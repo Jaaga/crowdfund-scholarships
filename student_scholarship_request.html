@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student-Form</title>
+	<style type="text/css">
+	.container {
+	width: 250px;
+	clear: both;
+	margin: 0 auto;
+	}
+	
+	.container input {
+	width: 100%;
+	clear: both;
+	}
+	.toalign
+	{ text-align: center;
+	}
+	
+	
+	</style>
+</head>
+<body>
+<div class="container">
+
+
+<!--	<form>
+	
+	<label for="username">Username: </label> <br>
+	<input type="text" id="username">
+	<label for="student">Student: </label> <br>
+	<input type="radio" id="student">
+	<label for="teacher">Teacher: </label>
+	<input type="radio" id="teacher">-->
+	
+	
+	
+	
+	</form>
+
+	<h3>Student Scholarship Form</h3>
+	
+	<form>
+	First Name:<input type="text" name="firstname"><br>
+	Last Name:<input type="text" name="lastname">
+	</div>
+	
+	<div class="toalign">
+	<input type="radio" name="sex" value="male">Male
+	<input type="radio" name="sex" value="female">Female<br></div>
+	<div class="container">
+	<!--<input type="submit"><br>-->
+	Birthday:<input type="date" name="bday"><br>
+    <!--<input type="submit">-->
+	E-mail:<input type="email" name="email"><br>
+	Telephone:<input type="tel" name="usrtel">
+	<!--<fieldset>-->
+		<p>Address:<input type="text" name ="Address"/></p>
+	<p>City:<input type="text" name ="City"/></p>
+	<p>State:<input type="text" name ="State"/></p>
+	<p>Zip:<input type="text" name ="Zip"/></p>
+	<p>Country:<input type="text" name ="Country"/></p>
+	<!--</fieldset>-->
+	University:<select>
+	<option value="">select</option>
+	<option value="VTU">VTU</option>
+  <option value="Mount Carmel College">Mount Carmel College</option>
+  <option value="Jaaga Study">Jaaga Study</option>
+  <option value="Bangalore University">Bangalore University</option><br>
+ </select><br>
+ Course:<select>
+<option value="">select</option>
+<option value="Psychology">Psychology</option>
+  <option value="Engineering">Engineering</option>
+  <option value="MBA">MBA</option>
+  <option value="Graphic Design">Graphic Design</option><br>
+ </select><br>
+ <h4>Please describe the course for which you would like to get funded</h4>
+  <!--<label for="Please describe the course for which you would like to get funded">-->
+  <textarea rows="5" cols="30">
+</textarea>
+Scholarship Amount:<input type="text" name="Scholarship Amount"><br>
+<input type="checkbox" name="privacy" >Enable Privacy<br>
+<input type="submit">
+	</form>
+	</div>
+</body>
+</html>
