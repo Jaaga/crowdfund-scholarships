@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
     <title>Crowd Funding Scholarships</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
-    
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
@@ -33,9 +32,14 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
-	<a class="navbar-brand" href="howitworks.html">How it works!</a>
+	<a class="navbar-brand" href="#">How it works!</a>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
@@ -45,23 +49,20 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button> 
-          &nbsp &nbsp  <a href="signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
+            <button type="submit" class="btn btn-primary">Sign in</button>
           </form>
-            
-             
         </div><!--/.navbar-collapse -->
       </div>
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background color : blue" > <!-- style="background:url(./images/crowdfunding-1.jpeg) no-repeat center center;background-size:1200px 400px;" -->
+    <div class="jumbotron" style="background:url(./images/crowdfunding.jpg) no-repeat center center;background-size:1200px 400px;">
       <div class="container">
         <h1>LearnEmp</h1>
         <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
 
 </p>
-        <p><a href="donate.html" class="btn btn-warning btn-lg">Donate Now &raquo;</a></p>
+        <p><a class="btn btn-warning btn-lg" role="button">Donate Now &raquo;</a></p>
       </div>
     </div>
 
@@ -70,44 +71,25 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Fund</h2>
-          <p>Donate and fund student's education to help empower learning and a better tomorrow.</p><br>
-          <p><a class="btn btn-success" href="details.html" role="button">View details &raquo;</a></p>
+          <p>Donate and fund student's education to help empower learning and a better tomorrow</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Pay Forward</h2>
           <p>Once student's are done with their education, FundEmp encourages them to help and fund other aspiring students.</p>
-          <p><a class="btn btn-success" href="details.html" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
-       
-     <div class="col-md-4">
-        <form action="#" method="post">
-     Give Feedback!!:<br /><br>
-     <textarea rows="4" cols="40" name="comments" id="comments">
-        Hey... say something!
-     </textarea>
-     <button type="submit" class="btn btn-success">Post-Feedback!</button>
-    </form>
- 
-    </div>
- 
- </div>
+        
+      </div>
 
       <hr>
 
-     
+      <footer>
+        <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
+      </footer><a class="navbar-brand" href="donors.html">DONORS</a><a class="navbar-brand" href="students_list.html">STUDENTS</a>
     </div> <!-- /container -->
 
-<footer class="footer" align= "center">
-  <nav>
-    <ul>
-    <a href="index.html">Home</a>&nbsp &nbsp &nbsp &nbsp
-    <a href= "about.html">About</a>&nbsp &nbsp &nbsp &nbsp
-      <a href= "contact.html">Contact</a>&nbsp &nbsp &nbsp &nbsp
-      <a href="faq.html">Faq</a>&nbsp &nbsp &nbsp &nbsp
-      <a href="donors.html">Donors</a>&nbsp &nbsp &nbsp &nbsp
-    </ul>
-  </nav><br> Site Designed by<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
-</footer>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
