@@ -30,7 +30,9 @@ nav
     <a href= "about.html">About</a>
       <a href= "contact.html">Contact</a>
       <a href="faq.html">Faq</a>
-      <a href="donors.html">Donors</a></nav>
+      <a href="donors.html">Donors</a>
+      </nav>
+      <br>
 <!-- This is the header image (highlights title of page) -->
 <center><img src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSv8FiBblot3pDKtk9LwEecBPlQNFyAUf3ZRQMo-W-SbohFTtSlomoD8Gc" 
 style = "border: none; width:300px;" ></img></center>
