@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Crowd Funding Scholarships</title>
+    <title>Donor Signup Form</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
@@ -25,6 +25,25 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+<style type="text/css">
+	
+	body {font-family:Arial,Sans-Serif;}
+	#container {width:300px;margin:0 auto;}
+	form label{display:inline=block; width:140px;}
+	form input[type="text"]
+	form inputp[type="password"]
+	form input[type="email"]{width:160px;}
+	form .line {clear:both;}
+	form .line.submit {text-align:right;}
+
+</style>
+	
+
+
+
+
+
   </head>
 
   <body>
@@ -55,34 +74,31 @@
       </div>
     </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="background:url(./images/crowdfunding.jpg) no-repeat center center;background-size:1200px 400px;">
-      <div class="container">
-        <h1>LearnEmp</h1>
-        <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
+<div id="container">
+	<form>
+		<h2 style="margin:60px 0 10px 0">Donor Signup Form</h2>
+		<div class="line"> <label for="firstname"> First Name* : </label> <input type="text" id="firstname" /> </div>
+		<div class="line"> <label for="lastname"> Last Name* : </label> <input type="text" id="lastname" /> </div>
+		<div class="line"> <label for="email"> Email : </label> <input type="email" id="email" /> </div>
+		<div class="line"> <label for="cemai">Confirm Email: </label> <input type="email"id="cemail" /> </div>
+		<div class="line"> <label for="pwd"> Password* : </label> <input type="password" id="pwd" /> </div>
+		<div class="line"> <label for="cpwd"> Confirm Password*: </label> <input type="password" id="cpwd" /> </div>
+		<div class="line"> <label for="telephone"> Contact No: </label> <input type="text" id="telephone" /> </div>
+		<div class="line"> <label for="dob"> Date of Birth </label> <input type="text" id="dob" /> </div>
+		<div class="line"> <label for="address"> Address : </label> <input type="text" id="address" /> </div>
+	</form>
 
-</p>
-        <p><a class="btn btn-warning btn-lg" role="button">Donate Now &raquo;</a></p>
-      </div>
-    </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Fund</h2>
-          <p>Donate and fund student's education to help empower learning and a better tomorrow</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Pay Forward</h2>
-          <p>Once student's are done with their education, FundEmp encourages them to help and fund other aspiring students.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        
-      </div>
+
+
+
+
+
+
 
       <hr>
+
+
 
       <footer>
         <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
