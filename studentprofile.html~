@@ -39,7 +39,7 @@
 			}
 		.student-pic {
 			border:2px solid black;
-			
+			border-radius:2px;
 			}
 	</style>
   </head>
