@@ -62,20 +62,7 @@
 </div>
 
     </div><!-- /.container -->
-<hr>
-<footer class="footer" align= "center">
-  <nav>
-    <ul>
 
-    <a href="index.html">Home </a>&nbsp | &nbsp 
-    <a href= "about.html">About </a>&nbsp | &nbsp 
-      <a href= "contact.html">Contact </a>&nbsp | &nbsp
-      <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
-      <a href="donors.html">Donors </a>&nbsp | &nbsp 
-
-    </ul>
-  </nav> &nbsp &nbsp  Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
-</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
