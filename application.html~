@@ -206,14 +206,15 @@
 <br>
 <br>
 <hr>
-<footer align="center">
-<a href="#">Home |</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">FAQ |</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">About |</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">Contact |</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">Doners list |</a>
-<br><br> Site Designed by<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+<footer class="footer"  align="center">
+<a href="#">Home &nbsp |</a>&nbsp &nbsp
+<a href="#">FAQ &nbsp |</a>&nbsp &nbsp 
+<a href="#">About &nbsp |</a>&nbsp &nbsp 
+<a href="#">Contact &nbsp |</a>&nbsp &nbsp
+<a href="#">Doners list &nbsp |</a>
+<br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
 </footer>
+ 
 </body>
 </html>
 
