@@ -10,13 +10,13 @@ body
  padding-left: 50px;
   padding-right: 50px;
 }
-img
+/*img
 {
 border:5px solid ;
 } 
 .col-lg-4 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px;*/
 }
 
 </style>
@@ -46,13 +46,14 @@ border:5px solid ;
     </br>
     </br>
 <!-- This is the header image (highlights title of page) -->
-<center><img src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSv8FiBblot3pDKtk9LwEecBPlQNFyAUf3ZRQMo-W-SbohFTtSlomoD8Gc" 
-style = "border: none; width:300px;" ></img></center>
+ 
+<h1 style="font-family: 'Audiowide', cursive;">How it Works</h1>
+
 <hr>
 <!-- This is the section explaining the how it works process -->
 <div class="row">
   <div class="col-lg-4">
-  <img src="./images/images.jpeg" alt="donate" class="img-circle"></img> 
+  <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
   <br><h2>MAKE A <br>DONATION</h2>
   <p >Our system is simple. We select candidates for a scholarship based on preset criterias by our team, where we consider but not limit it to economic background, academic performance and extra curricular skills.</p>
 
@@ -61,12 +62,12 @@ style = "border: none; width:300px;" ></img></center>
 <button type="button" class="btn btn-success">More</button>  
   </div>
   <div class="col-lg-4">
-<img src="./images/images.jpeg" alt="donate" class="img-circle"></img> 
+<img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
 <br><h2>STUDENT BENEFITS FROM YOUR LOAN</h2>
 <p>You as a donor choose the candidate you would like to sponsor.The student utilizes the loan for paying his/her academic fee and other basic necessities.</p>
   <br><br> <!-- Standard button -->
 <button type="button" class="btn btn-success">More</button></div>
-  <div class="col-lg-4"><img src="./images/images.jpeg" alt="donate" class="img-circle"></img> <br><h2>STUDENT PAYS IT FORWARD</h2>
+  <div class="col-lg-4"><img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> <br><h2>STUDENT PAYS IT FORWARD</h2>
   <p>The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process where the student once graduated and starts earning, gets an option to sponsor another student. </p>
   <br>
   <!-- Standard button -->
@@ -87,7 +88,7 @@ style = "border: none; width:300px;" ></img></center>
       <a href="donors.html">Donors</a>&nbsp | &nbsp 
 
     </ul>
-  </nav> Site Designed by &nbsp &nbsp &nbsp &nbsp|<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+  </nav> &nbsp &nbsp &nbsp &nbsp Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
 </footer>
 </body>
 
