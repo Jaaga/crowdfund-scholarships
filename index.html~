@@ -46,13 +46,13 @@
         <div class="navbar-header">
           
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
-
+<<<<<<< HEAD
 		<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>	
 		<a class="navbar-brand" href="./how.html">How it works!</a>
-
+=======
 		<a class="navbar-brand" href="#" style="font-family: 'Audiowide', cursive;">LearnEmp</a>	
 		<a class="navbar-brand" href="how.html">How it works!</a>
-
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
 
         </div>
         <div class="navbar-collapse collapse">
@@ -63,13 +63,13 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-
+<<<<<<< HEAD
             <a href="Students_list.htm" button class="btn btn-success">Log In</button></a> 
           &nbsp &nbsp  <a href="Donor_signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
-
+=======
             <button type="submit" class="btn btn-success">Sign in</button> 
           &nbsp &nbsp  <a href="Donor-signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
-
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
           </form>
             
              
@@ -123,17 +123,19 @@
 <footer class="footer" align= "center">
   <nav>
     <ul>
+<<<<<<< HEAD
     <a href="index.html">Home |</a>&nbsp &nbsp &nbsp &nbsp
     <a href= "about.html">About |</a>&nbsp &nbsp &nbsp &nbsp
       <a href= "contact.html">Contact |</a>&nbsp &nbsp &nbsp &nbsp
       <a href="faq.html">Faq |</a>&nbsp &nbsp &nbsp &nbsp
       <a href="donors.html">Donors |</a>&nbsp &nbsp &nbsp &nbsp
+=======
     <a href="index.html">Home</a>&nbsp &nbsp &nbsp &nbsp
     <a href= "about.html">About</a>&nbsp &nbsp &nbsp &nbsp
       <a href= "contact.html">Contact</a>&nbsp &nbsp &nbsp &nbsp
       <a href="FAQ.html">Faq</a>&nbsp &nbsp &nbsp &nbsp
       <a href="donors.html">Donors</a>&nbsp &nbsp &nbsp &nbsp
-
+>>>>>>> 368b43e9e009894b831e60c0ca8f14ff5e6fa7e8
     </ul>
   </nav><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
 </footer>

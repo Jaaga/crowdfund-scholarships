@@ -2,8 +2,6 @@
 <head><link href="./dist/css/bootstrap.css" rel="stylesheet">
 </head>
  <body>
- <br>
- <br>
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">

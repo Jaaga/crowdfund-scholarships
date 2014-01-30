@@ -1,7 +1,24 @@
 <html><head>
 <link type="text/css" rel="stylesheet" media="all" href="http://kabbalah.com/sites/default/files/css/css_29bba17c8c27415da00b12b33f95e4ea.css" />
-</head>
+   <link href="./dist/css/bootstrap.css" rel="stylesheet"></head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+		   
+            <li><a href="how.html">How it Works</a></li>
+            <li><a href="Students_list.html">Students</a></li>
+            <li><a href="about.html">About</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 <h1>Student Scholorship Form</h1>
 <hr><div align="center"><form>
 <div><div class="webform-component webform-component-textfield" id="webform-component-first-name"><div class="form-item" id="edit-submitted-first-name-wrapper">
@@ -34,7 +51,7 @@
  <label for="edit-submitted-street-address">Street Address: <span class="form-required" title="This field is required.">*</span></label>
  <input type="text" maxlength="128" name="submitted[street_address]" id="edit-submitted-street-address" size="60" value="" class="form-text required" />
 </div>
-<div>
+<div class="webform-component webform-component-textfield" id="webform-component-street-address"><div class="form-item" id="edit-submitted-street-address-wrapper">
  <label for="edit-submitted-telephone">Telephone: <span class="form-required" title="This field is required.">*</span></label>
  <input type="text" maxlength="128" name="submitted[telephone]" id="edit-submitted-telephone" size="60" value="" class="form-text required" />
 </div>
