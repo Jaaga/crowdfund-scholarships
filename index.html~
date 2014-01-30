@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+<<<<<<< HEAD
     
+=======
+<style> 
+   hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    
+    background-color: #333; //Modern Browsers
+}
+</style>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
 
     <title>Crowd Funding Scholarships</title>
 
@@ -38,8 +50,13 @@
         <div class="navbar-header">
           
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
+<<<<<<< HEAD
 		<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>	
 		<a class="navbar-brand" href="./how.html">How it works!</a>
+=======
+		<a class="navbar-brand" href="#" style="font-family: 'Audiowide', cursive;">LearnEmp</a>	
+		<a class="navbar-brand" href="how.html">How it works!</a>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
 
         </div>
         <div class="navbar-collapse collapse">
@@ -50,8 +67,13 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
+<<<<<<< HEAD
             <a href="Students_list.htm" button class="btn btn-success">Log In</button></a> 
           &nbsp &nbsp  <a href="Donor_signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
+=======
+            <button type="submit" class="btn btn-success">Sign in</button> 
+          &nbsp &nbsp  <a href="Donor-signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
           </form>
             
              
@@ -66,7 +88,11 @@
         <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
 
 </p>
+<<<<<<< HEAD
         <p><a href="Students_list.htm" class="btn btn-warning btn-lg">Donate Now &raquo;</a></p>
+=======
+        <p><a href="donate.html" class="btn btn-warning btn-lg">Donate Now &raquo;</a></p>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
       </div>
     </div>
 
@@ -76,12 +102,20 @@
         <div class="col-md-4">
           <h2>Fund</h2>
           <p>Donate and fund student's education to help empower learning and a better tomorrow.</p><br>
+<<<<<<< HEAD
           <p><a class="btn btn-success" href="./Students_list.htm" role="button">Learn More &raquo;</a></p>
+=======
+          <p><a class="btn btn-success" href="details.html" role="button">View details &raquo;</a></p>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
         </div>
         <div class="col-md-4">
           <h2>Pay Forward</h2>
           <p>Once student's are done with their education, FundEmp encourages them to help and fund other aspiring students.</p>
+<<<<<<< HEAD
           
+=======
+          <p><a class="btn btn-success" href="details.html" role="button">View details &raquo;</a></p>
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
        </div>
        
      <div class="col-md-4">
@@ -108,7 +142,11 @@
     <a href="index.html">Home</a>&nbsp &nbsp &nbsp &nbsp
     <a href= "about.html">About</a>&nbsp &nbsp &nbsp &nbsp
       <a href= "contact.html">Contact</a>&nbsp &nbsp &nbsp &nbsp
+<<<<<<< HEAD
       <a href="FAQ.html">Faq</a>&nbsp &nbsp &nbsp &nbsp
+=======
+      <a href="faq.html">Faq</a>&nbsp &nbsp &nbsp &nbsp
+>>>>>>> 4b9e8f99f483a76bc48a0a9b17bc59137d6deb91
       <a href="donors.html">Donors</a>&nbsp &nbsp &nbsp &nbsp
     </ul>
   </nav><br> Site Designed by<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
