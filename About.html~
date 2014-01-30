@@ -50,7 +50,7 @@
 			
 			}
 		.faq-head {
-			font-family: 'Stint Ultra Expanded', cursive;
+			/*font-family: 'Stint Ultra Expanded', cursive;*/
 			font-size:45px;
 			}
 		.faq-content {
@@ -113,14 +113,14 @@
 	<div class="row">
 		<div class="col-md-8">
 			<article class="faq-content">
-				<h2>How does LearnEmp work?</h2>
-				<p>LearnEmp is a social crowdfunding platform for students who cannot afford a worthy education in a required university or course. LearnEmp enables donors to check a student's potential and make a contribution in order to help and empower the student.</p>
+				<h2>The Team</h2>
+				<p>Founded in January 2014,LearEmp comprises of eight individuals from across India who are passionate about learning and sharing knowledge and skills. The team was brought together by Jaaga Study, an initiative by Mr.Freeman Murray. The team strives to level the play field by providing opportunities to students who do not have the means to pursue higher education due to lack of funding. </p>
 				<hr>
-				<h2>Will the donor be paid back?</h2>
-				<p>The donor is not paid back. LearnEmp works on the principle of 'Pay it Forward Loans'.<br> When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</p>
-				<hr>
-				<h2>How much should I donate?</h2>
-				<p>When you have browsed through our list of students in need of funding, you can pick any-one and donate any amount you prefer. The minimum amountis 5$. On every student's page you can view the funding required and how much other donors have already donated. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</p>
+				<!--<h2>The Team</h2>
+				<p> fjlkdsfj</p>
+				<hr>-->
+				<h2>Get Involved</h2>
+				<p>After you've sponsored your first student, we would like you to stay involved with us by keeping in touch through <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter. </a>If you would like to put in some hours volunteering with our organization, feel free to drop an email at volunteer@learnemp.com.</p>
 				
 			</article>
 		</div>
