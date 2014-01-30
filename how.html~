@@ -20,6 +20,9 @@ border:5px solid ;
 }
 nav
 {float:right;}
+p{
+text-align:justify;
+}
 </style>
 
 </head>
@@ -55,8 +58,7 @@ style = "border: none; width:300px;" ></img></center>
   <div class="col-lg-4">
   <img src="./images/images.jpeg" alt="donate" class="img-circle"></img> 
   <br><h2>MAKE A <br>DONATION</h2>
-  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. 
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna..</p>
+  <p >Our system is simple. We select candidates for a scholarship based on preset criterias by our team, where we consider but not limit it to economic background, academic performance and extra curricular skills.</p>
 
 <br>
 <!-- Standard button -->
@@ -65,13 +67,11 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo c
   <div class="col-lg-4">
 <img src="./images/images.jpeg" alt="donate" class="img-circle"></img> 
 <br><h2>STUDENT BENEFITS FROM YOUR LOAN</h2>
-<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. 
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+<p>You as a donor choose the candidate you would like to sponsor.The student utilizes the loan for paying his/her academic fee and other basic necessities.</p>
   <br> <!-- Standard button -->
 <button type="button" class="btn btn-default">More</button></div>
   <div class="col-lg-4"><img src="./images/images.jpeg" alt="donate" class="img-circle"></img> <br><h2>STUDENT PAYS IT FORWARD</h2>
-  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. 
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+  <p>The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process where the student once he graduates and starts earning gets an option to sponsor another deserving student. </p>
   <br>
   <!-- Standard button -->
 <button type="button" class="btn btn-default">More</button></div>
