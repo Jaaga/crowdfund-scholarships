@@ -57,12 +57,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
-<<<<<<< HEAD
+
 	<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
 	<a class="navbar-brand" href="#">How it works!</a>
-=======
 <!--	<a class="navbar-brand" href="#">How it works!</a>
->>>>>>> 24a3f9018bc24decb8001b9cf0e36822362e4f85
         </div>
 
            <div class="navbar-collapse collapse">
@@ -147,37 +145,31 @@
           </div><!--/row-->
         </div><!--/span-->
 
-       <!-- <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Student1</a>
-            <a href="#" class="list-group-item">Student2</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
+      
       </div><!--/row--> 
 
-      <hr>
-
-     <footer>
-        <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
-      </footer><a class="navbar-brand" href="donors.html">DONORS</a><a class="navbar-brand" href="students_list.html">STUDENTS</a>
     </div> <!-- /container -->
 
       
     </div><!--/.container-->
+<hr>
+<footer class="footer" align= "center">
+  <nav>
+    <ul>
 
+    <a href="index.html">Home </a>&nbsp | &nbsp 
+    <a href= "about.html">About </a>&nbsp | &nbsp 
+      <a href= "contact.html">Contact </a>&nbsp | &nbsp
+      <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
+      <a href="donors.html">Donors </a>&nbsp | &nbsp 
+
+    </ul>
+  </nav> &nbsp &nbsp &nbsp Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+</footer>
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+       <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="offcanvas.js"></script>
