@@ -204,13 +204,15 @@
 <br>
 <br>
 <br>
-
+<br>
+<hr>
 <footer align="center">
-<a href="#">Home</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">FAQ</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">About</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">Contact</a>&nbsp &nbsp &nbsp &nbsp
-<a href="#">Doners list</a>
+<a href="#">Home |</a>&nbsp &nbsp &nbsp &nbsp
+<a href="#">FAQ |</a>&nbsp &nbsp &nbsp &nbsp
+<a href="#">About |</a>&nbsp &nbsp &nbsp &nbsp
+<a href="#">Contact |</a>&nbsp &nbsp &nbsp &nbsp
+<a href="#">Doners list |</a>
+<br><br> Site Designed by<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
 </footer>
 </body>
 </html>
