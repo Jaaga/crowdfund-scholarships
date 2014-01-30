@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Vaibhav " >
     <link rel="shortcut icon" href="./docs-assets/ico/favicon.png">
 
     <title> Students List Page</title>
@@ -30,7 +30,24 @@
   </head>
 
   <body>
-     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+		   
+            <li><a href="how.html">How it Works</a></li>
+            <li><a href="Students_list.html">Students</a></li>
+            <li><a href="about.html">About</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  <!--   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,16 +57,20 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
+<<<<<<< HEAD
 	<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
 	<a class="navbar-brand" href="#">How it works!</a>
+=======
+<!--	<a class="navbar-brand" href="#">How it works!</a>
+>>>>>>> 24a3f9018bc24decb8001b9cf0e36822362e4f85
         </div>
 
            <div class="navbar-collapse collapse">
           
         </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
+   <!--   </div>
+    </div> 
+-->
     <div class="container">
 
       <div class="row row-joffcanvas row-offcanvas-right">
