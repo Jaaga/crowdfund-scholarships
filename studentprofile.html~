@@ -42,6 +42,9 @@
 			
 			}
 	</style>
+<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -55,8 +58,8 @@
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="Students_list.html">Students</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="Students_list.htm">Students</a></li>
+            <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -114,15 +117,21 @@ Jackman has won international recognition for his roles in major films, notably 
 		</div>
 			
 	</div>
-    
-
-      <hr>
-
-
-      <footer>
-        <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
-      </footer><a class="navbar-brand" href="donors.html">DONORS</a><a class="navbar-brand" href="students_list.html">STUDENTS</a>
 </div>
+<hr>
+<footer class="footer" align= "center">
+  <nav>
+    <ul>
+
+    <a href="index.html">Home </a>&nbsp | &nbsp 
+    <a href= "About.html">About </a>&nbsp | &nbsp 
+      <a href= "Contact.html">Contact </a>&nbsp | &nbsp
+      <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
+      <a href="Donor_signup.html">Donors </a>&nbsp | &nbsp 
+
+    </ul>
+  </nav> &nbsp &nbsp  Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+</footer>
 
 
     <!-- Bootstrap core JavaScript

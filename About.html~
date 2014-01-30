@@ -55,8 +55,9 @@
 			}
 		.faq-content {
 			max-width:800px;
-			text-align:left;
+			text-align:justify;
 			margin:0 auto;
+			
 			}
 	</style>
   </head>
@@ -66,14 +67,14 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="Students_list.html">Students</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="Students_list.htm">Students</a></li>
+            
 			<li><a href="Contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -110,7 +111,8 @@
 		</div>
 	</div>
 	<hr>
-	<div class="row">
+	<div class
+="row">
 		<div class="col-md-8">
 			<article class="faq-content">
 				<h2>The Team</h2>
@@ -124,18 +126,55 @@
 				
 			</article>
 		</div>
+ 	     <div class="col-md-4">
+        
+        <img src="./images/stephanie1.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <img src="./images/manoj.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <hr>
+
+        <img src="./images/abhinay.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <img src="./images/sushil.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <hr>
+
+        <img src="./images/vaibhav.jpg" style="height:100px"  alt="" class="img-rounded" >
+
+        <img src="./images/Sai.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <hr>
+
+	<img src="./images/RJ.jpg" style="height:100px" alt="" class="img-rounded" >
+
+        <img src="./images/sujay.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <hr>
+
+      </div>
+
+
 			
 	</div><!--row class ending here-->
     
 
-      <hr>
 
-
-      <footer>
-        <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
-      </footer><a class="navbar-brand" href="donors.html">DONORS</a><a class="navbar-brand" href="students_list.html">STUDENTS</a>
 </div><!--container div closing here-->
 
+<footer class="footer" align= "center">
+  <nav>
+    <ul>
+
+    <a href="index.html">Home </a>&nbsp | &nbsp 
+    <a href= "About.html">About </a>&nbsp | &nbsp 
+      <a href= "Contact.html">Contact </a>&nbsp | &nbsp
+      <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
+      <a href="Donor_signup.html">Donors </a>&nbsp | &nbsp 
+
+    </ul>
+  </nav> &nbsp &nbsp  Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
