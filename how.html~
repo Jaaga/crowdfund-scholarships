@@ -47,7 +47,7 @@ border:5px solid ;
     </br>
 <!-- This is the header image (highlights title of page) -->
  
-<h1 style="font-family: 'Audiowide', cursive;">How it Works</h1>
+<h1>How it Works</h1>
 
 <hr>
 <!-- This is the section explaining the how it works process -->
