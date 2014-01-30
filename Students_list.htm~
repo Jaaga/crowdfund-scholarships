@@ -57,12 +57,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
-<<<<<<< HEAD
+
 	<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
 	<a class="navbar-brand" href="#">How it works!</a>
-=======
 <!--	<a class="navbar-brand" href="#">How it works!</a>
->>>>>>> 24a3f9018bc24decb8001b9cf0e36822362e4f85
         </div>
 
            <div class="navbar-collapse collapse">
@@ -80,8 +78,8 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>Student Profiles</h1>
-            <p>Browse the list of students who can be sponsored by you.</p>
+            <h2>Applicants at LearnEmp</h2>
+          <!--  <p>Browse the list of students who can be sponsored by you.</p>-->
           </div>
           <div class="row-list">
             <div class="col-sm-6 col-md-4">
@@ -176,8 +174,7 @@
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+       <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="offcanvas.js"></script>
