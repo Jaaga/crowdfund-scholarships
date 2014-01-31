@@ -80,7 +80,7 @@
 
 </p>
         <p><a href="Students_list.htm" class="btn btn-warning btn-lg" style="font-family: verdana;">Donate Now &raquo;</a>
-           <a href="application.html" class="btn btn-success btn-lg" style="font-family: verdana;">Student<font color="red">&nbsp ?</font>apply-here</a>
+           <a href="application.html" class="btn btn-success btn-lg" style="font-family: verdana;">Student ? apply-here</a>
 </p>
         
       </div>
@@ -102,11 +102,14 @@
        
      <div class="col-md-4 inline">
         <form action="#" method="post">
-     <h5>Give Feedback!!:</h5>
-     <textarea rows="4" cols="40" name="comments" id="comments">
-Hey... say something!
-     </textarea><br/><br />
-     <button type="submit" class="btn btn-success inline" style="font-family: verdana;">Post-Feedback!</button>
+     <h5> &nbsp &nbspGive Feedback!!:</h5>
+     <div class="form-group">
+  <div class="col-md-8">                     
+    <p><textarea class="form-control" id="textarea" name="textarea" rows="3">Hey..Say Something!!</textarea></p><br/>
+    <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success" style="margin-bottom: 10px" >Post-feedback</button>
+  </div>
+</div>
+
     </form>
  
     </div>
