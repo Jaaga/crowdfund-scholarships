@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    
 <style> 
    hr {
     border: none;
@@ -74,7 +74,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="background color : blue" > <!-- style="background:url(./images/crowdfunding-1.jpeg) no-repeat center center;background-size:1200px 400px;" -->
       <div class="container">
-        <h1>LearnEmp</h1>
+        <h1 style="font-family: 'Audiowide', cursive;">LearnEmp</h1>
         <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
 
 </p>
@@ -96,13 +96,13 @@
           
        </div>
        
-     <div class="col-md-4">
+     <div class="col-md-4 inline">
         <form action="#" method="post">
-     Give Feedback!!:<br /><br>
+     <h5>Give Feedback!!:</h5>
      <textarea rows="4" cols="40" name="comments" id="comments">
-        Hey... say something!
-     </textarea>
-     <button type="submit" class="btn btn-success">Post-Feedback!</button>
+Hey... say something!
+     </textarea><br/><br />
+     <button type="submit" class="btn btn-success inline">Post-Feedback!</button>
     </form>
  
     </div>
