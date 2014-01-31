@@ -48,7 +48,8 @@
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
 
 		<a class="navbar-brand" href="#" style="font-family: 'Audiowide', cursive;">LearnEmp</a>	
-		<a class="navbar-brand" href="how.html">How it works!</a>
+		<a class="navbar-brand" href="how.html" style="font-family: verdana;">&nbsp &nbsp How it works!</a>
+                
 
 
         </div>
@@ -61,8 +62,8 @@
               <input type="password" placeholder="Password" class="form-control">
             </div>
 
-            <button type="submit" class="btn btn-success">Sign in</button> 
-          &nbsp <a href="Donor-signup.html" button class="btn btn-primary">Sign-up Now!!</button></a>
+            <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
+          &nbsp <a href="Donor-signup.html" button class="btn btn-primary" style="font-family: verdana;">Sign-up Now!!</button></a>
 
           </form>
             
@@ -78,7 +79,10 @@
         <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
 
 </p>
-        <p><a href="Students_list.htm" class="btn btn-warning btn-lg">Donate Now &raquo;</a></p>
+        <p><a href="Students_list.htm" class="btn btn-warning btn-lg" style="font-family: verdana;">Donate Now &raquo;</a>
+           <a href="application.html" class="btn btn-success btn-lg" style="font-family: verdana;">Student<font color="red">&nbsp ?</font>apply-here</a>
+</p>
+        
       </div>
     </div>
 
@@ -88,7 +92,7 @@
         <div class="col-md-4">
           <h2>Fund</h2>
           <p>Donate and fund student's education to help empower learning and a better tomorrow.</p><br>
-          <p><a class="btn btn-success" href="./Students_list.htm" role="button">Learn More &raquo;</a></p>
+          <p><a class="btn btn-success" href="./Students_list.htm" role="button" style="font-family: verdana;">Learn More &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Pay Forward</h2>
@@ -102,7 +106,7 @@
      <textarea rows="4" cols="40" name="comments" id="comments">
 Hey... say something!
      </textarea><br/><br />
-     <button type="submit" class="btn btn-success inline">Post-Feedback!</button>
+     <button type="submit" class="btn btn-success inline" style="font-family: verdana;">Post-Feedback!</button>
     </form>
  
     </div>
@@ -111,8 +115,7 @@ Hey... say something!
 
       
 
-     
-    </div> <!-- /container -->
+     </div> <!-- /container -->
 <hr>
 <footer class="footer" align= "center">
   <nav>
