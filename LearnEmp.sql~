@@ -99,7 +99,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-
+INSERT INTO `student` VALUES (0,1,'abhinay','kumar','M','abhinay302@gmail.com',2147483647,'wilson garden',560030,'india','bangalore','mtech',2000),(63,1,'mushraff','kr','F','mushraff@gmail.com',999999999,'wagha border',420,'Pakistan','Delhi','BE',5000),(97383644,1,'mushraff','kr','','mushraff@gmail.com',999999999,'wagha border',420,'Pakistan','Delhi','BE',5000);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
