@@ -67,7 +67,35 @@
           </p>
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
-            
+                                <?php
+                $con=mysqli_connect("localhost","root","mysql","LearnEmp");
+// Check connection
+         if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$result = mysqli_query($con,"SELECT * FROM student");
+
+echo "<table border='1'>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Action</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+  {
+  echo "<tr>";
+  echo "<td>" . $row['fname'] . "</td>";
+  echo "<td>" . $row['lname'] . "</td>";
+  echo "<td><a class='btn btn-primary' href='/donate.php?id=" . $row['S_Id'] . "'>Donate Now</a></td>";
+  echo "</tr>";
+  }
+echo "</table>";
+
+mysqli_close($con);
+?>
           </div>
           
 <hr>
