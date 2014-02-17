@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
 echo "its working";
 $sql=mysqli_query($con,"INSERT INTO student (fname, lname,gender,email,Phone_number,address,pincode,country,course,scholar_AMT,para,password)
 VALUES
-('$fname','$lname','$gender','$email','$Phone_number','$address', '$pincode', '$country', '$course','$scholar_AMT','$para','$password');
+('$_POST[fname]','$_POST[lname]','$_POST[gender]','$_POST[email]','$_POST[Phone_number]','$_POST[address]', '$_POST[pincode]', '$_POST[country]', '$_POST[course]','$_POST[scholar_AMT]','$_POST[para]','$_POST[password]');
 
 
 
