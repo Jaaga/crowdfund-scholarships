@@ -75,6 +75,7 @@
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
+
 $result = mysqli_query($con,"SELECT * FROM student");
 
 echo "<table border='1'>
@@ -89,7 +90,7 @@ while($row = mysqli_fetch_array($result))
   echo "<tr>";
   echo "<td>" . $row['fname'] . "</td>";
   echo "<td>" . $row['lname'] . "</td>";
-  echo "<td><a class='btn btn-primary' href='/donate.php?id=" . $row['S_Id'] . "'>Donate Now</a></td>";
+  echo "<td><a class='btn btn-primary' href='/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
   echo "</tr>";
   }
 echo "</table>";

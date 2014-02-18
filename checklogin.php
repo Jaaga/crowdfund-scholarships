@@ -22,6 +22,8 @@ $mypassword = mysql_real_escape_string($mypassword);
 $sql="SELECT * FROM $tbl_name WHERE email='$myusername' and password='$mypassword'";
 //$sql1="SELECT D_id FROM $tbl_name WHERE email='$myusername' ";
 $result=mysql_query($sql);
+$row=mysql_fetch_array($result);
+$D_id=$row['D_id'];
 //$result1=mysql_query($sql1);
 
 // Mysql_num_row is counting table row
@@ -35,7 +37,7 @@ if($count==1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 $_SESSION['usr']= "myusername";
 $_SESSION['pawd']="mypassword"; 
-header("location:Students_list.php");
+header("location:Students_list.php?id=$D_id ");
 }
 else {
 echo "Wrong Username or Password";
