@@ -1,0 +1,7 @@
+1 .Edit Scholarship function for Students, and should be visible on his dashboard
+also , should have a logout button.
+
+2. Donate now should have two ways for donating "Annonimous" and "Signed-in donor".
+
+3. Signed-in donors have extra functionality, he can see list of donors.
+
