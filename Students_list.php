@@ -68,7 +68,7 @@
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
                                 <?php
-                $con=mysqli_connect("localhost","root","mysql","LearnEmp");
+                $con=mysqli_connect("localhost","root","123","LearnEmp");
 // Check connection
          if (mysqli_connect_errno())
   {

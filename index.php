@@ -81,8 +81,8 @@
         <p>Directly fund and help aspiring learners and students from all over the world with a click of a button. Donate now and help a chain of good deeds.
 
 </p>
-        <p><a href="Students_list.htm" class="btn btn-warning btn-lg" style="font-family: verdana;">Donate Now &raquo;</a>
-           <a href="application.html" class="btn btn-success btn-lg" style="font-family: verdana;">Student ? apply-here</a>
+        <p><a href="Students_list.php" class="btn btn-warning btn-lg" style="font-family: verdana;">Donate Now &raquo;</a>
+           <a href="application.php" class="btn btn-success btn-lg" style="font-family: verdana;">Student ? apply-here</a>
 </p>
         
       </div>

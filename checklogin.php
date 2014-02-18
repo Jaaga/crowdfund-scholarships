@@ -20,10 +20,14 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
 $sql="SELECT * FROM $tbl_name WHERE email='$myusername' and password='$mypassword'";
+//$sql1="SELECT D_id FROM $tbl_name WHERE email='$myusername' ";
 $result=mysql_query($sql);
+//$result1=mysql_query($sql1);
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
+
+
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
