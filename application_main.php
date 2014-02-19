@@ -38,8 +38,10 @@
 	
 <div class="container">
 <div class="well">
-<form class="form-horizontal" action = "application.php" method="post">
 <fieldset>
+
+<form class="form-horizontal" action = "application.php" method="post" role="form">
+
 
 <!-- Form Name -->
 
@@ -49,7 +51,8 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
-  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" name="fname">
+
+  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" >
   
   </div>
 </div>
@@ -58,27 +61,35 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
-  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" name="lname"> 
+
+  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
+
   </div>
 </div>
 
-<!-- Multiple Radios -->
+<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Gender:</label>
+  <!--<label class="col-md-4 control-label" for="gender">Gender</label>  
   <div class="col-md-4">
-  <div class="radio">
-    <label for="radios-0">
-      <input type="radio" id="gender-0" value="F" checked="checked" name="gender">
-      Female
-    </label>
-	</div>
-  <div class="radio">
-    <label for="radios-1">
-      <input type="radio" id="gender-1" value="M" name="gender">
-      Male
-    </label>
-	</div>
-  </div>
+
+  
+
+<div class="radio">
+<lable for="gender">
+Female <input id="gender" type="radio" value="F" class="form-control">
+
+</lable>
+</div>
+<div class="radio">
+<lable for="gender">
+Male <input id="gender" type="radio" value="M" class="form-control">
+
+</lable>
+</div>
+  </div>-->
+<input type="radio" name="sex" value="M" id="gender">Male<br>
+<input type="radio" name="sex" value="F" id="gender">Female
+
 </div>
 
 
@@ -86,7 +97,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">E-mail:</label>  
   <div class="col-md-4">
-  <input id="textinput" type="email" placeholder="e-mail" class="form-control input-md" name = "email">
+  <input id="email" type="email" placeholder="e-mail" class="form-control input-md" name = "email">
     
   </div>
 </div>
@@ -95,7 +106,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Password</label>  
   <div class="col-md-4">
-  <input id="pass" type="password" placeholder="" class="form-control input-md" name="password">
+  <input id="password" type="password" placeholder="" class="form-control input-md" name="password">
   
   </div>
 </div>
@@ -104,7 +115,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="Contact Number" class="form-control input-md" name="Phone_number">
+  <input id="Phone_Number" type="text" placeholder="Contact Number" class="form-control input-md" name="Phone_Number">
     
   </div>
 </div>
@@ -113,7 +124,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea">Address:</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="textarea" name="address">Address</textarea>
+    <textarea class="form-control" id="address" name="address">Address</textarea>
   </div>
 </div>
 
@@ -121,19 +132,17 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Pin Code:</label>  
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="Pin Code" class="form-control input-md" name="pincode">
+  <input id="pincode" type="text" placeholder="Pin Code" class="form-control input-md" name="pincode">
   
   </div>
 </div>
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Country:</label>
+  <label class="col-md-4 control-label" for="textinput">Country</label>  
   <div class="col-md-4">
-    <select id="selectbasic" class="form-control" name="country">
-      <option value="1">Select Country</option>
-      <option value="2">Armenia</option>
-    </select>
+  <input id="country" type="text" class="form-control input-md" name = "country">
+    
   </div>
 </div>
 
@@ -141,7 +150,7 @@
 <div class="form-group">
  <label class="col-md-4 control-label" for="textinput">Course</label>  
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="Course Name" class="form-control input-md" name="course">
+  <input id="course" type="text" class="form-control input-md" name="course">
   
     </select>
   </div>
@@ -151,26 +160,26 @@
 
 <!-- Textarea -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textarea">Description of Course:</label>
+  <label class="col-md-4 control-label" for="textarea">Description of Course</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="textarea" placeholder = "Please describe why you want to take up the course" name="para"> </textarea>
+    <textarea class="form-control" id="para" placeholder ="Please describe why you want to take up the course. Prospective donors will be able to see this on your profile page" name="para"> </textarea>
   </div>
 </div>
 
-<!-- for uploading any-file-->
+<!-- for uploading any-file
 <div class="form-group">
   <label class="col-md-4 control-label" for="file">Upload-Document:</label> 
 <div class="col-md-4">
 <input id="datafile" type="file" name="datafile" size="60">
 </div>
-</div>
+</div>-->
 
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Scholarship Amount:</label>  
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="state the amount required" name="scholar_AMT" class="form-control input-md">
+  <input id="scholar_AMT" type="text" placeholder="state the amount required" name="scholar_AMT" class="form-control input-md">
 
   </div>
 </div>
@@ -180,12 +189,12 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4" align="center">
-    <input id="singlebutton" type="submit" class="btn btn-success btn-lg" name="submit">
+    <input id="singlebutton" type="submit" class="btn btn-success btn-lg">
   </div>
 </div>
 
-</fieldset>
 </form>
+</fieldset>
 </div>
 </div>
 <br>

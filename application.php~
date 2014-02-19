@@ -1,24 +1,40 @@
 <?php
-$con=mysqli_connect("localhost","root","dunno1726","LearnEmp");
-// Check connection
-echo "lol";
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-echo "its working";
-$sql=mysqli_query($con,"INSERT INTO student (fname, lname,gender,email,Phone_number,address,pincode,country,course,scholar_AMT,para,password)
-VALUES
-('$_POST[fname]','$_POST[lname]','$_POST[gender]','$_POST[email]','$_POST[Phone_number]','$_POST[address]', '$_POST[pincode]', '$_POST[country]', '$_POST[course]','$_POST[scholar_AMT]','$_POST[para]','$_POST[password]');
+
+define('DB_NAME', 'LearnEmp');
+define('DB_USER', 'root');
+define('DB_PASS', '123');
+define('DB_HOST', 'localhost');
+
+$link = mysql_connect(DB_HOST, DB_USER, DB_PASS);
+
+if (!$link) {
+    dir('There was a problem when trying to connect to the host. Please contact Tech Support. Error: ' . mysql_error());    
+}
+
+$db_selected = mysql_select_db(DB_NAME, $link);
+
+if (!$link) {
+    dir('There was a problem when trying to connect to the database. Please contact Tech Support. Error: ' . mysql_error());    
+}
+$S_Id = $_POST['UUID()'];
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$gender = $_POST['gender'];
+$email = $_POST['email'];
+$Phone_Number = $_POST['Phone_Number'];
+$address = $_POST['address'];
+$pincode = $_POST['pincode'];
+$country = $_POST['country'];
+$course = $_POST['course'];
+$scholar_AMT = $_POST['scholar_AMT'];
+$para = $_POST['para'];
+$password = $_POST['password'];
 
 
+$sql = "INSERT INTO student (S_Id, fname, lname, gender, email, Phone_Number, address, pincode, country, course, scholar_AMT, para, password) VALUES ('".$S_Id"','".$fname"', '".$lname"', '".$gender"', '".$email"', '".$Phone_Number"', '".$address"', '".$pincode"', '".$country"', '".$course"', '".$scholar_AMT"','".$para"','".$password"')";
 
+if (!mysql_query($sql)) {
+    die('Error: ' . mysql_error()); 
+}
 
-if (!mysqli_query($con,$sql))
-  {
-  die('Error: ' . mysqli_error($con));
-  }
-echo "1 record added";
-
-mysqli_close($con);
 ?>
