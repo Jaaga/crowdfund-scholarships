@@ -1,15 +1,15 @@
 <?php
-$con=mysqli_connect("localhost","root","dunno1726","LearnEmp");
+$con=mysqli_connect("localhost","root","123","LearnEmp");
 // Check connection
-echo "lol";
+
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 echo "its working";
-$sql=mysqli_query($con,"INSERT INTO student (fname, lname,gender,email,Phone_number,address,pincode,country,course,scholar_AMT,para,password)
+$sql="INSERT INTO student (fname, lname,gender,email,Phone_number,address,pincode,country,course,scholar_AMT,para,password)
 VALUES
-('$fname','$lname','$gender','$email','$Phone_number','$address', '$pincode', '$country', '$course','$scholar_AMT','$para','$password');
+('$_POST[fname]','$_POST[lname]','$_POST[gender]','$_POST[email]','$_POST[Phone_number]','$_POST[address]', '$_POST[pincode]', '$_POST[country]', '$_POST[course]','$_POST[scholar_AMT]','$_POST[para]','$_POST[password]')");
 
 
 

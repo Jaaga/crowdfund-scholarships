@@ -49,7 +49,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="First Name" class="form-control input-md" name="fname">
+  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" name="fname">
   
   </div>
 </div>
@@ -58,7 +58,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
-  <input id="textinput" type="text" placeholder="Last Name" class="form-control input-md" name="lname"> 
+  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" name="lname"> 
   </div>
 </div>
 
@@ -68,43 +68,19 @@
   <div class="col-md-4">
   <div class="radio">
     <label for="radios-0">
-      <input type="radio" id="radios-0" value="1" checked="checked" name="gender">
+      <input type="radio" id="gender-0" value="F" checked="checked" name="gender">
       Female
     </label>
 	</div>
   <div class="radio">
     <label for="radios-1">
-      <input type="radio" id="radios-1" value="2" name="gender">
+      <input type="radio" id="gender-1" value="M" name="gender">
       Male
     </label>
 	</div>
   </div>
 </div>
 
-<!-- Select Basic 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Select Basic:</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>-->
 
 <!-- Text input-->
 <div class="form-group">

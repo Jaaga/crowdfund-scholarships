@@ -90,7 +90,7 @@ while($row = mysqli_fetch_array($result))
   echo "<tr>";
   echo "<td>" . $row['fname'] . "</td>";
   echo "<td>" . $row['lname'] . "</td>";
-  echo "<td><a class='btn btn-primary' href='/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
+  echo "<td><a class='btn btn-primary' href='/work/crowdfund-scholarships/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
   echo "</tr>";
   }
 echo "</table>";
