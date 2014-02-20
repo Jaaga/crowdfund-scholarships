@@ -88,12 +88,14 @@ echo "<table border='1'>
 $link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
-  echo "<tr>";
+  echo '<tr><form method="POST" action="donate.php">';
+  echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
+  echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
   echo "<td><a href='".$link."' >" . $row['fname'] . "</a></td>";
   echo "<td>" . $row['lname'] . "</td>";
-  echo "<td><a class='btn btn-primary' href='/work/crowdfund-scholarships/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
-  echo "<td><input type=></td>"
-  echo "</tr>";
+  echo '<td><input type="text" name="amount"></td>';
+  echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
+  echo "</form></tr>";
   }
 echo "</table>";
 
