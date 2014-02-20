@@ -5,11 +5,13 @@
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
- $id1 = $_GET['id'];
- $id2 = $_GET['id2'];
+ $D_id = $_POST['D_id'];
+ $S_Id = $_POST['S_Id'];
+ $amount= $_POST['amount'];
+
 $sql=mysqli_query($con,"INSERT INTO donation (D_id,S_Id,date,amount)
   VALUES
-  ('$id1', '$id2',NOW(),25.22 )");
+  ('$D_id','$S_Id',NOW(),'$amount' )");
 
 
 if (!($con))
@@ -46,7 +48,7 @@ if (!($con))
 </body>
 </html>
 <?php
-  header("Refresh: 6;url='index.php'");
+  //header("Refresh: 6;url='index.php'");
 
 mysqli_close($con);
 
