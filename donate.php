@@ -48,7 +48,8 @@ if (!($con))
 </body>
 </html>
 <?php
-  //header("Refresh: 6;url='index.php'");
+$D_id=$_POST['D_id'];
+  header("Refresh: 6;url='Students_list.php?id=$D_id");
 
 mysqli_close($con);
 
