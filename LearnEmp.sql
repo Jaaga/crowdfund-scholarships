@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: LearnEmp
+-- Host: localhost    Database: test
 -- ------------------------------------------------------
 -- Server version	5.5.35-0ubuntu0.12.04.2
 
@@ -18,6 +18,9 @@
 --
 -- Table structure for table `donation`
 --
+
+Create Database LearnEmp;
+Use LearnEmp;
 
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -137,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-20 22:09:05
+-- Dump completed on 2014-02-26 17:40:21
