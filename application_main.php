@@ -176,7 +176,8 @@
   <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
   <div class="col-md-4"><form action="upload.php" method="post" enctype="multipart/form-data">
 <label for="file">Filename:</label>
-<input type="file" name="file" id="file"><br></form>
+<input type="file" name="file" id="file">
+<input type="submit" name="submit" value="Submit"></form>
 </div>
 </div>
 
