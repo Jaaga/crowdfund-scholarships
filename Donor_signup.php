@@ -70,7 +70,7 @@
 		<!--<div class="line"> <label for="lastname"> Last Name* : </label> <input type="text" id="lastname" /> </div>-->
 		<div class="line"> <label for="email"> Email : </label> <input type="email" id="email" name="email" /> </div>
 		<!--<div class="line"> <label for="cemai">Confirm Email: </label> <input type="email"id="cemail" /> </div>-->
-		<div class="line"> <label for="pwd"> Password* : </label> <input type="password" id="pwd" name="password"/> </div>
+		<div class="line"> <label for="pwd"> Password* : </label> <input type="password" id="password" name="password"/> </div>
 		<!--<div class="line"> <label for="cpwd"> Confirm Password*: </label> <input type="password" id="cpwd" /> </div>
 		<div class="line"> <label for="telephone"> Contact No: </label> <input type="text" id="telephone" /> </div>
 		<div class="line"> <label for="dob"> Date of Birth </label> <input type="text" id="dob" /> </div>

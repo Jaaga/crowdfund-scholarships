@@ -53,7 +53,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="#" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -71,8 +71,9 @@
 
 
 
-
-<div class="info">
+<div class="container">
+<div class="jumbotron" >
+<hr>
 <?php
                 
 
@@ -137,9 +138,8 @@ Jackman has won international recognition for his roles in major films, notably 
 
 
 		</div>
-			
-	</div>
-</div>
+	</div>		
+	
 <hr>
 <footer class="footer" align= "center">
   <nav>

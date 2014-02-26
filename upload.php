@@ -19,7 +19,7 @@ else
   {
   
 $temp=$_FILES["file"]['tmp_name'];
-  $pic="images/".$_FILES['file']['name'];
+  $pic="images/".$_FILES["file"]['name'];
   move_uploaded_file($temp,$pic);
 	
   }
