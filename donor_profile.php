@@ -1,17 +1,30 @@
 <?php
-                $con=mysqli_connect("localhost","root","123","LearnEmp");
-// Check connection
-         if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+        $con1 = mysql_connect("localhost","root","123") or die("Couldn't select DB");
+        $db = mysql_select_db("LearnEmp", $con1) or die("Couldn't select database."); 
 
-$D_id=$_GET['id'];
+        $con2 = mysql_connect("localhost","root","123") or die("Couldn't select DB"); 
+        $db = mysql_select_db("LearnEmp", $con2)  or die("Couldn't select database."); 
+       
+        $D_id=$_GET['id'];
 
-$sql=mysqli_query($con,"select S_Id from donation where D_id=$D_id");
+        $sql = "SELECT *  FROM donation where D_id = $D_id";                   
+        $sql_result=mysql_query($sql,$con1) or die("Couldn't execute query 1."); 
 
-echo $sql;
+        while($row1 = mysql_fetch_array($sql_result))                           
+        {
+           
+           $ident = $row1['S_Id'];
 
-mysqli_close($con);
+           
+           $query ="SELECT * FROM student WHERE S_ID=$ident";       
+           
+           $query_result = mysql_query($query,$con2) or die("Couldn't execute query 2.");  
+           while($row2 = mysql_fetch_array($query_result))                             
+           {
+              echo "<br>".$row2['fname'];      
+           }
+        }
 
-  ?>
+        mysql_close($connection1);
+        mysql_close($connection2);
+?>
