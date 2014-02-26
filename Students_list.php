@@ -35,11 +35,14 @@
           
           <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
+       
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="Donor_signup.html">Donors</a></li>
+            <li><a href="<?php $link_address='donor_profile.php?id='.$_GET['id'].'';
+
+                 echo $link_address;?>"> Donorprofile</a></li>
             <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
       <li><a href=></a></li> 

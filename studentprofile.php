@@ -39,6 +39,9 @@
 			border:2px solid black;
 			
 			}
+		.info {
+			top:50px;
+			}
 	</style>
 <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>	
@@ -63,8 +66,46 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
- 
- <div class="container">
+  
+
+
+
+
+
+<div class="info">
+<?php
+                
+
+$con=mysqli_connect("localhost","root","123","LearnEmp");
+// Check connection
+         if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$S_Id=$_GET['id'];
+$result = mysqli_query($con,"SELECT * FROM student where S_Id = $S_Id");
+while($row = mysqli_fetch_array($result))
+{
+echo "First Name: " . $row['fname'] . "<br>";
+echo "Last Name: " . $row['lname'] . "<br>";
+echo "gender: " . $row['gender'] . "<br>";
+echo "email: " . $row['email'] . "<br>";
+echo "Phone_Number: " . $row['Phone_Number'] . "<br>";
+echo "Address: " . $row['address'] . "<br>";
+echo "Pincode: " . $row['pincode'] . "<br>";
+echo "Country: " . $row['country'] . "<br>";
+echo "Course: " . $row['course'] . "<br>";
+echo "Scholarship Amount: " . $row['scholar_AMT'] . "<br>";
+echo "Note of Purpose: " . $row['para'] . "<br>";
+}
+
+mysqli_close($con);
+?>
+
+
+
+ <!--<div class="container">
 	<div class="row">
 		<div class="col-md-4">
 			<h2 style="margin:60px 0 10px 0">Hugh Jackman</h2>		
@@ -81,16 +122,16 @@
   				<div class="progress-bar progress-bar-warning" style="width: 50%">
     				<span class="sr-only">25% Complete (warning)</span>
   				</div>
-			</div><!--progrss class-->
+			</div><!--progrss class
 			<a href="#" style="bottom:10px">Click here to request student details</a><br>
 			<p><br>Hugh Michael Jackman (born 12 October 1968)[1] is an Australian actor and producer who is involved in film, musical theatre, and television.<br>
 Jackman has won international recognition for his roles in major films, notably as superhero, period, and romance characters. He is known for his long-running role as Wolverine in the X-Men film series, as well as for his leads in Kate & Leopold, Van Helsing, The Prestige, Australia, Real Steel, Les Misérables, and Prisoners. His work in Les Misérables earned him his first Academy Award nomination for Best Actor and his first Golden Globe Award for Best Actor in a Musical or Comedy in 2013. He is also a singer, dancer, and actor in stage musicals, and won a Tony Award for his role in The Boy from Oz.</p>
 <br>
 			<a href="#"> View Accomplishment Documents</a>
 			<hr>
-			<p class="req">Please enter your contribution and donate</p><br>
+			<p class="req">Please enter your contribution and donate</p><br> 
 			
-			<input type="text-box" class="donation-amount" placeholder="$"></input><a class="btn btn-danger btn-lg" role="button" style="margin-top:0px">Donate Now &raquo;</a>
+			<input type="text-box" class="donation-amount" placeholder="$"></input><a class="btn btn-danger btn-lg" role="button" style="margin-top:0px">Donate Now &raquo;</a>--> 
 
 
 
