@@ -22,7 +22,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -49,10 +49,10 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">First Name:</label> 
+  <label class="col-md-4  control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
 
-  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" >
+  <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" >
   
   </div>
 </div>
@@ -62,35 +62,24 @@
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
 
-  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
+  <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
 
   </div>
 </div>
 
-<!-- Text input-->
+
 <div class="form-group">
-  <!--<label class="col-md-4 control-label" for="gender">Gender</label>  
+  <label class="col-md-4 control-label" for="textinput">Gender</label>  
   <div class="col-md-4">
 
-  
-
-<div class="radio">
-<lable for="gender">
-Female <input id="gender" type="radio" value="F" class="form-control">
-
-</lable>
-</div>
-<div class="radio">
-<lable for="gender">
-Male <input id="gender" type="radio" value="M" class="form-control">
-
-</lable>
-</div>
-  </div>-->
 <input type="radio" name="sex" value="M" id="gender">Male<br>
 <input type="radio" name="sex" value="F" id="gender">Female
 
+
 </div>
+</div>
+
+
 
 
 <!-- Text input-->
@@ -183,13 +172,21 @@ Male <input id="gender" type="radio" value="M" class="form-control">
 
   </div>
 </div>
+<div class="form-group" align="center">
+  <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
+  <div class="col-md-4"><form action="upload.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file">
+<input type="submit" name="submit" value="Submit"></form>
+</div>
+</div>
 
 
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4" align="center">
-    <input id="singlebutton" type="submit" class="btn btn-success btn-lg">
+    <input id="singlebutton" type="submit" class="btn btn-success btn-lg" href="Students_list.php">
   </div>
 </div>
 

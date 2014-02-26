@@ -35,13 +35,17 @@
           
           <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
+       
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="Donor_signup.html">Donors</a></li>
+            <li><a href="<?php $link_address='donor_profile.php?id='.$_GET['id'].'';
+
+                 echo $link_address;?>"> Donorprofile</a></li>
             <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
+      <li><a href=></a></li> 
 <li><form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
@@ -54,7 +58,7 @@
     </div>
 
 
-	<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+	<a class="navbar-brand" href="./index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
 	<a class="navbar-brand" href="how.html">How it works!</a>
 
     <div class="container">
@@ -80,18 +84,27 @@ $result = mysqli_query($con,"SELECT * FROM student");
 
 echo "<table border='1'>
 <tr>
+<th>Read More</th>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>Action</th>
+<th>Amount<th>
 </tr>";
-
+$link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
-  echo "<tr>";
+  echo '<tr>';
+  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';  
+  echo '<form method="POST" action="donate.php">';
+  echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
+  echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
   echo "<td>" . $row['fname'] . "</td>";
   echo "<td>" . $row['lname'] . "</td>";
-  echo "<td><a class='btn btn-primary' href='/work/crowdfund-scholarships/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
-  echo "</tr>";
+  
+  echo '<td><input type="text" name="amount"></td>';
+  echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
+  echo "</form></tr>";
+
   }
 echo "</table>";
 
