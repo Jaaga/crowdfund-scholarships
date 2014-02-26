@@ -67,30 +67,19 @@
   </div>
 </div>
 
-<!-- Text input-->
+
 <div class="form-group">
-  <!--<label class="col-md-4 control-label" name="gender" for="gender">Gender</label>  
+  <label class="col-md-4 control-label" for="textinput">Gender</label>  
   <div class="col-md-4">
 
-  
-
-<div class="radio">
-<lable for="gender">
-Female <input id="gender" type="radio" value="F" class="form-control">
-
-</lable>
-</div>
-<div class="radio">
-<lable for="gender">
-Male <input id="gender" type="radio" value="M" class="form-control">
-
-</lable>
-</div>
-  </div>-->
 <input type="radio" name="sex" value="M" id="gender">Male<br>
 <input type="radio" name="sex" value="F" id="gender">Female
 
+
 </div>
+</div>
+
+
 
 
 <!-- Text input-->
@@ -182,6 +171,13 @@ Male <input id="gender" type="radio" value="M" class="form-control">
   <input id="scholar_AMT" type="text" placeholder="state the amount required" name="scholar_AMT" class="form-control input-md">
 
   </div>
+</div>
+<div class="form-group" align="center">
+  <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
+  <div class="col-md-4"><form action="upload.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br></form>
+</div>
 </div>
 
 
