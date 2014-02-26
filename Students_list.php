@@ -42,6 +42,7 @@
             <li><a href="Donor_signup.html">Donors</a></li>
             <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
+      <li><a href=></a></li> 
 <li><form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
@@ -80,6 +81,7 @@ $result = mysqli_query($con,"SELECT * FROM student");
 
 echo "<table border='1'>
 <tr>
+<th>Read More</th>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>Action</th>
@@ -88,14 +90,18 @@ echo "<table border='1'>
 $link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
-  echo '<tr><form method="POST" action="donate.php">';
+  echo '<tr>';
+  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';  
+  echo '<form method="POST" action="donate.php">';
   echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
   echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
-  echo "<td><a href='".$link."' >" . $row['fname'] . "</a></td>";
+  echo "<td>" . $row['fname'] . "</td>";
   echo "<td>" . $row['lname'] . "</td>";
+  
   echo '<td><input type="text" name="amount"></td>';
   echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
   echo "</form></tr>";
+
   }
 echo "</table>";
 

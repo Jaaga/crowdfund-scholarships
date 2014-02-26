@@ -22,7 +22,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -49,10 +49,10 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">First Name:</label> 
+  <label class="col-md-4  control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
 
-  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" >
+  <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" >
   
   </div>
 </div>
@@ -62,14 +62,14 @@
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
 
-  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
+  <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
 
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <!--<label class="col-md-4 control-label" for="gender">Gender</label>  
+  <!--<label class="col-md-4 control-label" name="gender" for="gender">Gender</label>  
   <div class="col-md-4">
 
   
