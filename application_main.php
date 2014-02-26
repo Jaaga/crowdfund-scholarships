@@ -185,7 +185,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4" align="center">
-    <input id="singlebutton" type="submit" class="btn btn-success btn-lg">
+    <input id="singlebutton" type="submit" class="btn btn-success btn-lg" href="Students_list.php">
   </div>
 </div>
 
