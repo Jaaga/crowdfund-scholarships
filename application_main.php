@@ -155,13 +155,6 @@
   </div>
 </div>
 
-<!-- for uploading any-file
-<div class="form-group">
-  <label class="col-md-4 control-label" for="file">Upload-Document:</label> 
-<div class="col-md-4">
-<input id="datafile" type="file" name="datafile" size="60">
-</div>
-</div>-->
 
 
 <!-- Text input-->
@@ -174,10 +167,9 @@
 </div>
 <div class="form-group" align="center">
   <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
-  <div class="col-md-4"><form action="upload.php" method="post" enctype="multipart/form-data">
-<label for="file">Filename:</label>
-<input type="file" name="file" id="file">
-<input type="submit" name="submit" value="Submit"></form>
+  <div class="col-md-4">
+<input type="file" name="image_path" id="image_path">
+
 </div>
 </div>
 
@@ -186,7 +178,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4" align="center">
-    <input id="singlebutton" type="submit" class="btn btn-success btn-lg" href="Students_list.php">
+    <input id="singlebutton" type="submit" class="btn btn-success btn-lg">
   </div>
 </div>
 

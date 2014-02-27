@@ -127,7 +127,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (2,'','','','rahulv@jaaga.iin',78987987,'Jaaga Farm',78945,'India','Jaaga',120000,'i am a software rockstar ','123123');
+
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
