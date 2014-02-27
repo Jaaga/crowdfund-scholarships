@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['email']))
+{
+header("location:index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,6 +59,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Search</button>
 </form></li>
+<a href="logout.php">Click Here to Logout</a> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
