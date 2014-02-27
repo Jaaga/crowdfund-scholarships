@@ -103,7 +103,9 @@ echo "Note of Purpose: " . $row['para'] . "<br>";
 
 mysqli_close($con);
 ?>
+<a href="<?php $link_address='student_dash.php?id='.$_GET['id'].'';
 
+                 echo $link_address;?>"> See Donors</a>
 
 
  <!--<div class="container">
