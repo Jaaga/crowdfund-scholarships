@@ -1,6 +1,10 @@
 <?php
 
+
+
+
 $con=mysqli_connect("localhost","root","123","LearnEmp");
+
 // Check connection
 if (mysqli_connect_errno())
   {
