@@ -37,11 +37,13 @@ $count=mysql_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
+session_start();
+$_SESSION['email']="$myusername";
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
-$_SESSION['usr']= "myusername";
-$_SESSION['pawd']="mypassword"; 
-header("location:Students_list.php?id=$D_id ");
+//$_SESSION['usr']= "myusername";
+//$_SESSION['pawd']="mypassword"; 
+header("location:Students_list.php?id=$D_id&id2=$myusername");
 }
 else {
 echo "Wrong Username or Password";
