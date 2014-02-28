@@ -40,7 +40,7 @@
 <div class="well">
 <fieldset>
 
-<form class="form-horizontal" action = "application.php" method="post" role="form">
+<form class="form-horizontal" action = "application.php" method="post" role="form" autocomplete="on" enctype="multipart/form-data">
 
 
 <!-- Form Name -->
@@ -72,8 +72,8 @@
   <label class="col-md-4 control-label" for="textinput">Gender</label>  
   <div class="col-md-4">
 
-<input type="radio" name="sex" value="M" id="gender">Male<br>
-<input type="radio" name="sex" value="F" id="gender">Female
+<input type="radio" name="gender" value="Male" id="gender" />Male<br>
+<input type="radio" name="gender" value="Female" id="gender" />Female
 
 
 </div>
@@ -151,7 +151,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea">Description of Course</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="para" placeholder ="Please describe why you want to take up the course. Prospective donors will be able to see this on your profile page" name="para"> </textarea>
+    <textarea name="para" class="form-control" id="para" placeholder ="Please describe why you want to take up the course. Prospective donors will be able to see this on your profile page" > </textarea>
   </div>
 </div>
 
@@ -168,7 +168,7 @@
 <div class="form-group" align="center">
   <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
   <div class="col-md-4">
-<input type="file" name="image_path" id="image_path">
+<input type="file" name="image">
 
 </div>
 </div>
