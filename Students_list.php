@@ -1,10 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION['email']))
-{
-header("location:index.php");
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,7 +53,7 @@ header("location:index.php");
   </div>
   <button type="submit" class="btn btn-primary">Search</button>
 </form></li>
-<a href="logout.php">Click Here to Logout</a> 
+<!--<a href="logout.php">Click Here to Logout</a> --> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -92,17 +86,21 @@ $result = mysqli_query($con,"SELECT * FROM student");
 
 echo "<table border='1'>
 <tr>
+
 <th>Read More</th>
+<th></th>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>Action</th>
 <th>Amount<th>
+
 </tr>";
 $link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
   echo '<tr>';
-  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';  
+  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';
+  echo '<td><img src="'.$row['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';  
   echo '<form method="POST" action="donate.php">';
   echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
   echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
@@ -125,11 +123,11 @@ mysqli_close($con);
   <nav>
     <ul>
 
-    <a href="index.html">Home </a>&nbsp | &nbsp 
-    <a href= "About.html">About </a>&nbsp | &nbsp 
-      <a href= "Contact.html">Contact </a>&nbsp | &nbsp
+    <a href="index.php">Home </a>&nbsp | &nbsp 
+    <a href= "About.php">About </a>&nbsp | &nbsp 
+      <a href= "Contact.php">Contact </a>&nbsp | &nbsp
       <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
-      <a href="Donor_signup.html">Donors </a>&nbsp | &nbsp 
+      <a href="Donor_signup.php">Donors </a>&nbsp | &nbsp 
 
     </ul>
   </nav> &nbsp &nbsp Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
