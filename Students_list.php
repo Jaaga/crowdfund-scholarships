@@ -123,11 +123,11 @@ mysqli_close($con);
   <nav>
     <ul>
 
-    <a href="index.html">Home </a>&nbsp | &nbsp 
-    <a href= "About.html">About </a>&nbsp | &nbsp 
-      <a href= "Contact.html">Contact </a>&nbsp | &nbsp
+    <a href="index.php">Home </a>&nbsp | &nbsp 
+    <a href= "About.php">About </a>&nbsp | &nbsp 
+      <a href= "Contact.php">Contact </a>&nbsp | &nbsp
       <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
-      <a href="Donor_signup.html">Donors </a>&nbsp | &nbsp 
+      <a href="Donor_signup.php">Donors </a>&nbsp | &nbsp 
 
     </ul>
   </nav> &nbsp &nbsp Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
