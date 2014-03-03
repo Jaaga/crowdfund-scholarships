@@ -51,6 +51,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
+
   <input id="fname" type="text" placeholder="First Name" class="form-control input-md" >
   
   </div>
@@ -60,7 +61,9 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
+
   <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
+
   </div>
 </div>
 
@@ -68,6 +71,9 @@
 <div class="form-group">
   <!--<label class="col-md-4 control-label" for="gender">Gender</label>  
   <div class="col-md-4">
+
+  
+
 <div class="radio">
 <lable for="gender">
 Female <input id="gender" type="radio" value="F" class="form-control">
@@ -83,32 +89,9 @@ Male <input id="gender" type="radio" value="M" class="form-control">
   </div>-->
 <input type="radio" name="sex" value="M" id="gender">Male<br>
 <input type="radio" name="sex" value="F" id="gender">Female
+
 </div>
 
-<!-- Select Basic 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Select Basic:</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	   <option value="1">Option one</option>
-      <option value="2">Option two</option>
-	  <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>-->
 
 <!-- Text input-->
 <div class="form-group">

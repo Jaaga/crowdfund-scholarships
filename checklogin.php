@@ -20,6 +20,10 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
 $sql="SELECT * FROM $tbl_name WHERE email='$myusername' and password='$mypassword'";
+if ($sql!==1)
+{
+	echo "wrong username";
+}
 //$sql1="SELECT D_id FROM $tbl_name WHERE email='$myusername' ";
 $result=mysql_query($sql);
 $row=mysql_fetch_array($result);

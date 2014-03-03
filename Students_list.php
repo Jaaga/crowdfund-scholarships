@@ -33,7 +33,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -54,7 +54,7 @@
     </div>
 
 
-	<a class="navbar-brand" href="./index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+	<a class="navbar-brand" href="./index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
 	<a class="navbar-brand" href="how.html">How it works!</a>
 
     <div class="container">
@@ -83,15 +83,19 @@ echo "<table border='1'>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>Action</th>
+<th>Amount<th>
 </tr>";
-
+$link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
-  echo "<tr>";
-  echo "<td>" . $row['fname'] . "</td>";
+  echo '<tr><form method="POST" action="donate.php">';
+  echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
+  echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
+  echo "<td><a href='".$link."' >" . $row['fname'] . "</a></td>";
   echo "<td>" . $row['lname'] . "</td>";
-  echo "<td><a class='btn btn-primary' href='/donate.php?id=" . $row['S_Id'] ."&id2=" . $_GET['id'] . "'>Donate Now</a></td>";
-  echo "</tr>";
+  echo '<td><input type="text" name="amount"></td>';
+  echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
+  echo "</form></tr>";
   }
 echo "</table>";
 

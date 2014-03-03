@@ -51,25 +51,14 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+         
           <a class="navbar-brand" href="#"></a> <!--INSERT LOGO HERE -->
 	<a class="navbar-brand" href="#">How it works!</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <!--<input type="text" placeholder="Email" class="form-control">-->
-            </div>
-            <div class="form-group">
-              <!--<input type="password" placeholder="Password" class="form-control">-->
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </form>
+          <div class="col md-4" align="right">
+          <a href="index.php" button class="btn btn-primary" style="font-family: verdana;">Sign-in</button></a>
+          </div>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
@@ -86,7 +75,7 @@
 		<div class="line"> <label for="telephone"> Contact No: </label> <input type="text" id="telephone" /> </div>
 		<div class="line"> <label for="dob"> Date of Birth </label> <input type="text" id="dob" /> </div>
 		<div class="line"> <label for="address"> Address : </label> <input type="text" id="address" /> </div>-->
-		<input type="submit">
+		<input type="submit" values="submit">
 	</form>
 </div>
 

@@ -65,7 +65,7 @@
 
             <!--<button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button>-->
 <input type="submit" name="submit" value="login"> 
-          &nbsp <a href="Donor_signup.html" button class="btn btn-primary" style="font-family: verdana;">Sign-up Now!!</button></a>
+          &nbsp <a href="Donor_signup.php" button class="btn btn-primary" style="font-family: verdana;">Sign-up Now!!</button></a>
 
           </form>
             
@@ -82,7 +82,7 @@
 
 </p>
         <p><a href="Students_list.php" class="btn btn-warning btn-lg" style="font-family: verdana;">Donate Now &raquo;</a>
-           <a href="application.php" class="btn btn-success btn-lg" style="font-family: verdana;">Student ? apply-here</a>
+           <a href="application_main.php" class="btn btn-success btn-lg" style="font-family: verdana;">Student ? apply-here</a>
 </p>
         
       </div>
