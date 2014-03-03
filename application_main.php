@@ -22,7 +22,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -40,7 +40,7 @@
 <div class="well">
 <fieldset>
 
-<form class="form-horizontal" action = "application.php" method="post" role="form">
+<form class="form-horizontal" action = "application.php" method="post" role="form" autocomplete="on" enctype="multipart/form-data">
 
 
 <!-- Form Name -->
@@ -49,10 +49,10 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">First Name:</label> 
+  <label class="col-md-4  control-label" for="textinput">First Name:</label> 
   <div class="col-md-4">
 
-  <input id="fname" type="text" placeholder="First Name" class="form-control input-md" >
+  <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" >
   
   </div>
 </div>
@@ -62,35 +62,24 @@
   <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
   <div class="col-md-4">
 
-  <input id="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
+  <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" > 
 
   </div>
 </div>
 
-<!-- Text input-->
+
 <div class="form-group">
-  <!--<label class="col-md-4 control-label" for="gender">Gender</label>  
+  <label class="col-md-4 control-label" for="textinput">Gender</label>  
   <div class="col-md-4">
 
-  
+<input type="radio" name="gender" value="Male" id="gender" />Male<br>
+<input type="radio" name="gender" value="Female" id="gender" />Female
 
-<div class="radio">
-<lable for="gender">
-Female <input id="gender" type="radio" value="F" class="form-control">
-
-</lable>
-</div>
-<div class="radio">
-<lable for="gender">
-Male <input id="gender" type="radio" value="M" class="form-control">
-
-</lable>
-</div>
-  </div>-->
-<input type="radio" name="sex" value="M" id="gender">Male<br>
-<input type="radio" name="sex" value="F" id="gender">Female
 
 </div>
+</div>
+
+
 
 
 <!-- Text input-->
@@ -162,17 +151,10 @@ Male <input id="gender" type="radio" value="M" class="form-control">
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea">Description of Course</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="para" placeholder ="Please describe why you want to take up the course. Prospective donors will be able to see this on your profile page" name="para"> </textarea>
+    <textarea name="para" class="form-control" id="para" placeholder ="Please describe why you want to take up the course. Prospective donors will be able to see this on your profile page" > </textarea>
   </div>
 </div>
 
-<!-- for uploading any-file
-<div class="form-group">
-  <label class="col-md-4 control-label" for="file">Upload-Document:</label> 
-<div class="col-md-4">
-<input id="datafile" type="file" name="datafile" size="60">
-</div>
-</div>-->
 
 
 <!-- Text input-->
@@ -182,6 +164,13 @@ Male <input id="gender" type="radio" value="M" class="form-control">
   <input id="scholar_AMT" type="text" placeholder="state the amount required" name="scholar_AMT" class="form-control input-md">
 
   </div>
+</div>
+<div class="form-group" align="center">
+  <label class="col-md-4 control-label" for="textinput">Upload Profile picture</label>  
+  <div class="col-md-4">
+<input type="file" name="image">
+
+</div>
 </div>
 
 

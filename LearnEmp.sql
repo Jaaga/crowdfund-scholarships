@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: LearnEmp
 -- ------------------------------------------------------
@@ -18,6 +18,8 @@
 --
 -- Table structure for table `donation`
 --
+CREATE DATABASE LearnEmp;
+USE LearnEmp;
 
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -61,7 +63,6 @@ CREATE TABLE `donor` (
 
 LOCK TABLES `donor` WRITE;
 /*!40000 ALTER TABLE `donor` DISABLE KEYS */;
-INSERT INTO `donor` VALUES (1,'Sushil','123123','sushil@jaaga.in');
 /*!40000 ALTER TABLE `donor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,7 +105,7 @@ CREATE TABLE `student` (
   `S_Id` int(11) NOT NULL AUTO_INCREMENT,
   `fname` varchar(20) DEFAULT NULL,
   `lname` varchar(20) DEFAULT NULL,
-  `gender` enum('M','F') NOT NULL,
+  `gender` varchar(20) DEFAULT NULL,
   `email` varchar(320) DEFAULT NULL,
   `Phone_Number` int(20) DEFAULT NULL,
   `address` varchar(60) DEFAULT NULL,
@@ -114,8 +115,9 @@ CREATE TABLE `student` (
   `scholar_AMT` int(20) DEFAULT NULL,
   `para` varchar(500) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
+  `image_path` blob,
   PRIMARY KEY (`S_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +126,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (2,'','','','rahulv@jaaga.iin',78987987,'Jaaga Farm',78945,'India','Jaaga',120000,'i am a software rockstar ','123123');
+
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -137,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-20 22:09:05
+-- Dump completed on 2014-02-27 18:27:12

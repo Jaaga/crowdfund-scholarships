@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,19 +36,24 @@
           
           <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
         </div>
+       
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="Donor_signup.html">Donors</a></li>
+            <li><a href="<?php $link_address='donor_profile.php?id='.$_GET['id'].'';
+
+                 echo $link_address;?>"> Donorprofile</a></li>
             <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
+      <li><a href=></a></li> 
 <li><form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
   </div>
   <button type="submit" class="btn btn-primary">Search</button>
 </form></li>
+<!--<a href="logout.php">Click Here to Logout</a> --> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -80,22 +86,31 @@ $result = mysqli_query($con,"SELECT * FROM student");
 
 echo "<table border='1'>
 <tr>
+
+<th>Read More</th>
+<th></th>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>Action</th>
 <th>Amount<th>
+
 </tr>";
 $link= './studentprofile.php';
 while($row = mysqli_fetch_array($result))
   {
-  echo '<tr><form method="POST" action="donate.php">';
+  echo '<tr>';
+  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';
+  echo '<td><img src="'.$row['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';  
+  echo '<form method="POST" action="donate.php">';
   echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
   echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
-  echo "<td><a href='".$link."' >" . $row['fname'] . "</a></td>";
+  echo "<td>" . $row['fname'] . "</td>";
   echo "<td>" . $row['lname'] . "</td>";
+  
   echo '<td><input type="text" name="amount"></td>';
   echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
   echo "</form></tr>";
+
   }
 echo "</table>";
 
@@ -108,11 +123,11 @@ mysqli_close($con);
   <nav>
     <ul>
 
-    <a href="index.html">Home </a>&nbsp | &nbsp 
-    <a href= "About.html">About </a>&nbsp | &nbsp 
-      <a href= "Contact.html">Contact </a>&nbsp | &nbsp
+    <a href="index.php">Home </a>&nbsp | &nbsp 
+    <a href= "About.php">About </a>&nbsp | &nbsp 
+      <a href= "Contact.php">Contact </a>&nbsp | &nbsp
       <a href="FAQ.html">Faq </a>&nbsp | &nbsp 
-      <a href="Donor_signup.html">Donors </a>&nbsp | &nbsp 
+      <a href="Donor_signup.php">Donors </a>&nbsp | &nbsp 
 
     </ul>
   </nav> &nbsp &nbsp Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>

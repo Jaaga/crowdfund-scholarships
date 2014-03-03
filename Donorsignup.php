@@ -14,6 +14,9 @@ if (!mysqli_query($con,$sql))
   {
   die('Error: ' . mysqli_error($con));
   }
+
+
+
   ?>
 
 
@@ -47,14 +50,25 @@ if (!mysqli_query($con,$sql))
 </html>
 
 <?php
-       
+       $host="localhost"; // Host name 
+$username="root"; // Mysql username 
+$password="123"; // Mysql password 
+$db_name="LearnEmp"; // Database name 
+$tbl_name="donor"; // Table name 
+
+// Connect to server and select databse.
+mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_select_db("$db_name")or die("cannot select DB");
+   
     
           $sql1="SELECT * FROM donor WHERE email='$_POST[email]' and password='$_POST[password]'";
-          $result=mysql_query($con,$sql1);
+          $result=mysql_query($sql1);
           $row=mysql_fetch_array($result);
+          
           $D_id=$row['D_id'];
    
           
+        
   //   $count=mysql_num_rows($result);
 
 

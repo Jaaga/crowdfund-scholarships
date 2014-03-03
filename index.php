@@ -126,7 +126,7 @@
   <nav>
     <ul>
 
-    <a href="index.html">Home </a>&nbsp | &nbsp 
+    <a href="index.php">Home </a>&nbsp | &nbsp 
     <a href= "About.html">About </a>&nbsp | &nbsp 
       <a href= "Contact.html">Contact </a>&nbsp | &nbsp
       <a href="FAQ.html">Faq </a>&nbsp | &nbsp 

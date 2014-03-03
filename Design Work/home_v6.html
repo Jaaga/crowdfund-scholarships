@@ -7,15 +7,18 @@
 <style type="text/css">
 body
 {
+background-color: #E8EDE0;
  padding-left: 50px;
   padding-right: 50px;
 }
+h2{
+text-align:center;}
 img {
   position: relative;
 }
 .pitch {
   position: absolute;
-   top: 80px;
+   top: 30px;
    left: 100px;
    right:100px;
    width: 100%;
@@ -26,9 +29,33 @@ img {
 }
 .container1{
 position: relative;
-left: 150px;
+
 padding-bottom: 50px;
 
+}
+.donatebutton {
+  position: absolute;
+  top: 350px;
+  left: 750px;
+}
+.studentbutton {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+
+}
+.buttontext {
+  position: absolute;
+  top:300px;
+  left: 300px;
+  color:black;
+}
+
+.buttontext2 {
+  position: absolute;
+  top:300px;
+  left: 650px;
+  color:black;
 }
 
 </style>
@@ -39,15 +66,17 @@ padding-bottom: 50px;
 <!-- This is the NAV BAR at the top of the page-->
  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
+	  
         <div class="navbar-header">
+		
           
-          <a class="navbar-brand" href="home_v3.html">Home</a>
+          <a class="navbar-brand" href="home_v3.html"><img src="./images/Logo.png" width="80px"></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="listofstudents.html">Sponsor</a></li>
+            <li><a href="listofstudents_v1.html">Sponsor</a></li>
             <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Keep UptoDate</a></li>
+            <li><a href="#">Keep Upto Date</a></li>
           </ul>
 		   <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
@@ -74,21 +103,31 @@ padding-bottom: 50px;
       <br>
     </br>
     </br>
+	<div class="container1" align="center">
 <div align="center">
 
 <img src="./images/jaaga-study1.png"/>
 <div class="pitch"><h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2></div>
 </div>
+<!-- Standard button -->
+<div class="buttontext"><h3>Apply for Scholarship</h3></div>
+<div class="studentbutton">
+  
+<a href="application.html"><button type="button" class="btn btn-primary btn-lg" align="center" style="background-color:#8b9dc3">Submit Profile</button></a> </div>
+<!-- Standard button -->
+<div class="buttontext2"><h3>View Scholarship Applications</h3></div>
+<div class="donatebutton">
+  <a href="listofstudents_v1.html"><button type="button" class="btn btn-primary btn-lg" align="center" style="background-color:black">View Profiles</button></a> </div>
 <!--FEATURED STUDENTS IS HERE-->
-<h1 style="text-align:center">Students recommended by Jaaga</h1>
+<!--<h1 style="text-align:center">Featured Students</h1>-->
 <hr>
 <div class="container1">
-
+	
      <!-- <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>-->
       <div class="row">
-        <div class="col-md-4"><img src="./images/profile1.jpg"></div>
-        <div class="col-md-4"><img src="./images/profile1.jpg"></div>
-        <div class="col-md-4"><img src="./images/profile1.jpg"></div>
+       <div class="col-md-4"><img src="./images/student01.jpg" style="height:200px; width:300px"></div>
+        <div class="col-md-4"><img src="./images/student02.jpg" style="height:200px; width:300px"></div>
+        <div class="col-md-4"><img src="./images/student03.jpg" style="height:200px; width:300px"></div>
       </div></div>
 
 
@@ -106,38 +145,35 @@ padding-bottom: 50px;
 
 <br>
 <!-- Standard button -->
-<button type="button" class="btn btn-success" style="margin-bottom:5px">More</button>  
+<!--<button type="button" class="btn btn-success" style="margin-bottom:5px">More</button>  -->
   </div>
   <div class="col-lg-4">
 <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
 <br><h3>STUDENT BENEFITS FROM YOUR LOAN</h3>
 <p>You as a donor choose the candidate you would like to sponsor.The student utilizes the loan for paying his/her academic fee and other basic necessities.</p>
   <br><br><!-- Standard button -->
-<button type="button" class="btn btn-success" style="margin-bottom:5px">More</button></div>
+<!--<button type="button" class="btn btn-success" style="margin-bottom:5px">More</button>--></div>
   <div class="col-lg-4"><img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> <br><h3>STUDENT PAYS IT FORWARD</h3>
   <p>The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process where the student once graduated and starts earning, gets an option to sponsor another student. </p>
   <br>
   <!-- Standard button -->
-<button type="button" class="btn btn-success" style="margin-bottom:5px" >More</button></div>
+<!--<button type="button" class="btn btn-success" style="margin-bottom:5px" >More</button>--></div>
  
 </div>
 </div>
 <hr>
 
- <div class="container">
-  <div class="row">
-    
-
-
-
-    <div class="col-lg-12">
+ <div class="container1">
+  <!--<div class="row">
+    -->
+    <div class="col-lg-12" style="text-align:center">
       <h1 class="faq-head" align="center" id="faq">There's More!</h1>
     </div>
   </div>
   <hr>
   <div class="row">
-    <div class="col-md-8" style="text-align:center">
-      <article class="faq-content" style="text-align:center">
+    <div style="text-align:right">
+      <article class="faq-content" align="right" style="text-align:justified">
         <h2>How does LearnEmp work?</h2>
         <p>LearnEmp is a social crowdfunding platform for students who cannot afford higher education in a required university or course.LearnEmp enables donor to check a student's potential and accomplishments and make a contribution in order to help and empower the student.</p>
         <hr>
@@ -150,7 +186,7 @@ padding-bottom: 50px;
       </article>
     </div>
       
-  </div><!--row class ending here-->
+  <!--</div>--><!--row class ending here-->
     
 </div><!--container div closing here-->
 <hr id="about">
@@ -208,7 +244,7 @@ padding-bottom: 50px;
 
   
 
- <div class="container">
+ <div class="container1">
   <div class="row">
     
 
@@ -220,7 +256,7 @@ padding-bottom: 50px;
   </div>
   <hr>
   <div class="row">
-    <div class="col-md-8">
+  
       <article class="faq-content">
         <h2>The Team</h2>
         <p>Founded in January 2014, LearnEmp comprises eight individuals from across India who are passionate about learning and sharing knowledge and skills. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the play field by providing opportunities to students who do not have the means to pursue higher education due to lack of funding. </p>
@@ -228,12 +264,37 @@ padding-bottom: 50px;
         <!--<h2>The Team</h2>
         <p> fjlkdsfj</p>
         <hr>-->
-        <h2>Get Involved</h2>
-        <p>After you've sponsored your first student, we would like you to stay involved with us by keeping in touch through <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter. </a>If you would like to put in some hours volunteering with our organization, feel free to drop an email at volunteer@learnemp.com.</p>
+       <!-- <h2>Get Involved</h2>
+        <p>After you've sponsored your first student, we would like you to stay involved with us by keeping in touch through 
+		<a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
+		</a>If you would like to put in some hours volunteering with our organization, feel free to drop an email at volunteer@learnemp.com.</p>-->
         
-      </article>
-    </div>
-       <div class="col-md-4">
+		<div align="center">  <img src="./images/stephanie1.jpg" style="height:100px" alt="" class="img-rounded">
+
+        <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="" class="img-rounded">
+
+        
+
+        <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="" class="img-rounded">
+
+        <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="" class="img-rounded">
+
+        <hr>
+
+        <img src="./images/vaibhav.jpg" style="height:100px"  alt="" class="img-rounded" >
+
+        <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="" class="img-rounded">
+
+
+
+  <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="" class="img-rounded" >
+
+        <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="" class="img-rounded">
+
+        <hr></div>
+     </article>
+    
+      <!-- <div class="col-md-4" align="right">
         
         <img src="./images/stephanie1.jpg" style="height:100px" alt="" class="img-rounded">
 
@@ -252,7 +313,7 @@ padding-bottom: 50px;
         <img src="./images/Sai.jpg" style="height:100px" alt="" class="img-rounded">
 
         <hr>
-
+	
   <img src="./images/RJ.JPG" style="height:100px" alt="" class="img-rounded" >
 
         <img src="./images/sujay.jpg" style="height:100px" alt="" class="img-rounded">
@@ -264,7 +325,7 @@ padding-bottom: 50px;
 
       
   </div><!--row class ending here-->
-  <hr id="#contact">
+ <!-- <hr id="#contact">-->
     
 
 
@@ -289,17 +350,26 @@ padding-bottom: 50px;
 
     <div class="container">
 
-      <div class="starter-template">
-        <h1 align="center">Get in Touch</h1>
+      <!--<div class="starter-template" align="center">-->
+        
+<h2>Get Involved</h2>
+		<p style="text-align:justified">After you've sponsored your first student, we would like you to stay involved with us by keeping in touch through 
+		<a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
+		</a>If you would like to put in some hours volunteering with our organization, feel free to drop an email at volunteer@learnemp.com.</p>
+		</div>
+</div>	
+  <div class="container">
+
   <p align="center"> 
+  <h2 align="center">Get in Touch</h2>
   1, Penthouse 01<br>
   Rich Homes<br>
   Richmond Road<br>
   Bangalore - 560025<br>
   INDIA<br>
   </p>
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=jaaga+penthouse,+bangalore&amp;aq=&amp;sll=12.964423,77.599365&amp;sspn=0.006451,0.009892&amp;ie=UTF8&amp;hq=jaaga+penthouse,&amp;hnear=Bangalore,+Bangalore+Urban,+Karnataka&amp;ll=12.96571,77.600168&amp;spn=0.012902,0.019784&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=3203272073091932272&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=jaaga+penthouse,+bangalore&amp;aq=&amp;sll=12.964423,77.599365&amp;sspn=0.006451,0.009892&amp;ie=UTF8&amp;hq=jaaga+penthouse,&amp;hnear=Bangalore,+Bangalore+Urban,+Karnataka&amp;ll=12.96571,77.600168&amp;spn=0.012902,0.019784&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=3203272073091932272" style="color:#0000FF;text-align:left">View Larger Map</a></small>        
-</div>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=jaaga+penthouse,+bangalore&amp;aq=&amp;sll=12.964423,77.599365&amp;sspn=0.006451,0.009892&amp;ie=UTF8&amp;hq=jaaga+penthouse,&amp;hnear=Bangalore,+Bangalore+Urban,+Karnataka&amp;ll=12.96571,77.600168&amp;spn=0.012902,0.019784&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=3203272073091932272&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=jaaga+penthouse,+bangalore&amp;aq=&amp;sll=12.964423,77.599365&amp;sspn=0.006451,0.009892&amp;ie=UTF8&amp;hq=jaaga+penthouse,&amp;hnear=Bangalore,+Bangalore+Urban,+Karnataka&amp;ll=12.96571,77.600168&amp;spn=0.012902,0.019784&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=3203272073091932272" style="color:#0000FF;text-align:left" align="right">View Larger Map</a></small>        
+
 
     </div><!-- /.container -->
 <hr>
