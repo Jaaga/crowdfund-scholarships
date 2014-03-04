@@ -20,7 +20,7 @@
     <title>Crowd Funding Scholarships</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
     
 
     <!-- Custom styles for this template -->
