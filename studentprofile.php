@@ -88,6 +88,7 @@ $S_Id=$_GET['id'];
 $result = mysqli_query($con,"SELECT * FROM student where S_Id = $S_Id");
 while($row = mysqli_fetch_array($result))
 {
+echo '<img src="'.$row['image_path'].'" ALT="some text" WIDTH=150 HEIGHT=150><br>';  
 echo "First Name: " . $row['fname'] . "<br>";
 echo "Last Name: " . $row['lname'] . "<br>";
 echo "gender: " . $row['gender'] . "<br>";

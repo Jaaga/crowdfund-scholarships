@@ -1,8 +1,4 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,7 +86,13 @@
 
         $sql = "SELECT *  FROM donation where D_id = $D_id";                   
         $sql_result=mysql_query($sql,$con1) or die("Couldn't execute query 1."); 
-
+        
+        echo "<table border='1'>
+               <tr>
+               <th></th>
+               <th>Student Name</th>
+               <th>Amount Recieved</th>
+               </tr>";
         while($row1 = mysql_fetch_array($sql_result))                           
         {
            
@@ -102,22 +104,20 @@
            $query ="SELECT * FROM student WHERE S_ID=$S_Id";       
            
            $query_result = mysql_query($query,$con2) or die("Couldn't execute query 2.");  
-           echo "<table border='1'>
-<tr>
-<th>Student Name</th>
-<th>Amount Recieved</th>
-</tr>";
+           
 
            while($row2 = mysql_fetch_array($query_result))                             
            {
 
               echo "<tr>";
+              echo '<td><img src="'.$row2['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';
               echo '<td>'.$row2['fname'].'</td>';
               echo '<td>'.$row1['amount'].'</td>';
               echo "</tr>";      
            }
-           echo "</table>";
+           
         }
+        echo "</table>";
 
         mysql_close($connection1);
         mysql_close($connection2);
