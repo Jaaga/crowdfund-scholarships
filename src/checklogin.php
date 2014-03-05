@@ -1,7 +1,9 @@
 <?php
 
-include("dbcon.php");
-
+include 'dbcon.php';
+dbopen();
+$tbl_name ="donor";
+//mysql_select_db("$db_name")or die("cannot select DB");
 // username and password sent from form 
 $myusername=$_POST['email']; 
 $mypassword=$_POST['pass']; 

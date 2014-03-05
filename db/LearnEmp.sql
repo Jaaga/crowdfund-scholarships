@@ -18,13 +18,14 @@
 --
 -- Table structure for table `donation`
 --
-
+create database LearnEmp;
+use LearnEmp;
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `donation` (
   `D_id` int(20) DEFAULT NULL,
-  `S_Id` int(11) DEFAULT NULL,
+  `S_id` int(20) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `amount` decimal(15,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -74,14 +75,14 @@ DROP TABLE IF EXISTS `scholarship`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `scholarship` (
-  `SC_Id` int(11) NOT NULL,
+  `SC_id` int(20) NOT NULL auto_increment,
   `image` varchar(300) DEFAULT NULL,
   `description` text,
   `scholar_amt` int(20) DEFAULT NULL,
-  `S_Id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`SC_Id`),
-  KEY `S_Id` (`S_Id`),
-  CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_Id`) REFERENCES `student` (`S_Id`)
+  `S_id` int(20) DEFAULT NULL,
+  PRIMARY KEY (`SC_id`),
+  KEY `S_id` (`S_id`),
+  CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
