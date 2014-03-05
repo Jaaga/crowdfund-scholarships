@@ -20,12 +20,7 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysql_real_escape_string($myusername);
 $mypassword = mysql_real_escape_string($mypassword);
 $sql="SELECT * FROM $tbl_name WHERE email='$myusername' and password='$mypassword'";
-if ($sql!==1)
-{
-	echo " Please Login";
-header("Refresh: 4;url=index.php");
-}
-else
+
 //$sql1="SELECT D_id FROM $tbl_name WHERE email='$myusername' ";
 $result=mysql_query($sql);
 $row=mysql_fetch_array($result);
@@ -45,7 +40,7 @@ $_SESSION['email']="$myusername";
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 //$_SESSION['usr']= "myusername";
 //$_SESSION['pawd']="mypassword"; 
-header("location:Students_list.php?id=$D_id&id2=$myusername");
+header("location:../public/Students_list.php?id=$D_id");
 }
 else {
 echo "Wrong Username or Password";
