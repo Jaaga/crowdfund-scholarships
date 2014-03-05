@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: LearnEmp
 -- ------------------------------------------------------
@@ -18,8 +18,6 @@
 --
 -- Table structure for table `donation`
 --
-CREATE DATABASE LearnEmp;
-USE LearnEmp;
 
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -38,6 +36,7 @@ CREATE TABLE `donation` (
 
 LOCK TABLES `donation` WRITE;
 /*!40000 ALTER TABLE `donation` DISABLE KEYS */;
+INSERT INTO `donation` VALUES (0,7,'2014-02-28 05:47:03',3000.00),(0,7,'2014-02-28 05:48:45',2000.00),(3,7,'2014-02-28 05:49:41',0.00),(0,8,'2014-02-28 05:54:17',25000.00);
 /*!40000 ALTER TABLE `donation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +53,7 @@ CREATE TABLE `donor` (
   `password` varchar(20) DEFAULT NULL,
   `email` varchar(320) DEFAULT NULL,
   PRIMARY KEY (`D_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,6 +62,7 @@ CREATE TABLE `donor` (
 
 LOCK TABLES `donor` WRITE;
 /*!40000 ALTER TABLE `donor` DISABLE KEYS */;
+INSERT INTO `donor` VALUES (2,'manoj kumar','123','manrox.drag@gmail.com'),(3,'raj','123','rajkundra@yahoo.com');
 /*!40000 ALTER TABLE `donor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `student` (
-  `S_Id` int(11) NOT NULL AUTO_INCREMENT,
+  `S_id` int(20) NOT NULL AUTO_INCREMENT,
   `fname` varchar(20) DEFAULT NULL,
   `lname` varchar(20) DEFAULT NULL,
   `gender` varchar(20) DEFAULT NULL,
@@ -116,8 +116,8 @@ CREATE TABLE `student` (
   `para` varchar(500) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   `image_path` blob,
-  PRIMARY KEY (`S_Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`S_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-
+INSERT INTO `student` VALUES (7,'manoj','kumar','Male','manroxd@yahoo.com',2147483647,'wilson garden',560030,'india','jaaga study',25000,'hfkjkfj;sjfjsfj ','123','images/'),(8,'abhishek','bachan','Male','bachan@amithabh.com',9999999,'mumbai',777777,'india','jaaga study',30000,'jhhjdvhihvdhp ','123','images/ar490abhishek-bachchan.jpg');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -139,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-02-27 18:27:12
+-- Dump completed on 2014-03-05  5:02:39
