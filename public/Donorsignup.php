@@ -8,7 +8,7 @@ dbopen();
 
 //dbopen();
 
-donorsignup();
+donorsignup($_POST['name'],$_POST['password'],$_POST['email']);
 close();
 
   ?>

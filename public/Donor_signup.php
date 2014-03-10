@@ -64,7 +64,7 @@
     </div>
 
 <div id="container">
-	<form action = "../public/Donorsignup.php" method="post">
+	<form action = "Donorsignup.php" method="post">
 		<h2 style="margin:60px 0 10px 0">Donor Signup Form</h2>
 		<div class="line"> <label for="firstname"> First Name* : </label> <input type="text" id="firstname" name="name"/> </div>
 		<!--<div class="line"> <label for="lastname"> Last Name* : </label> <input type="text" id="lastname" /> </div>-->
