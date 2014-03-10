@@ -1,4 +1,4 @@
-
+<?php include 'Donorsignup.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,7 +75,10 @@
 		<div class="line"> <label for="telephone"> Contact No: </label> <input type="text" id="telephone" /> </div>
 		<div class="line"> <label for="dob"> Date of Birth </label> <input type="text" id="dob" /> </div>
 		<div class="line"> <label for="address"> Address : </label> <input type="text" id="address" /> </div>-->
-		<input type="submit" values="submit">
+		<br>
+    <input type="submit" values="submit" >
+    
+
 	</form>
 </div>
 
