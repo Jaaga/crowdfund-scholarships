@@ -1,0 +1,154 @@
+/* Style for Home Page */
+
+body{
+	background-color: #E8EDE0;
+	padding-left: 50px;
+  	padding-right: 50px;
+	}
+	h2{
+	text-align:center;
+	}
+	img {
+  	position: relative;
+	}
+	.pitch {
+	position: absolute;
+	top: 30px;
+	left: 100px;
+	right:100px;
+	width: 100%;
+	margin: 0 auto;
+	width: 1000px;
+	height: 50px;
+	color: white;
+	}
+
+	.container1{
+	position: relative;
+
+	padding-bottom: 50px;
+
+	}
+
+	.donatebutton {
+  	position: absolute;
+  	top: 350px;
+  	left: 750px;
+	}
+
+	.studentbutton {
+  	position: absolute;
+  	top: 350px;
+  	left: 350px;
+	}
+
+	.buttontext {
+  	position: absolute;
+  	top:300px;
+  	left: 300px;
+  	color:white;
+	}
+
+	.buttontext2 {
+  	position: absolute;
+  	top:300px;
+  	left: 650px;
+  	color:white;
+	}
+
+
+	.student-pic {
+      height:550px;
+      }
+    .donation-amount {
+      width:100px;
+      display:inline;
+      }
+    .donation {
+      font-size:15pt;
+      display:inline;
+      }
+    .student-pic {
+      border:2px solid black;
+      
+      }
+    .col-lg-12 {
+      position:relative;
+      margin-top:40px;
+      text-align:center;
+      
+      }
+
+    .faq-head {
+      /*font-family: 'Stint Ultra Expanded', cursive;*/
+      font-size:45px;
+      }
+    .faq-content {
+      max-width:800px;
+      text-align:justify;
+      margin:0 auto;
+      
+      }
+
+
+/* Style for StudentDashboard */
+
+    .viewprofile{
+    
+    margin-top:20px;
+    float:right;
+    
+    
+    }
+
+    #bg{
+      background:url('../images/images/crowd_n.jpg');
+      height: 500px;
+      border: 5px solid #000;
+      margin-top: 90px;
+    }
+    .sponsor_data{
+      color:white;
+      text-shadow: black 0.2em 0.2em 0.2em;
+    }
+
+    .edit{
+      float:right;
+    }
+    
+    
+
+    .body{
+      background:url('./images/bg_image.png');
+      margin: 0;
+        background-size: 1440px 800px;
+      background-repeat:no-repeat;
+      display: compact;
+      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #prework{
+      margin-top:50px;
+    }
+
+    .dashboard{
+
+      float:right;
+    }
+
+    form{
+      display:inline;
+
+  /* Style for StudentProfile */
+
+  .col-md-3{
+  padding-left: 60px;
+  }
+
+  .icons{
+  position: absolute;
+  top: 130px;
+  right: 100px;
+  }
+.workstatus{
+  text-align: center;}
