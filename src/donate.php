@@ -49,7 +49,7 @@ if (!($con))
 </html>
 <?php
 $D_id=$_POST['D_id'];
-  header("Refresh: 4;url='Students_list.php?id=$D_id");
+  header("Refresh: 4;url='../public/Students_list.php?id=$D_id");
 
 mysqli_close($con);
 

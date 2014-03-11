@@ -95,15 +95,6 @@
 //$link= './studentprofile.php';
 //while($row = mysqli_fetch_array($result))
   {
-  //echo '<tr>';
-  //echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';
- // echo '<td><img src="'.$row['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';  
-  //echo '<form method="POST" action="donate.php">';
-  //echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
-  //echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
-  //echo "<td>" . $row['fname'] . "</td>";
-  //echo "<td>" . $row['lname'] . "</td>";
-  
  // echo '<td><input type="text" name="amount"></td>';
   //echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
   //echo "</form></tr>";
