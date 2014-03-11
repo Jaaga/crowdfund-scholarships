@@ -13,6 +13,6 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
 
 function close(){
-	mysqli_close($con);
+	mysqli_close();
 	}
 ?>

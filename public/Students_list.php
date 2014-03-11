@@ -1,4 +1,7 @@
-
+<?php
+                                  include '../src/dbcon.php';
+                                  include '../src/student.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -73,49 +76,43 @@
           </p>
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
-                                <?php
-                $con=mysqli_connect("localhost","root","123","LearnEmp");
-// Check connection
-         if (mysqli_connect_errno())
+                                                                  dbopen();
+                                  studentlist();
+
+                                ?>
+                               <!-- <?php             
+//echo "<table border='1'>
+//<tr>
+
+//<th>Read More</th>
+//<th></th>
+//<th>Firstname</th>
+//<th>Lastname</th>
+//<th>Action</th>
+//<th>Amount<th>
+
+//</tr>";
+//$link= './studentprofile.php';
+//while($row = mysqli_fetch_array($result))
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-
-$result = mysqli_query($con,"SELECT * FROM student");
-
-echo "<table border='1'>
-<tr>
-
-<th>Read More</th>
-<th></th>
-<th>Firstname</th>
-<th>Lastname</th>
-<th>Action</th>
-<th>Amount<th>
-
-</tr>";
-$link= './studentprofile.php';
-while($row = mysqli_fetch_array($result))
-  {
-  echo '<tr>';
-  echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';
-  echo '<td><img src="'.$row['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';  
-  echo '<form method="POST" action="donate.php">';
-  echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
-  echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
-  echo "<td>" . $row['fname'] . "</td>";
-  echo "<td>" . $row['lname'] . "</td>";
+  //echo '<tr>';
+  //echo '<td><a class="btn btn-danger" href="studentprofile.php?id='.$row['S_Id'].'">Read more</a></td>';
+ // echo '<td><img src="'.$row['image_path'].'" ALT="some text" WIDTH=50 HEIGHT=50></td>';  
+  //echo '<form method="POST" action="donate.php">';
+  //echo '<input type="hidden" name="D_id" value="' . $_GET['id'] . '">';
+  //echo '<input type="hidden" name="S_Id" value='.$row['S_Id'].'>';
+  //echo "<td>" . $row['fname'] . "</td>";
+  //echo "<td>" . $row['lname'] . "</td>";
   
-  echo '<td><input type="text" name="amount"></td>';
-  echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
-  echo "</form></tr>";
+ // echo '<td><input type="text" name="amount"></td>';
+  //echo '<td><input type="submit" value="Donate" class="btn btn-primary"></td>';
+  //echo "</form></tr>";
 
   }
-echo "</table>";
+//echo "</table>";
 
-mysqli_close($con);
-?>
+//mysqli_close($con);
+?> -->
           </div>
           
 <hr>
