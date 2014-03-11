@@ -13,6 +13,7 @@ if(!mysql_query($sql))
 	die('Error' .mysql_error());
 }
 
+}
 
 function getDonation(){
 
@@ -20,9 +21,8 @@ function getDonation(){
     $result=mysqli_query($sql);
 	$row=mysqli_fetch_array($result);
 
-	for ($row=0)
 }
 
 
-}
+
 ?>
