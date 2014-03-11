@@ -18,7 +18,7 @@ if(!mysql_query($sql))
 //}
 }
 
-function donations($fname,$amount) {
+function donations($D_id) {
 	$con1 = mysql_connect("localhost","root","123") or die("Couldn't select DB");
         $db = mysql_select_db("LearnEmp", $con1) or die("Couldn't select database."); 
 

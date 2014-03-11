@@ -76,7 +76,7 @@
 <?php
         include '../src/donor.php';
         dbopen();
-        donations($POST['fname'],$POST['amount']);
+        donations($POST['D_id'], $POST['S_Id']);
         close();
         
 ?>
