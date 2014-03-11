@@ -9,8 +9,8 @@ dbopen();
 //dbopen();
 
 donorsignup($_POST['name'],$_POST['password'],$_POST['email']);
-close();
 
+close();
   ?>
 
 
@@ -43,3 +43,10 @@ close();
 </body>
 </html>
 
+<?php
+dbopen();
+getId($_POST['email'],$_POST['password']);
+header("Refresh: 2;url='Students_list.php?id=$D_id");
+
+close();
+?>
