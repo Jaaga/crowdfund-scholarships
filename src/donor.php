@@ -28,15 +28,18 @@ function donations($D_id) {
         $db = mysql_select_db("LearnEmp", $con2)  or die("Couldn't select database."); 
 
 
+
+}
+
+
 function getDonation(){
 
 	$sql="SELECT * from donation inner join student on donation.D_id=$D_id && donation.S_id=student.S_id";
     $result=mysqli_query($sql);
 	$row=mysqli_fetch_array($result);
 
-	for ($row=0)
 }
 
 
-}
+
 ?>

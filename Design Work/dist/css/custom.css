@@ -101,12 +101,7 @@ body{
     
     }
 
-    #bg{
-      background:url('../images/images/crowd_n.jpg');
-      height: 500px;
-      border: 5px solid #000;
-      margin-top: 90px;
-    }
+    
     .sponsor_data{
       color:white;
       text-shadow: black 0.2em 0.2em 0.2em;
