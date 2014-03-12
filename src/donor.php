@@ -13,7 +13,7 @@ if(!mysql_query($sql))
 	die('Error' .mysql_error());
 }
 
-<<<<<<< HEAD
+
 //if (!mysqli_query($con,$sql))
   //{
   //die('Error: ' . mysqli_error($con));
@@ -26,8 +26,7 @@ function donations($D_id) {
 
         $con2 = mysql_connect("localhost","root","123") or die("Couldn't select DB"); 
         $db = mysql_select_db("LearnEmp", $con2)  or die("Couldn't select database."); 
-=======
->>>>>>> 06c858ac91aa79774c4ef3cb22fb46020b124395
+
 
 function getDonation(){
 
