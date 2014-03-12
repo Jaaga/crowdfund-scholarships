@@ -1,4 +1,6 @@
 <?php
+
+
 function dbopen(){
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
@@ -15,4 +17,6 @@ mysql_select_db("$db_name")or die("cannot select DB");
 function close(){
 	mysqli_close();
 	}
+
+
 ?>

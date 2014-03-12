@@ -1,7 +1,8 @@
 <?php
 
-include 'dbcon.php';
+include './dbcon.php';
 dbopen();
+
 $tbl_name ="donor";
 //mysql_select_db("$db_name")or die("cannot select DB");
 // username and password sent from form 
@@ -34,7 +35,7 @@ $_SESSION['email']="$myusername";
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 //$_SESSION['usr']= "myusername";
 //$_SESSION['pawd']="mypassword"; 
-header("location:../public/Students_list.php?id=$D_id");
+header("./public/Students_list.php?id=$D_id");
 }
 else {
 echo "Wrong Username or Password";
