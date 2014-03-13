@@ -120,6 +120,8 @@ body{
       background-repeat:no-repeat;
       display: compact;
       font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
     }
 
     #prework{
@@ -133,6 +135,14 @@ body{
 
     form{
       display:inline;
+    }
+
+    #student_dash{
+     background:url('./images/crowd_n.jpg');
+      height: 500px;
+      margin-top: 90px;
+      
+    }
 
   /* Style for StudentProfile */
 
