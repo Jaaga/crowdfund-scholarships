@@ -1,7 +1,4 @@
-<?php
-                                  include '../src/dbcon.php';
-                                  include '../src/student.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,9 +24,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>	
-	<link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
+
   </head>
 
   <body>
@@ -44,9 +39,9 @@
           <ul class="nav navbar-nav">
 		   
             <li><a href="how.html">How it Works</a></li>
-            <li><a href="<?php $link_address='donor_profile.php?id='.$_GET['id'].'';
+            <!--<li><a href="<?php $link_address//='donor_profile.php?id='.$_GET['id'].'';
 
-                 echo $link_address;?>"> Donorprofile</a></li>
+                // echo $link_address;?>"> Donorprofile</a></li> -->
             <li><a href="About.html">About</a></li>
 			<li><a href="Contact.html">Contact</a></li>
       <li><a href=></a></li> 
@@ -76,11 +71,15 @@
           </p>
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
-                                                                  dbopen();
-                                  studentlist();
 
-                                ?>
-                               <!-- <?php             
+            <?php
+                 include '../src/dbcon.php';
+                 include '../src/student.php';
+              dbopen();
+               studentlist();
+                  echo $row['S_id'];
+                  echo $row['fname'];
+             ?>                   <!-- <?php             
 //echo "<table border='1'>
 //<tr>
 
