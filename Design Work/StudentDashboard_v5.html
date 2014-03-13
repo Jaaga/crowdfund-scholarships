@@ -3,8 +3,10 @@
 <head>
 	<title>Student Dashboard</title>
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
 	<link href="./dist/css/slider.css" rel="stylesheet">
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+  
 
 	<style>
 		body{
@@ -21,9 +23,15 @@ background-repeat:repeat;
 	#student_dash{
      background:url('./images/student.jpg');
       
-      margin-top: 15px;
-      
+      margin-top: -3px;
     }
+
+    .profilename{
+
+      font-family:'Cabin Sketch' cursive;
+      font-size: 40px;
+    }
+
     
 	</style>
 </head>
@@ -65,9 +73,9 @@ background-repeat:repeat;
     	<div class="row">
         	<div class="col-md-4">
 		
-				<div class="profilename">
-					<h3 align="left"> Welcome Vaibhav !</h3>
-				</div>
+				
+					<h3 class="profilename" align="left" style="font-family:'Cabin Sketch' cursive;"> Welcome Vaibhav !</h3>
+			
 
 				<br>
 
@@ -164,11 +172,11 @@ background-repeat:repeat;
 				
 				<div class="viewprofile">
    					<form action="studentprofile_v7.html">
-       					<button type="submit" class="btn btn-success" style="font-family: verdana;">&nbsp&nbsp&nbspView Profile&nbsp&nbsp&nbsp</button>
+       					<button type="submit" class="btn btn-info" style="font-family: verdana;">&nbsp&nbsp&nbspView Profile&nbsp&nbsp&nbsp</button>
        				</form>
        				<form action="application.html">
 
-       					<button type="submit" class="btn btn-success" style="font-family: verdana;">Edit Application</button>
+       					<button type="submit" class="btn btn-info" style="font-family: verdana;">Edit Application</button>
     				
     				</form>
     			</div>	

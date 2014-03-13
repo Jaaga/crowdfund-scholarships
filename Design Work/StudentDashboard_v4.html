@@ -5,6 +5,7 @@
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
 	<link href="./dist/css/slider.css" rel="stylesheet">
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
 
 	<style>
 
@@ -18,8 +19,16 @@
      background:url('./images/student.jpg');
       
       margin-top: 15px;
+  }
+
+.profilename{
+
+	font-family:'Cabin Sketch' cursive;
+}
+
       
-    }
+      
+    
     
 	</style>
 </head>
@@ -61,34 +70,39 @@
     	<div class="row">
         	<div class="col-md-4">
 		
-				<div class="profilename">
-					<h3 align="left"> Welcome Vaibhav !</h3>
+				<div class="profilename" >
+					<h3 align="left"> Welcome Vaibhavflsdjf !</h3>
 				</div>
 
 				<br>
 
+				<div id="container">
+					<img src="./images/student.jpg"  style="height:200px; width:500px" id="student_dash" class="img-responsive">
 				
-				<img src="./images/student.jpg"  style="height:200px; width:500px" id="student_dash" class="img-responsive">
 				
-				
+					<p id="text">
+       						 Hello World!
+    				</p>
 
-				<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
+					<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
 
-				<a href="" onclick="document.getElementById('profile_pic').click(); return false">
+					<a href="" onclick="document.getElementById('profile_pic').click(); return false">
 
-          		<span class="glyphicon glyphicon-edit"></span>
+          			<span class="glyphicon glyphicon-edit"></span>
 
-        		</a>
+        			</a>
 	 			 
 
-     			<br><br>
+     				<br><br>
 
-		   		<div class="well" width="50%">
-		   		<a class="edit"href="#">
+		   			<div class="well" width="50%">
+		   			<a class="edit"href="#">
 
-              	<span class="glyphicon glyphicon-edit"></span>
+              		<span class="glyphicon glyphicon-edit"></span>
         
-        		</a>
+        			</a>
+
+        		</div>
 
         		<h3><b>Student Story</b></h3>
         		<br>
