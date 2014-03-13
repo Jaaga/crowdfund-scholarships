@@ -1,7 +1,4 @@
-<?php
-                                  include '../src/dbcon.php';
-                                  include '../src/student.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,10 +73,13 @@
           </p>
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
-                                                                  dbopen();
+            <?php
+                                  include '../src/dbcon.php';
+                                  dbopen();
+                                  include '../src/student.php';                                                                  
                                   studentlist();
 
-                                ?>
+            ?>
                                <!-- <?php             
 //echo "<table border='1'>
 //<tr>

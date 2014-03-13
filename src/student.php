@@ -2,7 +2,7 @@
 
 function studentlist(){
 	    
-	           $sql="SELECT * from student";
+	           $sql = "SELECT * from student";
 	           
 	           $result = mysqli_query($sql);
                while($row = mysqli_fetch_array($result))
