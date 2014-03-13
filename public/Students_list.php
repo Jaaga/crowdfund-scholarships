@@ -72,6 +72,7 @@
           <div class="jumbotron">
             <h2>Applicants at LearnEmp</h2>
 
+
             <?php
                  include '../src/dbcon.php';
                  include '../src/student.php';
@@ -80,6 +81,15 @@
                   echo $row['S_id'];
                   echo $row['fname'];
              ?>                   <!-- <?php             
+
+            <?php
+                                  include '../src/dbcon.php';
+                                  dbopen();
+                                  include '../src/student.php';                                                                  
+                                  studentlist();
+
+            ?>
+                               <!-- <?php             
 //echo "<table border='1'>
 //<tr>
 
