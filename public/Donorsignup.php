@@ -1,12 +1,12 @@
 <?php
-//include 'src/dbcon.php';
+
 include '../src/dbcon.php';
 
 include '../src/donor.php';
 dbopen();
 
 
-//dbopen();
+
 
 donorsignup($_POST['name'],$_POST['password'],$_POST['email']);
 
@@ -43,10 +43,3 @@ close();
 </body>
 </html>
 
-<?php
-dbopen();
-getId($_POST['email'],$_POST['password']);
-header("Refresh: 2;url='Students_list.php?id=$D_id");
-
-close();
-?>
