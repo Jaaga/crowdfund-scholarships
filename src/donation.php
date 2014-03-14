@@ -21,9 +21,11 @@ if (!($con))
 
 
 function redirectToStudent($D_Id)
+{
 $D_id=$_POST['D_id'];
   header("Refresh: 4;url='Students_list.php?id=$D_id");
 
 mysqli_close($con);
+}
 
 ?>
