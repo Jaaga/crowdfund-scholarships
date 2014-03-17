@@ -74,7 +74,7 @@
 
 
             <?php
-                 include '../src/dbcon.php';
+                 include '../model/dbcon.php';
                  include '../src/student.php';
               dbopen();
                studentlist();
@@ -82,14 +82,14 @@
                   echo $row['fname'];
              ?>                   <!-- <?php             
 
-            <?php
-                                  include '../src/dbcon.php';
+           // <?php
+             //                     include '../src/dbcon.php';
                                   dbopen();
-                                  include '../src/student.php';                                                                  
+               //                   include '../src/student.php';                                                                  
                                   studentlist();
 
             ?>
-                               <!-- <?php             
+                          //     <!-- <?php             
 //echo "<table border='1'>
 //<tr>
 

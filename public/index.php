@@ -55,7 +55,7 @@
 
         </div>
         <div class="navbar-collapse collapse">
-          <form name="form1" method="post" action="../src/checklogin.php" class="navbar-form navbar-right" role="form">
+          <form name="form1" method="post" action="../model/test.php" class="navbar-form navbar-right" role="form">
             <div class="form-group">
               <input name="email" type="text" placeholder="Email" id="email" class="form-control">
             </div>
