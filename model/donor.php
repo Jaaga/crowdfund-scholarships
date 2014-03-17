@@ -16,9 +16,9 @@ include ('dbcon.php');
 
 	}
 //"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
-	function getDonors(	$studentId){
+	function getStudents($donorId){
 		$db=dbopen();
-		$sql="select * from donation inner join donor on donation.S_id=$studentId && donation.D_id=donor.D_id";
+		$sql="select * from donation inner join student on donation.D_id=$donorId && donation.S_id=student.S_id";
 		$list = $db->query($sql);
 
 		if(!$db->query($sql))

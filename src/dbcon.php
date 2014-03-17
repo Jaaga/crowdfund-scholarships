@@ -23,8 +23,8 @@ if (!$con1)
 }
 
 
-function close(){
-	mysqli_close();
+function dbclose($db){
+	mysqli_close($db);
 	}
 
 ?>
