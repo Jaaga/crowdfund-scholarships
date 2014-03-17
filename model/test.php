@@ -1,4 +1,5 @@
 <?php
 include('donor.php');
-createDonor("avin","hello","ma@yy.com");
+donorLogin($_POST['email'],$_POST['pass']);
+//giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['$amount']);
 ?>
