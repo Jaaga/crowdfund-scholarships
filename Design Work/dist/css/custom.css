@@ -4,6 +4,8 @@ body{
 	background-color: #E8EDE0;
 	padding-left: 50px;
   	padding-right: 50px;
+	background: url("./images/wood1.png");
+background-repeat:repeat;
 	}
 	h2{
 	text-align:center;
@@ -113,14 +115,7 @@ body{
     
     
 
-    .body{
-      background:url('./images/bg_image.png');
-      margin: 0;
-        background-size: 1440px 800px;
-      background-repeat:no-repeat;
-      display: compact;
-      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+    
 
     #prework{
       margin-top:50px;
@@ -133,6 +128,14 @@ body{
 
     form{
       display:inline;
+    }
+
+    #student_dash{
+     background:url('./images/crowd_n.jpg');
+      height: 500px;
+      margin-top: 90px;
+      
+    }
 
   /* Style for StudentProfile */
 
@@ -140,10 +143,10 @@ body{
   padding-left: 60px;
   }
 
-  .icons{
+  /*.icons{
   position: absolute;
   top: 130px;
   right: 100px;
-  }
+  }*/
 .workstatus{
   text-align: center;}

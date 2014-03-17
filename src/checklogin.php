@@ -1,20 +1,14 @@
-?php
-
+<?php
 function validateLogin()
 {
 include 'dbcon.php';
 dbopen();
 //login function which checks the credentials taken from index.php and matches it with the database;
 
-
-include './dbcon.php';
-dbopen();
-
-
-$tbl_name ="donor";
+$tbl_name = "donor";
 // username and password sent from form 
-$myusername=$_POST['email']; 
-$mypassword=$_POST['pass']; 
+$myusername = $_POST['email']; 
+$mypassword = $_POST['pass']; 
 
 // To protect MySQL injection (more detail about MySQL injection)
 $myusername = stripslashes($myusername);
@@ -33,15 +27,8 @@ if($count==1){
 session_start();
 $_SESSION['email']="$myusername";
 
-
 // Register $myusername, $mypassword and redirect to file "Students_list.php"
 header("location:../public/Students_list.php?id=$D_id");
-
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-//$_SESSION['usr']= "myusername";
-//$_SESSION['pawd']="mypassword"; 
-header("./public/Students_list.php?id=$D_id");
-
 }
 //if its not a proper credential then redirect the user back to index page.
 else {

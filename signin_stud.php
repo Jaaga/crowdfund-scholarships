@@ -44,7 +44,7 @@ $_SESSION['email']="$myusername";
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 //$_SESSION['usr']= "myusername";
 //$_SESSION['pawd']="mypassword"; 
-header("location:Students_list.php?id=$S_Id");
+header("location:student_dash.php?id=$S_Id");
 }
 else {
 echo "Wrong Username or Password";
