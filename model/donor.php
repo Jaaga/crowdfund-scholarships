@@ -36,7 +36,7 @@ include ('dbcon.php');
 		$result =$db->query($sql);
 		$row=mysqli_result::fetch_array($result); 
 		$D_id = $row['D_id'];
-			$count = mysql_num_rows($result);
+			$count = mysqli_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 		if($count==1)
 			{
@@ -49,9 +49,6 @@ include ('dbcon.php');
 			echo "wrong username or password";
 header("Refresh: 2;url='../public/index.php'");
 		}
-		else
-			session_start();
-		header("location:../public/Students_list.php?id=$D_id");
-	}
+		
 
 ?>
