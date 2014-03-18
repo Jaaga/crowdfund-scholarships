@@ -23,6 +23,7 @@ A. SETUP GIT AND PULL REPO. FROM GITHUB(Pull,Push).
           $ git commit -m "some msg"
           $ git pull origin master
           $ git push origin master
+          $ git remote rm origin  // only if remote is already exists.
 
           Note: origin master is optional is some cases.
 
