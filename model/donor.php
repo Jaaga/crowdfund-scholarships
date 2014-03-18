@@ -7,7 +7,7 @@ include ('dbcon.php');
 		
 		$sql="INSERT INTO donor (name, password,email)
 		VALUES('$name','$password','$email')";
-		$result = $db->query($sql);
+		//$result = $db->query($sql);
 
 		if(!$db->query($sql))
 		{
@@ -20,12 +20,16 @@ include ('dbcon.php');
 		$db=dbopen();
 		$sql="select * from donation inner join student on donation.D_id=$donorId && donation.S_id=student.S_id";
 		$list = $db->query($sql);
-
+		$result = mysqli_fetch_array($list);
 		if(!$db->query($sql))
 		{
 			die('Error' .$db->error($sql));
 		}
-		return array($list);
+		//return array($list);
+		//echo $result;
+		echo $result['fname'];
+		//var_dump($result);
+
 	}
 
 	function donorLogin($email,$password)
@@ -67,7 +71,7 @@ include ('dbcon.php');
 		else
 		{
 			echo "Thank You for Donating";
-			redirectToStudent($D_id);
+			//redirectToStudent($D_id);
 		}
 
  }
