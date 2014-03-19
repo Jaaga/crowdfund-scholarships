@@ -62,4 +62,9 @@ C. Import DB inside Mysql:
      Move into the Dir. "/var/www/crowdfund-scholarships" if you want to export .sql file inside your project.  
 
      /var/www/crowd..$ mysqldump -u root -p DB_name > LearnEmp.sql   // You can change name but DB_name should point the 
+
+D. command for streaming the apache error log 
+tail -f /var/log/apache2/error.log
+
+
                                                                          DB you wanted to export 

@@ -37,7 +37,7 @@ include ('dbcon.php');
 		$db=dbopen();
 		//$myEmail = $_POST['email']; 
 		//$mypassword = $_POST['pass']; 
-		$sql = "select * from donor where email = '$email' && password = '$password'";
+		$sql = "select * from donor where email ='$email' && password ='$password'";
 
 		$result =$db->query($sql);
 		$row=mysqli_fetch_array($result); 
