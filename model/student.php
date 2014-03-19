@@ -1,3 +1,4 @@
+
 <?php
   
   include ('dbcon.php');
@@ -45,12 +46,13 @@
         }
     }
 
-    function createStudent($studentId,$fname,$lname,$gender,$email,$Phone_Number,
+    function createStudent($fname,$lname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
-
+    	
         $db= dbopen();
-        $sql ="INSERT INTO student(S_id,fname,lname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,password,image_path)";
+        $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
+            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ($fname,$lname,$gender,$email,$Phone_Number,
+        $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path)";
         $result= $db->query($sql);
         
         if(!$db->query($sql))
