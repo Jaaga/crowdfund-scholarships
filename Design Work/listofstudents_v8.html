@@ -86,11 +86,16 @@ background-repeat:repeat;
     
   <div class="row">
     <h1 id="hiw">Meet the Students</h1>
+    <?php 
+    include '../model/student.php';
+    $students=getStudentList();
+    foreach($students as $student):
+    ?>
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
           <img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
           <br>
-          <h3>Priyanka</h3>
+          <h3><?php echo $student['fname']; ?></h3>
           <p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
         
           <div class="progress">
@@ -101,7 +106,7 @@ background-repeat:repeat;
              &nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
         </div>
       </div>
-  
+      <?php endforeach; ?>
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
           <a href="studentprofile_v10.html">
