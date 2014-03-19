@@ -6,12 +6,15 @@
     {   
         
         $db= dbopen();
-        $sql=$db->prepare('SELECT S_id, fname, lname FROM student');
+        $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
-        $sql->bind_result($S_id,$fname,$lname);
+        $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
+            $pincode,$country,$course,$scholar_AMT,$password,$image_path);
         while($sql->fetch()){
                
-            $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname);
+            $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
+                'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
+                'course'=>$course,'scholar_AMT'=>$scholar_AMT,'password'=>$password,'image_path'=>$image_path);
         }
          //$sql->close();
         return ($students);    

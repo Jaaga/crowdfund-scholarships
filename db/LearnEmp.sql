@@ -75,24 +75,16 @@ DROP TABLE IF EXISTS `scholarship`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `scholarship` (
-<<<<<<< HEAD
-  `SC_id` int(20) NOT NULL AUTO_INCREMENT,
-=======
+
   `SC_id` int(20) NOT NULL auto_increment,
->>>>>>> 56c83f8a693bb2d2715c2eb2b3e62bec658e391f
   `image` varchar(300) DEFAULT NULL,
   `description` text,
   `scholar_amt` int(20) DEFAULT NULL,
   `S_id` int(20) DEFAULT NULL,
-<<<<<<< HEAD
-  PRIMARY KEY (`SC_Id`),
-  KEY `S_Id` (`S_Id`),
-  CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_Id`) REFERENCES `student` (`S_Id`)
-=======
-  PRIMARY KEY (`SC_id`),
+   PRIMARY KEY (`SC_id`),
   KEY `S_id` (`S_id`),
   CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_id`)
->>>>>>> 56c83f8a693bb2d2715c2eb2b3e62bec658e391f
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
