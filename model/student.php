@@ -15,7 +15,7 @@
                
             $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
                 'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
-                'course'=>$course,'scholar_AMT'=>$scholar_AMT, 'para'==>'$para','password'=>$password,'image_path'=>$image_path);
+                'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'==>$para,'password'=>$password,'image_path'=>$image_path);
         }
          //$sql->close();
         return ($students);    
