@@ -1,14 +1,16 @@
+<?php include('../model/student.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <html>
 <head>
   <title>Home</title>
-  <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/custom.css" rel="stylesheet" type='text/css'>
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
   <link href="jumbotron.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'> 
     <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
-    <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+    
     <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
 <style type="text/css">
 
@@ -55,7 +57,7 @@ h4:before{
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -92,10 +94,11 @@ h4:before{
     
     <div align="center">
 
-    <img src="./images/jaaga-study1.png">
+    <img src="./images/jaaga-study1.png"/>
 
       <div class="pitch">
-        <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
+        <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial 
+        aid to aspiring students empowering them to pay it forward</h2>
       </div>
     </div>
     <!-- Standard button -->
@@ -122,32 +125,33 @@ h4:before{
         </a> 
       </div>
         <br>
-
+<?php $students= getStudentList(); ?>
       <div class="row">
-        <div class="col-md-4" style="margin-left:-0.6em; padding-left:3em;">
+        <div class="col-md-4">
           <div class="well">
             <h4>Featured</h4>
-            <img src="./images/student01.jpg" style="height:200px; width:300px">
-            <h2>Sheela Dixit</h2>
-            <p style="text-align: justify; padding:1em 1em;" >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+          <img src="./images/student01.jpg" style="height:200px; width:300px">
+            <h2><?php echo $students[0]['fname']; ?> </h2>
+            <p style="text-align: justify">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
-          <div class="well">
-            <h4>Featured</h4>
+          <div class="col-md-4">
+            <div class="well">
+              <h4>Featured</h4>
             <img src="./images/student02.jpg" style="height:200px; width:300px"> 
-            <h2>Manisha Reddy</h2>
-            <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <h2><?php echo $students[1]['fname'] ?></h2>
+            <p style="text-align: justify">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
-          <div class="well">
-            <h4>Featured</h4>
+          <div class="col-md-4">
+            <div class="well">
+              <h4>Featured</h4>
             <img src="./images/student03.jpg" style="height:200px; width:300px"> 
-            <h2>Priyanka Sethi</h2>
-            <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+             <h2><?php echo $students[2]['fname'] ?></h2>
+             <p style="text-align: justify">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+           </div>
           </div>
         </div>
       </div>
@@ -161,7 +165,7 @@ h4:before{
         <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
           <br><h3>MAKE A DONATION</h3>
-          <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
+          <p style="text-align: justify">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
 
         <br>
 
@@ -170,14 +174,14 @@ h4:before{
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
         <br><h3>STUDENT BENEFITS FROM LOAN</h3>
-        <p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
+        <p style="text-align: justify">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>
       </div>
 
         <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
           <br><h3>STUDENT PAYS IT FORWARD</h3>
-          <p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
+          <p style="text-align: justify">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
   
       </div>
     </div>
