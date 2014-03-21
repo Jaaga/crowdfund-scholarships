@@ -67,7 +67,7 @@
             pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
         $result= $db->query($sql);        
-        if(!$db->query($sql))
+        if(!$result)
         {
             die('Error'.$db->error);
         }
