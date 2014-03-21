@@ -183,7 +183,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Pin Code:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="pincode" type="text" placeholder="Pin Code" class="form-control input-md">
+    <input name="pincode" type="text" placeholder="Pin Code" class="form-control input-md">
     
     </div>
   </div>
