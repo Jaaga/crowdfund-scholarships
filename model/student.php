@@ -88,7 +88,7 @@
         $sql="select * from donation inner join donor on donation.S_id=$studentId && donation.D_id=donor.D_id";
         $list = $db->query($sql);
 
-        if(!$db->query($sql))
+        if(!$list)
         {
             die('Error' .$db->error());
         }
