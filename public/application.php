@@ -8,17 +8,17 @@
   background: url("./images/wood1.png");
   background-repeat:repeat;
   }
-  	.well{
-  	position: relative;
-  	top: 100px;
-  	}
-  	
+    .well{
+    position: relative;
+    top: 100px;
+    }
+    
 
   </style>
-  <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../dist/css/bootstrap.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-          <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>	
-  	<link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
 
 
@@ -31,7 +31,7 @@
         <div class="navbar-header" style="height: 50px;">
       
             
-              <a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+              <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
@@ -66,11 +66,11 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-  		   
+         
               <li><a href="how.html">How it Works</a></li>
               <li><a href="Students_list.htm">Students</a></li>
               <li><a href="About.html">About</a></li>
-  			<li><a href="Contact.html">Contact</a></li>
+        <li><a href="Contact.html">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -78,7 +78,7 @@
 
   <div class="container">
   <div class="well">
-  <form class="form-horizontal" action="applicant.php" method="post">
+  <form class="form-horizontal" action="applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
   <fieldset>
 
   <!-- Form Name -->
@@ -88,7 +88,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">First Name:</label> 
     <div class="col-md-4">
-    <input id="textinput" name="fname" type="text" placeholder="First Name" class="form-control input-md">
+    <input name="fname" type="text" placeholder="First Name" class="form-control input-md">
     
     </div>
   </div>
@@ -97,7 +97,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="lname" type="text" placeholder="Last Name" class="form-control input-md"> 
+    <input name="lname" type="text" placeholder="Last Name" class="form-control input-md"> 
     </div>
   </div>
 
@@ -107,58 +107,42 @@
     <div class="col-md-4">
     <div class="radio">
       <label for="radios-0">
-        <input type="radio" name="gender" id="radios-0" value="1" checked="checked">
+        <input type="radio" name="gender" id="radios-0" value="F" checked="checked">
         Female
       </label>
-  	</div>
+    </div>
     <div class="radio">
       <label for="radios-1">
-        <input type="radio" name="gender" id="radios-1" value="2">
+        <input type="radio" name="gender" id="radios-1" value="M">
         Male
       </label>
-  	</div>
+    </div>
     </div>
   </div>
 
-  <!-- Select Basic 
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="selectbasic">Select Basic:</label>
-    <div class="col-md-4">
-      <select id="selectbasic" name="selectbasic" class="form-control">
-        <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	  <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	   <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	  <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	   <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	  <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	   <option value="1">Option one</option>
-        <option value="2">Option two</option>
-  	  <option value="1">Option one</option>
-        <option value="2">Option two</option>
-      </select>
-    </div>
-  </div>-->
-
+  
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">E-mail:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="email" type="email" placeholder="e-mail" class="form-control input-md">
+    <input name="email" type="email" placeholder="e-mail" class="form-control input-md">
       
     </div>
   </div>
-
+  
+  
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password:</label>
+  <div class="col-md-4">
+    <input name="password" type="password" placeholder="Password" class="form-control input-md">    
+  </div>
+</div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="Phone_Number" type="text" placeholder="Contact Number" class="form-control input-md">
+    <input name="Phone_Number" type="text" placeholder="Contact Number" class="form-control input-md">
       
     </div>
   </div>
@@ -167,7 +151,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea">Address:</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" id="textarea" name="address">Address</textarea>
+      <textarea class="form-control" name="address">Address</textarea>
     </div>
   </div>
 
@@ -175,7 +159,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Pin Code:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="pincode" type="text" placeholder="Pin Code" class="form-control input-md">
+    <input name="pincode" type="text" placeholder="Pin Code" class="form-control input-md">
     
     </div>
   </div>
@@ -184,9 +168,9 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="selectbasic">Country:</label>
     <div class="col-md-4">
-      <select id="selectbasic" name="country" class="form-control" name="country">
-        <option value="1">Select Country</option>
-        <option value="2">Armenia</option>
+      <select name="country" class="form-control">
+        <option value="#">Select Country</option>
+        <option value="Armenia">Armenia</option>
       </select>
     </div>
   </div>
@@ -206,9 +190,9 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="selectbasic">Course:</label>
     <div class="col-md-4">
-      <select id="selectbasic" name="course" class="form-control">
-        <option value="1">Select Course</option>
-        <option value="2">Culinary Studies</option>
+      <select name="course" class="form-control">
+        <option value="#">Select Course</option>
+        <option value="cooking">Culinary Studies</option>
       </select>
     </div>
   </div>
@@ -217,7 +201,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea">Description of Course:</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" id="textarea" name="para">Please describe why you want to take up the course </textarea>
+      <textarea class="form-control" name="para">Please describe why you want to take up the course </textarea>
     </div>
   </div>
 
@@ -225,7 +209,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label">Upload-Document:</label> 
   <div class="col-md-4">
-  <input type="file" name="image" size="60">
+  <input name="image_path" type="file" size="60">
   </div>
   </div>
 
@@ -234,7 +218,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Scholarship Amount:</label>  
     <div class="col-md-4">
-    <input id="textinput" name="scholar_AMT" type="text" placeholder="state the amount required" class="form-control input-md">
+    <input name="scholar_AMT" type="text" placeholder="state the amount required" class="form-control input-md">
 
     </div>
   </div>
@@ -244,7 +228,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="singlebutton"></label>
     <div class="col-md-4" align="center">
-      <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
+      <button type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
     </div>
   </div>
 

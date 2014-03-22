@@ -67,4 +67,12 @@ D. command for streaming the apache error log
 tail -f /var/log/apache2/error.log
 
 
-                                                                         DB you wanted to export 
+E. DB you wanted to export 
+
+F. IF NOT ABLE TO REMOVE DATA FROM MYSQL,(TRUNCATE) FOLLOW THESE STEPS:
+    Inside MySql terminal:
+
+    mysql>  SET FOREIGN_KEY_CHECKS = 0; -- Disable foreign key checking.
+    mysql>  TRUNCATE TABLE table_name;
+    mysql>  TRUNCATE TABLE table_name;
+    mysql>  SET FOREIGN_KEY_CHECKS = 1; -- Enable foreign key checking.
