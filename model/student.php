@@ -48,19 +48,7 @@
 
     function createStudent($fname,$lname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
-    	$fname= $fname;
-        $lname= $lname;
-        $gender=$gender;
-        $email= $email;
-        $Phone_Number= $Phone_Number;
-        $address= $address;
-        $pincode= $pincode;
-        $country= $country;
-        $course= $course;
-        $scholar_AMT= $scholar_AMT;
-        $para= $para;
-        $password= $password;
-        $image_path=$image_path;
+    	
 
         $db= dbopen();
         $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
