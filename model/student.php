@@ -6,7 +6,7 @@
     function getStudentList()
     {   
         
-        $db= dbopen();
+        $db= dbopen($studentId);
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
@@ -48,21 +48,33 @@
 
     function createStudent($fname,$lname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
-    	
+    	$fname= $fname;
+        $lname= $lname;
+        $gender=$gender;
+        $email= $email;
+        $Phone_Number= $Phone_Number;
+        $address= $address;
+        $pincode= $pincode;
+        $country= $country;
+        $course= $course;
+        $scholar_AMT= $scholar_AMT;
+        $para= $para;
+        $password= $password;
+        $image_path=$image_path;
+
         $db= dbopen();
         $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ($fname,$lname,$gender,$email,$Phone_Number,
-        $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path)";
-        $result= $db->query($sql);
-        
-        if(!$db->query($sql))
+            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
+            '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
+        $result= $db->query($sql);        
+        if(!$result)
         {
-            die('Error'.$db->error());
+            die('Error'.$db->error);
         }
 
-        $row=mysqli_fetch_array($result); 
+        //$row=mysqli_fetch_array($result); 
 
-        $S_id = $row['S_id'];  
+        //$S_id = $row['S_id'];  
         
 
         header("location:../public/Student_dash.php?id=$S_id");
@@ -76,7 +88,7 @@
         $sql="select * from donation inner join donor on donation.S_id=$studentId && donation.D_id=donor.D_id";
         $list = $db->query($sql);
 
-        if(!$db->query($sql))
+        if(!$list)
         {
             die('Error' .$db->error());
         }
