@@ -9,19 +9,22 @@
 	
 
 	<style>
+	@font-face{
+		font-family:'CabinSketch-Regular';
+		src: url('./fonts/CabinSketch-Regular.otf'),
+			url('./fonts/CabinSketch-Regular.ttf');
+	}
 	
 	#bg{
     background:url('./images/chalkboard2.jpg');
-    border: 3 solid /*#33cc33*/#6E8B3D;
-	color: #FFFFe0;
-	text-align: center;
-	}
+    }
 		body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
+font-size:;
 }
 .sponsor_data{
-font-family:'Cabin Sketch' cursive;
+font-family:'CabinSketch-Regular';
 font-size: 27px;
 }
 
@@ -35,7 +38,7 @@ font-size: 27px;
 			<div class="navbar-header" style="height: 50px;">
 		
           
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'CabinSketch-Regular';; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
@@ -69,7 +72,7 @@ font-size: 27px;
     <br>
 	<br>
 	<br>
-<div class="container" width="50px;" style="display: inline"><h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 72px; margin-top: -30px;">Vaibhav Mule</h1>
+<div class="container" width="50px;" style="display: inline"><h1 align="center" style="font-family:'CabinSketch-Regular'; font-size: 64px; margin-top: -30px;">Vaibhav Mule</h1>
 				<div class="col-xs-5" align="left"  style="margin-top: -60px;"><img src="./images/facebook-icon.png" width="25px"/>
 				<img src="./images/Twitter_logo.png" width="25px"/>
 				<img src="./images/linked-in.jpg" width="25px"/></div>
@@ -80,7 +83,7 @@ font-size: 27px;
     	<div class="row">
       
         	<div class="col-xs-7"  text-align="justify">
-				<img src="./images/student.jpg" width="100%" height="400px">
+				<img src="./images/student.jpg" width="100%" height="400px" style="border:1px solid white; border-radius: 5px;">
 		 		<div class="well" width="100%">
         			<h2>My Story</h2><br><p style="text-align:justify"><b>Hey Guys! Please sponsor me for my new adventure with Jaaga. </b>Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.
  					Through this program I am hoping to get a better understanding of programming languages and make great websites for a living!<br><br>
@@ -99,7 +102,7 @@ font-size: 27px;
 
 		
 			<div class="col-xs-5"> 
-			<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
+			<div class="well" style="background-color:#33cc66; height:400px" id="bg";>
 				<div class="sponsor_data"><h2 class="sponsor_data"> <b>34</b> donors backed </h2><br>
 					<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br> out of<b> Rs.1,20,000</b></h2>
 					<h2 class="sponsor_data"> <b>4</b> days to go!</h2><br>
@@ -117,7 +120,7 @@ font-size: 27px;
 			</div>
 
 
-			<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">
+			<div class="well" style="background-color:#; height:455px; margin-top: -20px; text-align: justify;">
 
 				<h3>So here's why I need your help</h3><br><p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
