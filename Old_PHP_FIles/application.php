@@ -187,12 +187,12 @@
   </div> -->
 
   <!-- Select Basic -->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="selectbasic">Course:</label>
+<div class="form-group">
+    <label class="col-md-4 control-label" for="selectbasic">Country:</label>
     <div class="col-md-4">
       <select name="course" class="form-control">
         <option value="#">Select Course</option>
-        <option value="cooking">Culinary Studies</option>
+        <option value="Cooking">Cooking</option>
       </select>
     </div>
   </div>

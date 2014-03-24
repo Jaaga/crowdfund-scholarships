@@ -1,6 +1,6 @@
 
 <?php
-  
+  include ('dbcon.php');
   
 
     function getStudentList()
@@ -63,9 +63,14 @@
         //$row=mysqli_fetch_array($result); 
 
         //$S_id = $row['S_id'];  
-        
+        else{
 
-        header("location:../public/Student_dash.php?id=$S_id");
+            $_SESSION['$email']= $email;
+            $_SESSION['password']= $password;
+            header("location:../public/Student_dash.php?id=$S_id");
+        }
+
+        
 
     } 
 
