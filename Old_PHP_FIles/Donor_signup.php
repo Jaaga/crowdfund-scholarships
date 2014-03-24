@@ -17,16 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-<style type="text/css">
+    <style type="text/css">
 	
 	body {font-family:Arial,Sans-Serif;}
 	#container {width:300px;margin:0 auto;}
@@ -39,12 +30,7 @@
 
 </style>
 	
-
-
-
-
-
-  </head>
+ </head>
 
   <body>
 
@@ -81,20 +67,9 @@
 
 	</form>
 </div>
-
-
-
-
-
-
-
-
-
       <hr>
 
-
-
-      <footer>
+<footer>
         <a class="navbar-brand" href="howitworks.html">How it works!</a><a class="navbar-brand" href="about.html">ABOUT</a><a class="navbar-brand" href="faq.html">FAQ</a>
       </footer><a class="navbar-brand" href="donors.html">DONORS</a><a class="navbar-brand" href="students_list.html">STUDENTS</a>
     </div> <!-- /container -->

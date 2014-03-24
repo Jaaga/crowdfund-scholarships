@@ -1,22 +1,21 @@
 <?php
-include '..src/dbcon.php';
-include '../src/donation.php';
- getData($D_id,$S_Id,$amount)
+include '..model/donor.php';
+//include '../src/donation.php';
+ giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['$amount']);
 ?>
 
 <html>
 
 <head>
      <link href="../dist/css/bootstrap.css" rel="stylesheet">
-    
-
-    <!-- Custom styles for this template -->
+  
+  <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 </head>
 
 <body>
 
-    
+  
        <div class="jumbotron" style="background color : blue" > 
     <div class="container">
     
@@ -33,5 +32,5 @@ include '../src/donation.php';
 </body>
 </html>
 <?php
-redirectToStudent($D_Id)
+redirectToStudent($D_Id);
 ?>

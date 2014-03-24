@@ -29,6 +29,7 @@ include ('dbcon.php');
 		//return array($list);
 		//echo $result;
 		echo $result['fname'];
+		echo $result['amount'];
 		//var_dump($result);
 
 	}
