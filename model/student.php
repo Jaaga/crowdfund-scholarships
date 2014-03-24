@@ -1,12 +1,12 @@
 
 <?php
   
-  include ('dbcon.php');
+  
 
     function getStudentList()
     {   
         
-        $db= dbopen();
+        $db= dbopen($studentId);
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,

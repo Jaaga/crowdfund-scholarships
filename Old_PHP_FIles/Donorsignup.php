@@ -1,35 +1,22 @@
 <?php
 
-include '../src/dbcon.php';
-
-include '../src/donor.php';
-dbopen();
-
-
-
-
-donorsignup($_POST['name'],$_POST['password'],$_POST['email']);
-
-close();
+include '../model/donor.php';
+createDonor($_POST['name'],$_POST['password'],$_POST['email']);
   ?>
-
 
 <html>
 
 <head>
      <link href="./dist/css/bootstrap.css" rel="stylesheet">
-    
-
-    <!-- Custom styles for this template -->
+        <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 </head>
 
 <body>
-
     
        <div class="jumbotron" style="background color : blue" > 
     <div class="container">
-    
+  
       <div class="row">
        
        <p align="center" style="font-family: verdana;">Signed-up Successfully</p>

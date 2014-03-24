@@ -93,10 +93,10 @@ background-repeat:repeat;
     ?>
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
-          <img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
+          <img src="<?php echo $student['image_path']; ?>" alt="donate"align="center" style="height:200px; width:300px" ></img> 
           <br>
           <h3><?php echo $student['fname']; ?></h3>
-          <p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
+          <p ><?php echo $student['para']; ?></p>
         
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: 40%">
@@ -106,7 +106,7 @@ background-repeat:repeat;
              &nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
         </div>
       </div>
-      <?php endforeach; ?>
+    <?php endforeach; ?>
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
           <a href="studentprofile_v10.html">
