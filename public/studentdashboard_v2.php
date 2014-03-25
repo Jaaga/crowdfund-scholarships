@@ -78,11 +78,24 @@ font-size: 27px;
 	</div>
 
 	
+	<div class="container">
+		<div class="row">
+			
 
+			<div div class="col-md-6" align="right"  style="margin-top: -40px;">
+   					
+       			<form action="application.html">
+
+       					<button type="submit" class="btn btn-success" style="font-family: verdana;">Edit Application</button>
+    				
+    			</form>
+    		</div>
+    	</div>
+    </div>
 
 	<div class="container">
     	<div class="row">
-    		<div class="col-md-6" align="left" style="margin-top: -70px;">
+    		<div class="col-md-6" align="left" style="margin-top: -40px;">
 					<img src="./images/facebook-icon.png" width="25px"/>
 					<img src="./images/Twitter_logo.png" width="25px"/>
 					<img src="./images/linked-in.jpg" width="25px"/>
@@ -190,32 +203,6 @@ font-size: 27px;
 
 		</div>
 	</div>
-
-	<div class="container1" align="center">
-    <div class="row" style="padding: 80px 50px 0 50px">
-      <div class="col-lg-4">
-          <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:100px"></img> 
-          <br><h3>MAKE A DONATION</h3>
-         <!-- <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
-
-          <br>-->
-      </div>
-
-      <div class="col-lg-4">
-        <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-        <br><h3>STUDENT BENEFITS FROM LOAN</h3>
-        <!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
-          <br><br>-->
-      </div>
-
-      <div class="col-lg-4">
-          <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-          <br><h3>STUDENT PAYS IT FORWARD</h3>
-          <!--<p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
-      -->
-      </div>
-    </div>
-  </div>
 
 	<footer class="footer" style="text-align:center">
   		<nav>
