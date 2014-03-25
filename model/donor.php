@@ -13,6 +13,13 @@ include ('dbcon.php');
 		{
 			die('Error' .$db->error($sql));
 		}
+		else
+		{   session_start();
+			$_SESSION['email'] = $email;
+			$_SESSION['password'] = $password;
+			$_SESSION['time'] = time();
+			header("location:../public/Students_list.php?id=$D_id");
+		}
 
 	}
 //"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
