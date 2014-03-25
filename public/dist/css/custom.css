@@ -94,7 +94,7 @@ background-repeat:repeat;
 
 /* Style for StudentDashboard */
 
-    .viewprofile{
+    #viewprofile{
     
     /*margin-top:20px; */
     float:right;
@@ -111,7 +111,10 @@ background-repeat:repeat;
     .edit{
       float:right;
     }
+
     
+    
+
     
 
     
@@ -125,9 +128,9 @@ background-repeat:repeat;
       float:right;
     }
 
-    form{
-      display:inline;
-    }
+   /*orm{
+     display:inline;
+    } */
 
     #student_dash{
      background:url('./images/crowd_n.jpg');
