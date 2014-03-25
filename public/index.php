@@ -156,14 +156,13 @@ h4:before{
 
   <div class="container1" align="center">
     <div class="row">
-        <div class="col-lg-4">
+      <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
           <br><h3>MAKE A DONATION</h3>
           <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
 
-        <br>
-
-        </div>
+          <br>
+      </div>
 
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
@@ -172,11 +171,10 @@ h4:before{
           <br><br>
       </div>
 
-        <div class="col-lg-4">
+      <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
           <br><h3>STUDENT PAYS IT FORWARD</h3>
           <p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
-  
       </div>
     </div>
   </div>
