@@ -1,28 +1,27 @@
 
 <?php
-  include ('dbcon.php');
+    include ('dbcon.php');
   
 
     function getStudentList()
     {   
         
-        $db= dbopen($studentId);
+        $db= dbopen();
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
             $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path);
         while($sql->fetch()){
                
-            $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
-                'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
-                'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path);
+        $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
+            'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
+            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path);
         }
          //$sql->close();
         return ($students);    
     }
 
-    function studentLogin($email,$password)
-    {
+    function studentLogin($email,$password){
         $db= dbopen();
         $sql="SELECT * from student where email='$email' && password='$password'";
         $result= $db->query($sql);
@@ -36,12 +35,15 @@
         if($count==1){
 
             session_start();
+            $_SESSION['email']= $email;
+            $_SESSION['password']= $password;
         // Register $myusername, $mypassword and redirect to file "Students_list.php"
-            header("location:../public/Students_list.php?id=$D_id");
+            header("location:../public/Students_list.php?id=$S_id");
         }
         else{
             
-            echo "wrong username or password";
+            $Isnotuser= "wrong username or password";
+            return $Isnotuser;
             header("Refresh: 2;url='../public/index.php'");
         }
     }
@@ -86,4 +88,21 @@
             die('Error' .$db->error());
         }
         return array($list);
+    }
+
+    function getStudent($studentId){
+
+        $db=dbopen();
+        $sql= "select * from student where S_id=$studentId";
+        $result= $db->query($sql);
+
+        if (!$result){
+            die('Error' .$db->error());
+        }
+        else{
+        $row= $result->fetch_array(MYSQLI_BOTH);
+
+        return $row;
+        }
+
     }
