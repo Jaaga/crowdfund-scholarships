@@ -46,18 +46,18 @@ include ('dbcon.php');
 		$db=dbopen();
 		//$myEmail = $_POST['email']; 
 		//$mypassword = $_POST['pass']; 
-		$sql = "select * from donor where email ='$email' && password ='$password'";
-
-		$result =$db->query($sql);
+		$sql ="SELECT * from donor where email='".$email."' && password='".$password."'";
+        
+        $result =$db->query($sql);
 		$row=mysqli_fetch_array($result); 
 		$D_id = $row['D_id'];
 			$count = mysqli_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 		if($count==1)
 			{
-				session_start();
+				
 // Register $myusername, $mypassword and redirect to file "Students_list.php"
-				header("location:../public/Students_list.php?id=$D_id");
+			header("location:../public/Students_list.php?id=$D_id");
 			}
 		else
 			{
