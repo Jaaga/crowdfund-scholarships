@@ -10,11 +10,11 @@
     
 <style type="text/css">
 
-	body{
+  body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
 }
-h4 { position:relative;
+.feature { position:relative;
     color:#fff;
     background:#3ea99f;
     font-size:1.5em;
@@ -30,22 +30,11 @@ h4 { position:relative;
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);
   }
-
-h4:before{
-    content:" ";
-    background:url(../img/css/ribbon.png);
-    display:block;
-    width:10px;
-    height:10px;
-    position:absolute;
-    bottom:0;
-    left:0;
-    margin-bottom:-10px;
-    z-index:-1;
-}</style>
+</style>
 </head>
 
 <body>
+
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -58,25 +47,25 @@ h4:before{
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents_v8.html">Sponsor</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li>
+                    <a href= "#hiw">How it Works</a>
+                </li>
             </ul>
 
-        <div class="navbar-collapse collapse">
+             
+    
+
+<div class="navbar-collapse collapse">
               <form class="navbar-form navbar-right" role="form">
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <input type="password" placeholder="Password" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                &nbsp 
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              
 
               </form>
               
-              </div><!--/.navbar-collapse -->
+              </div>
+
+
         </div>
       </div>
       </div> 
@@ -124,7 +113,7 @@ h4:before{
       <div class="row">
         <div class="col-md-4" style="margin-left:-0.6em; padding-left:3em;">
           <div class="well">
-            <h4>Featured</h4>
+            <h3 class="feature">Featured</h3>
             <img src="./images/student01.jpg" style="height:200px; width:300px">
             <h2>Sheela Dixit</h2>
             <p style="text-align: justify; padding:1em 1em;" >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
@@ -133,7 +122,7 @@ h4:before{
 
         <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
           <div class="well">
-            <h4>Featured</h4>
+            <h3 class="feature">Featured</h3>
             <img src="./images/student02.jpg" style="height:200px; width:300px"> 
             <h2>Manisha Reddy</h2>
             <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
@@ -142,7 +131,7 @@ h4:before{
 
         <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
           <div class="well">
-            <h4>Featured</h4>
+            <h3 class="feature">Featured</h3>
             <img src="./images/student03.jpg" style="height:200px; width:300px"> 
             <h2>Priyanka Sethi</h2>
             <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
@@ -150,7 +139,7 @@ h4:before{
         </div>
       </div>
 
-  <h1 style="text-align:center; font-family:'Cabin Sketch' cursive; font-size:48px;" id="hiw" >How it Works</h1>
+  <h1 style="text-align:center; font-family:'Cabin Sketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
 
   <br>
 
@@ -194,19 +183,19 @@ h4:before{
 
     <div class="container1">
     <div class="row">
-      <div style="text-align:right">
+      <div>
         <article class="faq-content" align="right" style="text-align:justified">
 
-          <h4>How does LearnEmp work?</h4>
+          <h3 class="feature">How does LearnEmp work?</h3>
           <p>LearnEmp is a social crowdfunding platform for students who cannot afford higher education at their desired university or course. LearnEmp enables the donor to identify a student's potential and accomplishments and make a contribution in order to help and empower the student.</p>
 
           <br>
-          <h4>Will the donor be paid back?</h4>
+          <h3 class="feature">Will the donor be paid back?</h3>
 
           <p>The donor is not paid back. LearnEmp works on the principle of 'Pay it Forward Loans'. When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</p>
 
           <br>
-          <h4>How much should I donate?</h4>
+          <h3 class="feature">How much should I donate?</h3>
 
           <p>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</p>
         
@@ -218,50 +207,7 @@ h4:before{
 
   <br>
 
-  <div class="container1">
-    <div class="row">
-    <div class="col-lg-12">
-      <h1 class="faq-head" style="font-family:'Cabin Sketch' cursive;">About Us</h1>
-      </div>
-    </div>
-
-    <div class="row">
   
-        <article class="faq-content">
-            <h2>The Team</h2>
-            <p>Founded in January 2014, LearnEmp comprises eight individuals from across India who are passionate about learning and sharing knowledge and skills. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the play field by providing opportunities to students who do not have the means to pursue higher education due to a lack of funding. </p>
-
-            <br>
-     
-        
-        <div align="center">
-          <br>
-          <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-rounded">
-            
-              <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="Manoj" class="img-rounded">
-            
-              <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-rounded">
-
-              <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-rounded">
-
-              <br>
-              <br>
-
-              <img src="./images/vaibhav.jpg" style="height:100px"  alt="Vaibhav" class="img-rounded" >
-
-              <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="Sai" class="img-rounded">
-
-              <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="Rajeef" class="img-rounded" >
-
-              <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="Sujay" class="img-rounded">
-
-              <br>
-            </div>
-        </article>
-    
-    </div>
-    <br>
-
       <div class="faq-content">
 
      
@@ -293,10 +239,11 @@ h4:before{
     </small>        
     </div>
 
-  <hr>
+  <br>
 
-  <footer class="footer" style="text-align:center">
+  <footer class="well" align="center">
       <nav>
+        <br>
         <ul>
           <a href="home_v3.html">Home </a> |
           <a href= "#about">About Us</a> |
@@ -307,6 +254,48 @@ h4:before{
         </ul>
       </nav> 
   </footer>
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
+      </div>
+      <div class="modal-body">
+        <div class="navbar-collapse collapse">
+              <form>
+               <!-- Text input-->
+  <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Username:</label>  
+      <div class="col-md-4">
+      <input id="textinput" name="textinput" type="text" placeholder="Username" class="form-control input-md"> 
+      </div>
+  </div>
+  <br>
+
+<!--Text input-->
+  <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Password:</label> 
+      <div class="col-md-4">
+        <input id="textinput" name="textinput" type="text" placeholder="Password" class="form-control input-md">
+      </div>
+  </div>
+  <br>
+
+              </form>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 </body>
 
 </html> 
