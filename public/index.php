@@ -56,12 +56,12 @@ background-repeat:repeat;
     
 
 <div class="navbar-collapse collapse">
-              <form class="navbar-form navbar-right" role="form">
+              <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
                 <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
               
 
-              </form>
+              </div>
               
               </div>
 
@@ -263,12 +263,12 @@ background-repeat:repeat;
       </div>
       <div class="modal-body">
         <div class="navbar-collapse collapse">
-              <form>
+              <form action="donorlogin.php" method="post">
                <!-- Text input-->
   <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Username:</label>  
       <div class="col-md-4">
-      <input id="textinput" name="textinput" type="text" placeholder="Username" class="form-control input-md"> 
+      <input id="email" name="email" type="text" placeholder="Username" class="form-control input-md"> 
       </div>
   </div>
   <br>
@@ -277,17 +277,18 @@ background-repeat:repeat;
   <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Password:</label> 
       <div class="col-md-4">
-        <input id="textinput" name="textinput" type="text" placeholder="Password" class="form-control input-md">
+        <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
       </div>
   </div>
   <br>
+        <div class="modal-footer">
+        <button type="submit" class="btn btn-default">Log In</button>
+      </div> 
 
               </form>
             </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Log In</button>
-      </div>
+      
     </div>
   </div>
 </div>
