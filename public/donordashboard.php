@@ -106,7 +106,7 @@ background-repeat:repeat;
 
           <br>
 
-          <h3>Vaibhav Mule</h3>
+          <h3>Vaibhav</h3>
           <p>Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           <div class="progress">
@@ -150,9 +150,9 @@ background-repeat:repeat;
     <div class="row">
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
-          <img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
+          <img src="./images/science7.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
           <br>
-          <h3>Priyanka</h3>
+          <h3>Neha</h3>
           <p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
         
           <div class="progress">
@@ -167,12 +167,12 @@ background-repeat:repeat;
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
           <a href="studentprofile_v5.html">
-            <img src="./images/student.jpg" alt="donate" style="height:200px; width:300px"></img>
+            <img src="./images/student3.jpg" alt="donate" style="height:200px; width:300px"></img>
           </a>
 
           <br>
 
-          <h3>Vaibhav Mule</h3>
+          <h3>Anton</h3>
           <p>Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           <div class="progress">
@@ -188,8 +188,8 @@ background-repeat:repeat;
 
       <div class="col-lg-4" style="width:350px; text-align:justify;">
         <div class="well"style="width:340px;">
-          <img src="./images/student01.jpg" alt="donate"  style="height:200px"></img> 
-          <br><h3>Maria</h3>
+          <img src="./images/student2.jpg" alt="donate"  style="height:200px"></img> 
+          <br><h3>Robin</h3>
           <p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           <div class="progress">
@@ -216,9 +216,9 @@ background-repeat:repeat;
     <div class="row">
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
-          <img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
+          <img src="./images/628x471.jpg" alt="donate"align="center" style="height:200px; width:300px" ></img> 
           <br>
-          <h3>Priyanka</h3>
+          <h3>Aparna</h3>
           <p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds.</p>
         
           <div class="progress">
@@ -233,12 +233,12 @@ background-repeat:repeat;
       <div class="col-lg-4" style="width:350px; text-align: justify;">
         <div class="well" style="width: 340px;">
           <a href="studentprofile_v5.html">
-            <img src="./images/student.jpg" alt="donate" style="height:200px; width:300px"></img>
+            <img src="./images/indian_student_computer.jpg" alt="donate" style="height:200px; width:300px"></img>
           </a>
 
           <br>
 
-          <h3>Vaibhav Mule</h3>
+          <h3>Prashant</h3>
           <p>Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           <div class="progress">
@@ -254,8 +254,8 @@ background-repeat:repeat;
 
       <div class="col-lg-4" style="width:350px; text-align:justify;">
         <div class="well"style="width:340px;">
-          <img src="./images/student01.jpg" alt="donate"  style="height:200px"></img> 
-          <br><h3>Maria</h3>
+          <img src="./images/Indian-student.jpg" alt="donate"  style="height:200px; width:300px"></img> 
+          <br><h3>Soniya</h3>
           <p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           <div class="progress">
