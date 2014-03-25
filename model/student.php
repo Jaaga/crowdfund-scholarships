@@ -69,7 +69,7 @@
 
             $_SESSION['$email']= $email;
             $_SESSION['password']= $password;
-            header("location:../public/Student_dash.php?id=$S_id");
+            header("location:../public/Student_dash.php");
         }
 
         

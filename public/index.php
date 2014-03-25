@@ -1,3 +1,5 @@
+<?php include('../model/student.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -110,31 +112,35 @@ background-repeat:repeat;
       </div>
         <br>
 
+
+<?php $students= getStudentList(); ?>
+
+
       <div class="row">
         <div class="col-md-4" style="margin-left:-0.6em; padding-left:3em;">
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src="./images/student01.jpg" style="height:200px; width:300px">
-            <h2>Sheela Dixit</h2>
-            <p style="text-align: justify; padding:1em 1em;" >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <img src=<?php echo $students[0]['image_path']?> style="height:200px; width:300px">
+            <h2><?php echo $students[0]['fname']; ?> </h2>
+            <p style="text-align: justify; padding:1em 1em;" ><?php echo $students[0]['para'] ?></p>
           </div>
         </div>
 
         <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src="./images/student02.jpg" style="height:200px; width:300px"> 
-            <h2>Manisha Reddy</h2>
-            <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <img src=<?php echo $students[1]['image_path'] ?> style="height:200px; width:300px"> 
+            <h2><?php echo $students[1]['fname'] ?></h2>
+            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[1]['para'] ?></p>
           </div>
         </div>
 
         <div class="col-md-4" style="margin-left:-0.3em; padding-left:3em;">
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src="./images/student03.jpg" style="height:200px; width:300px"> 
-            <h2>Priyanka Sethi</h2>
-            <p style="text-align: justify; padding:1em 1em;">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <img src=<?php echo $students[2]['image_path'] ?> style="height:200px; width:300px"> 
+            <h2><?php echo $students[2]['fname'] ?></h2>
+            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
           </div>
         </div>
       </div>

@@ -55,9 +55,10 @@ include ('dbcon.php');
 // If result matched $myusername and $mypassword, table row must be 1 row
 		if($count==1)
 			{
-				
+				$_SESSION['email']= $email;
+				$_SESSION['password']= $password;
 // Register $myusername, $mypassword and redirect to file "Students_list.php"
-			header("location:../public/Students_list.php?id=$D_id");
+			header("location:../public/listofstudents.php?id=$D_id");
 			}
 		else
 			{
