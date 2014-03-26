@@ -71,10 +71,10 @@ include ('dbcon.php');
  {
  		$db=dbopen();
  		
-  		$sql = "INSERT INTO donation (D_id,S_Id,date,amount)
- 		VALUES ('$D_id','$S_Id',NOW(),'$amount' )";
+  		$sql = "INSERT INTO donation (D_id,S_id,date,amount)
+ 		VALUES ('".$D_id."','".$S_id."',Now(),'".$amount."' )";
  		$result = $db->query($sql);
-		if(!$result)
+		if(!$sql)
 		{
 			echo "sorry your donations were not accepted";
 		}
@@ -83,6 +83,7 @@ include ('dbcon.php');
 			echo "Thank You for Donating";
 			//redirectToStudent($D_id);
 		}
+		echo "thanks.";
 
  }
 
