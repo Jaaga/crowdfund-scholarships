@@ -12,6 +12,7 @@
     position: relative;
     top: 100px;
     }
+
     
 
   </style>
@@ -77,12 +78,12 @@
       </div>
 
   <div class="container">
-  <div class="well">
+  <div class="well" style="background-color:rgba(144,144,144,1);">
   <form class="form-horizontal" action="applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
   <fieldset>
 
   <!-- Form Name -->
-  <legend align="center"><h1>Application for Scholarship</h1></legend>
+  <h1 style= "text-align: center; padding: 0 0 50px 0;">Application for Scholarship</h1>
 
   <!-- Text input-->
   <div class="form-group">
@@ -138,6 +139,15 @@
     <input name="password" type="password" placeholder="Password" class="form-control input-md">    
   </div>
 </div>
+
+ <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
+    <div class="col-md-4">
+    <input name="fname" type="password" placeholder="Confirm Password" class="form-control input-md">
+    
+    </div>
+  </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
@@ -151,7 +161,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea">Address:</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="address">Address</textarea>
+      <textarea class="form-control" name="address" placeholder="Address"></textarea>
     </div>
   </div>
 
@@ -192,36 +202,54 @@
     <div class="col-md-4">
       <select name="course" class="form-control">
         <option value="#">Select Course</option>
-        <option value="cooking">Culinary Studies</option>
+        <option value="Php">Php</option>
+        <option value="Python">Python</option>
+        <option value="html/css">Html/Css</option>
       </select>
     </div>
   </div>
 
   <!-- Textarea -->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="textarea">Description of Course:</label>
+    <label class="col-md-4 control-label" for="textarea" >Introduce yourself!</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="para">Please describe why you want to take up the course </textarea>
+      <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
     </div>
   </div>
-
-  <!-- for uploading any-file-->
-  <div class="form-group">
-    <label class="col-md-4 control-label">Upload-Document:</label> 
-  <div class="col-md-4">
-  <input name="image_path" type="file" size="60">
-  </div>
-  </div>
-
-
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Scholarship Amount:</label>  
     <div class="col-md-4">
-    <input name="scholar_AMT" type="text" placeholder="state the amount required" class="form-control input-md">
+    <input name="scholar_AMT" type="text" placeholder="enter the amount required" class="form-control input-md">
 
     </div>
   </div>
+
+  <!-- for uploading anyfile-->
+  <div class="form-group">
+    <label class="col-md-4 control-label">Upload-Document:</label> 
+    <div class="col-md-4">
+      <input name="image_path" type="file" size="60">
+    </div>
+  </div>
+<!--Upload image starts here-->
+  <div class="form-group">
+    <label class="col-md-4 control-label">Upload-Image:</label> 
+    <div class="col-md-6" >
+<div class="fileupload fileupload-new" data-provides="fileupload">
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div>
+    <span class="btn btn-file"><input type="file" /></span>
+    
+  </div>
+  </div>
+  </div>
+</div>
+
+<!--upload image ends here-->
+
+
+  
 
 
   <!-- Button -->
