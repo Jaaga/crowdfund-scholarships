@@ -10,6 +10,15 @@
 
 	<style>
 	
+	 @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+     
+    
+     }
 	#bg{
     background:url('./images/chalkboard2.jpg');
     border: 3 solid /*#33cc33*/#6E8B3D;
@@ -21,7 +30,8 @@ background: url("./images/wood1.png");
 background-repeat:repeat;
 }
 .sponsor_data{
-font-family:'Cabin Sketch' cursive;
+/*font-family:'KG Second Chances Sketch- Regular';*/
+font-family: 'KGSecondChancesSketch', Arial, sans-serif;
 font-size: 27px;
 }
 
@@ -35,7 +45,7 @@ font-size: 27px;
 			<div class="navbar-header" style="height: 50px;">
 		
           
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'CabinSketch-Regular'; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
@@ -70,7 +80,7 @@ font-size: 27px;
 	<br>
 
 	<div class="container" width="50px;" style="display: inline">
-		<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 72px; margin-top: -30px;">Vaibhav Mule</h1>
+		<h1 align="center" style="font-family:'KGSecondChancesSketch'; font-size: 72px; margin-top: -30px;">Vaibhav Mule</h1>
 	
 
 		
@@ -118,7 +128,7 @@ font-size: 27px;
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b>34</b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br> out of<b> Rs.1,20,000</b></h2>
+						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br>of<b> Rs.1,20,000</b></h2>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
@@ -195,7 +205,7 @@ font-size: 27px;
     <div class="row" style="padding: 80px 50px 0 50px">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:100px"></img> 
-          <br><h3>MAKE A DONATION</h3>
+          <br><h4>MAKE A DONATION</h4>
          <!-- <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
 
           <br>-->
@@ -203,14 +213,14 @@ font-size: 27px;
 
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-        <br><h3>STUDENT BENEFITS FROM LOAN</h3>
+        <br><h4>STUDENT BENEFITS FROM LOAN</h4>
         <!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>-->
       </div>
 
       <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-          <br><h3>STUDENT PAYS IT FORWARD</h3>
+          <br><h4>STUDENT PAYS IT FORWARD</h4>
           <!--<p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
       -->
       </div>
