@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title>Student Dashboard</title>
+	<title>Student Profile</title>
 
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
 	<link href="./dist/css/slider.css" rel="stylesheet">
@@ -69,72 +69,45 @@ font-size: 27px;
 	<br>
 	<br>
 
-	<div class="container" >
+	<div class="container" width="50px;" style="display: inline">
+		<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 72px; margin-top: -30px;">Vaibhav Mule</h1>
+	
+
+		
+		
+	</div>
+
+	
+	<div class="container">
 		<div class="row">
-			<div class="col-lg-3" align="left"  >
 			
 
+			<div div class="col-md-6" align="right"  style="margin-top: -40px;">
+   					
+       			<form action="application.html">
+
+       					<button type="submit" class="btn btn-success" style="font-family: verdana;">Edit Application</button>
+    				
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+	<div class="container">
+    	<div class="row">
+    		<div class="col-md-6" align="left" style="margin-top: -40px;">
 					<img src="./images/facebook-icon.png" width="25px"/>
 					<img src="./images/Twitter_logo.png" width="25px"/>
 					<img src="./images/linked-in.jpg" width="25px"/>
-					&nbsp
 
-					<a href="#">
-
-              		<span class="glyphicon glyphicon-edit" style="font-size:13px;"></span>
-        
-        			</a>
-					
-
-			</div>
-			<div class="col-lg-6">
-			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
-			Vaibhav Mule
-			</h1>
-			</div>
-    		
-
-			<div class="col-lg-3" align="right" >
-   					
-       			<form action="application.php">
-
-       			<button type="submit" class="btn btn-success" style="font-family: verdana;" >Edit Application</button>
-    				
-    			</form>
-    		</div>	
-    	</div>
-
-    	<br>
-    
-
-    
-    	<div class="row">
+				</div>
 
         	<div class="col-xs-7"  text-align="justify">
         		
 
 				<img src="./images/student.jpg" width="100%" height="400px">
-				<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
-
-				<a href="" onclick="document.getElementById('profile_pic').click(); return false">
-
-          		<span class="glyphicon glyphicon-camera" style="font-size:20px;"></span>
-
-        		</a>
-		 		<br>
-		 		
 		 		<div class="well" width="100%">
-        			<a class="edit"href="#">
-
-              	<span class="glyphicon glyphicon-edit" style="font-size:24px;"></span>
-        
-        		</a>
-
-        			<h2>My Story</h2>
-
-        			<br>
-
-        			<p style="text-align:justify">Hey Guys! Please sponsor me for my new adventure with Jaaga. </b>Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.
+        			<h2>My Story</h2><br><p style="text-align:justify"><b>Hey Guys! Please sponsor me for my new adventure with Jaaga. </b>Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.
  					Through this program I am hoping to get a better understanding of programming languages and make great websites for a living!<br><br>
  
         			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
@@ -152,6 +125,9 @@ font-size: 27px;
 		
 			<div class="col-xs-5"> 
 
+			
+				
+
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b>34</b> donors backed </h2><br>
@@ -160,39 +136,31 @@ font-size: 27px;
 					
 						<br>
 					
-						<!--<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
 							<input type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
-                    	</div> -->
+                    	</div>
 						
-						<!--<button type="button" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate
-						</button>-->
-						
+						<button type="button" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
 					</div>
 
 					<br><br><br>			
 				</div>
 
-				<br>
 
 				<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">
 
-				<a class="edit"href="#">
-
-              	<span class="glyphicon glyphicon-edit" style="font-size:24px;"></span>
-        
-        		</a>
-
-					<h3>So here's why I need your help</h3><br><p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+					<h3>So here's why I need your help</h3><br><p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
 						Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 					</p>
 					<p>Aenean lacinia bibendum nulla sed consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
 				</div>
 			</div>
-
 		</div>
-	
+	</div>
 
+	
+	<div class="container">
     	<div class="row">
       
         	<div class="col-sm-7"  text-align="justify">
@@ -232,38 +200,9 @@ font-size: 27px;
 				<br>
 
 				</div>
-			</div>
-	
 
-
-    	<div class="row" style="padding: 100px 50px 0 50px" align="center">
-    	<br><br>
-
-      		<div class="col-lg-4">
-
-          		<img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:100px"></img> 
-          		<br><h3>MAKE A DONATION</h3>
-         		<!-- <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
-
-          		<br>-->
-      		</div>
-
-      		<div class="col-lg-4">
-        		<img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-        		<br><h3>STUDENT BENEFITS FROM LOAN</h3>
-        		<!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
-          		<br><br>-->
-      		</div>
-
-      		<div class="col-lg-4">
-          		<img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-          		<br><h3>STUDENT PAYS IT FORWARD</h3>
-          		<!--<p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
-      		-->
-      		</div>
-    	</div>
-
-  	</div>
+		</div>
+	</div>
 
 	<footer class="footer" style="text-align:center">
   		<nav>

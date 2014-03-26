@@ -132,7 +132,7 @@ h4:before{
             <h4>Featured</h4>
           <img src="./images/student01.jpg" style="height:200px; width:300px">
             <h2><?php echo $students[0]['fname']; ?> </h2>
-            <p style="text-align: justify">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <p style="text-align: justify"><?php echo $students[0]['para'] </p>
             </div>
           </div>
 
@@ -141,7 +141,7 @@ h4:before{
               <h4>Featured</h4>
             <img src="./images/student02.jpg" style="height:200px; width:300px"> 
             <h2><?php echo $students[1]['fname'] ?></h2>
-            <p style="text-align: justify">I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. Please do help fund me so that I can realise my dreams</p>
+            <p style="text-align: justify"><?php echo $students[1]['para'] </p>
             </div>
           </div>
 
