@@ -88,8 +88,6 @@ $S_id=$_GET['id'];
 $D_id=$_GET['id2'];
 $row= getStudent($S_id);
 $listDonors=getDonors($S_id);
-$totalDonors=0;
-foreach($listDonors as $total){ $totalDonors++;}
 //$totalDonors=count($listdonors);
  ?>
 
@@ -142,7 +140,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
-						<h2 class="sponsor_data"> <b><?php echo $totalDonors; ?></b> donors backed </h2><br>
+						<h2 class="sponsor_data"> <b><?php echo $listDonors['0']; ?></b> donors backed </h2><br>
 						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					

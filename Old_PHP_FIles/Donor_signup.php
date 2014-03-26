@@ -50,8 +50,13 @@
     </div>
 
 <div id="container">
-	<form action = "./Donorsignup.php" method="post">
-		<h2 style="margin:60px 0 10px 0">Donor Signup Form</h2>
+  
+	<form action = "./listofstudents.php" method="post">
+    <?php
+    include '../model/donor.php';
+    createDonor($_POST['name'],$_POST['password'],$_POST['email']);
+    ?>
+ 		<h2 style="margin:60px 0 10px 0">Donor Signup Form</h2>
 		<div class="line"> <label for="firstname"> First Name* : </label> <input type="text" id="firstname" name="name"/> </div>
 		<!--<div class="line"> <label for="lastname"> Last Name* : </label> <input type="text" id="lastname" /> </div>-->
 		<div class="line"> <label for="email"> Email : </label> <input type="email" id="email" name="email" /> </div>
