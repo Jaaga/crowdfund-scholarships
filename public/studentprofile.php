@@ -87,10 +87,12 @@ font-size: 27px;
 $S_id=$_GET['id'];
 $D_id=$_GET['id2'];
 $row= getStudent($S_id);
-$listDonors=getDonors($S_id);
-$totalDonors=0;
-foreach($listDonors as $total){ $totalDonors++;}
+$Donors=getDonors($S_id);
+$total=count($Donors);
+//$totalDonors=0;
+//foreach($Donors as $totalDonors){ 
 //$totalDonors=count($listdonors);
+//	$total = count($totalDonors);}
  ?>
 
 
@@ -142,7 +144,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
-						<h2 class="sponsor_data"> <b><?php echo $totalDonors; ?></b> donors backed </h2><br>
+						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
 						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
@@ -227,9 +229,9 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
       </div>
 
       <div class="col-lg-4">
-        <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-        <br><h4>STUDENT BENEFITS FROM LOAN</h4>
-        <!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
+            <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
+            <br><h4>STUDENT BENEFITS FROM LOAN</h4>
+            <!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>-->
       </div>
 
@@ -237,7 +239,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
           <br><h4>STUDENT PAYS IT FORWARD</h4>
           <!--<p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
-      -->
+          -->
       </div>
     </div>
   </div>
