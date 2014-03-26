@@ -27,6 +27,7 @@ createDonor($_POST['name'],$_POST['password'],$_POST['email']);
     </div>
           <hr>
     <h6 align="center"> This Page will be redirected in few seconds...</h6>
+    <?php header('Location: ./Students_list.php'); ?>
 </body>
 </html>
 
