@@ -2,7 +2,6 @@
 <?php
   include ('dbcon.php');
   
-
     function getStudentList()
     {   
         
