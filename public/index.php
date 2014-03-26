@@ -277,15 +277,16 @@ background-repeat:repeat;
       <input id="email" name="email" type="text" placeholder="Username" class="form-control input-md"> 
       </div>
   </div>
-  <br>
-
+   <br>
+   <br>
 <!--Text input-->
   <div class="form-group">
         <label class="col-md-4 control-label" for="textinput">Password:</label> 
       <div class="col-md-4">
-        <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+      <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
       </div>
   </div>
+  <br>
   <br>
         <div class="modal-footer">
         <button type="submit" class="btn btn-default">Log In</button>

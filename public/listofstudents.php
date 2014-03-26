@@ -60,25 +60,10 @@ background-repeat:repeat;
                 <li><a href="#">Sign Up</a></li>
             </ul>
 
-        <div class="navbar-collapse collapse">
-              <form class="navbar-form navbar-right" role="form">
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <input type="password" placeholder="Password" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                &nbsp 
-
-              </form>
               
               </div><!--/.navbar-collapse -->
         </div>
       </div>
-    </div>
     
   <br>
   <br>
@@ -89,28 +74,38 @@ background-repeat:repeat;
     <h1 id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
-        foreach($students as $student){
-      echo '<div class="col-lg-4" style="width:350px; text-align: justify;">';
-      echo '<div class="well" style="width: 340px;">';
-      echo '<img src='.$student['image_path'].' alt="donate"align="center" style="height:200px; width:300px" ></img>'; 
-      echo  '<br>';
-      echo  '<h3>'.$student['fname'].'</h3>';
-      echo    '<p>'.$student['para'].'</p>';
-      echo '</div></div>';
-          
-          }
+        foreach($students as $student){ ?>
+    <div class="col-lg-4" style="width:350px; text-align: justify;">
+      <div class="well" style="width: 340px;">
+        <img src=<?php echo $student['image_path']; ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
+        <br>
+        <h3><?php echo $student['fname']; ?></h3>
+        <p><?php echo $student['para']; ?></p>
+        <?php 
+            $D_id=$_GET['id'];   
+            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
+               ?>
+    <div class="row">
+    <div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>" >Read more</a></div>
+      <form method="POST" action="donate.php">
+          <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
+          <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
+      <div class="col-lg-6"><input type="submit" value="Donate" class="btn btn-primary"></div>
+      </form>
+      </div>
+      </div></div>
+      <?php    
+        }
 
-           ?>
+  ?>
+  </div>
+            </div> 
         
           <!--<div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
               <span class="sr-only">40% Complete (success)</span>
             </div></div> -->
-          </div><p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbspRs.40,000</b> pledged
-             &nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
-            </div>
-          </div>
-        </div>   
+        
 
 
   <footer class="footer" style="text-align:center">
