@@ -81,12 +81,12 @@
         $db=dbopen();
         $sql="select * from donation inner join donor on donation.S_id=$studentId && donation.D_id=donor.D_id";
         $list = $db->query($sql);
-
+        $row=mysqli_fetch_array($list);
         if(!$list)
         {
             die('Error' .$db->error());
         }
-        return array($list);
+        return array($row);
     }
 
     function getStudent($studentId){
@@ -99,7 +99,7 @@
             die('Error' .$db->error());
         }
         else{
-        $row= $result->fetch_array(MYSQLI_BOTH);
+        $row= mysqli_fetch_array($result);
 
         return $row;
         }
