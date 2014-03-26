@@ -1,3 +1,10 @@
+// <?php
+//if(isset($_GET('donate'))){
+ // include ''
+//}
+
+//?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -104,7 +111,7 @@ background-repeat:repeat;
               <span class="sr-only">40% Complete (success)</span>
             </div>
           </div><p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbspRs.40,000</b> pledged
-             &nbsp&nbsp<button type="button" href="../Old_PHP_FIles/Donor_signup.php" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
+             &nbsp&nbsp<button type="button" href="?donate" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
         </div>
       </div>
     <?php endforeach; ?>
