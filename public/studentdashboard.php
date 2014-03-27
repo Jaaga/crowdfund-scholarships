@@ -18,7 +18,7 @@
 		}
 		body{
 		
-		background-repeat:repeat;
+	
 		padding-top: 80px;
 
 		}
@@ -33,48 +33,36 @@
 
 	
 
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-	  
-				<div class="navbar-header" style="height: 50px;">
-		
-          
-<<<<<<< HEAD
-        			<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
-        		</div>
+	
 
-        		<div class="collapse navbar-collapse">
-        			<ul class="nav navbar-nav">
-            			<li><a href="listofstudents.php">Sponsor</a></li>
-            			<li><a href="#">Sign Up</a></li>
-        			</ul>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+    
+      <div class="navbar-header" style="height: 50px;">
+    
 
-					<div class="navbar-collapse collapse">
-        				<div class="navbar-form navbar-right">
-                			<button type="button" class="btn btn-danger">Sign Up</button>
-                			<button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
-           				</div><!--/.navbar-collapse -->
-    				</div>
-    			</div>
-=======
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
-        	</div>
-        	<div class="collapse navbar-collapse">
-        		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php">Sponsor</a></li>
-            		<li><a href="#">Sign Up</a></li>
-        		</ul>
+        <a class="navbar-brand" href="index.php">
+        <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+      </div>
 
-				<div class="navbar-collapse collapse">
-        			<div class="navbar-form navbar-right">
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+              <li><a href="listofstudents.php">Sponsor</a></li>
+              <li><a href= "#hiw">How it Works</a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
-           		</div><!--/.navbar-collapse -->
->>>>>>> 14730fa5e36cbb1dd75cd3793f720d175507afe4
-    		</div>
-    </div><!--/.navbar-collapse -->
+                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+          </div>              
+        </div>
+      </div>
+    </div>
+</div>
 
-    <div class="container" >
+<div class="container" >
 
 		<div class="row">
 			<div class="col-lg-3" align="left"  >
@@ -265,7 +253,7 @@
       		</div>
     	</div>
 
-  	</div>
+</div>
 
 	<hr>
 	<footer class="footer" style="text-align:center">
