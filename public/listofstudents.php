@@ -94,7 +94,8 @@ background-repeat:repeat;
       </form>
       </div>
       </div></div>
-  
+  <?php 
+       }
 
   ?>
   </div>
