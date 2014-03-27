@@ -41,19 +41,10 @@
               </ul>
 
           <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" role="form">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-
-                  <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                  &nbsp 
-
-                </form>
+                 <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              </div>
                 
                 </div><!--/.navbar-collapse -->
           </div>
@@ -276,7 +267,7 @@
   <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
   <a href="">Contact &nbsp |</a>&nbsp &nbsp
   <a href="">Donor &nbsp |</a>
-  <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+  <br><br> 
   </footer>
    
   </body>
