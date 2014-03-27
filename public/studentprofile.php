@@ -29,9 +29,9 @@ include ('../model/student.php'); ?>
 	text-align: center;
 	}
 		body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
-}
+	background: url("./images/wood1.png");
+	background-repeat:repeat;
+	}
 .sponsor_data{
 /*font-family:'KG Second Chances Sketch- Regular';*/
 font-family: 'KGSecondChancesSketch', Arial, sans-serif;

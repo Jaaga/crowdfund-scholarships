@@ -4,25 +4,34 @@
 <head>
   <title>Donor Dashboard</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
  <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
   <style type="text/css">
     body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
+     
+      background-repeat:repeat;
 
-  padding-top: 80px;
+    padding-top: 80px;
 
-}
+    }
     
-    img {
+    /*img {
     position: relative;
     float:left;
-    }
+    }*/
+
+    img {
+    float:left;
+    position: relative;
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
   </style>
 </head>
 
 <body>
-<div class="container">
+
 	
 	<!-- Navbar section -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -51,13 +60,10 @@ background-repeat:repeat;
     	</div>
 	</div> 
 
+  <div class="container">
 
-	
-
-
-
-	<!-- Donor Detail Row-->
- 	<div class="row">
+	  <!-- Donor Detail Row-->
+ 	  <div class="row">
     	<div class="col-md-12" >
      		<div class="well" >  
         		<img src="./images/donor.jpg" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
@@ -69,27 +75,28 @@ background-repeat:repeat;
         		<p style="font-size:18px"> Born and raised in LA. Currently working selling electric vehicles and project planning for rad new projects taking place in LA. English Lit. graduate that loves to write and live life to the fullest!</>
         		<br>
         		<p style="font-size:26px" "text-type:bold">Donated to 9 Students -- Donate to More</p>
-      		</div>
+      	</div>
     	</div>
-  	</div>
+    </div>
 
   
 
   	<!-- Heading for Donated list row-->
-  	<div class="row">
+    <div class="row">
     	<h1 style="text-align:center; font-family:Cabin Sketch">John's Donated Student List</h1>
     	<br>  
     </div>
 
-	<!-- First row of students -->
+	  <!-- First row of students -->
   	<div class="row">
-    	<div class="col-lg-4" >
+    	<div class="col-md-4" >
         	<div class="well" >
             <a href="studentprofile.php">
-        	<!-- style="width: 340px;"-->
+        	   
           		<img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:320px" ></img> 
           		<br>
           		<h3>Priyanka</h3>
+            </a>
           		<p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
         
           		<div class="progress">
@@ -103,15 +110,16 @@ background-repeat:repeat;
         	</div>
      	</div>
   
-      	<div class="col-lg-4" >
-        	<div class="well" >
+      <div class="col-md-4" >
+        <div class="well" >
         		<a href="studentprofile.php">
             	<img src="./images/student.jpg" alt="donate" style="height:200px; width:320px"></img>
-          		</a>
+          		
 
           		<br>
 
           		<h3>Vaibhav</h3>
+            </a>
           		<p>Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
           		<div class="progress">
@@ -125,20 +133,21 @@ background-repeat:repeat;
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></a>
           		</p>
         	</div>
-      	</div>
+      </div>
 
-      	<div class="col-lg-4" >
-        	<div class="well">
-            <a href="studentprofile.php">
-          		<img src="./images/student01.jpg" alt="donate"  style="height:200px; width:320px"></img> 
-          		<br><h3>Maria</h3>
-          		<p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
+      <div class="col-md-4" >
+        <div class="well">
+          <a href="studentprofile.php">
+          	<img src="./images/student01.jpg" alt="donate"  style="height:200px; width:320px"></img> 
+          	<br><h3>Maria</h3>
+          </a>
+          <p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
-        		<div class="progress">
-            		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: 40%">
-                		<span class="sr-only">40% Complete (success)</span>
-            		</div>
-          		</div>
+        	<div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: 40%">
+              <span class="sr-only">40% Complete (success)</span>
+            </div>
+          </div>
 
          		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp Rs.40,000</b> pledged
          		&nbsp<a href="studentprofile.php">
@@ -146,8 +155,8 @@ background-repeat:repeat;
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button>
           		</a>
           		</p>
-        	</div>
-      	</div> 
+        </div>
+      </div> 
     </div>
 
   	
@@ -219,7 +228,10 @@ background-repeat:repeat;
    		</div>
    	</div>
     
+
    	<!-- Third Row -->
+
+    
     <div class="row">
     	<div class="col-lg-4" >
         	<div class="well" >
@@ -283,12 +295,12 @@ background-repeat:repeat;
         	</div>
       	</div>     
     </div>
-</div> <!-- Main Container Close -->
+  </div> <!-- Main Container Close -->
 
-<hr>
+  <hr>
 
-<!-- Footer -->
-<div class="row">
+  <!-- Footer -->
+  <div class="row">
     <footer class="footer" style="text-align:center" class="row">
       <nav>
         <ul>
@@ -300,7 +312,10 @@ background-repeat:repeat;
         </ul>
       </nav> 
     </footer>
-</div>
+  </div>
+
+
+
 </body>
 
 </html> 
