@@ -19,6 +19,8 @@
 		body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
+padding-top: 80px;
+
 }
 .sponsor_data{
 font-family:'Cabin Sketch' cursive;
@@ -29,7 +31,10 @@ font-size: 27px;
 </head>
 
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+	<div class="container" >
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 	  
 			<div class="navbar-header" style="height: 50px;">
@@ -61,15 +66,12 @@ font-size: 27px;
            		</div><!--/.navbar-collapse -->
     		</div>
     	</div>
-    </div><!--/.navbar-collapse -->
+    	</div><!--/.navbar-collapse -->
 
-    <br>
-    <br>
-    <br>
-	<br>
-	<br>
+    
 
-	<div class="container" >
+	
+
 		<div class="row">
 			<div class="col-lg-3" align="left"  >
 			
@@ -79,14 +81,9 @@ font-size: 27px;
 					<img src="./images/linked-in.jpg" width="25px"/>
 					&nbsp
 
-					<a href="#">
-
-              		<span class="glyphicon glyphicon-edit" style="font-size:13px;"></span>
-        
-        			</a>
-					
-
+	
 			</div>
+
 			<div class="col-lg-6">
 			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
 			Vaibhav Mule
@@ -116,7 +113,7 @@ font-size: 27px;
 				<img src="./images/student.jpg" width="100%" height="400px">
 				<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
 
-				<a href="" onclick="document.getElementById('profile_pic').click(); return false">
+				<a href="" onclick="document.getElementBglyphiconyId('profile_pic').click(); return false">
 
           		<span class="glyphicon glyphicon-camera" style="font-size:20px;"></span>
 
@@ -237,6 +234,7 @@ font-size: 27px;
 
 
     	<div class="row" style="padding: 100px 50px 0 50px" align="center">
+    	
     	<br><br>
 
       		<div class="col-lg-4">

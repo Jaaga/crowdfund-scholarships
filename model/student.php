@@ -79,14 +79,20 @@
     function getDonors($studentId){
 
         $db=dbopen();
-        $sql="select * from donation inner join donor on donation.S_id=$studentId && donation.D_id=donor.D_id";
-        $list = $db->query($sql);
-        $row=mysqli_fetch_array($list);
-        if(!$list)
-        {
-            die('Error' .$db->error());
+        $query="SELECT * from donation inner join donor on donation.S_id='$studentId' && donation.D_id=donor.D_id";
+        $sql=$db->prepare($query);
+        $sql->execute();
+        $sql->bind_result($D_id,$S_id,$date,$amount,$name,$password,$email);
+         while($sql->fetch()){
+               
+        $Donors[]=array('D_id'=>$D_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'password'=>$password,'email'=>$email);
+
         }
-        return array($row);
+        //$sql->store_result();
+        //$count= $sql->num_rows;
+        //$list = $db->query($sql);
+        
+        return ($Donors);
     }
 
     function getStudent($studentId){
