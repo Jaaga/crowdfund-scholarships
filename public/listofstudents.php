@@ -93,7 +93,8 @@ background-repeat:repeat;
           <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
       <div class="col-lg-6">
-        <input type="text" name="amount" value="amount" >  </div>
+      <label class="col-md-4 control-label" for="textinput">$</label> 
+        <input type="text" name="amount" placeholder="Donation amount" >  </div>
       <div class="col-lg-6">
         <input type="submit" value="Donate" class="btn btn-primary">
                              

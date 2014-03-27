@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: LearnEmp
 -- ------------------------------------------------------
@@ -17,7 +17,7 @@
 
 --
 -- Table structure for table `donation`
-
+--
 CREATE Database LearnEmp;
 use LearnEmp;
 
@@ -38,7 +38,7 @@ CREATE TABLE `donation` (
 
 LOCK TABLES `donation` WRITE;
 /*!40000 ALTER TABLE `donation` DISABLE KEYS */;
-
+INSERT INTO `donation` VALUES (1,1,'2014-03-26 09:52:10',40.00),(2,1,'2014-03-26 09:52:30',50.00),(3,1,'2014-03-26 09:52:43',50.00),(1,2,'2014-03-27 13:30:34',0.00),(2,2,'2014-03-27 13:40:45',23.00),(1,2,'2014-03-27 14:05:37',500.00),(2,3,'2014-03-27 14:07:12',600.00);
 /*!40000 ALTER TABLE `donation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,8 @@ CREATE TABLE `donor` (
 --
 
 LOCK TABLES `donor` WRITE;
-
+/*!40000 ALTER TABLE `donor` DISABLE KEYS */;
+INSERT INTO `donor` VALUES (1,'abhinay','abhinay','abhinay302@gmail.com'),(2,'freeman','freeman','freeman@gmail.com'),(3,'akshay','akshay','akshay@gmail.com');
 /*!40000 ALTER TABLE `donor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,16 +76,14 @@ DROP TABLE IF EXISTS `scholarship`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `scholarship` (
-
-  `SC_id` int(20) NOT NULL auto_increment,
+  `SC_id` int(20) NOT NULL AUTO_INCREMENT,
   `image` varchar(300) DEFAULT NULL,
   `description` text,
   `scholar_amt` int(20) DEFAULT NULL,
   `S_id` int(20) DEFAULT NULL,
-   PRIMARY KEY (`SC_id`),
+  PRIMARY KEY (`SC_id`),
   KEY `S_id` (`S_id`),
-  CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_id`)
-
+  CONSTRAINT `scholarship_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -119,8 +118,9 @@ CREATE TABLE `student` (
   `para` varchar(500) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
   `image_path` blob,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`S_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-
+INSERT INTO `student` VALUES (1,'abhinay','kumar','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'Hi,I am a student seeking scholarship for my higher education.','123456','images/bug.jpg','2014-03-27 13:17:04'),(2,'Vaibhav','Mule','M','vaibhav@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.','123123','images/Freeman.jpg','2014-03-27 13:19:24'),(3,'Micheal','Hartl','M','freeman@gmail.com',2147483647,'Bangalore',560062,'Armenia','html/css',120000,'Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy and codeschool.','123123','images/Micheal.jpg','2014-03-27 13:20:28');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -142,4 +142,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-03-05  5:02:39
+-- Dump completed on 2014-03-27 19:58:35
