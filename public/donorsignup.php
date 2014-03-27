@@ -118,7 +118,18 @@ font-size: 64px;}
 	</div>
 
 
-
+<hr>
+  <footer class="footer" style="text-align:center">
+    <nav>
+      <ul>
+        <a href="index.php">Home </a> |
+        <a href= "aboutus.php">About Us</a> |
+        <a href= "#hiw">How It Works</a> |
+        <a href="#faq">FAQ</a> |
+        <a href="#contact">Contact</a>  
+      </ul>
+    </nav> 
+  </footer> 
 
 </body>
 

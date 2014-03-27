@@ -243,6 +243,8 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
     </div>
   </div>
 
+  <hr>
+
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>

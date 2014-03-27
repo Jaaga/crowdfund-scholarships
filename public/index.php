@@ -245,6 +245,8 @@ background-repeat:repeat;
 
   <br>
 
+  <hr>
+
   <footer class="well" align="center">
       <nav>
         <br>

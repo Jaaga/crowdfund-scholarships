@@ -263,6 +263,7 @@ font-size: 27px;
 
   	</div>
 
+<hr>
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>
