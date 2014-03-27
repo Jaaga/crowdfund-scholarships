@@ -75,7 +75,6 @@ background-repeat:repeat;
   
   <?php $students= getStudentList();
         foreach($students as $student){ ?>
-        <?php echo $student['date'];  ?>
     <div class="col-lg-4" style="width:350px; text-align: justify;">
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];

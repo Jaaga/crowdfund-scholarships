@@ -22,12 +22,7 @@
   </head>
   <body>
 <script>
-function ajaxFileUpload(upload_field)
-            {   
-                var filename = upload_field.value;
-                upload_field.form.target = 'image_path';
-                return true;
-            }
+
 </script>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
