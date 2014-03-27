@@ -32,6 +32,39 @@ background-repeat:repeat;
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);
   }
+ .header-faq {
+ /*This is the  header for FAQ(in the blue box)*/
+  position:relative;
+    color:#fff;
+    background:#3ea99f;
+    font-size:1.5em;
+    clear:both;
+    padding:10px 10px 10px 20px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom:0px;
+    font-size: 28px;
+    /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
+
+    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+  }
+  .content-faq{
+     /*This is the actual content for FAQ(in the white box)*/
+    background:white;
+    color: black;
+    width: -100px;
+    padding:10px 10px 10px 20px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom:20px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
 </style>
 </head>
 
@@ -60,7 +93,7 @@ background-repeat:repeat;
 <div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
               
 
               </div>
@@ -154,22 +187,23 @@ background-repeat:repeat;
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
           <br><h3>MAKE A DONATION</h3>
-          <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
-
+          <p style="text-align: justify; padding:1em 1em;"><!--We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>-->
+View our student list and donate an amount. You can share the candidates profile to give them a further boost in achieving their goal. A little donation from your end could go a long way in helping someone for life.</p>
           <br>
       </div>
 
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
-        <br><h3>STUDENT BENEFITS FROM LOAN</h3>
-        <p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
+        <br><h3>AID THE STUDENT</h3>
+        <p style="text-align: justify; padding:1em 1em;">You as a donor choose the applicant you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>
       </div>
 
       <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
           <br><h3>STUDENT PAYS IT FORWARD</h3>
-          <p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
+          <p style="text-align: justify; padding:1em 1em;"><!--The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>-->
+      A student who has been succesfully sponsored gets inducted into apay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>
     </div>
   </div>
@@ -190,19 +224,24 @@ background-repeat:repeat;
       <div>
         <article class="faq-content" align="right" style="text-align:justified">
 
-          <h3 class="feature">How does LearnEmp work?</h3>
-          <p>LearnEmp is a social crowdfunding platform for students who cannot afford higher education at their desired university or course. LearnEmp enables the donor to identify a student's potential and accomplishments and make a contribution in order to help and empower the student.</p>
+          <h3 class="header-faq">How does LearnEmp work?</h3>
+          <p class="content-faq">LearnEmp is a social crowdfunding platform for students who cannot afford higher education at their desired university or course. LearnEmp enables the donor to identify a student's potential and accomplishments and make a contribution in order to help and empower the student.</p>
 
           <br>
-          <h3 class="feature">Will the donor be paid back?</h3>
+          <h3 class="header-faq">Will the donor be paid back?</h3>
 
-          <p>The donor is not paid back. LearnEmp works on the principle of 'Pay it Forward Loans'. When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</p>
+          <p class="content-faq">The donor is not paid back. LearnEmp works on the principle of 'Pay it Forward Loans'. When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</p>
 
           <br>
-          <h3 class="feature">How much should I donate?</h3>
+          <h3 class="header-faq">How much should I donate?</h3>
 
-          <p>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</p>
-        
+          <p class="content-faq">When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</p>
+          <br>
+          <br>
+          <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
+      <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
+      <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
+      </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnemp.com">volunteer@learnemp.com</a>.</p>
           </article>
       </div>
       
@@ -211,18 +250,6 @@ background-repeat:repeat;
 
   <br>
 
-  
-      <div class="faq-content">
-
-     
-        
-      <h2 style="font-family:'Cabin Sketch' cursive;">Get Involved</h2>
-      <p>After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
-      <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
-      </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnemp.com">volunteer@learnemp.com</a>.</p>
-    </div>
-  </div>
-  
     <div class="container1" align="center">
       <h2 style="font-family:'Cabin Sketch' cursive;">Get in Touch</h2>
       <p align="center"> 
@@ -245,9 +272,14 @@ background-repeat:repeat;
 
   <br>
 
+<<<<<<< HEAD
   <hr>
+  <footer align="center">
+=======
+ 
 
-  <footer class="well" align="center">
+ 
+>>>>>>> dda32b0467202a7d083e7f507358ada5c569ae66
       <nav>
         <br>
         <ul>

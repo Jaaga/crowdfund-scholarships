@@ -57,19 +57,10 @@ font-size: 27px;
         		</ul>
 
 				<div class="navbar-collapse collapse">
-        			<form class="navbar-form navbar-right" role="form">
-            		<div class="form-group">
-            			<input type="text" placeholder="Email" class="form-control">
-            		</div>
-
-            		<div class="form-group">
-            			<input type="password" placeholder="Password" class="form-control">
-            		</div>
-
-            		<button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-          			&nbsp 
-
-        			</form>
+        			<div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              </div>
            		
            		</div><!--/.navbar-collapse -->
     		</div>
