@@ -1,6 +1,12 @@
 <?php 
 session_start();
 include ('../model/student.php'); ?>
+<?php
+if isset(action)
+{
+	
+}
+?>
 
 <html>
 
@@ -152,7 +158,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 							<input type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
                     	</div>
 						
-						<button type="button" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
+						<button type="button" name  ="action" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
 					</div>
 
 					<br><br><br>			

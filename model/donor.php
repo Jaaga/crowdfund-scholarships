@@ -83,7 +83,7 @@ include ('dbcon.php');
 			echo "Thank You for Donating";
 			//redirectToStudent($D_id);
 		}
-		echo "thanks.";
+		
 
  }
 
