@@ -36,7 +36,7 @@
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
-                  <li><a href="listofstudents_v8.html">Sponsor</a></li>
+                  <li><a href="listofstudents.php">Sponsor</a></li>
                   <li><a href="#">Sign Up</a></li>
               </ul>
 
@@ -202,9 +202,9 @@
     <div class="col-md-4">
       <select name="course" class="form-control">
         <option value="#">Select Course</option>
-        <option value="Php">Php</option>
+        <option value="Php">PHP</option>
         <option value="Python">Python</option>
-        <option value="html/css">Html/Css</option>
+        <option value="html/css">HTML/CSS</option>
       </select>
     </div>
   </div>
@@ -271,11 +271,11 @@
   <br>
   <hr>
   <footer class="footer"  align="center">
-  <a href="index.html">Home &nbsp |</a>&nbsp &nbsp
-  <a href="FAQ.html">FAQ &nbsp |</a>&nbsp &nbsp 
-  <a href="About.html">About &nbsp |</a>&nbsp &nbsp 
-  <a href="Contact.html">Contact &nbsp |</a>&nbsp &nbsp
-  <a href="Donor_signup.html">Donor &nbsp |</a>
+  <a href="index.php">Home &nbsp |</a>&nbsp &nbsp
+  <a href="">FAQ &nbsp |</a>&nbsp &nbsp 
+  <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
+  <a href="">Contact &nbsp |</a>&nbsp &nbsp
+  <a href="">Donor &nbsp |</a>
   <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
   </footer>
    

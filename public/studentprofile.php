@@ -18,7 +18,7 @@ include ('../model/student.php'); ?>
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');*/
+      src: url('fonts/CabinSketch-Regular.otf');* to be used later/
      
     
      }
@@ -48,11 +48,11 @@ font-size: 27px;
 			<div class="navbar-header" style="height: 50px;">
 		
           
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'CabinSketch-Regular'; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'CabinSketch-Regular'; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents_v8.html">Sponsor</a></li>
+            		<li><a href="listofstudents.php">Sponsor</a></li>
             		<li><a href="#">Sign Up</a></li>
         		</ul>
 
@@ -243,10 +243,12 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
     </div>
   </div>
 
+  <hr>
+
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>
-    			<a href="home_v3.html">Home </a> |
+    			<a href="index.php">Home </a> |
     			<a href= "#about">About Us</a> |
       			<a href= "#hiw">How It Works</a> |
       			<a href="#faq">FAQ</a> |
