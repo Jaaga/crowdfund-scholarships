@@ -74,18 +74,21 @@ padding-top: 60px;
     <h1 id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
-        foreach($students as $student){ ?>
-    <div class="col-lg-4" style="width:350px; text-align: justify;">
+        foreach($students as $student){ 
+  ?>
+
+  <?php 
+            $D_id=$_GET['id'];   
+            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
+  ?>
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;">  <div class="col-lg-4" style="width:350px; text-align: justify;">
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
         <h3><?php echo $student['fname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
-        <?php 
-            $D_id=$_GET['id'];   
-            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
-               ?>
+        </a>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>">Donate</a></div>-->
         <form method="POST" action="donate.php">
@@ -94,8 +97,7 @@ padding-top: 60px;
           
           <!--<div class="col-lg-6">-->
 
-        
-          <div class="col-md-8">
+         <div class="col-md-8">
 
             <input type="text" name="amount" placeholder="$ " class="form-control input-md" > 
 
