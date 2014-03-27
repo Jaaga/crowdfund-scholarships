@@ -1,13 +1,6 @@
 <?php 
 session_start();
 include ('../model/student.php'); ?>
-<?php
-if isset(action)
-{
-	
-}
-?>
-
 <html>
 
 <head>
