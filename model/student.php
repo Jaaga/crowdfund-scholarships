@@ -9,7 +9,7 @@
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
-            $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path);
+            $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path,$date);
         while($sql->fetch()){
                
         $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
