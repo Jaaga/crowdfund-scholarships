@@ -25,7 +25,7 @@ if isset(action)
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');*/
+      src: url('fonts/CabinSketch-Regular.otf');* to be used later/
      
     
      }
