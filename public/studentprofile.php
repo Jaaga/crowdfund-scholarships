@@ -18,7 +18,7 @@ include ('../model/student.php'); ?>
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');* to be used later/
+      src: url('fonts/CabinSketch-Regular.otf');*/
      
     
      }
@@ -59,7 +59,7 @@ font-size: 27px;
 				<div class="navbar-collapse collapse">
         			<div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
               </div>
            		
            		</div><!--/.navbar-collapse -->

@@ -91,21 +91,23 @@
     
       <div class="navbar-header" style="height: 50px;">
     
+
         <a class="navbar-brand" href="index.php">
         <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
       </div>
 
+
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="listofstudents.php">Sponsor</a></li>
-          <li><a href= "#hiw">How it Works</a></li>
+              <li><a href="listofstudents.php">Sponsor</a></li>
+              <li><a href= "#hiw">How it Works</a></li>
         </ul>
 
         <div class="navbar-collapse collapse">
-            <div class="navbar-form navbar-right">
-              <button type="button" class="btn btn-danger">Sign Up</button>
-              <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
-            </div>              
+          <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+          </div>              
         </div>
       </div>
     </div>

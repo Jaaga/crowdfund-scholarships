@@ -21,7 +21,14 @@
 
   </head>
   <body>
-
+<script>
+function ajaxFileUpload(upload_field)
+            {   
+                var filename = upload_field.value;
+                upload_field.form.target = 'image_path';
+                return true;
+            }
+</script>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
       
@@ -39,7 +46,7 @@
           <div class="navbar-collapse collapse">
                  <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
               </div>
                 
                 </div><!--/.navbar-collapse -->
@@ -131,7 +138,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
     <div class="col-md-4">
-    <input name="fname" type="password" placeholder="Confirm Password" class="form-control input-md">
+    <input name="confpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
     
     </div>
   </div>
@@ -214,24 +221,28 @@
 
   <!-- for uploading anyfile-->
   <div class="form-group">
-    <label class="col-md-4 control-label">Upload-Document:</label> 
+    <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-4">
-      <input name="doc_path" type="file" size="60">
+      <input name="image_path" type="file" size="60">
     </div>
   </div>
 <!--Upload image starts here-->
-  <div class="form-group">
+  <!--<div class="form-group">
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+    <img src=<?php echo $_FILES["image_path"]["tmp_name"]; ?> >
+  </div>
   <div>
-    <span class="btn btn-file"><input type="file" name="image_path"></span>
-    
+    <span class="btn btn-file">
+    <input type="file" name="image_path" id="image_path" onchange="return ajaxFileUpload(this);">
+    <input type="file" name="image_path"></span>
+
   </div>
   </div>
-  </div>
-</div>
+  </div> 
+</div>-->
 
 <!--upload image ends here-->
 

@@ -39,6 +39,7 @@
 				<div class="navbar-header" style="height: 50px;">
 		
           
+<<<<<<< HEAD
         			<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
         		</div>
 
@@ -55,6 +56,21 @@
            				</div><!--/.navbar-collapse -->
     				</div>
     			</div>
+=======
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        	</div>
+        	<div class="collapse navbar-collapse">
+        		<ul class="nav navbar-nav">
+            		<li><a href="listofstudents.php">Sponsor</a></li>
+            		<li><a href="#">Sign Up</a></li>
+        		</ul>
+
+				<div class="navbar-collapse collapse">
+        			<div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+           		</div><!--/.navbar-collapse -->
+>>>>>>> 14730fa5e36cbb1dd75cd3793f720d175507afe4
     		</div>
     </div><!--/.navbar-collapse -->
 
