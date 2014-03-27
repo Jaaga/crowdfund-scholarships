@@ -80,7 +80,7 @@ font-size: 64px;}
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Password:</label> 
   		<div class="col-md-4">
-  			<input id="textinput" name="textinput" type="text" placeholder="Password" class="form-control input-md">
+  			<input id="textinput" name="textinput" type="password" placeholder="Password" class="form-control input-md">
   		</div>
 	</div>
 	<br>
