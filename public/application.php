@@ -16,11 +16,11 @@
     
 
   </style>
-  <link href="../dist/css/bootstrap.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-          <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+  <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet' type='text/css'>
+          <link href="http://fonts.googleapis.com/css?family=Rock+Salt" rel='stylesheet' type='text/css'> 
+    <link href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch" rel='stylesheet' type='text/css'>
 
 
   </head>
@@ -229,7 +229,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label">Upload-Document:</label> 
     <div class="col-md-4">
-      <input name="image_path" type="file" size="60">
+      <input name="doc_path" type="file" size="60">
     </div>
   </div>
 <!--Upload image starts here-->
@@ -239,7 +239,7 @@
 <div class="fileupload fileupload-new" data-provides="fileupload">
   <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
   <div>
-    <span class="btn btn-file"><input type="file" /></span>
+    <span class="btn btn-file"><input type="file" name="image_path"></span>
     
   </div>
   </div>
