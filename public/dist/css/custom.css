@@ -4,15 +4,21 @@ body{
 	background-color: #E8EDE0;
 	padding-left: 50px;
   	padding-right: 50px;
-	background: url("./images/wood1.png");
+	background: url("../../images/wood1.png");
 background-repeat:repeat;
+
 	}
 	h2{
 	text-align:center;
 	}
-	img {
-  	position: relative;
-	}
+	/*img {
+  	
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }*/
+    
+	
 	.pitch {
 	position: absolute;
 	top: 30px;

@@ -10,36 +10,53 @@
 
 	<style>
 	
-	#bg{
-    background:url('./images/chalkboard2.jpg');
-    border: 3 solid /*#33cc33*/#6E8B3D;
-	color: #FFFFe0;
-	text-align: center;
-	}
+		#bg{
+    	background:url('./images/chalkboard2.jpg');
+    	border: 3 solid /*#33cc33*/#6E8B3D;
+		color: #FFFFe0;
+		text-align: center;
+		}
 		body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
-padding-top: 80px;
+		
+		background-repeat:repeat;
+		padding-top: 80px;
 
-}
-.sponsor_data{
-font-family:'Cabin Sketch' cursive;
-font-size: 27px;
-}
-
+		}
+		.sponsor_data{
+		font-family:'Cabin Sketch' cursive;
+		font-size: 27px;
+		}
 	</style>
 </head>
 
 <body>
 
-	<div class="container" >
+	
 
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
 	  
-			<div class="navbar-header" style="height: 50px;">
+				<div class="navbar-header" style="height: 50px;">
 		
           
+<<<<<<< HEAD
+        			<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		</div>
+
+        		<div class="collapse navbar-collapse">
+        			<ul class="nav navbar-nav">
+            			<li><a href="listofstudents.php">Sponsor</a></li>
+            			<li><a href="#">Sign Up</a></li>
+        			</ul>
+
+					<div class="navbar-collapse collapse">
+        				<div class="navbar-form navbar-right">
+                			<button type="button" class="btn btn-danger">Sign Up</button>
+                			<button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+           				</div><!--/.navbar-collapse -->
+    				</div>
+    			</div>
+=======
         		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
@@ -53,14 +70,11 @@ font-size: 27px;
                 <button type="button" class="btn btn-danger">Sign Up</button>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
            		</div><!--/.navbar-collapse -->
+>>>>>>> 14730fa5e36cbb1dd75cd3793f720d175507afe4
     		</div>
-    	</div>
-    	</div>
-    	</div><!--/.navbar-collapse -->
+    </div><!--/.navbar-collapse -->
 
-    
-
-	
+    <div class="container" >
 
 		<div class="row">
 			<div class="col-lg-3" align="left"  >
@@ -97,7 +111,7 @@ font-size: 27px;
     
     	<div class="row">
 
-        	<div class="col-xs-7"  text-align="justify">
+        	<div class="col-md-7"  text-align="justify">
         		
 
 				<img src="./images/student.jpg" width="100%" height="400px">
@@ -137,7 +151,7 @@ font-size: 27px;
 			</div>
 
 		
-			<div class="col-xs-5"> 
+			<div class="col-md-5"> 
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
@@ -182,7 +196,7 @@ font-size: 27px;
 
     	<div class="row">
       
-        	<div class="col-sm-7"  text-align="justify">
+        	<div class="col-md-7"  text-align="justify">
 
 				<div class="workstatus">
 					<h3>PreWork Status</h3>
@@ -205,7 +219,7 @@ font-size: 27px;
 			</div>
 
 
-			<div class="col-xs-5">
+			<div class="col-md-5">
 
 				<div class="well" width="100%">
 
@@ -253,7 +267,7 @@ font-size: 27px;
 
   	</div>
 
-<hr>
+	<hr>
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>

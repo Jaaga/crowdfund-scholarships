@@ -3,11 +3,7 @@
   <html>
   <head>
   <style>
-   body 
-    {
-  background: url("./images/wood1.png");
-  background-repeat:repeat;
-  }
+   
     .well{
     position: relative;
     top: 100px;
@@ -21,7 +17,7 @@
           <link href="http://fonts.googleapis.com/css?family=Rock+Salt" rel='stylesheet' type='text/css'> 
     <link href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch" rel='stylesheet' type='text/css'>
-
+    <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
 
   </head>
   <body>
