@@ -52,11 +52,11 @@ background-repeat:repeat;
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents_v8.html">Sponsor</a></li>
+                <li><a href="listofstudents.php">Sponsor</a></li>
                 <li><a href="#">Sign Up</a></li>
             </ul>
 
@@ -75,9 +75,11 @@ background-repeat:repeat;
   
   <?php $students= getStudentList();
         foreach($students as $student){ ?>
+        <?php echo $student['date'];  ?>
     <div class="col-lg-4" style="width:350px; text-align: justify;">
       <div class="well" style="width: 340px;">
-        <img src=<?php echo $student['image_path']; ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
+        <img src=<?php echo $student['image_path'];
+         ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
         <h3><?php echo $student['fname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
@@ -86,15 +88,21 @@ background-repeat:repeat;
             $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
                ?>
     <div class="row">
-    <div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>" >Read more</a></div>
+    <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>">Donate</a></div>-->
       <form method="POST" action="donate.php">
           <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
-      <div class="col-lg-6"><input type="submit" value="Donate" class="btn btn-primary"></div>
+      <div class="col-lg-6">
+        <input type="text" name="amount" value="amount" >  </div>
+      <div class="col-lg-6">
+        <input type="submit" value="Donate" class="btn btn-primary">
+                             
+      </div>
       </form>
       </div>
       </div></div>
-  
+  <?php 
+       }
 
   ?>
   </div>
@@ -106,12 +114,12 @@ background-repeat:repeat;
             </div></div> -->
         
 
-
+<hr>
   <footer class="footer" style="text-align:center">
     <nav>
       <ul>
-        <a href="home_v9.html">Home </a> |
-        <a href= "#about">About Us</a> |
+        <a href="index.php">Home </a> |
+        <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
         <a href="#contact">Contact</a>  

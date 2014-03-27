@@ -31,12 +31,12 @@ background-repeat:repeat;
     		<div class="navbar-header" style="height: 50px;">
     
           
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
 
         	<div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                	<li><a href="listofstudents_v8.html">Sponsor</a></li>
+                	<li><a href="listofstudents.php">Sponsor</a></li>
                 	<li><a href="#">Sign Up</a></li>
            		</ul>
 
@@ -92,6 +92,7 @@ background-repeat:repeat;
   	<div class="row">
     	<div class="col-lg-4" >
         	<div class="well" >
+            <a href="studentprofile.php">
         	<!-- style="width: 340px;"-->
           		<img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:320px" ></img> 
           		<br>
@@ -111,7 +112,7 @@ background-repeat:repeat;
   
       	<div class="col-lg-4" >
         	<div class="well" >
-        		<a href="studentprofile_v10.html">
+        		<a href="studentprofile.php">
             	<img src="./images/student.jpg" alt="donate" style="height:200px; width:320px"></img>
           		</a>
 
@@ -127,7 +128,7 @@ background-repeat:repeat;
           		</div>
 
         		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp&nbspRs.40,000</b> pledged
-          		&nbsp&nbsp<a href="studentprofile_v10.html">
+          		&nbsp&nbsp<a href="studentprofile.php">
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></a>
           		</p>
         	</div>
@@ -135,6 +136,7 @@ background-repeat:repeat;
 
       	<div class="col-lg-4" >
         	<div class="well">
+            <a href="studentprofile.php">
           		<img src="./images/student01.jpg" alt="donate"  style="height:200px; width:320px"></img> 
           		<br><h3>Maria</h3>
           		<p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
@@ -146,7 +148,7 @@ background-repeat:repeat;
           		</div>
 
          		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp Rs.40,000</b> pledged
-         		&nbsp<a href="studentprofile_v10.html">
+         		&nbsp<a href="studentprofile.php">
 
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button>
           		</a>
@@ -180,7 +182,7 @@ background-repeat:repeat;
   
     	<div class="col-lg-4" >
         	<div class="well">
-          		<a href="studentprofile_v5.html">
+          		<a href="studentprofile.php">
             	<img src="./images/student3.jpg" alt="donate" style="height:200px; width:320px"></img>
           		</a>
 
@@ -196,7 +198,7 @@ background-repeat:repeat;
           		</div>
 
           		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp&nbspRs.40,000</b> pledged
-          		&nbsp&nbsp<a href="studentprofile_v7.html">
+          		&nbsp&nbsp<a href="studentprofile.php">
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></a>
           		</p>
         	</div>
@@ -215,7 +217,7 @@ background-repeat:repeat;
           		</div>
 
           		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp Rs.40,000</b> pledged
-          		&nbsp<a href="studentprofile_v7.html">
+          		&nbsp<a href="studentprofile.php">
 
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button>
           		</a>
@@ -246,7 +248,7 @@ background-repeat:repeat;
   
       	<div class="col-lg-4" >
         	<div class="well" >
-          		<a href="studentprofile_v5.html">
+          		<a href="studentprofile.php">
             	<img src="./images/indian_student_computer.jpg" alt="donate" style="height:200px; width:320px"></img>
           		</a>
 
@@ -280,7 +282,7 @@ background-repeat:repeat;
           		</div>
 
           		<p style="text-align:left"><b>4</b> days to go <b>&nbsp&nbsp Rs.40,000</b> pledged
-          		&nbsp<a href="studentprofile_v7.html">
+          		&nbsp<a href="studentprofile.php">
 
           		<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button>
           		</a>
@@ -297,7 +299,7 @@ background-repeat:repeat;
     <footer class="footer" style="text-align:center" class="row">
       <nav>
         <ul>
-          <a href="home_v3.html">Home </a> |
+          <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
           <a href= "#hiw">How It Works</a> |
           <a href="#faq">FAQ</a> |
