@@ -18,7 +18,7 @@ include ('../model/student.php'); ?>
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');* to be used later/
+      src: url('fonts/CabinSketch-Regular.otf');*/
      
     
      }
