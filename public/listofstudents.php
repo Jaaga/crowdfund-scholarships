@@ -59,7 +59,7 @@ padding-top: 60px;
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php?id=<?php echo $D_id; ?>">Sponsor</a></li>
                 
                 <li><a href="donordashboard.php?id=<?php echo $D_id;?>">MyProfile</a>
             </ul>

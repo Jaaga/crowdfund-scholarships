@@ -1,6 +1,9 @@
 <?php 
 session_start();
-include ('../model/student.php'); ?>
+include ('../model/student.php');
+$S_id=$_GET['id'];
+$D_id=$_GET['id2'];
+ ?>
 <html>
 
 <head>
@@ -52,8 +55,8 @@ font-size: 27px;
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php">Sponsor</a></li>
-            		<li><a href="donordashboard.php">MyProfile</a></li>
+            		<li><a href="listofstudents.php?id=<?php echo $D_id; ?>">Sponsor</a></li>
+            		<li><a href="donordashboard.php?id=<?php echo $D_id; ?>">MyProfile</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
@@ -74,8 +77,7 @@ font-size: 27px;
 	<br>
 <!-- GET Student and Donors ID from url and pass student id in getStudent($S_id) -->
 	<?php 
-$S_id=$_GET['id'];
-$D_id=$_GET['id2'];
+
 $row= getStudent($S_id);
 $Donors=getDonors($S_id);
 $total=count($Donors);
