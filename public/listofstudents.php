@@ -52,7 +52,7 @@ padding-top: 60px;
     
       <div class="navbar-header" style="height: 50px;">
     
-          
+        <?php $D_id=$_GET['id']; ?>  
             <a class="navbar-brand" href="index.php">
 
             <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
@@ -61,6 +61,7 @@ padding-top: 60px;
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
                 <li><a href="donorsignup.php">Sign Up</a></li>
+                <li><a href="donordashboard.php?id=<?php echo $D_id;?>">MyProfile</a>
             </ul>
 
               
@@ -78,7 +79,7 @@ padding-top: 60px;
   ?>
 
   <?php 
-            $D_id=$_GET['id'];   
+               
             $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
   ?>
   <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify;">
