@@ -94,8 +94,13 @@ $students=getStudents($D_id);
     foreach($students as $student):
       ?>
 	<!-- First row of students -->
-
+<?php 
+               
+            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
+  ?>
+  
   	<div class="row">
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">
     	<div class="col-md-4" >
         	<div class="well" >
         	<!-- style="width: 340px;"-->
@@ -115,8 +120,7 @@ $students=getStudents($D_id);
      	</div>
 
   <?php endforeach; ?>
-      	
-
+  </a>
   <hr>
 
   <!-- Footer -->
