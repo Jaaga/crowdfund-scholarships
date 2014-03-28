@@ -131,7 +131,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 
 			
 				
-
+              <form method="post" action="donate.php">
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
@@ -139,6 +139,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
+<<<<<<< HEAD
 					     <form action="donate.php" method="post">
 					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
@@ -148,9 +149,21 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
 						</form>
 						</div>
+=======
+						<input type="hidden" value="<?php echo $S_id;?>" name="student_id">
+						<input type="hidden" value="<?php echo $D_id;?>" name="donor_id">
+
+						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+							<input type="text" class="form-control" placeholder="enter amount" style="height: 50px; " name="amount">
+                    	</div>
+						
+						<<button type="button" name  ="action" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
+					</div>
+>>>>>>> ab06a3c12199753ab1a090d217e951b451e8420a
 
 					<br><br><br>			
 				</div>
+			</form>
 
 
 				<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">

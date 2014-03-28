@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<?php include ('student.php'); ?>
+<?php include ('test1.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +16,7 @@
             <th>Last name</th>
         </tr>
         <?php
-            $students = getStudentList();
+            $students = getstudents('1');
             foreach($students as $student){
                 echo"<tr><td>".$student['S_id']."</td><td>".$student['fname']."</td><td>".$student['lname']."</td></tr>";
             }
