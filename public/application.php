@@ -3,11 +3,7 @@
   <html>
   <head>
   <style>
-   body 
-    {
-  background: url("./images/wood1.png");
-  background-repeat:repeat;
-  }
+   
     .well{
     position: relative;
     top: 100px;
@@ -21,11 +17,13 @@
           <link href="http://fonts.googleapis.com/css?family=Rock+Salt" rel='stylesheet' type='text/css'> 
     <link href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch" rel='stylesheet' type='text/css'>
-
+    <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
 
   </head>
   <body>
+<script>
 
+</script>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
       
@@ -135,7 +133,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
     <div class="col-md-4">
-    <input name="fname" type="password" placeholder="Confirm Password" class="form-control input-md">
+    <input name="confpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
     
     </div>
   </div>
@@ -218,24 +216,28 @@
 
   <!-- for uploading anyfile-->
   <div class="form-group">
-    <label class="col-md-4 control-label">Upload-Document:</label> 
+    <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-4">
-      <input name="doc_path" type="file" size="60">
+      <input name="image_path" type="file" size="60">
     </div>
   </div>
 <!--Upload image starts here-->
-  <div class="form-group">
+  <!--<div class="form-group">
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+    <img src=<?php echo $_FILES["image_path"]["tmp_name"]; ?> >
+  </div>
   <div>
-    <span class="btn btn-file"><input type="file" name="image_path"></span>
-    
+    <span class="btn btn-file">
+    <input type="file" name="image_path" id="image_path" onchange="return ajaxFileUpload(this);">
+    <input type="file" name="image_path"></span>
+
   </div>
   </div>
-  </div>
-</div>
+  </div> 
+</div>-->
 
 <!--upload image ends here-->
 

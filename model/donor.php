@@ -8,17 +8,21 @@ include ('dbcon.php');
 		$sql="INSERT INTO donor (name, password,email)
 		VALUES('$name','$password','$email')";
 		//$result = $db->query($sql);
-
+         
 		if(!$db->query($sql))
 		{
 			die('Error' .$db->error($sql));
 		}
 		else
-		{   session_start();
+		{   $sql="SELECT * from donor where email='$email' and password='$password'";
+	        $result= $db->query($sql);
+	        $row=mysqli_fetch_array($result);
+	        $D_id=$row['D_id']; 
+			session_start();
 			$_SESSION['email'] = $email;
 			$_SESSION['password'] = $password;
 			$_SESSION['time'] = time();
-			header("location:../public/Students_list.php?id=$D_id");
+			header("location:../public/listofstudents.php?id=$D_id");
 		}
 
 	}
@@ -71,10 +75,10 @@ include ('dbcon.php');
  {
  		$db=dbopen();
  		
-  		$sql = "INSERT INTO donation (D_id,S_id,date,amount)
- 		VALUES ('".$D_id."','".$S_id."',Now(),'".$amount."' )";
+  		$sql = "INSERT INTO donation (D_id,S_id,amount)
+ 		VALUES ('$D_id','$S_id','$amount' )";
  		$result = $db->query($sql);
-		if(!$sql)
+		if(!$result)
 		{
 			echo "sorry your donations were not accepted";
 		}
@@ -90,7 +94,7 @@ include ('dbcon.php');
  function redirectToStudent($D_Id)
  	{
 		$D_id=$_POST['D_id'];
-  		header("Refresh: 4;url='Students_list.php?id=$D_id");
+  		header("Refresh: 3;url='listofstudents.php?id=$D_id");
 		mysqli_close($con);
 	}
 

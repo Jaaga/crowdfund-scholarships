@@ -50,21 +50,21 @@ font-size: 64px;}
   <div class="container" style="padding:80px 170px 0 170px;">
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
-			<form class="form-horizontal">
+			<form class="form-horizontal" action="createdonor.php" method="post">
 						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
   		<div class="col-md-4">
-  			<input id="textinput" name="textinput" type="text" placeholder="First Name" class="form-control input-md">
+  			<input name="name" type="text" placeholder="First Name" class="form-control input-md">
   		</div>
 	</div>
 	<br>
 <!-- Text input-->
 	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Username:</label>  
+  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Email:</label>  
   		<div class="col-md-4">
- 		 	<input id="textinput" name="textinput" type="text" placeholder="Username" class="form-control input-md"> 
+ 		 	<input  name="email" type="text" placeholder="Username" class="form-control input-md"> 
   		</div>
 	</div>
 	<br>
@@ -73,7 +73,7 @@ font-size: 64px;}
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Password:</label> 
   		<div class="col-md-4">
-  			<input id="textinput" name="textinput" type="password" placeholder="Password" class="form-control input-md">
+  			<input name="password" type="password" placeholder="Password" class="form-control input-md">
   		</div>
 	</div>
 	<br>
@@ -82,18 +82,10 @@ font-size: 64px;}
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Confirm Password:</label> 
   		<div class="col-md-4">
-  			<input id="textinput" name="textinput" type="text" placeholder="Confirm Password" class="form-control input-md">
+  			<input name="confpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
   		 </div>
 	</div>
 	<br>
-
-<!--Text input-->
-	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Email Address:</label> 
-  		<div class="col-md-4">
-  			<input id="textinput" name="textinput" type="text" placeholder="Email Address" class="form-control input-md">
-  		</div>
-	</div>
 <!-- Button -->
 <br>
 	<div class="form-group">

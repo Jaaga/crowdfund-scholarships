@@ -1,6 +1,6 @@
 <?php
 include ('../model/donor.php');
-giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['$amount']);
+giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['amount']);
 ?>
 
 <html>
