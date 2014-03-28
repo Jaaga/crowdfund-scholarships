@@ -66,10 +66,10 @@
         $row= donorInfo($D_id);
          
         ?>
-<div class="container">
-	<!-- Donor Detail Row-->
- 	<div class="row">
-
+		
+  <div class="container">
+	  <!-- Donor Detail Row-->
+ 	  <div class="row">
     	<div class="col-md-12" >
      		<div class="well" >  
         		<img src="./images/donor.jpg" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
@@ -101,13 +101,11 @@ $students=getStudents($D_id);
   	<div class="row">
     	<div class="col-md-4" >
         	<div class="well" >
-
         	<!-- style="width: 340px;"-->
           		<img src=<?php echo $student['image_path']; ?> alt="donate"align="center" style="height:200px; width:320px" ></img> 
           		<br>
           		<h3><?php echo $student['fname'];?></h3>
           		<p ><?php echo $student['para'];?> </p>
-        
           		<div class="progress">
             		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: 40%">
               			<span class="sr-only">40% Complete (success)</span>

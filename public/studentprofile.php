@@ -140,6 +140,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 					
 						<br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					     <form action="donate.php" method="post">
 					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
@@ -150,6 +151,8 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						</form>
 						</div>
 =======
+=======
+>>>>>>> 2aa903f6d9025fdc8e2e0252ef0a7e4a4f447ad2
 						<input type="hidden" value="<?php echo $S_id;?>" name="student_id">
 						<input type="hidden" value="<?php echo $D_id;?>" name="donor_id">
 
@@ -159,7 +162,21 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						
 						<<button type="button" name  ="action" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
 					</div>
+<<<<<<< HEAD
 >>>>>>> ab06a3c12199753ab1a090d217e951b451e8420a
+=======
+=======
+					     <form action="donate.php" method="post">
+					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
+                         <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+							<input name="amount" type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
+                    	</div>
+						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
+						</form>
+						</div>
+>>>>>>> 6cb90a2a578fad7e4a11e768c7c2887522dd60a1
+>>>>>>> 2aa903f6d9025fdc8e2e0252ef0a7e4a4f447ad2
 
 					<br><br><br>			
 				</div>
