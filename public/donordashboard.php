@@ -57,11 +57,12 @@ background-repeat:repeat;
         	</div>      	
     	</div>
 	</div> 
-
-
-	
-
-
+<?php
+        include('../model/donor.php');
+        $D_id=$_GET['id'];
+        $row= donorInfo($D_id);
+         
+        ?>
 
 	<!-- Donor Detail Row-->
  	<div class="row">
@@ -69,9 +70,7 @@ background-repeat:repeat;
      		<div class="well" >  
         		<img src="./images/donor.jpg" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
         		<button type="submit" class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;"><h4>Edit Profile</h4></button>
-        
-        		<h2><strong>John Carter</strong></h2>
-
+        		<h2><?php echo $row;?> <h2/>
         		<p>Los Angeles, CA . Joined since Feb 2014 </p>
         		<p style="font-size:18px"> Born and raised in LA. Currently working selling electric vehicles and project planning for rad new projects taking place in LA. English Lit. graduate that loves to write and live life to the fullest!</>
         		<br>
@@ -84,19 +83,24 @@ background-repeat:repeat;
 
   	<!-- Heading for Donated list row-->
   	<div class="row">
-    	<h1 style="text-align:center; font-family:Cabin Sketch">John's Donated Student List</h1>
+    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row;?> Donated Student List</h1>
+
     	<br>  
     </div>
-
+<?php 
+$D_id=$_GET['id'];
+$students=getStudents($D_id);
+    foreach($students as $student):
+      ?>
 	<!-- First row of students -->
   	<div class="row">
     	<div class="col-lg-4" >
         	<div class="well" >
         	<!-- style="width: 340px;"-->
-          		<img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:320px" ></img> 
+          		<img src=<?php echo $student['image_path']; ?> alt="donate"align="center" style="height:200px; width:320px" ></img> 
           		<br>
-          		<h3>Priyanka</h3>
-          		<p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
+          		<h3><?php echo $student['fname'];?></h3>
+          		<p ><?php echo $student['para'];?> </p>
         
           		<div class="progress">
             		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: 40%">
@@ -104,11 +108,11 @@ background-repeat:repeat;
            			</div>
           		</div>
 
-          		<p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbspRs.40,000</b> pledged
+          		<p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbsp<?php echo "RS".$student['scholar_AMT'];?></b> pledged
             		&nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
         	</div>
      	</div>
-  
+  <?php endforeach; ?>
       	<div class="col-lg-4" >
         	<div class="well" >
         		<a href="studentprofile_v10.html">

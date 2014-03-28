@@ -20,24 +20,44 @@ include ('dbcon.php');
 			$_SESSION['time'] = time();
 			header("location:../public/Students_list.php?id=$D_id");
 		}
-
 	}
-//"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
-	function getStudents($donorId){
-		$donorId = $_GET['id'];		
-		$db=dbopen();
-		$sql="select * from donation inner join student on donation.D_id=$donorId && donation.S_id=student.S_id";
-		$list = $db->query($sql);
-		$result = mysqli_fetch_array($list);
-		if(!$db->query($sql))
+		function donorInfo($donorId)
 		{
-			die('Error' .$db->error($sql));
+			$db =dbopen();
+			$sql = "select * from donor where D_id = $donorId";
+
+			$result = mysqli_fetch_array($db->query($sql));
+			if(!$result)
+			{
+				die('Error' .$db->error($sql));
+			}
+			return $result['name'];
+		} 
+	
+//"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
+	function getStudents($donorId)
+	{
+		//$donorId = $_GET['id'];		
+		$db=dbopen();
+		$sql="select * from donation inner join student on donation.S_id=student.S_id WHERE donation.D_id=$donorId";
+		$list = mysqli_query($db,$sql) or die ("couldnt execute");
+		echo mysqli_num_rows($list);
+	
+
+		//while($rows= mysqli_fetch_array($list))
+		while($rows= mysqli_fetch_assoc($list))
+		{
+			/*$value =array('D_id'=>"D_id", "S_id"=>$S_id, "date"=> $date,	"amount"=> $amount,"fname"=>$fname,"lname"=>$lname,"gender"=> $gender,
+				"email"=> $email,"Phone_Number"=> $Phone_Number,"address"=>$address,"pincode"=> $pincode,"country"=> $country,"course"=> $course,"scholar_AMT"=>$scholar_AMT, 
+				"para"=>$para,"password"=>$password,"image_path"=>$image_path );
+			*/
+			//var_dump(value);
+			$data[] = array('D_id'=>$rows['D_id'],'fname'=>$rows['fname'],'para'=>$rows['para'],'date'=>$rows['date'],
+				'amount'=>$rows['amount'],'scholar_AMT'=>$rows['scholar_AMT'],'S_id'=>$rows['S_id'],'image_path'=>$rows['image_path']);
 		}
-		//return array($list);
-		//echo $result;
-		echo $result['fname'];
-		echo $result['amount'];
-		//var_dump($result);
+		//var_dump($data);
+		return($data);
+		//return ($value);
 
 	}
 

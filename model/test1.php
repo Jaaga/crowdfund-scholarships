@@ -1,7 +1,16 @@
-<?php
-include ('donor.php');
-/* $a=1;
-$b=8;
-$c=20000; */
-giveDonation(1,8,20000);
-?>
+<?php include ('donor.php'); 
+
+            $students = getStudents('1');
+            foreach($students as $student){
+               echo $student['fname'];
+               echo $student['S_id'];
+               echo $student['D_id'];
+               echo $student['para'];
+               echo $student['amount'];
+               
+           }
+            ?>
+           
+
+
+  
