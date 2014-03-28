@@ -88,7 +88,8 @@ background-repeat:repeat;
             <a href="studentprofile.php">
         	<!-- style="width: 340px;"-->
           		<img src="./images/student03.jpg" alt="donate"align="center" style="height:200px; width:320px" ></img> 
-          		<br>
+          		</a>
+              <br>
           		<h3>Priyanka</h3>
           		<p >I am a brilliant student with a bright future but am unable to support my education due to a paucity of funds. </p>
         
@@ -131,7 +132,7 @@ background-repeat:repeat;
         	<div class="well">
             <a href="studentprofile.php">
           		<img src="./images/student01.jpg" alt="donate"  style="height:200px; width:320px"></img> 
-          		<br><h3>Maria</h3>
+          		</a><br><h3>Maria</h3>
           		<p> Hey Guys! Please sponsor me for my new adventure with Jaaga. Currently, I have learnt HTML, CSS and Javascript on my own...</p>
 
         		<div class="progress">
