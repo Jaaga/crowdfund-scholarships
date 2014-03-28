@@ -53,30 +53,20 @@ h4:before{
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents_v8.html">Sponsor</a></li>
+                <li><a href="listofstudents.php">Sponsor</a></li>
                 <li><a href="#">Sign Up</a></li>
             </ul>
 
         <div class="navbar-collapse collapse">
-              <form class="navbar-form navbar-right" role="form">
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <input type="password" placeholder="Password" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                &nbsp 
-
-              </form>
-              
+              <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
               </div><!--/.navbar-collapse -->
+            </div>
         </div>
       </div>
       </div> 
@@ -135,7 +125,7 @@ h4:before{
   <footer class="footer" style="text-align:center">
       <nav>
         <ul>
-          <a href="home_v3.html">Home </a> |
+          <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
             <a href= "#hiw">How It Works</a> |
             <a href="#faq">FAQ</a> |

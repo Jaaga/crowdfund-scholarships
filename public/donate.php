@@ -1,6 +1,6 @@
 <?php
 include ('../model/donor.php');
-giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['$amount']);
+giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['amount']);
 ?>
 
 <html>
@@ -20,14 +20,14 @@ giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['$amount']);
     
       <div class="row">
        
-       <p align="center" style="font-family: verdana;">THNAK YOU FOR YOUR HELP AND SUPPORT TOWARDS EMPOWERING EDUCATION </p>
+       <p align="center" style="font-family: verdana;">THANK YOU FOR YOUR HELP AND SUPPORT TOWARDS EMPOWERING EDUCATION </p>
        
        </div>
 
     </div>
     </div>
           <hr>
-    <h6 align="center"> This Page will be redirected in few seconds...</h6>
+    <h6 align="center"> This Page will be redirected in a few seconds...</h6>
 </body>
 </html>
 <?php

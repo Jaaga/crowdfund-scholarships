@@ -9,12 +9,12 @@
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
-            $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path);
+            $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path,$date);
         while($sql->fetch()){
                
         $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
-            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path);
+            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path,'date'=>$date);
         }
          //$sql->close();
         return ($students);    
@@ -37,7 +37,7 @@
             $_SESSION['email']= $email;
             $_SESSION['password']= $password;
         // Register $myusername, $mypassword and redirect to file "Students_list.php"
-            header("location:../public/Students_list.php?id=$S_id");
+            header("location:../public/studentdashboard.php?id=$S_id");
         }
         else{
             
@@ -66,9 +66,9 @@
         //$S_id = $row['S_id'];  
         else{
 
-            $_SESSION['$email']= $email;
+            $_SESSION['email']= $email;
             $_SESSION['password']= $password;
-            header("location:../public/Student_dash.php");
+            header("location:../public/studentdashboard.php");
         }
 
         

@@ -35,24 +35,15 @@
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
-                  <li><a href="listofstudents_v8.html">Sponsor</a></li>
+                  <li><a href="listofstudents.php">Sponsor</a></li>
                   <li><a href="#">Sign Up</a></li>
               </ul>
 
           <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" role="form">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-
-                  <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                  &nbsp 
-
-                </form>
+                <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              </div>
                 
                 </div><!--/.navbar-collapse -->
           </div>
@@ -62,7 +53,7 @@
         <div class="container">
           <div class="navbar-header">
             
-            <a class="navbar-brand" href="index.html" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
+            <a class="navbar-brand" href="index.php" style="font-family: 'Audiowide', cursive;">LearnEmp</a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -243,9 +234,9 @@
   <br>
   <hr>
   <footer class="footer"  align="center">
-  <a href="index.html">Home &nbsp |</a>&nbsp &nbsp
+  <a href="index.php">Home &nbsp |</a>&nbsp &nbsp
   <a href="FAQ.html">FAQ &nbsp |</a>&nbsp &nbsp 
-  <a href="About.html">About &nbsp |</a>&nbsp &nbsp 
+  <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
   <a href="Contact.html">Contact &nbsp |</a>&nbsp &nbsp
   <a href="Donor_signup.html">Donor &nbsp |</a>
   <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>

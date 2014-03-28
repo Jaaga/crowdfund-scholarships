@@ -3,11 +3,7 @@
   <html>
   <head>
   <style>
-   body 
-    {
-  background: url("./images/wood1.png");
-  background-repeat:repeat;
-  }
+   
     .well{
     position: relative;
     top: 100px;
@@ -16,16 +12,18 @@
     
 
   </style>
-  <link href="../dist/css/bootstrap.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-          <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
-
+  <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Audiowide" rel='stylesheet' type='text/css'>
+          <link href="http://fonts.googleapis.com/css?family=Rock+Salt" rel='stylesheet' type='text/css'> 
+    <link href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Cabin+Sketch" rel='stylesheet' type='text/css'>
+    <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
 
   </head>
   <body>
+<script>
 
+</script>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
       
@@ -36,24 +34,15 @@
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
-                  <li><a href="listofstudents_v8.html">Sponsor</a></li>
+                  <li><a href="listofstudents.php">Sponsor</a></li>
                   <li><a href="#">Sign Up</a></li>
               </ul>
 
           <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" role="form">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-
-                  <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-                  &nbsp 
-
-                </form>
+                 <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              </div>
                 
                 </div><!--/.navbar-collapse -->
           </div>
@@ -144,7 +133,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
     <div class="col-md-4">
-    <input name="fname" type="password" placeholder="Confirm Password" class="form-control input-md">
+    <input name="confpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
     
     </div>
   </div>
@@ -202,9 +191,9 @@
     <div class="col-md-4">
       <select name="course" class="form-control">
         <option value="#">Select Course</option>
-        <option value="Php">Php</option>
+        <option value="Php">PHP</option>
         <option value="Python">Python</option>
-        <option value="html/css">Html/Css</option>
+        <option value="html/css">HTML/CSS</option>
       </select>
     </div>
   </div>
@@ -227,24 +216,28 @@
 
   <!-- for uploading anyfile-->
   <div class="form-group">
-    <label class="col-md-4 control-label">Upload-Document:</label> 
+    <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-4">
       <input name="image_path" type="file" size="60">
     </div>
   </div>
 <!--Upload image starts here-->
-  <div class="form-group">
+  <!--<div class="form-group">
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+    <img src=<?php echo $_FILES["image_path"]["tmp_name"]; ?> >
+  </div>
   <div>
-    <span class="btn btn-file"><input type="file" /></span>
-    
+    <span class="btn btn-file">
+    <input type="file" name="image_path" id="image_path" onchange="return ajaxFileUpload(this);">
+    <input type="file" name="image_path"></span>
+
   </div>
   </div>
-  </div>
-</div>
+  </div> 
+</div>-->
 
 <!--upload image ends here-->
 
@@ -271,12 +264,12 @@
   <br>
   <hr>
   <footer class="footer"  align="center">
-  <a href="index.html">Home &nbsp |</a>&nbsp &nbsp
-  <a href="FAQ.html">FAQ &nbsp |</a>&nbsp &nbsp 
-  <a href="About.html">About &nbsp |</a>&nbsp &nbsp 
-  <a href="Contact.html">Contact &nbsp |</a>&nbsp &nbsp
-  <a href="Donor_signup.html">Donor &nbsp |</a>
-  <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+  <a href="index.php">Home &nbsp |</a>&nbsp &nbsp
+  <a href="">FAQ &nbsp |</a>&nbsp &nbsp 
+  <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
+  <a href="">Contact &nbsp |</a>&nbsp &nbsp
+  <a href="">Donor &nbsp |</a>
+  <br><br> 
   </footer>
    
   </body>

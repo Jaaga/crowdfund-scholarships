@@ -18,7 +18,7 @@ include ('../model/student.php'); ?>
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');* to be used later/
+      src: url('fonts/CabinSketch-Regular.otf');*/
      
     
      }
@@ -29,9 +29,9 @@ include ('../model/student.php'); ?>
 	text-align: center;
 	}
 		body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
-}
+	background: url("./images/wood1.png");
+	background-repeat:repeat;
+	}
 .sponsor_data{
 /*font-family:'KG Second Chances Sketch- Regular';*/
 font-family: 'KGSecondChancesSketch', Arial, sans-serif;
@@ -48,28 +48,19 @@ font-size: 27px;
 			<div class="navbar-header" style="height: 50px;">
 		
           
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'CabinSketch-Regular'; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'CabinSketch-Regular'; margin-top: -9px;">LearnEmp<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents_v8.html">Sponsor</a></li>
+            		<li><a href="listofstudents.php">Sponsor</a></li>
             		<li><a href="#">Sign Up</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
-        			<form class="navbar-form navbar-right" role="form">
-            		<div class="form-group">
-            			<input type="text" placeholder="Email" class="form-control">
-            		</div>
-
-            		<div class="form-group">
-            			<input type="password" placeholder="Password" class="form-control">
-            		</div>
-
-            		<button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-          			&nbsp 
-
-        			</form>
+        			<div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              </div>
            		
            		</div><!--/.navbar-collapse -->
     		</div>
@@ -148,6 +139,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
+<<<<<<< HEAD
 						<input type="hidden" value="<?php echo $S_id;?>" name="student_id">
 						<input type="hidden" value="<?php echo $D_id;?>" name="donor_id">
 
@@ -157,6 +149,17 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						
 						<<button type="button" name  ="action" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate</button><br><br><br>
 					</div>
+=======
+					     <form action="donate.php" method="post">
+					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
+                         <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+							<input name="amount" type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
+                    	</div>
+						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
+						</form>
+						</div>
+>>>>>>> 6cb90a2a578fad7e4a11e768c7c2887522dd60a1
 
 					<br><br><br>			
 				</div>
@@ -246,10 +249,12 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
     </div>
   </div>
 
+  <hr>
+
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>
-    			<a href="home_v3.html">Home </a> |
+    			<a href="index.php">Home </a> |
     			<a href= "#about">About Us</a> |
       			<a href= "#hiw">How It Works</a> |
       			<a href="#faq">FAQ</a> |

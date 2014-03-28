@@ -10,67 +10,59 @@
 
 	<style>
 	
-	#bg{
-    background:url('./images/chalkboard2.jpg');
-    border: 3 solid /*#33cc33*/#6E8B3D;
-	color: #FFFFe0;
-	text-align: center;
-	}
+		#bg{
+    	background:url('./images/chalkboard2.jpg');
+    	border: 3 solid /*#33cc33*/#6E8B3D;
+		color: #FFFFe0;
+		text-align: center;
+		}
 		body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
-padding-top: 80px;
+		
+	
+		padding-top: 80px;
 
-}
-.sponsor_data{
-font-family:'Cabin Sketch' cursive;
-font-size: 27px;
-}
-
+		}
+		.sponsor_data{
+		font-family:'Cabin Sketch' cursive;
+		font-size: 27px;
+		}
 	</style>
 </head>
 
 <body>
 
-	<div class="container" >
-
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-	  
-			<div class="navbar-header" style="height: 50px;">
-		
-          
-        		<a class="navbar-brand" href="home_v9.html"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
-        	</div>
-        	<div class="collapse navbar-collapse">
-        		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents_v8.html">Sponsor</a></li>
-            		<li><a href="#">Sign Up</a></li>
-        		</ul>
-
-				<div class="navbar-collapse collapse">
-        			<form class="navbar-form navbar-right" role="form">
-            		<div class="form-group">
-            			<input type="text" placeholder="Email" class="form-control">
-            		</div>
-
-            		<div class="form-group">
-            			<input type="password" placeholder="Password" class="form-control">
-            		</div>
-
-            		<button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
-          			&nbsp 
-
-        			</form>
-           		
-           		</div><!--/.navbar-collapse -->
-    		</div>
-    	</div>
-    	</div><!--/.navbar-collapse -->
-
-    
+	
 
 	
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+    
+      <div class="navbar-header" style="height: 50px;">
+    
+
+        <a class="navbar-brand" href="index.php">
+        <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+      </div>
+
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+              <li><a href="listofstudents.php">Sponsor</a></li>
+              <li><a href= "#hiw">How it Works</a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+          </div>              
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container" >
 
 		<div class="row">
 			<div class="col-lg-3" align="left"  >
@@ -107,7 +99,7 @@ font-size: 27px;
     
     	<div class="row">
 
-        	<div class="col-xs-7"  text-align="justify">
+        	<div class="col-md-7"  text-align="justify">
         		
 
 				<img src="./images/student.jpg" width="100%" height="400px">
@@ -147,7 +139,7 @@ font-size: 27px;
 			</div>
 
 		
-			<div class="col-xs-5"> 
+			<div class="col-md-5"> 
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
@@ -192,7 +184,7 @@ font-size: 27px;
 
     	<div class="row">
       
-        	<div class="col-sm-7"  text-align="justify">
+        	<div class="col-md-7"  text-align="justify">
 
 				<div class="workstatus">
 					<h3>PreWork Status</h3>
@@ -215,7 +207,7 @@ font-size: 27px;
 			</div>
 
 
-			<div class="col-xs-5">
+			<div class="col-md-5">
 
 				<div class="well" width="100%">
 
@@ -261,12 +253,13 @@ font-size: 27px;
       		</div>
     	</div>
 
-  	</div>
+</div>
 
+	<hr>
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>
-    			<a href="home_v3.html">Home </a> |
+    			<a href="index.php">Home </a> |
     			<a href= "#about">About Us</a> |
       			<a href= "#hiw">How It Works</a> |
       			<a href="#faq">FAQ</a> |
