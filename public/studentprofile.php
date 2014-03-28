@@ -53,7 +53,7 @@ font-size: 27px;
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
             		<li><a href="listofstudents.php">Sponsor</a></li>
-            		<li><a href="#">Sign Up</a></li>
+            		<li><a href="donordashboard.php">MyProfile</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
@@ -140,7 +140,6 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 					
 						<br>
 
-			
 					     <form action="donate.php" method="post">
 					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
