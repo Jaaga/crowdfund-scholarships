@@ -55,7 +55,7 @@
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
           </div>              
         </div>
       </div>

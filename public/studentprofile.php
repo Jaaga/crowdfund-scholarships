@@ -139,6 +139,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
+
 					     <form action="donate.php" method="post">
 					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
@@ -148,7 +149,6 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
 						</form>
 						</div>
-
 
 					<br><br><br>			
 				</div>
