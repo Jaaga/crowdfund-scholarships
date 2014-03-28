@@ -82,7 +82,7 @@ include ('dbcon.php');
 				$_SESSION['email']= $email;
 				$_SESSION['password']= $password;
 // Register $myusername, $mypassword and redirect to file "Students_list.php"
-			header("location:../public/listofstudents.php?id=$D_id");
+			header("location:../public/donordashboard.php?id=$D_id");
 			}
 		else
 			{

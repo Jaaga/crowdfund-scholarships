@@ -1,3 +1,9 @@
+<?php
+        include('../model/donor.php');
+        $D_id=$_GET['id'];
+        $row= donorInfo($D_id);
+         
+?>
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -45,14 +51,11 @@
 
         	<div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                	<li><a href="listofstudents.php">Sponsor</a></li>
-                	<li><a href="#">Sign Up</a></li>
+                <li><a href="listofstudents.php?id=<?php echo $D_id; ?>">Sponser</a></li>
            		</ul>
 
         		<div class="navbar-collapse collapse">
-             		<div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+             		<div class="navbar-form navbar-right"> 
               </div><!--/.navbar-collapse -->
             </div>
             	</div><!--/.navbar-collapse -->
@@ -60,12 +63,7 @@
     	</div>
 	</div> 
 
-<?php
-        include('../model/donor.php');
-        $D_id=$_GET['id'];
-        $row= donorInfo($D_id);
-         
-        ?>
+
 
 		
   <div class="container">
