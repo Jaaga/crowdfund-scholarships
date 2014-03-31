@@ -9,7 +9,15 @@
     <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
     
 <style type="text/css">
+@font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
 
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+     
+    
+     }
 	body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
@@ -78,7 +86,7 @@ h4:before{
   <div class="container1">
     <div class="row">
     <div class="col-lg-12">
-      <h1 class="faq-head" style="font-family:'Cabin Sketch' cursive;">About Us</h1>
+      <h1 class="faq-head" style="font-family:'KGSecondChancesSketch' cursive;">About Us</h1>
       </div>
     </div>
 
