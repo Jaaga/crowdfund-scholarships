@@ -1,7 +1,7 @@
 <?php
-        include('../model/donor.php');
-        $D_id=$_GET['id'];
-        $row= donorInfo($D_id);
+        include('../model/user.php');
+        $U_id=$_GET['id'];
+        $row= userInfo($U_id);
          
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
 
         	<div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?id=<?php echo $D_id; ?>">AllStudents</a></li>
+                <li><a href="listofstudents.php?id=<?php echo $U_id; ?>">AllStudents</a></li>
            		</ul>
 
         		<div class="navbar-collapse collapse">
@@ -90,13 +90,13 @@
     	<br>  
     </div>
 <?php 
-$students=getStudents($D_id);
+$students=getStudents($U_id);
     foreach($students as $student):
       ?>
 	<!-- First row of students -->
 <?php 
                
-            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
+            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
   ?>
   
   	<div class="row">
