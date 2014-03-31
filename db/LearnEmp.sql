@@ -17,7 +17,8 @@
 
 --
 -- Table structure for table `donation`
---
+CREATE Database `LearnEmp`;
+use `LearnEmp`;
 
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

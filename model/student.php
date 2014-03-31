@@ -16,7 +16,8 @@
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
             'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path,'date'=>$date);
         }
-         //$sql->close();
+        
+        $sql->close();
         return ($students);    
     }
 
@@ -31,6 +32,8 @@
 
         $count = mysqli_num_rows($result);
         // If result matched $myusername and $mypassword, table row must be 1 row
+        $result->close();
+
         if($count==1){
 
             session_start();
@@ -65,6 +68,7 @@
 
         //$S_id = $row['S_id'];  
         else{
+            $result->close();
 
             $_SESSION['email']= $email;
             $_SESSION['password']= $password;
@@ -79,19 +83,19 @@
     function getDonors($studentId){
 
         $db=dbopen();
-        $query="SELECT * from donation inner join donor on donation.S_id='$studentId' && donation.D_id=donor.D_id";
+        $query="SELECT * from donation inner join donor on donation.S_id='$studentId' && donation.U_id=user.U_id";
         $sql=$db->prepare($query);
         $sql->execute();
-        $sql->bind_result($D_id,$S_id,$date,$amount,$name,$password,$email);
+        $sql->bind_result($U_id,$S_id,$date,$amount,$name,$password,$email);
          while($sql->fetch()){
                
-        $Donors[]=array('D_id'=>$D_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'password'=>$password,'email'=>$email);
+        $Donors[]=array('U_id'=>$U_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'password'=>$password,'email'=>$email);
 
         }
         //$sql->store_result();
         //$count= $sql->num_rows;
         //$list = $db->query($sql);
-        
+        $sql->close();
         return ($Donors);
     }
 
@@ -107,6 +111,8 @@
         else{
         $row= mysqli_fetch_array($result);
 
+        $result->close();
+
         return $row;
         }
 
@@ -121,6 +127,7 @@
         {
             die('Error' .$db->error());
         }
+        $result->close;
         return $result;
     }
 
