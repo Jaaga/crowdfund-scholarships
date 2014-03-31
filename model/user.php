@@ -18,11 +18,9 @@ include ('dbcon.php');
 	        $result= $db->query($sql);
 	        $row=mysqli_fetch_array($result);
 	        $U_id=$row['U_id']; 
-			session_start();
-			$_SESSION['email'] = $email;
-			$_SESSION['password'] = $password;
-			$_SESSION['time'] = time();
-			header("location:../public/listofstudents.php?id=$U_id");
+			
+            $result->close();
+            return ($U_id);
 		}
 	}
 		function userInfo($userId)
