@@ -105,7 +105,7 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-                <a href="donorsignup.php" class="btn btn-danger">SignUp</a>
+                <a href="usersignup.php" class="btn btn-danger">SignUp</a>
                 <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
           </div>              
         </div>

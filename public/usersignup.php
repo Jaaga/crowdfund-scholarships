@@ -94,6 +94,23 @@ font-size: 64px;}
     		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
   		</div>
 
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="radios">Are You:</label>
+    <div class="col-md-4">
+    <div class="radio">
+      <label for="radios-0">
+        <input type="radio" name="type" id="radios-0" value="D" checked="checked">
+        Donor
+      </label>
+    </div>
+    <div class="radio">
+      <label for="radios-1">
+        <input type="radio" name="type" id="radios-1" value="S">
+        Student
+      </label>
+    </div>
+    </div>
+  </div>
 
 
 				</div>
