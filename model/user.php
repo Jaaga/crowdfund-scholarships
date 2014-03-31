@@ -1,10 +1,14 @@
 <?php 
-include ('dbcon.php');
 
+if(!function_exists('dbopen')){
+include ('dbcon.php');
+}
 	function createUser($name,$password,$email) 
 	{
+		if(!$db){
 		$db=dbopen();
-		
+		}
+
 		$sql="INSERT INTO user (name, password,email)
 		VALUES('$name','$password','$email')";
 		//$result = $db->query($sql);
@@ -18,11 +22,9 @@ include ('dbcon.php');
 	        $result= $db->query($sql);
 	        $row=mysqli_fetch_array($result);
 	        $U_id=$row['U_id']; 
-			session_start();
-			$_SESSION['email'] = $email;
-			$_SESSION['password'] = $password;
-			$_SESSION['time'] = time();
-			header("location:../public/listofstudents.php?id=$U_id");
+			
+            $result->close();
+            return ($U_id);
 		}
 	}
 		function userInfo($userId)

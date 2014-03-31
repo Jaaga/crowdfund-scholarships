@@ -50,7 +50,7 @@ font-size: 64px;}
   <div class="container" style="padding:80px 170px 0 170px;">
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
-			<form class="form-horizontal" action="createdonor.php" method="post">
+			<form class="form-horizontal" action="../controller/createuser.php" method="post">
 						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">
@@ -94,6 +94,23 @@ font-size: 64px;}
     		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
   		</div>
 
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="radios">Are You:</label>
+    <div class="col-md-4">
+    <div class="radio">
+      <label for="radios-0">
+        <input type="radio" name="type" id="radios-0" value="D" checked="checked">
+        Donor
+      </label>
+    </div>
+    <div class="radio">
+      <label for="radios-1">
+        <input type="radio" name="type" id="radios-1" value="S">
+        Student
+      </label>
+    </div>
+    </div>
+  </div>
 
 
 				</div>

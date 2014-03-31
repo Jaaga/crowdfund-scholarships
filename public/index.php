@@ -26,6 +26,7 @@
     margin-left:20px;
     margin-right: 20px;
     margin-bottom:20px;
+    text-align: center;
     /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
 
   
@@ -33,6 +34,16 @@
     -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);
+    }
+
+   
+    .feature-image{
+      height:200px;
+       width:280px;
+          
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom:20px;
     }
 
   .header-faq {
@@ -105,7 +116,7 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-                <a href="donorsignup.php" class="btn btn-danger">SignUp</a>
+                <a href="usersignup.php" class="btn btn-danger">SignUp</a>
                 <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
           </div>              
         </div>
@@ -162,7 +173,7 @@
         <div class="col-md-4" >
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[0]['image_path']?> style="height:200px; width:300px">
+            <img src=<?php echo $students[0]['image_path']?> class="feature-image">
             <h2><?php echo $students[0]['fname']; ?> </h2>
             <p style="text-align: justify; padding:1em 1em;" ><?php echo $students[0]['para'] ?></p>
           </div>
@@ -171,7 +182,7 @@
         <div class="col-md-4">
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[1]['image_path'] ?> style="height:200px; width:300px"> 
+            <img src=<?php echo $students[1]['image_path'] ?> class="feature-image"> 
             <h2><?php echo $students[1]['fname'] ?></h2>
             <p style="text-align: justify; padding:1em 1em;"><?php echo $students[1]['para'] ?></p>
           </div>
@@ -180,7 +191,7 @@
         <div class="col-md-4" >
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[2]['image_path'] ?> style="height:200px; width:300px"> 
+            <img src=<?php echo $students[2]['image_path'] ?> class="feature-image"> 
             <h2><?php echo $students[2]['fname'] ?></h2>
             <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
           </div>
