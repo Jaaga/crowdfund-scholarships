@@ -1,11 +1,14 @@
 
 <?php
-    include ('dbcon.php');
+    
+    if(!function_exists('dbopen')){
+        include ('dbcon.php');
+    }
   
     function getStudentList()
     {   
-        
-        $db= dbopen();
+        if(!$db){
+        $db= dbopen();}
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
@@ -54,7 +57,10 @@
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
     	
 
-        $db= dbopen();
+        if(!$db){
+        $db= dbopen(); 
+        }
+
         $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
             pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
@@ -68,11 +74,9 @@
 
         //$S_id = $row['S_id'];  
         else{
+            $S_id=$db->insert_id;
             $result->close();
-
-            $_SESSION['email']= $email;
-            $_SESSION['password']= $password;
-            header("location:../public/studentdashboard.php");
+            return ($S_id);
         }
 
         

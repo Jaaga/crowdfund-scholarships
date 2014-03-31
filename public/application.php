@@ -77,7 +77,7 @@
 
   <div class="container">
   <div class="well" style="background-color:rgba(144,144,144,1);">
-  <form class="form-horizontal" action="applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
+  <form class="form-horizontal" action="../controller/applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
   <fieldset>
 
   <!-- Form Name -->
