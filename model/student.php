@@ -1,11 +1,14 @@
 
 <?php
-    include ('dbcon.php');
+    
+    if(!function_exists('dbopen')){
+        include ('dbcon.php');
+    }
   
     function getStudentList()
     {   
-        
-        $db= dbopen();
+        if(!$db){
+        $db= dbopen();}
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
@@ -54,7 +57,10 @@
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
     	
 
-        $db= dbopen();
+        if(!$db){
+        $db= dbopen(); 
+        }
+
         $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
             pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
@@ -68,11 +74,9 @@
 
         //$S_id = $row['S_id'];  
         else{
+            $S_id=$db->insert_id;
             $result->close();
-
-            $_SESSION['email']= $email;
-            $_SESSION['password']= $password;
-            header("location:../public/studentdashboard.php");
+            return ($S_id);
         }
 
         
@@ -118,18 +122,33 @@
 
     }
 
-    function getFundedAmount($studentId) {
+    function getFundedAmount($S_id) 
 
-    	$db=dbopen();
-    	$sql= "select sum(amount) from donations where S_id='$studentId'";
-    	$result= $db->query($sql);
-    	 if(!$result)
-        {
-            die('Error' .$db->error());
-        }
-        $result->close;
-        return $result;
-    }
+    	
+{
+    $db=dbopen();
+    //$Student_id=$_GET['id2'];
+    $sql = "select sum(amount) from donation where S_id=$S_id";
+    $result = $db->query($sql);
+    $sum = mysqli_fetch_array($result);
+    return $sum['sum(amount)'];
+
+}
+
+
+        //$db=dbopen();
+    	//$sql= "select sum(amount) from donations where S_id=$studentId";
+    	//$result = $db->query($sql);
+        //mysqli_fetch_array($result);
+        //return $result;
+    	 
+         //if(!$result)
+        //{
+           // die('Error' .$db->error());
+        //}
+        //$result->close;
+        
+    
 
 
 //while($row = mysqli_fetch_array($result))
