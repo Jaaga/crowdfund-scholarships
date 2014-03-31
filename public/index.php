@@ -105,7 +105,7 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-                <a href="donorsignup.php" class="btn btn-danger">SignUp</a>
+              <a href="usersignup.php" class="btn btn-danger">SignUp</a>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
           </div>              
         </div>
@@ -134,7 +134,7 @@
 
         <div class="studentbutton">
   
-        <a href="application.php">
+        <a href="usersignup.php">
           <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
         </a> 
         </div>
@@ -212,7 +212,7 @@
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
           <br><h3>STUDENT PAYS IT FORWARD</h3>
           <p style="text-align: justify; padding:1em 1em;"><!--The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>-->
-          A student who has been succesfully sponsored gets inducted into apay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
+          A student who has been succesfully sponsored gets inducted into a pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>  
   </div>
   
