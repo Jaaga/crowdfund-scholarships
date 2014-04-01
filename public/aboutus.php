@@ -93,13 +93,15 @@ h4:before{
     <div class="row">
   
         <article class="faq-content">
-            <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2>
-            <p>Founded in January 2014, LearnEmp comprises eight individuals from across India who are passionate about learning and sharing knowledge and skills. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the play field by providing opportunities to students who do not have the means to pursue higher education due to a lack of funding. </p>
-
-            <br>
-     
+     <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2> </div>
         
         <div align="center">
+
+            
+            <p style="text-align:justify">Founded in January 2014, LearnEm comprises eight individuals from across India who are passionate about learning and sharing their knowledge. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the playing field by providing opportunities to students who do not have the means to pursue higher education due to a lack of funding. </p>
+
+
+            <br>
           <br>
           <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-circle">
             
