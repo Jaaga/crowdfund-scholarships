@@ -87,17 +87,21 @@ include ('../model/student.php');
 
 	
 			</div>
-<?php $S_id=$_GET['id']; ?>
+<?php
 
-<?php $student= getStudent($S_id); ?>
-<?php //$Donors=getDonors($S_id); ?>
-<?php //$total=count($Donors); ?>
-//$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
-//$totalDonors=0;
+$S_id=$_GET['id'];
+
+$student= getStudent($S_id);
+
+$Donors=getDonors($S_id);
+
+$total=count($Donors);
+
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //foreach($Donors as $totalDonors){ 
 //$totalDonors=count($listdonors);
-//	$total = count($totalDonors);}
- ?> -->
+//$total = count($totalDonors);}
+ ?>
 
 			<div class="col-lg-6">
 
