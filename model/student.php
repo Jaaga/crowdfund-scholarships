@@ -63,9 +63,9 @@
             pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$U_id','$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
         $result= $db->query($sql); 
-        $sql1="SELECT S_id from student where U_id='$U_id'";
+        $sql1="SELECT * from student where U_id='$U_id'";
         $result1= $db->query($sql1);
-        $row=mysqli_fetch_array($result);       
+        $row=mysqli_fetch_array($result1);       
         if(!$result1)
         {
             die('Error'.$db->error);
@@ -76,7 +76,7 @@
         //$S_id = $row['S_id'];  
         else{
             
-            $result->close();
+            $db->close();
             return ($row);
         }
 

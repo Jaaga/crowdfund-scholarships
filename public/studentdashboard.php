@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?php 
 include 'student.php';
+<!DOCTYPE html>
+<?php
+    
+
 ?>
 <html>
 

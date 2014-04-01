@@ -5,9 +5,8 @@ include ('dbcon.php');
 }
 	function createUser($name,$password,$email) 
 	{
-		if(!$db){
+		
 		$db=dbopen();
-		}
 
 		$sql="INSERT INTO user (name, password,email)
 		VALUES('$name','$password','$email')";
