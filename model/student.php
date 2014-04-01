@@ -1,11 +1,14 @@
 
 <?php
-    include ('dbcon.php');
+    
+    if(!function_exists('dbopen')){
+        include ('dbcon.php');
+    }
   
     function getStudentList()
     {   
-        
-        $db= dbopen();
+        if(!$db){
+        $db= dbopen();}
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
@@ -50,16 +53,20 @@
         }
     }
 
-    function createStudent($fname,$lname,$gender,$email,$Phone_Number,
+    function createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
     	
+        $db= dbopen(); 
+        
 
-        $db= dbopen();
-        $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
+        $sql ="INSERT INTO student(U_id,fname,lname,gender,email,Phone_Number,address,
+            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$U_id','$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
-        $result= $db->query($sql);        
-        if(!$result)
+        $result= $db->query($sql); 
+        $sql1="SELECT S_id from student where U_id='$U_id'";
+        $result1= $db->query($sql1);
+        $row=mysqli_fetch_array($result);       
+        if(!$result1)
         {
             die('Error'.$db->error);
         }
@@ -68,11 +75,9 @@
 
         //$S_id = $row['S_id'];  
         else{
+            
             $result->close();
-
-            $_SESSION['email']= $email;
-            $_SESSION['password']= $password;
-            header("location:../public/studentdashboard.php");
+            return ($row);
         }
 
         
@@ -118,18 +123,33 @@
 
     }
 
-    function getFundedAmount($studentId) {
+    function getFundedAmount($S_id) 
 
-    	$db=dbopen();
-    	$sql= "select sum(amount) from donations where S_id='$studentId'";
-    	$result= $db->query($sql);
-    	 if(!$result)
-        {
-            die('Error' .$db->error());
-        }
-        $result->close;
-        return $result;
-    }
+    	
+{
+    $db=dbopen();
+    //$Student_id=$_GET['id2'];
+    $sql = "select sum(amount) from donation where S_id=$S_id";
+    $result = $db->query($sql);
+    $sum = mysqli_fetch_array($result);
+    return $sum['sum(amount)'];
+
+}
+
+
+        //$db=dbopen();
+    	//$sql= "select sum(amount) from donations where S_id=$studentId";
+    	//$result = $db->query($sql);
+        //mysqli_fetch_array($result);
+        //return $result;
+    	 
+         //if(!$result)
+        //{
+           // die('Error' .$db->error());
+        //}
+        //$result->close;
+        
+    
 
 
 //while($row = mysqli_fetch_array($result))

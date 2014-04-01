@@ -11,7 +11,13 @@
   
   <style type="text/css">
   
+ @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
 
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
   
   body{	
 background: url("./images/wood1.png");
@@ -72,7 +78,7 @@ padding-top: 60px;
   
   <div class="container" align="center">
       <div class="row">
-    <h1 id="hiw">Meet the Students</h1>
+    <h1 style="font-family:'KGSecondChancesSketch'; id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
         foreach($students as $student){ 

@@ -50,7 +50,7 @@ font-size: 64px;}
   <div class="container" style="padding:80px 170px 0 170px;">
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
-			<form class="form-horizontal" action="createdonor.php" method="post">
+			<form class="form-horizontal" action="../controller/createuser.php" method="post">
 						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">

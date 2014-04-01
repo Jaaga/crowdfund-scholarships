@@ -81,6 +81,7 @@ font-size: 27px;
 $row= getStudent($S_id);
 $Donors=getDonors($S_id);
 $total=count($Donors);
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //$totalDonors=0;
 //foreach($Donors as $totalDonors){ 
 //$totalDonors=count($listdonors);
@@ -137,7 +138,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data"> <b><? echo $totalAmount ?></b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
