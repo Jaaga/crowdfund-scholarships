@@ -35,8 +35,6 @@
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     }
-
-   
     .feature-image{
       height:200px;
        width:280px;
@@ -116,7 +114,7 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-                <a href="usersignup.php" class="btn btn-danger">SignUp</a>
+                <a href="donorsignup.php" class="btn btn-danger">SignUp</a>
                 <button class="btn btn-success" style="font-family: verdana;" data-toggle="modal" data-target="#myModal">Sign in</button> 
           </div>              
         </div>
@@ -128,6 +126,7 @@
     
   <!--<div align="center">-->
   <div class="row">
+
       <div class="col-md-12">
 
         <img src="./images/jaaga-study1.png">
@@ -161,6 +160,7 @@
         </a> 
         </div>
       </div>
+  </div>
   </div>
         
   <br>
