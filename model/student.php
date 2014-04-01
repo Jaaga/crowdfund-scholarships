@@ -88,7 +88,7 @@
     function getDonors($studentId){
 
         $db=dbopen();
-        $query="SELECT * from donation inner join donor on donation.S_id='$studentId' && donation.U_id=user.U_id";
+        $query="SELECT * from donation inner join user on donation.S_id='$studentId' && donation.U_id=user.U_id";
         $sql=$db->prepare($query);
         $sql->execute();
         $sql->bind_result($U_id,$S_id,$date,$amount,$name,$password,$email);
