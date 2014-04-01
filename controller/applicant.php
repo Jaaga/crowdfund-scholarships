@@ -1,18 +1,41 @@
 <?php
 include ('../model/student.php');
+
+if(isset($_POST['U_id'])){
 $temp=$_FILES['image_path']['tmp_name'];
-  $pic="images/".$_FILES['image_path']['name'];
+  $pic="../public/images/".$_FILES['image_path']['name'];
   move_uploaded_file($temp,$pic);
 
+$U_id=$_POST['U_id'];
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$gender=$_POST['gender'];
+$email=$_POST['email'];
+$Phone_Number=$_POST['Phone_Number'];
+$address=$_POST['address'];
+$pincode=$_POST['pincode'];
+$country=$_POST['country'];
+$course=$_POST['course'];
+$scholar_AMT=$_POST['scholar_AMT'];
+$para=$_POST['para'];
+$password=$_POST['password'];
 
- $row= createStudent($_POST['U_id'],$_POST['fname'],$_POST['lname'],$_POST['gender'],
-  	$_POST['email'],$_POST['Phone_Number'],$_POST['address'],$_POST['pincode'],
-  	$_POST['country'],$_POST['course'],$_POST['scholar_AMT'],$_POST['para'],$_POST['password'],$pic);
+$row= createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,$pincode,$country,
+	$course,$scholar_AMT,$para,$password,$pic);
 
 $S_id= $row['S_id'];
-    $_SESSION['email']= $email;
-    $_SESSION['password']= $password;
-    header("location:../public/studentdashboard.php?id=$S_id");
-        
-
+    
+}
 ?>
+<!doctype <!DOCTYPE html>
+<html>
+  <body>
+    <form name="studentForm" method="post" action="../public/studentdashboard.php">
+      <input type="hidden" name="name" value="<?php echo $S_id; ?>">
+        
+    <script language="JavaScript">document.studentForm.submit();
+    </script>
+      
+    </form>
+  </body>
+</html>

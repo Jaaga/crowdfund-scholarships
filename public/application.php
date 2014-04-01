@@ -2,6 +2,21 @@
   <!DOCTYPE html>
   <html>
   <head>
+  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#showimage').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
   <style>
    body 
     {
@@ -83,7 +98,6 @@
         $U_id=$_POST['U_id'];
       }
   ?>
-
   <div class="container">
   <div class="well" style="background-color:rgba(144,144,144,1);">
   <form class="form-horizontal" action="../controller/applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
@@ -92,7 +106,7 @@
   <!-- Form Name -->
   <h1 style= "text-align: center; padding: 0 0 50px 0;">Application for Scholarship</h1>
   
-  <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+  <input type="hidden" name="U_id" value="<?php echo $U_id;?>" >
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">First Name:</label> 
@@ -240,15 +254,17 @@
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+    <img id="showimage" src="#" alt="your image" />
+
+  </div>
   <div>
-    <span class="btn btn-file"><input type="file" name="image_path" value=""></span>
+    <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
     
   </div>
   </div>
   </div>
 </div>
-
 <!--upload image ends here-->
 
 
