@@ -53,19 +53,20 @@
         }
     }
 
-    function createStudent($fname,$lname,$gender,$email,$Phone_Number,
+    function createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
     	
-
-        if(!$db){
         $db= dbopen(); 
-        }
+        
 
-        $sql ="INSERT INTO student(fname,lname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$fname','$lname','$gender',
+        $sql ="INSERT INTO student(U_id,fname,lname,gender,email,Phone_Number,address,
+            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$U_id','$fname','$lname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
-        $result= $db->query($sql);        
-        if(!$result)
+        $result= $db->query($sql); 
+        $sql1="SELECT S_id from student where U_id='$U_id'";
+        $result1= $db->query($sql1);
+        $row=mysqli_fetch_array($result);       
+        if(!$result1)
         {
             die('Error'.$db->error);
         }
@@ -74,9 +75,9 @@
 
         //$S_id = $row['S_id'];  
         else{
-            $S_id=$db->insert_id;
+            
             $result->close();
-            return ($S_id);
+            return ($row);
         }
 
         

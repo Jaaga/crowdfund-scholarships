@@ -75,6 +75,15 @@
         </div>
       </div>
 
+  <?php 
+      if(isset($_POST['name'])){
+        $name=$_POST['name'];
+        $password=$_POST['password'];
+        $email=$_POST['email'];
+        $U_id=$_POST['U_id'];
+      }
+  ?>
+
   <div class="container">
   <div class="well" style="background-color:rgba(144,144,144,1);">
   <form class="form-horizontal" action="../controller/applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
@@ -82,12 +91,13 @@
 
   <!-- Form Name -->
   <h1 style= "text-align: center; padding: 0 0 50px 0;">Application for Scholarship</h1>
-
+  
+  <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">First Name:</label> 
     <div class="col-md-4">
-    <input name="fname" type="text" placeholder="First Name" class="form-control input-md">
+    <input name="fname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
     
     </div>
   </div>
@@ -124,7 +134,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">E-mail:</label>  
     <div class="col-md-4">
-    <input name="email" type="email" placeholder="e-mail" class="form-control input-md">
+    <input name="email" type="email" class="form-control input-md" value="<?php echo $email; ?>">
       
     </div>
   </div>
@@ -134,7 +144,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="password">Password:</label>
   <div class="col-md-4">
-    <input name="password" type="password" placeholder="Password" class="form-control input-md">    
+    <input name="password" type="password" class="form-control input-md" value="<?php echo $password; ?>">    
   </div>
 </div>
 
@@ -142,7 +152,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
     <div class="col-md-4">
-    <input name="fname" type="password" placeholder="Confirm Password" class="form-control input-md">
+    <input name="confpassword" type="password" class="form-control input-md" value="<?php echo $password; ?>">
     
     </div>
   </div>
@@ -224,12 +234,7 @@
   </div>
 
   <!-- for uploading anyfile-->
-  <div class="form-group">
-    <label class="col-md-4 control-label">Upload-Document:</label> 
-    <div class="col-md-4">
-      <input name="doc_path" type="file" size="60">
-    </div>
-  </div>
+  
 <!--Upload image starts here-->
   <div class="form-group">
     <label class="col-md-4 control-label">Upload-Image:</label> 
@@ -237,7 +242,7 @@
 <div class="fileupload fileupload-new" data-provides="fileupload">
   <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
   <div>
-    <span class="btn btn-file"><input type="file" name="image_path"></span>
+    <span class="btn btn-file"><input type="file" name="image_path" value=""></span>
     
   </div>
   </div>
