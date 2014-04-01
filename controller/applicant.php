@@ -24,7 +24,7 @@ $row= createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,$p
 	$course,$scholar_AMT,$para,$password,$pic);
 
 $S_id= $row['S_id'];
-header("../public/studentdashboard?id=$S_id");
+header("location:../public/studentdashboard?id=$S_id");
     
 }
 ?>
@@ -32,7 +32,7 @@ header("../public/studentdashboard?id=$S_id");
 <html>
   <body>
     <form name="studentForm" method="post" action="../public/studentdashboard.php">
-      <input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
+      <input type="hidden" name="S_id" value="//<?php// echo $S_id; ?>">
         
     <script language="JavaScript">document.studentForm.submit();
     </script>
