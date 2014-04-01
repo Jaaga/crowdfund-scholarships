@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<?php
-    session_start();
-include ('../model/student.php');
+
+<?php 
+include 'student.php';
+
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -60,7 +61,7 @@ include ('../model/student.php');
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#appEdit">Sign in</button> 
           </div>              
         </div>
       </div>
@@ -105,7 +106,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
    					
        			<form action="application.php">
 
-       			<button type="submit" class="btn btn-success" style="font-family: verdana;" >Edit Application</button>
+       			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appEdit">
+  Edit Application
+</button><!-- button for pop up to edit the contents of the page -->
     				
     			</form>
     		</div>	
@@ -286,6 +289,33 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		</ul>
   		</nav> 
 	</footer>
+	<div class="modal fade" id="appEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Edit your Information</h4>
+      </div>
+      <div class="modal-body">
+      <label> Basic Information </label>
+      <div class="input-group">
+  <input type="text area" class="form-control" style="height:200px;width:300px" name="para"><br>
+  	<label>Why you need help</label>
+  	<div class="input-group">
+  <input type="text area" class="form-control" style="height:200px;width:300px">
+  
+</div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" type="submit">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
