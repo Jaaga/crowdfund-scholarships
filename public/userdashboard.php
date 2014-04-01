@@ -62,8 +62,10 @@
         	</div>      	
     	</div>
 	</div> 
-
-
+<?php 
+$students=getStudents($U_id); 
+$noofStudents=count($students);
+?>
 		
   <div class="container">
 	  <!-- Donor Detail Row-->
@@ -76,7 +78,7 @@
         		<p>Los Angeles, CA . Joined since Feb 2014 </p>
         		<p style="font-size:18px"> Born and raised in LA. Currently working selling electric vehicles and project planning for rad new projects taking place in LA. English Lit. graduate that loves to write and live life to the fullest!</>
         		<br>
-        		<p style="font-size:26px" "text-type:bold">Donated to 9 Students -- Donate to More</p>
+        		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
       	</div>
     	</div>
     </div>
@@ -90,7 +92,7 @@
     	<br>  
     </div>
 <?php 
-$students=getStudents($U_id);
+
     foreach($students as $student):
       ?>
 	<!-- First row of students -->

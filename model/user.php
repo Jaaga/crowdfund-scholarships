@@ -47,17 +47,13 @@ include ('dbcon.php');
 		$db=dbopen();
 		$sql="select * from donation inner join student on donation.S_id=student.S_id WHERE donation.U_id=$userId";
 		$list = mysqli_query($db,$sql) or die ("couldnt execute");
-		echo mysqli_num_rows($list);
+		//$noofStudents = mysqli_num_rows($list);
 	
 
 		//while($rows= mysqli_fetch_array($list))
 		while($rows= mysqli_fetch_assoc($list))
 		{
-			/*$value =array('D_id'=>"D_id", "S_id"=>$S_id, "date"=> $date,	"amount"=> $amount,"fname"=>$fname,"lname"=>$lname,"gender"=> $gender,
-				"email"=> $email,"Phone_Number"=> $Phone_Number,"address"=>$address,"pincode"=> $pincode,"country"=> $country,"course"=> $course,"scholar_AMT"=>$scholar_AMT, 
-				"para"=>$para,"password"=>$password,"image_path"=>$image_path );
-			*/
-			//var_dump(value);
+			
 			$data[] = array('U_id'=>$rows['U_id'],'fname'=>$rows['fname'],'para'=>$rows['para'],'date'=>$rows['date'],
 				'amount'=>$rows['amount'],'scholar_AMT'=>$rows['scholar_AMT'],'S_id'=>$rows['S_id'],'image_path'=>$rows['image_path']);
 		}
