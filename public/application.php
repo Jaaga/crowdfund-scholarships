@@ -18,6 +18,13 @@
         }
     </script>
   <style>
+  @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
    body 
     {
   background: url("./images/wood1.png");
@@ -45,7 +52,7 @@
         <div class="navbar-header" style="height: 50px;">
       
             
-              <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+              <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
@@ -295,7 +302,7 @@
   <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
   <a href="">Contact &nbsp |</a>&nbsp &nbsp
   <a href="">Donor &nbsp |</a>
-  <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+  <br><br>
   </footer>
    
   </body>
