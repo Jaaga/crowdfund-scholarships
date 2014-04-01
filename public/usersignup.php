@@ -61,7 +61,7 @@ font-size: 64px;}
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
 			<form class="form-horizontal" action="../controller/createuser.php" method="post">
-						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
+						<legend align="center" style="color: white;"><h2>Sign Up Now</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
