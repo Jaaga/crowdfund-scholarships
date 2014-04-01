@@ -123,18 +123,33 @@
 
     }
 
-    function getFundedAmount($studentId) {
+    function getFundedAmount($S_id) 
 
-    	$db=dbopen();
-    	$sql= "select sum(amount) from donations where S_id='$studentId'";
-    	$result= $db->query($sql);
-    	 if(!$result)
-        {
-            die('Error' .$db->error());
-        }
-        $result->close;
-        return $result;
-    }
+    	
+{
+    $db=dbopen();
+    //$Student_id=$_GET['id2'];
+    $sql = "select sum(amount) from donation where S_id=$S_id";
+    $result = $db->query($sql);
+    $sum = mysqli_fetch_array($result);
+    return $sum['sum(amount)'];
+
+}
+
+
+        //$db=dbopen();
+    	//$sql= "select sum(amount) from donations where S_id=$studentId";
+    	//$result = $db->query($sql);
+        //mysqli_fetch_array($result);
+        //return $result;
+    	 
+         //if(!$result)
+        //{
+           // die('Error' .$db->error());
+        //}
+        //$result->close;
+        
+    
 
 
 //while($row = mysqli_fetch_array($result))
