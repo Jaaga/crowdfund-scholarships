@@ -31,7 +31,7 @@ $S_id= $row['S_id'];
 <html>
   <body>
     <form name="studentForm" method="post" action="../public/studentdashboard.php">
-      <input type="hidden" name="name" value="<?php echo $S_id; ?>">
+      <input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
         
     <script language="JavaScript">document.studentForm.submit();
     </script>

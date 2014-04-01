@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
-    
+    session_start();
+include ('../model/student.php');
 ?>
 <html>
 
@@ -79,10 +80,23 @@
 
 	
 			</div>
+<?php 
+
+$S_id=$_POST['S_id'];
+
+$student= getStudent($S_id);
+$Donors=getDonors($S_id);
+$total=count($Donors);
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
+//$totalDonors=0;
+//foreach($Donors as $totalDonors){ 
+//$totalDonors=count($listdonors);
+//	$total = count($totalDonors);}
+ ?>
 
 			<div class="col-lg-6">
 			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
-			Vaibhav Mule
+			<?php echo $student['fname']; ?>
 			</h1>
 			</div>
     		
