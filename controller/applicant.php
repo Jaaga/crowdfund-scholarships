@@ -24,10 +24,11 @@ $row= createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,$p
 	$course,$scholar_AMT,$para,$password,$pic);
 
 $S_id= $row['S_id'];
+header("../public/studentdashboard?id=$S_id");
     
 }
 ?>
-<!doctype <!DOCTYPE html>
+<!--<!doctype <!DOCTYPE html>
 <html>
   <body>
     <form name="studentForm" method="post" action="../public/studentdashboard.php">
@@ -38,4 +39,4 @@ $S_id= $row['S_id'];
       
     </form>
   </body>
-</html>
+</html> -->

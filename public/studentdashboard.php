@@ -1,6 +1,6 @@
 
 <?php 
-include 'student.php';
+include ('../model/student.php');
 
 ?>
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ include 'student.php';
 			</div>
 <?php 
 
-$S_id=$_POST['S_id'];
+$S_id=$_GET['id'];
 
 $student= getStudent($S_id);
 $Donors=getDonors($S_id);
@@ -123,7 +123,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         	<div class="col-md-7"  text-align="justify">
         		
 
-				<img src="./images/student.jpg" width="100%" height="400px">
+				<img src="<?php echo $student['image_path']; ?>" width="100%" height="400px">
 				<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
 
 				<a href="" onclick="document.getElementBglyphiconyId('profile_pic').click(); return false">
@@ -164,9 +164,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
-						<h2 class="sponsor_data"> <b>34</b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br> out of<b> Rs.1,20,000</b></h2>
-						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
+						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
+						<h2 class="sponsor_data"> <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data"> <b><?php echo $student['date']; ?></b> days to go!</h2>
 					
 						<br>
 					
