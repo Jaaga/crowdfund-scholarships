@@ -11,6 +11,13 @@
     
   <style type="text/css">
 
+   @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
   body{
    
     padding-top: 80px;
@@ -102,7 +109,7 @@
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
 
@@ -114,7 +121,6 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-
               <a href="usersignup.php" class="btn btn-danger">SignUp</a>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 

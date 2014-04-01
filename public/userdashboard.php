@@ -13,6 +13,14 @@
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
  <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
   <style type="text/css">
+@font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
+  
     body{
      
       background-repeat:repeat;
@@ -46,7 +54,7 @@
     		<div class="navbar-header" style="height: 50px;">
     
           
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
         	</div>
 
         	<div class="collapse navbar-collapse">
@@ -62,8 +70,10 @@
         	</div>      	
     	</div>
 	</div> 
-
-
+<?php 
+$students=getStudents($U_id); 
+$noofStudents=count($students);
+?>
 		
   <div class="container">
 	  <!-- Donor Detail Row-->
@@ -76,7 +86,7 @@
         		<p>Los Angeles, CA . Joined since Feb 2014 </p>
         		<p style="font-size:18px"> Born and raised in LA. Currently working selling electric vehicles and project planning for rad new projects taking place in LA. English Lit. graduate that loves to write and live life to the fullest!</>
         		<br>
-        		<p style="font-size:26px" "text-type:bold">Donated to 9 Students -- Donate to More</p>
+        		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
       	</div>
     	</div>
     </div>
@@ -90,7 +100,7 @@
     	<br>  
     </div>
 <?php 
-$students=getStudents($U_id);
+
     foreach($students as $student):
       ?>
 	<!-- First row of students -->

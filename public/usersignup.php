@@ -5,11 +5,21 @@
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
   
  <style>
+
+   @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
  	body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
 }
-	h2{font-family:'Cabin Sketch' cursive;
+
+
+  h2{font-family:'Cabin Sketch' cursive;
 font-size: 64px;}
  </style>
 
@@ -20,7 +30,7 @@ font-size: 64px;}
     		<div class="navbar-header" style="height: 50px;">
     
           
-            	<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            	<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
         	</div>
          
         	<div class="collapse navbar-collapse">
@@ -51,7 +61,7 @@ font-size: 64px;}
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
 			<form class="form-horizontal" action="../controller/createuser.php" method="post">
-						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
+						<legend align="center" style="color: white;"><h2>Sign Up Now</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
