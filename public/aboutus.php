@@ -83,10 +83,10 @@ h4:before{
     <br>
     <br>
 
-  <div class="container1">
+
     <div class="row">
-    <div class="col-lg-12">
-      <h1 class="faq-head" style="font-family:'KGSecondChancesSketch' cursive;">About Us</h1>
+   
+      <h1 style="font-family:'KGSecondChancesSketch' cursive; text-align: center;font-size:45px;">About Us</h1>
       </div>
     </div>
 

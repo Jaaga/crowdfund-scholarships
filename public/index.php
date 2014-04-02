@@ -139,7 +139,7 @@
 
         <img src="./images/jaaga-study1.png">
 
-        <div class="pitch">
+        <div class="tagline">
           <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
         </div>
 
@@ -150,7 +150,8 @@
         <h3>Apply for Scholarship</h3>
         </div>
 
-        <div class="studentbutton">
+        <div class="submitprofile-button
+        ">
   
         <a href="usersignup.php">
           <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
@@ -162,7 +163,7 @@
         <h3>View Scholarship Applications</h3>
         </div>
 
-        <div class="donatebutton">
+        <div class="viewprofile-button">
         <a href="listofstudents.php">
           <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
         </a> 
@@ -239,7 +240,7 @@
 
   
   <div class="row">
-    <h1 class="faq-head" align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive;">
+    <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px;">
           There's More!</h1>
   </div>
  
@@ -265,7 +266,7 @@
           <br>
           <div class="oval-thought-border" style="text-align: justify; margin: 0 auto">
           <h2>How much should I donate?</h2>
-           <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEm for your contribution.</small></p>
+           <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
           </div>
 
           <br>

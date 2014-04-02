@@ -18,8 +18,10 @@ background-repeat:repeat;
     max-width: 100%;
   }*/
     
-	
-	.pitch {
+	/*--------------------------------------------
+  This is the elevator-pitch on the home page/homepage
+  ----------------------------------------------*/
+	.tagline {
 	position: absolute;
 	top: 30px;
 	left: 100px;
@@ -31,24 +33,26 @@ background-repeat:repeat;
 	color: white;
 	}
 
-	.container1{
-	position: relative;
-
-	padding-bottom: 50px;
-
-	}
-  
-	.donatebutton {
+	/*--------------------------------------------------
+  this is the button to view scholarship applications/homepage
+  ----------------------------------------------------*/
+	.viewprofile-button {
   	position: absolute;
   	top: 350px;
   	left: 750px;
 	}
-
-	.studentbutton {
+ /*--------------------------------------------
+  This is the button to apply for scholarships/homepage
+  ---------------------------------------------*/
+	.submitprofile-button {
   	position: absolute;
   	top: 350px;
   	left: 350px;
 	}
+
+/*-----------------------------------------------
+This is the text above the apply and submit button/homepage
+----------------------------------------------------*/  
 
 	.buttontext {
   	position: absolute;
@@ -63,33 +67,28 @@ background-repeat:repeat;
   	left: 650px;
   	color:white;
 	}
+  /*---------------------------------------------------*/
 
 
-	.student-pic {
+	/*.student-pic {
       height:550px;
-      }
-    .donation-amount {
+      }*/
+    /*.donation-amount {
       width:100px;
       display:inline;
-      }
-    .donation {
+      }*/
+    /*.donation {
       font-size:15pt;
       display:inline;
-      }
-    .student-pic {
+      }*/
+    /*.student-pic {
       border:2px solid black;
       
-      }
-    .col-lg-12 {
-      position:relative;
-      margin-top:40px;
-      text-align:center;
-      
-      }
+      }*/
 
-    .faq-head {
-      font-size:45px;
-      }
+    /*===============================================================
+    left work here, this is on the index page and the about us page
+    =================================================================*/
       
     .faq-content {
       max-width:1000px;
