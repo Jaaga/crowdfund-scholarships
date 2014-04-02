@@ -93,7 +93,7 @@ padding-top: 60px;
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
-        <h3><?php echo $student['fname']; ?></h3>
+        <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
     <div class="row">

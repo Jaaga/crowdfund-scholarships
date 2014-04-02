@@ -100,7 +100,7 @@
   <?php 
       if(isset($_POST['name'])){
         $name=$_POST['name'];
-        $password=$_POST['password'];
+        
         $email=$_POST['email'];
         $U_id=$_POST['U_id'];
       }
@@ -116,9 +116,9 @@
   <input type="hidden" name="U_id" value="<?php echo $U_id;?>" >
   <!-- Text input-->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">First Name:</label> 
+    <label class="col-md-4 control-label" for="textinput">Your Name:</label> 
     <div class="col-md-4">
-    <input name="fname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
+    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
     
     </div>
   </div>

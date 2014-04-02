@@ -26,7 +26,7 @@ include ('dbcon.php');
          
 		if(!$db->query($sql))
 		{
-			die('Error' .$db->error($sql));
+			die('Error' .$db->error);
 		}
 		else
 		{   $sql="SELECT * from user where email='$email' and password='$password'";
