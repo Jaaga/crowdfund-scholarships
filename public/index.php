@@ -121,7 +121,7 @@
 
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-              <a href="usersignup.php" class="btn btn-danger">SignUp</a>
+              <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 
           </div>              
