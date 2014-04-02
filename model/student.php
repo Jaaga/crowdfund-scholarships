@@ -11,11 +11,11 @@
         $db= dbopen();}
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
-        $sql->bind_result($S_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
+        $sql->bind_result($S_id,$U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
             $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path,$date);
         while($sql->fetch()){
                
-        $students[]=array('S_id'=>$S_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
+        $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
             'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path,'date'=>$date);
         }
@@ -88,7 +88,7 @@
     function getDonors($studentId){
 
         $db=dbopen();
-        $query="SELECT * from donation inner join donor on donation.S_id='$studentId' && donation.U_id=user.U_id";
+        $query="SELECT * from donation inner join user on donation.S_id='$studentId' && donation.U_id=user.U_id";
         $sql=$db->prepare($query);
         $sql->execute();
         $sql->bind_result($U_id,$S_id,$date,$amount,$name,$password,$email);
