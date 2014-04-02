@@ -11,11 +11,11 @@
         $db= dbopen();
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
-        $sql->bind_result($S_id,$U_id,$fname,$gender,$email,$Phone_Number,$address,
+        $sql->bind_result($S_id,$U_id,$sname,$gender,$email,$Phone_Number,$address,
             $pincode,$country,$course,$scholar_AMT,$para,$image_path,$date);
         while($sql->fetch()){
                
-        $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'fname'=>$fname,'gender'=>$gender,'email'=>$email,
+        $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'sname'=>$sname,'gender'=>$gender,'email'=>$email,
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
             'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'image_path'=>$image_path,'date'=>$date);
         }
@@ -54,14 +54,12 @@
         }
     }
 
-    function createStudent($U_id,$fname,$gender,$email,$Phone_Number,
+    function createStudent($U_id,$sname,$gender,$email,$Phone_Number,
         $address,$pincode,$country,$course,$scholar_AMT,$para,$image_path){
     	
         $db= dbopen(); 
-        
-
-        $sql ="INSERT INTO student(U_id,fname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,image_path) VALUES ('$U_id','$fname','$gender',
+        $sql ="INSERT INTO student(U_id,sname,gender,email,Phone_Number,address,
+            pincode,country,course,scholar_AMT,para,image_path) VALUES ('$U_id','$sname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$image_path')";
         $result= $db->query($sql); 
         $sql1="SELECT * from student where U_id='$U_id'";
@@ -112,7 +110,7 @@
         $result= $db->query($sql);
 
         if (!$result){
-            die('Error' .$db->error());
+            die('Error' .$db->error);
         }
         else{
         $row= mysqli_fetch_array($result);

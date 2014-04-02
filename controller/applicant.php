@@ -7,7 +7,7 @@ $temp=$_FILES['image_path']['tmp_name'];
   move_uploaded_file($temp,$pic);
 
 $U_id=$_POST['U_id'];
-$fname=$_POST['fname'];
+$sname=$_POST['sname'];
 $gender=$_POST['gender'];
 $email=$_POST['email'];
 $Phone_Number=$_POST['Phone_Number'];
@@ -19,10 +19,11 @@ $scholar_AMT=$_POST['scholar_AMT'];
 $para=$_POST['para'];
 
 
-$row= createStudent($U_id,$fname,$gender,$email,$Phone_Number,$address,$pincode,$country,
+$row= createStudent($U_id,$sname,$gender,$email,$Phone_Number,$address,$pincode,$country,
 	$course,$scholar_AMT,$para,$pic);
 
 $S_id= $row['S_id'];
+
 header("location:../public/studentdashboard?id=$S_id");
     
 }
@@ -31,7 +32,7 @@ header("location:../public/studentdashboard?id=$S_id");
 <html>
   <body>
     <form name="studentForm" method="post" action="../public/studentdashboard.php">
-      <input type="hidden" name="S_id" value="//<?php// echo $S_id; ?>">
+      <input type="hidden" name="S_id" value=// echo $S_id;">
         
     <script language="JavaScript">document.studentForm.submit();
     </script>
