@@ -42,7 +42,7 @@ font-size: 64px;}
         	<div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
               </div><!--/.navbar-collapse -->
             </div>
         </div>
@@ -97,32 +97,32 @@ font-size: 64px;}
 	</div>
 	<br>
 <!-- Button -->
-<br>
-	<div class="form-group">
- 			 <label class="col-md-4 control-label" for="singlebutton"></label>
-  		<div class="col-md-4" align="center">
-    		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
-  		</div>
 
   <div class="form-group">
-    <label class="col-md-4 control-label" for="radios">Are You:</label>
+    <label class="col-md-4 control-label" for="radios" style="color:white;">Are You:</label>
     <div class="col-md-4">
     <div class="radio">
       <label for="radios-0">
-        <input type="radio" name="type" id="radios-0" value="D" checked="checked">
+        <input type="radio" name="type" id="radios-0" value="D" checked="checked" style="text-color:white;">
         Donor
       </label>
     </div>
     <div class="radio">
       <label for="radios-1">
-        <input type="radio" name="type" id="radios-1" value="S">
+        <input type="radio" name="type" id="radios-1" value="S" style="color:white;">
         Student
       </label>
     </div>
     </div>
   </div>
 
-
+<br>
+  <div class="form-group">
+       <label class="col-md-4 control-label" for="singlebutton"></label>
+      <div class="col-md-4" align="center">
+        <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
+      </div>
+    </div>
 				</div>
 			</form>
 		</div>

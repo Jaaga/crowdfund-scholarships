@@ -70,7 +70,7 @@
                     <input type="password" placeholder="Password" class="form-control">
                   </div>
 
-                  <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
+                  <button type="submit" class="btn btn-success" >Sign In</button> 
                   &nbsp 
 
                 </form>
