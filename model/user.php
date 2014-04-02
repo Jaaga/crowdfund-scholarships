@@ -7,6 +7,18 @@ include ('dbcon.php');
 	{
 		
 		$db=dbopen();
+        
+        //TO check uniqueness
+
+        //$sql="SELECT email from user where email='$email'";
+        //$result = $db->query($sql);
+        //$count = mysqli_num_rows($result);
+        //if($count==1){
+        //	$invalidUser="A User with this E-mail already exists";
+        //	return $invalidUser;
+
+        //}
+        //else{
 
 		$sql="INSERT INTO user (name, password,email)
 		VALUES('$name','$password','$email')";
@@ -24,7 +36,9 @@ include ('dbcon.php');
 			
             $result->close();
             return ($U_id);
-		}
+		  }
+
+	    
 	}
 		function userInfo($userId)
 		{

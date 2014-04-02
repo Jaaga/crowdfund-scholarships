@@ -7,18 +7,19 @@
   
     function getStudentList()
     {   
-        if(!$db){
-        $db= dbopen();}
+
+        $db= dbopen();
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
-        $sql->bind_result($S_id,$U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,
-            $pincode,$country,$course,$scholar_AMT,$para,$password,$image_path,$date);
+        $sql->bind_result($S_id,$U_id,$fname,$gender,$email,$Phone_Number,$address,
+            $pincode,$country,$course,$scholar_AMT,$para,$image_path,$date);
         while($sql->fetch()){
                
-        $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'fname'=>$fname,'lname'=>$lname,'gender'=>$gender,'email'=>$email,
+        $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'fname'=>$fname,'gender'=>$gender,'email'=>$email,
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
-            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'password'=>$password,'image_path'=>$image_path,'date'=>$date);
+            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'image_path'=>$image_path,'date'=>$date);
         }
+
         
         $sql->close();
         return ($students);    
@@ -53,15 +54,15 @@
         }
     }
 
-    function createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,
-        $address,$pincode,$country,$course,$scholar_AMT,$para,$password,$image_path){
+    function createStudent($U_id,$fname,$gender,$email,$Phone_Number,
+        $address,$pincode,$country,$course,$scholar_AMT,$para,$image_path){
     	
         $db= dbopen(); 
         
 
-        $sql ="INSERT INTO student(U_id,fname,lname,gender,email,Phone_Number,address,
-            pincode,country,course,scholar_AMT,para,password,image_path) VALUES ('$U_id','$fname','$lname','$gender',
-            '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$password','$image_path')";
+        $sql ="INSERT INTO student(U_id,fname,gender,email,Phone_Number,address,
+            pincode,country,course,scholar_AMT,para,image_path) VALUES ('$U_id','$fname','$gender',
+            '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$image_path')";
         $result= $db->query($sql); 
         $sql1="SELECT * from student where U_id='$U_id'";
         $result1= $db->query($sql1);
@@ -91,10 +92,10 @@
         $query="SELECT * from donation inner join user on donation.S_id='$studentId' && donation.U_id=user.U_id";
         $sql=$db->prepare($query);
         $sql->execute();
-        $sql->bind_result($U_id,$S_id,$date,$amount,$name,$password,$email);
+        $sql->bind_result($U_id,$S_id,$date,$amount,$name,$email);
          while($sql->fetch()){
                
-        $Donors[]=array('U_id'=>$U_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'password'=>$password,'email'=>$email);
+        $Donors[]=array('U_id'=>$U_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'email'=>$email);
 
         }
         //$sql->store_result();

@@ -123,13 +123,7 @@
     </div>
   </div>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
-    <div class="col-md-4">
-    <input name="lname" type="text" placeholder="Last Name" class="form-control input-md"> 
-    </div>
-  </div>
+
 
   <!-- Multiple Radios -->
   <div class="form-group">
@@ -161,22 +155,7 @@
   </div>
   
   
-<!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="password">Password:</label>
-  <div class="col-md-4">
-    <input name="password" type="password" class="form-control input-md" value="<?php echo $password; ?>">    
-  </div>
-</div>
 
- <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
-    <div class="col-md-4">
-    <input name="confpassword" type="password" class="form-control input-md" value="<?php echo $password; ?>">
-    
-    </div>
-  </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
