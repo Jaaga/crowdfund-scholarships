@@ -17,8 +17,7 @@
 
 --
 -- Table structure for table `donation`
-CREATE Database `LearnEmp`;
-USE `LearnEmp`;
+--
 
 DROP TABLE IF EXISTS `donation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -82,8 +81,7 @@ DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
   `S_id` int(20) NOT NULL AUTO_INCREMENT,
   `U_id` int(20) DEFAULT NULL,
-  `fname` varchar(20) DEFAULT NULL,
-  `lname` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
   `gender` varchar(20) DEFAULT NULL,
   `email` varchar(320) DEFAULT NULL,
   `Phone_Number` int(20) DEFAULT NULL,
@@ -93,13 +91,13 @@ CREATE TABLE `student` (
   `course` varchar(20) DEFAULT NULL,
   `scholar_AMT` int(20) DEFAULT NULL,
   `para` varchar(500) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
   `image_path` blob,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`S_id`),
+  UNIQUE KEY `email` (`email`),
   KEY `U_id` (`U_id`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`U_id`) REFERENCES `user` (`U_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,8 +122,9 @@ CREATE TABLE `user` (
   `password` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`U_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`U_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,6 +133,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Freeman','123123','freeman@gmail.com','2014-04-02 11:04:30');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -146,4 +146,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-03-31 17:35:08
+-- Dump completed on 2014-04-02 16:45:51

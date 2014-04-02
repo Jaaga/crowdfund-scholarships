@@ -8,7 +8,6 @@ $temp=$_FILES['image_path']['tmp_name'];
 
 $U_id=$_POST['U_id'];
 $fname=$_POST['fname'];
-$lname=$_POST['lname'];
 $gender=$_POST['gender'];
 $email=$_POST['email'];
 $Phone_Number=$_POST['Phone_Number'];
@@ -18,10 +17,10 @@ $country=$_POST['country'];
 $course=$_POST['course'];
 $scholar_AMT=$_POST['scholar_AMT'];
 $para=$_POST['para'];
-$password=$_POST['password'];
 
-$row= createStudent($U_id,$fname,$lname,$gender,$email,$Phone_Number,$address,$pincode,$country,
-	$course,$scholar_AMT,$para,$password,$pic);
+
+$row= createStudent($U_id,$fname,$gender,$email,$Phone_Number,$address,$pincode,$country,
+	$course,$scholar_AMT,$para,$pic);
 
 $S_id= $row['S_id'];
 header("location:../public/studentdashboard?id=$S_id");
