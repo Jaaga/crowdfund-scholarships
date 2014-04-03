@@ -100,9 +100,9 @@
 
 <body>
 
-<div class="container" >
+  <div class="container" >
 
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
@@ -130,12 +130,12 @@
         </div>
       </div>
     </div>
-  </div> 
+    </div> 
     
   
     
-  <!--<div align="center">-->
-  <div class="row">
+    <!--<div align="center">-->
+    <div class="row">
 
       <div class="col-md-12">
 
@@ -171,15 +171,15 @@
         </a> 
         </div>
       </div>
-  </div>
-  </div>
+    </div>
+    <!--</div>-->
         
-  <br>
+    <br>
 
     
-  <?php $students= getStudentList(); ?>
+    <?php $students= getStudentList(); ?>
 
-  <div class="row">
+    <div class="row">
 
         <div class="col-md-4" >
           <div class="well">
@@ -207,14 +207,14 @@
             <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
           </div>
         </div>
-  </div>
+    </div>
 
-  <h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
+    <h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
 
-  <br>
+    <br>
 
   
-  <div class="row" align ="center">
+    <div class="row" align ="center">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
           <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">MAKE A DONATION</h3>
@@ -236,57 +236,60 @@
           <p style="text-align: justify; padding:1em 1em;"><!--The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>-->
           A student who has been succesfully sponsored gets inducted into a pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>  
-  </div>
-  
-
-
-  
-  <div class="row">
+    </div>
+ 
+   
+     <div class="row">
     <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px;">
           There's More!</h1>
-  </div>
+    </div>
  
 
-  <!--<div class="container">-->
+    <!--<div class="container">-->
 
-  <div class="row">
+    <div class="row">
       
        
 
-         <!-- <h3 class="header-faq">How does LearnEmp work?</h3>
-          <p class="content-faq">LearnEmp is a social crowdfunding platform for students who cannot afford higher education at their desired university or course. LearnEmp enables the donor to identify a student's potential and accomplishments and make a contribution in order to help and empower the student.</p>-->
-<div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
       <h2>How does LearnEm work?</h2>
-<p><small>LearnEm is a social crowdfunding platform for students who cannot afford higher education at their desired university or course. LearnEm enables the donor to identify a student's potential and accomplishments and make a contribution in order to help and empower the student.</small></p>
-        
+        <p>
+          <small>LearnEm is a social crowdfunding platform for
+           students who cannot afford higher education at their 
+          desired university or course. LearnEm enables the donor 
+          to identify a student's potential and accomplishments and 
+          make a contribution in order to help and empower the student.
+          </small>
+        </p>        
       </div>
-          <br>
-        <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+        <br>
+      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
           <h2>Will the donor be paid back?</h2>
           <p><small>The donor is not paid back. LearnEm works on the principle of 'Pay it Forward Loans'. When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</small></p>
-          </div>
-          <br>
-          <div class="oval-thought-border" style="text-align: justify; margin: 0 auto">
-          <h2>How much should I donate?</h2>
-           <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
-          </div>
+      </div>
+      <br>
+      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto">
+      <h2>How much should I donate?</h2>
+      <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
+      </div>
 
-          <br>
-    <article class="faq-content" align="right" style="text-align:justified">
+      <br>
+      <article class="faq-content" align="right" style="text-align:justified">
           <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
           </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
-        </article>
-  </div>
+      </article>
+    </div>
+    
       
-  <!--    </div>
-  </div>-->
+    <!--    </div>
+    </div>-->
 
-  <br>
+    <br>
 
-  <!--<div class="container1" align="center">-->
-  <div class="row" align="center">
+    <!--<div class="container1" align="center">-->
+    <div class="row" align="center">
       <h1 style="font-family:'KGSecondChancesSketch' cursive;">Get in Touch</h1>
       <p align="center"> 
       1, Penthouse 01<br>
@@ -304,13 +307,11 @@
 
       <small><a href="http://bit.ly/1otljDy" style="color:#0000FF;text-align:left" align="right">View Larger Map</a>
       </small>  
-  </div>      
-  <!--</div>-->
+    </div>      
+    <!--</div>-->
 
-  <br>
-
-  
-</div>
+    <br>  
+  </div>
   
   <hr>
   <footer class="footer" style="text-align:center">
