@@ -92,7 +92,7 @@ h4:before{
 
     <div class="row">
   
-        <article class="faq-content">
+        <article>
      <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2> </div>
         
         <div align="center">

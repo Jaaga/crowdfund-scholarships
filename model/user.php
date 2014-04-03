@@ -40,6 +40,18 @@ include ('dbcon.php');
 
 	    
 	}
+
+	function updateUser($U_id,$image,$details){
+       
+       $db = dbopen();
+       $sql = "UPDATE user SET image='$image',details='$details' where U_id='$U_id'";
+       
+       if(!$db->query($sql))
+			{
+				die('Error' .$db->error);
+			}
+
+	}
 		function userInfo($userId)
 		{
 			$db =dbopen();
@@ -50,7 +62,7 @@ include ('dbcon.php');
 			{
 				die('Error' .$db->error($sql));
 			}
-			return $result['name'];
+			return $result;
 		} 
 	
 //"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
@@ -128,5 +140,19 @@ include ('dbcon.php');
   		header("Refresh: 3;url='listofstudents.php?id=$U_id");
 		mysqli_close($con);
 	}
+   
+   function get_gravatar( $email, $s = 80, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {
+    $url = 'http://www.gravatar.com/avatar/';
+    $url .= md5( strtolower( trim( $email ) ) );
+    $url .= "?s=$s&d=$d&r=$r";
+    if ( $img ) {
+        $url = '<img src="' . $url . '"';
+        foreach ( $atts as $key => $val ){
+            $url .= ' ' . $key . '="' . $val . '"';
+        }
+        $url .= ' />';
+    }
+    return $url;
+}
 
 ?>

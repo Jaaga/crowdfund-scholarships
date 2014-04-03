@@ -22,6 +22,7 @@ $para=$_POST['para'];
 $row= createStudent($U_id,$sname,$gender,$email,$Phone_Number,$address,$pincode,$country,
 	$course,$scholar_AMT,$para,$pic);
 
+
 $S_id= $row['S_id'];
 
 header("location:../public/studentdashboard?id=$S_id");
