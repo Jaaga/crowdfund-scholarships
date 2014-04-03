@@ -81,11 +81,11 @@ $noofStudents=count($students);
  	  <div class="row">
     	<div class="col-md-12" >
      		<div class="well" >  
-        		<img src="./images/donor.jpg" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
+        		<img src="<?php echo $row['image']; ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
         		<button type="submit" class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;"><h4>Edit Profile</h4></button>
-        		<h2><?php echo $row;?> <h2/>
-        		<p>Los Angeles, CA . Joined since Feb 2014 </p>
-        		<p style="font-size:18px"> Born and raised in LA. Currently working selling electric vehicles and project planning for rad new projects taking place in LA. English Lit. graduate that loves to write and live life to the fullest!</>
+        		<h2><?php echo $row['name'];?> <h2/>
+        		
+        		<p style="font-size:18px"> <?php echo $row['details']; ?></p>
         		<br>
         		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
       	</div>
@@ -96,7 +96,7 @@ $noofStudents=count($students);
 
   	<!-- Heading for Donated list row-->
   	<div class="row">
-    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row;?> Donated Student List</h1>
+    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row['name'];?> Donated Student List</h1>
 
     	<br>  
     </div>

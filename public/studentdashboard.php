@@ -106,7 +106,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 			<div class="col-lg-6">
 
 			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
-			<?php echo $student['fname']; ?>
+			<?php echo $student['sname']; ?>
 			</h1>
 			</div>
     		

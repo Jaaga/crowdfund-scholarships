@@ -40,6 +40,14 @@ include ('dbcon.php');
 
 	    
 	}
+
+	function updateUser($U_id,$image,$details){
+       
+       $db = dbopen();
+       $sql = "UPDATE user SET image='$image',details='$details' where U_id='$U_id'";
+       $db->query($sql);
+
+	}
 		function userInfo($userId)
 		{
 			$db =dbopen();
@@ -50,7 +58,7 @@ include ('dbcon.php');
 			{
 				die('Error' .$db->error($sql));
 			}
-			return $result['name'];
+			return $result;
 		} 
 	
 //"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
