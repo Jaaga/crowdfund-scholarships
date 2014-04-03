@@ -34,7 +34,6 @@ if(isset($_POST['type'])){
   <body>
     <form name="userForm" method="post" action="../public/application.php">
       <input type="hidden" name="name" value="<?php echo $name; ?>">
-      <input type="hidden" name="password" value="<?php echo $password; ?>">
       <input type="hidden" name="email" value="<?php echo $email; ?>">
       <input type="hidden" name="U_id" value="<?php echo $U_id; ?>">
         
