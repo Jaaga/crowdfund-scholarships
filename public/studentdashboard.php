@@ -306,20 +306,49 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <h4 class="modal-title" id="myModalLabel">Edit your Information</h4>
       </div>
       <div class="modal-body">
-      <label> Basic Information </label>
-      <div class="input-group">
-  <input type="text area" class="form-control" style="height:200px;width:300px" name="para"><br>
-  	<label>Why you need help</label>
-  	<div class="input-group">
-  <input type="text area" class="form-control" style="height:200px;width:300px">
-  
-</div>
+      <div class="navbar-collapse collapse">
+              <form action="../controller/updatestudent.php" method="post">
+
+              <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
+                    <div class="col-md-4">
+                      <input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
+                    </div>
+                </div>
+                <br>
+                <br>
+                 <br>
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Address:</label>  
+                    <div class="col-md-4">
+                      <input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
+                    </div>
+                </div>
+                <br>
+                 <br>
+                <br>
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
+                    <div class="col-md-4">
+                      <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
+                    </div>
+                </div>
+                 <br>
+               
+                <br>
+                <br>
+
+                 <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" type="submit">Save changes</button>
+      </div>
+              </form>
+        </div>
        
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" type="submit">Save changes</button>
-      </div>
+     
     </div>
   </div>
 </div>

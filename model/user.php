@@ -60,7 +60,7 @@ include ('dbcon.php');
 			$result = mysqli_fetch_array($db->query($sql));
 			if(!$result)
 			{
-				die('Error' .$db->error($sql));
+				die('Error' .$db->error);
 			}
 			return $result;
 		} 
@@ -70,7 +70,7 @@ include ('dbcon.php');
 	{
 		//$donorId = $_GET['id'];		
 		$db=dbopen();
-		$sql="select * from donation inner join student on donation.S_id=student.S_id WHERE donation.U_id=$userId";
+		$sql="select * from donation inner join student on donation.S_id=student.S_id WHERE donation.U_id=$userId GROUP  BY donation.S_id";
 		$list = mysqli_query($db,$sql) or die ("couldnt execute");
 		//$noofStudents = mysqli_num_rows($list);
 	
@@ -105,7 +105,7 @@ include ('dbcon.php');
 				$_SESSION['email']= $email;
 				$_SESSION['password']= $password;
 // Register $myusername, $mypassword and redirect to file "Students_list.php"
-			header("location:../public/donordashboard.php?id=$U_id");
+			return $U_id;
 			}
 		else
 			{
@@ -136,9 +136,8 @@ include ('dbcon.php');
 
  function redirectToStudent($U_Id)
  	{
-		$U_id=$_POST['U_id'];
-  		header("Refresh: 3;url='listofstudents.php?id=$U_id");
-		mysqli_close($con);
+		$U_id=$U_Id;
+  		header("Refresh: 3;url='userdashboard.php?id=$U_id");
 	}
    
    function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {

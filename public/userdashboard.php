@@ -104,6 +104,7 @@ $noofStudents=count($students);
     foreach($students as $student):
                
             $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
+
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage = (($sum_amount/$requiredamount)*100);
@@ -119,19 +120,39 @@ $noofStudents=count($students);
           		<br>
 
           		<h3><?php echo $student['sname'];?></h3>
-          		<p ><?php echo $student['para'];?> </p>
+          		<p ><?php echo $student['para'];?> </p></a>
 
-          		<div class="progress">
+          		<div class="progress progress-striped">
                 
           		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
-              		<?php echo $percentage; ?> Complete
+              		<b style="color:#111111;"><?php echo $percentage; ?> Complete</b>
            			</div>
           		</div>
 
-          		<p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbsp<?php echo "Rs. ".$sum_amount;?></b> 
+          		<p style="text-align:left"><b>4</b> days to go <b><?php echo "Rs. ".$sum_amount;?></b> 
               pledged out of <?php echo $requiredamount; ?>
-            		&nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
-        	</div>
+            		</p>
+      <div class="row">
+        <form method="POST" action="donate.php">
+          <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+          <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
+         <div class="col-md-8">
+
+            <input type="text" name="amount" placeholder="$ " class="form-control input-md" > 
+
+          </div>
+
+          <div class="col-md-4">
+            
+              <!--<div class="col-lg-6">-->
+                <input type="submit" value="Donate" class="btn btn-primary">
+
+                             
+          </div>
+
+      </form>
+      </div>
+      </div>
      	</div>
     
 

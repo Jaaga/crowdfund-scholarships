@@ -58,7 +58,7 @@ padding-top: 60px;
     
       <div class="navbar-header" style="height: 50px;">
     
-        <?php $D_id=$_GET['id']; ?> 
+        <?php $U_id=$_GET['id']; ?> 
 
             <a class="navbar-brand" href="index.php">
 
@@ -66,9 +66,9 @@ padding-top: 60px;
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?id=<?php echo $D_id; ?>">Sponsor</a></li>
+                <li><a href="listofstudents.php?id=<?php echo $U_id; ?>">Sponsor</a></li>
                 
-                <li><a href="donordashboard.php?id=<?php echo $D_id;?>">MyProfile</a>
+                <li><a href="userdashboard.php?id=<?php echo $U_id;?>">MyProfile</a>
             </ul>
 
               
@@ -87,7 +87,12 @@ padding-top: 60px;
 
   <?php 
                
-            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$D_id.'';
+            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
+
+                $sum_amount=getFundedAmount($student['S_id']);
+                $requiredamount = $student['scholar_AMT'];
+                $percentage = (($sum_amount/$requiredamount)*100);
+                
   ?>
   <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify;">
       <div class="well" style="width: 340px;">
@@ -98,22 +103,18 @@ padding-top: 60px;
         <p><?php echo $student['para']; ?></p>
         </a>
         <div class="progress">
-                <?php
-                $sum_amount=getFundedAmount($student['S_id']);
-                $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
-                ?>
-
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
+               <b style="color:#111111;"><?php echo $percentage; ?> Complete</b> 
                 </div>
-
-                
-              </div>
-              <div> <?php echo $percentage;?>% Complete </div>
+               </div>
+           
+              <p style="text-align:left"><b>4</b> days left<b><br><?php echo "Rs. ".$sum_amount;?></b> 
+              pledged out of <?php echo $requiredamount; ?>
+                </p>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>">Donate</a></div>-->
         <form method="POST" action="donate.php">
-          <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
+          <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
           
           <!--<div class="col-lg-6">-->

@@ -337,7 +337,7 @@
 
       <div class="modal-body">
         <div class="navbar-collapse collapse">
-              <form action="donorlogin.php" method="post">
+              <form action="../controller/userlogin.php" method="post">
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Username:</label>  

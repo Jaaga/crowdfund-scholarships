@@ -136,6 +136,20 @@
 }
 
 
+    function updateStudent($S_id,$Phone_Number,$address,$para){
+      
+        $db=dbopen();
+        
+        $sql="UPDATE student SET Phone_Number='$Phone_Number',address='$address',para='$para' where S_id='$S_id'";
+
+        if(!$db->query($sql))
+            {
+                die('Error' .$db->error);
+            }
+
+        return $S_id;    
+
+    }
         //$db=dbopen();
     	//$sql= "select sum(amount) from donations where S_id=$studentId";
     	//$result = $db->query($sql);

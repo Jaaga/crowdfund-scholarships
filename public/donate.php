@@ -1,6 +1,11 @@
 <?php
-include ('../model/donor.php');
-giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['amount']);
+include ('../model/user.php');
+
+$U_id=$_POST['U_id'];
+$S_id=$_POST['S_id'];
+$amount=$_POST['amount']; 
+
+giveDonation($U_id,$S_id,$amount);
 ?>
 
 <html>
@@ -31,5 +36,5 @@ giveDonation($_POST['D_id'],$_POST['S_id'],$_POST['amount']);
 </body>
 </html>
 <?php
-redirectToStudent($D_Id);
+redirectToStudent($U_id);
 ?>
