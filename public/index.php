@@ -272,7 +272,7 @@
           </div>
 
           <br>
-    <article class="faq-content" align="right" style="text-align:justified">
+    <article style="text-align:justified; max-width:1000px; margin: 0 auto">
           <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.

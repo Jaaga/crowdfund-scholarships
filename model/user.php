@@ -79,7 +79,7 @@ include ('dbcon.php');
 		while($rows= mysqli_fetch_assoc($list))
 		{
 			
-			$data[] = array('U_id'=>$rows['U_id'],'fname'=>$rows['fname'],'para'=>$rows['para'],'date'=>$rows['date'],
+			$data[] = array('U_id'=>$rows['U_id'],'sname'=>$rows['sname'],'para'=>$rows['para'],'date'=>$rows['date'],
 				'amount'=>$rows['amount'],'scholar_AMT'=>$rows['scholar_AMT'],'S_id'=>$rows['S_id'],'image_path'=>$rows['image_path']);
 		}
 		//var_dump($data);
