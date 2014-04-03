@@ -273,8 +273,10 @@
       <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
       </div>
 
-      <br>
-      <article class="faq-content" align="right" style="text-align:justified">
+
+          <br>
+    <article style="text-align:justified; max-width:1000px; margin: 0 auto">
+
           <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
