@@ -84,8 +84,6 @@ $noofStudents=count($students);
         		<img src="<?php echo $row['image']; ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/> 
         		<button type="submit" class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;"><h4>Edit Profile</h4></button>
         		<h2><?php echo $row['name'];?> <h2/>
-        		
-        		<p style="font-size:18px"> <?php echo $row['details']; ?></p>
         		<br>
         		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
       	</div>
