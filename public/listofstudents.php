@@ -58,7 +58,8 @@ padding-top: 60px;
     
       <div class="navbar-header" style="height: 50px;">
     
-        <?php $D_id=$_GET['id']; ?>  
+        <?php $D_id=$_GET['id']; ?> 
+
             <a class="navbar-brand" href="index.php">
 
             <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
@@ -78,7 +79,7 @@ padding-top: 60px;
   
   <div class="container" align="center">
       <div class="row">
-    <h1 style="font-family:'KGSecondChancesSketch'; id="hiw">Meet the Students</h1>
+    <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
         foreach($students as $student){ 
@@ -96,6 +97,19 @@ padding-top: 60px;
         <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
+        <div class="progress">
+                <?php
+                $sum_amount=getFundedAmount($student['S_id']);
+                $requiredamount = $student['scholar_AMT'];
+                $percentage = (($sum_amount/$requiredamount)*100);
+                ?>
+
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
+                </div>
+
+                
+              </div>
+              <div> <?php echo $percentage;?>% Complete </div>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>">Donate</a></div>-->
         <form method="POST" action="donate.php">
