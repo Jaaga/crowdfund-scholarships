@@ -61,7 +61,7 @@ padding-top: 60px;
         <?php $D_id=$_GET['id']; ?>  
             <a class="navbar-brand" href="index.php">
 
-            <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -93,7 +93,7 @@ padding-top: 60px;
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
-        <h3><?php echo $student['fname']; ?></h3>
+        <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
     <div class="row">

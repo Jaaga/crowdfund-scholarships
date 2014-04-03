@@ -5,9 +5,20 @@ include ('dbcon.php');
 }
 	function createUser($name,$password,$email) 
 	{
-		if(!$db){
+		
 		$db=dbopen();
-		}
+        
+        //TO check uniqueness
+
+        //$sql="SELECT email from user where email='$email'";
+        //$result = $db->query($sql);
+        //$count = mysqli_num_rows($result);
+        //if($count==1){
+        //	$invalidUser="A User with this E-mail already exists";
+        //	return $invalidUser;
+
+        //}
+        //else{
 
 		$sql="INSERT INTO user (name, password,email)
 		VALUES('$name','$password','$email')";
@@ -15,7 +26,7 @@ include ('dbcon.php');
          
 		if(!$db->query($sql))
 		{
-			die('Error' .$db->error($sql));
+			die('Error' .$db->error);
 		}
 		else
 		{   $sql="SELECT * from user where email='$email' and password='$password'";
@@ -25,7 +36,9 @@ include ('dbcon.php');
 			
             $result->close();
             return ($U_id);
-		}
+		  }
+
+	    
 	}
 		function userInfo($userId)
 		{

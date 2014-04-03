@@ -61,7 +61,7 @@ h4:before{
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -72,7 +72,7 @@ h4:before{
         <div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
               </div><!--/.navbar-collapse -->
             </div>
         </div>
@@ -83,42 +83,44 @@ h4:before{
     <br>
     <br>
 
-  <div class="container1">
+
     <div class="row">
-    <div class="col-lg-12">
-      <h1 class="faq-head" style="font-family:'KGSecondChancesSketch' cursive;">About Us</h1>
+   
+      <h1 style="font-family:'KGSecondChancesSketch' cursive; text-align: center;font-size:45px;">About Us</h1>
       </div>
     </div>
 
     <div class="row">
   
         <article class="faq-content">
-            <h2>The Team</h2>
-            <p>Founded in January 2014, LearnEmp comprises eight individuals from across India who are passionate about learning and sharing knowledge and skills. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the play field by providing opportunities to students who do not have the means to pursue higher education due to a lack of funding. </p>
-
-            <br>
-     
+     <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2> </div>
         
         <div align="center">
+
+            
+            <p style="text-align:justify">Founded in January 2014, LearnEm comprises eight individuals from across India who are passionate about learning and sharing their knowledge. The team was brought together by Jaaga Study, an initiative by Freeman Murray. The team strives to level the playing field by providing opportunities to students who do not have the means to pursue higher education due to a lack of funding. </p>
+
+
+            <br>
           <br>
-          <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-rounded">
+          <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-circle">
             
-              <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="Manoj" class="img-rounded">
+              <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="Manoj" class="img-circle">
             
-              <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-rounded">
+              <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-circle">
 
-              <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-rounded">
+              <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-circle">
 
               <br>
               <br>
 
-              <img src="./images/vaibhav.jpg" style="height:100px"  alt="Vaibhav" class="img-rounded" >
+              <img src="./images/vaibhav.jpg" style="height:100px"  alt="Vaibhav" class="img-circle" >
 
-              <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="Sai" class="img-rounded">
+              <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="Sai" class="img-circle">
 
-              <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="Rajeef" class="img-rounded" >
+              <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="Rajeef" class="img-circle" >
 
-              <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="Sujay" class="img-rounded">
+              <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="Sujay" class="img-circle">
 
               <br>
             </div>

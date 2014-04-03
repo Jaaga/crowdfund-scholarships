@@ -2,7 +2,29 @@
   <!DOCTYPE html>
   <html>
   <head>
+  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#showimage').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
   <style>
+  @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
    body 
     {
   background: url("./images/wood1.png");
@@ -30,7 +52,7 @@
         <div class="navbar-header" style="height: 50px;">
       
             
-              <a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+              <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
@@ -48,7 +70,7 @@
                     <input type="password" placeholder="Password" class="form-control">
                   </div>
 
-                  <button type="submit" class="btn btn-success" style="font-family: verdana;">Sign in</button> 
+                  <button type="submit" class="btn btn-success" >Sign In</button> 
                   &nbsp 
 
                 </form>
@@ -78,12 +100,11 @@
   <?php 
       if(isset($_POST['name'])){
         $name=$_POST['name'];
-        $password=$_POST['password'];
+        
         $email=$_POST['email'];
         $U_id=$_POST['U_id'];
       }
   ?>
-
   <div class="container">
   <div class="well" style="background-color:rgba(144,144,144,1);">
   <form class="form-horizontal" action="../controller/applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
@@ -92,23 +113,17 @@
   <!-- Form Name -->
   <h1 style= "text-align: center; padding: 0 0 50px 0;">Application for Scholarship</h1>
   
-  <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+  <input type="hidden" name="U_id" value="<?php echo $U_id;?>" >
   <!-- Text input-->
   <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">First Name:</label> 
+    <label class="col-md-4 control-label" for="textinput">Your Name:</label> 
     <div class="col-md-4">
-    <input name="fname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
+    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
     
     </div>
   </div>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
-    <div class="col-md-4">
-    <input name="lname" type="text" placeholder="Last Name" class="form-control input-md"> 
-    </div>
-  </div>
+
 
   <!-- Multiple Radios -->
   <div class="form-group">
@@ -140,22 +155,7 @@
   </div>
   
   
-<!-- Password input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="password">Password:</label>
-  <div class="col-md-4">
-    <input name="password" type="password" class="form-control input-md" value="<?php echo $password; ?>">    
-  </div>
-</div>
 
- <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="textinput">Confirm Password:</label> 
-    <div class="col-md-4">
-    <input name="confpassword" type="password" class="form-control input-md" value="<?php echo $password; ?>">
-    
-    </div>
-  </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
@@ -240,15 +240,17 @@
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+    <img id="showimage" src="#" alt="your image" />
+
+  </div>
   <div>
-    <span class="btn btn-file"><input type="file" name="image_path" value=""></span>
+    <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
     
   </div>
   </div>
   </div>
 </div>
-
 <!--upload image ends here-->
 
 
@@ -279,7 +281,7 @@
   <a href="aboutus.php">About &nbsp |</a>&nbsp &nbsp 
   <a href="">Contact &nbsp |</a>&nbsp &nbsp
   <a href="">Donor &nbsp |</a>
-  <br><br> Site Designed by |<a href="http://www.jaaga.in"> Jaaga Crowd-funding Group</a>
+  <br><br>
   </footer>
    
   </body>

@@ -1,3 +1,9 @@
+
+<?php 
+include ('../model/student.php');
+
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -9,7 +15,13 @@
 	
 
 	<style>
-	
+	@font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
 		#bg{
     	background:url('./images/chalkboard2.jpg');
     	border: 3 solid /*#33cc33*/#6E8B3D;
@@ -42,7 +54,7 @@
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
 
@@ -55,7 +67,7 @@
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#appEdit">Sign in</button> 
           </div>              
         </div>
       </div>
@@ -75,10 +87,26 @@
 
 	
 			</div>
+<?php
+
+$S_id=$_GET['id'];
+
+$student= getStudent($S_id);
+
+$Donors=getDonors($S_id);
+
+$total=count($Donors);
+
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
+//foreach($Donors as $totalDonors){ 
+//$totalDonors=count($listdonors);
+//$total = count($totalDonors);}
+ ?>
 
 			<div class="col-lg-6">
+
 			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
-			Vaibhav Mule
+			<?php echo $student['fname']; ?>
 			</h1>
 			</div>
     		
@@ -87,7 +115,9 @@
    					
        			<form action="application.php">
 
-       			<button type="submit" class="btn btn-success" style="font-family: verdana;" >Edit Application</button>
+       			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appEdit">
+  Edit Application
+</button><!-- button for pop up to edit the contents of the page -->
     				
     			</form>
     		</div>	
@@ -102,7 +132,7 @@
         	<div class="col-md-7"  text-align="justify">
         		
 
-				<img src="./images/student.jpg" width="100%" height="400px">
+				<img src="<?php echo $student['image_path']; ?>" width="100%" height="400px">
 				<input type="file" id="profile_pic" name="upload" style="visibility: hidden; width: 1px; height: 1px" multiple />
 
 				<a href="" onclick="document.getElementBglyphiconyId('profile_pic').click(); return false">
@@ -143,9 +173,9 @@
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
-						<h2 class="sponsor_data"> <b>34</b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b>Rs.40,000</b> pledged<br> out of<b> Rs.1,20,000</b></h2>
-						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
+						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
+						<h2 class="sponsor_data"> <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data"> <b><?php echo $student['date']; ?></b> days to go!</h2>
 					
 						<br>
 					
@@ -268,6 +298,33 @@
     		</ul>
   		</nav> 
 	</footer>
+	<div class="modal fade" id="appEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Edit your Information</h4>
+      </div>
+      <div class="modal-body">
+      <label> Basic Information </label>
+      <div class="input-group">
+  <input type="text area" class="form-control" style="height:200px;width:300px" name="para"><br>
+  	<label>Why you need help</label>
+  	<div class="input-group">
+  <input type="text area" class="form-control" style="height:200px;width:300px">
+  
+</div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" type="submit">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

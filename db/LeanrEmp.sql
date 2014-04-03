@@ -81,7 +81,7 @@ DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
   `S_id` int(20) NOT NULL AUTO_INCREMENT,
   `U_id` int(20) DEFAULT NULL,
-  `name` varchar(20) DEFAULT NULL,
+  `sname` varchar(20) DEFAULT NULL,
   `gender` varchar(20) DEFAULT NULL,
   `email` varchar(320) DEFAULT NULL,
   `Phone_Number` int(20) DEFAULT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE `student` (
   UNIQUE KEY `email` (`email`),
   KEY `U_id` (`U_id`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`U_id`) REFERENCES `user` (`U_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,6 +106,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES (1,1,'Abhinay','F','abhinay@jaaga.in',2147483647,'Bangalore',560062,'Armenia','Php',3500,'HI','../public/images/404865_10150459077612156_759760336_n.jpg','2014-04-02 12:25:44'),(2,2,'Akshay','F','akshay@jaaga.in',2147483647,'Goa',560062,'Armenia','Python',120000,'hi','../public/images/download.jpg','2014-04-02 12:27:22');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +134,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Freeman','123123','freeman@gmail.com','2014-04-02 11:04:30');
+INSERT INTO `user` VALUES (1,'Abhinay','123123','abhinay@jaaga.in','2014-04-02 12:25:20'),(2,'Akshay','123123','akshay@jaaga.in','2014-04-02 12:26:30');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -146,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-02 16:45:51
+-- Dump completed on 2014-04-02 17:59:18

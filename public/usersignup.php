@@ -5,11 +5,21 @@
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
   
  <style>
+
+   @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
  	body{
 background: url("./images/wood1.png");
 background-repeat:repeat;
 }
-	h2{font-family:'Cabin Sketch' cursive;
+
+
+  h2{font-family:'Cabin Sketch' cursive;
 font-size: 64px;}
  </style>
 
@@ -20,7 +30,7 @@ font-size: 64px;}
     		<div class="navbar-header" style="height: 50px;">
     
           
-            	<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+            	<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
         	</div>
          
         	<div class="collapse navbar-collapse">
@@ -32,7 +42,7 @@ font-size: 64px;}
         	<div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
                 <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
               </div><!--/.navbar-collapse -->
             </div>
         </div>
@@ -51,7 +61,7 @@ font-size: 64px;}
   	
 		<div class="well" style="background-color: rgba(144,144,144,1);">
 			<form class="form-horizontal" action="../controller/createuser.php" method="post">
-						<legend align="center" style="color: white;"><h2>Would you like to donate?</h2><p>Create your account here</p></legend>
+						<legend align="center" style="color: white;"><h2>Sign Up Now</h2><p>Create your account here</p></legend>
 						<!-- Text input-->
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
@@ -87,32 +97,32 @@ font-size: 64px;}
 	</div>
 	<br>
 <!-- Button -->
-<br>
-	<div class="form-group">
- 			 <label class="col-md-4 control-label" for="singlebutton"></label>
-  		<div class="col-md-4" align="center">
-    		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
-  		</div>
 
   <div class="form-group">
-    <label class="col-md-4 control-label" for="radios">Are You:</label>
+    <label class="col-md-4 control-label" for="radios" style="color:white;">Are You:</label>
     <div class="col-md-4">
     <div class="radio">
       <label for="radios-0">
-        <input type="radio" name="type" id="radios-0" value="D" checked="checked">
+        <input type="radio" name="type" id="radios-0" value="D" checked="checked" style="text-color:white;">
         Donor
       </label>
     </div>
     <div class="radio">
       <label for="radios-1">
-        <input type="radio" name="type" id="radios-1" value="S">
+        <input type="radio" name="type" id="radios-1" value="S" style="color:white;">
         Student
       </label>
     </div>
     </div>
   </div>
 
-
+<br>
+  <div class="form-group">
+       <label class="col-md-4 control-label" for="singlebutton"></label>
+      <div class="col-md-4" align="center">
+        <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
+      </div>
+    </div>
 				</div>
 			</form>
 		</div>

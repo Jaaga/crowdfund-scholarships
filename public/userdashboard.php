@@ -14,6 +14,14 @@
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
  <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
   <style type="text/css">
+@font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+
+     /* font-family: 'CabinSketch';
+      src: url('fonts/CabinSketch-Regular.otf');*/
+         }
+  
     body{
      
       background-repeat:repeat;
@@ -47,7 +55,7 @@
     		<div class="navbar-header" style="height: 50px;">
     
           
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'Cabin Sketch' cursive; margin-top: -9px;">LearnEmp<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
         	</div>
 
         	<div class="collapse navbar-collapse">
