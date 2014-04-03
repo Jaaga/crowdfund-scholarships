@@ -141,7 +141,7 @@ include ('dbcon.php');
 		mysqli_close($con);
 	}
    
-   function get_gravatar( $email, $s = 80, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {
+   function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {
     $url = 'http://www.gravatar.com/avatar/';
     $url .= md5( strtolower( trim( $email ) ) );
     $url .= "?s=$s&d=$d&r=$r";

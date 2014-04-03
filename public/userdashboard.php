@@ -102,11 +102,12 @@ $noofStudents=count($students);
 <?php 
 
     foreach($students as $student):
-      ?>
-	<!-- First row of students -->
-<?php 
                
             $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
+                $sum_amount=getFundedAmount($student['S_id']);
+                $requiredamount = $student['scholar_AMT'];
+                $percentage = (($sum_amount/$requiredamount)*100);
+            
   ?>
   
   	<div class="row">
@@ -121,25 +122,23 @@ $noofStudents=count($students);
           		<p ><?php echo $student['para'];?> </p>
 
           		<div class="progress">
-                <?php
-                $sum_amount=getFundedAmount($student['S_id']);
-                $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
-                ?>
+                
           		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
-              			<span class="sr-only">40% Complete (success)</span>
+              		<?php echo $percentage; ?> Complete
            			</div>
           		</div>
 
-          		<p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbsp<?php echo "RS".$student['scholar_AMT'];?></b> pledged
+          		<p style="text-align:left"><b>4</b> days to go <b> &nbsp&nbsp&nbsp<?php echo "Rs. ".$sum_amount;?></b> 
+              pledged out of <?php echo $requiredamount; ?>
             		&nbsp&nbsp<button type="button" class="btn btn-success" style="margin-bottom:5px">Donate</button></p>
         	</div>
      	</div>
-      </div>
+    
 
 
 
   <?php endforeach; ?>
+  </div>
   <hr>
 
   <!-- Footer -->
@@ -157,7 +156,7 @@ $noofStudents=count($students);
     </footer>
   </div>
 
-</a></div>
+</div>
 </div>
 </body>
 
