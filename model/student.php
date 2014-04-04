@@ -150,6 +150,42 @@
         return $S_id;    
 
     }
+
+    function studentStory($S_id,$story,$reason){
+
+        $db= dbopen();
+        $sql= "SELECT S_id from studstory where S_id='$S_id'";
+        $result = $db->query($sql);
+        $count=mysqli_num_rows($result);
+        if($count==1){
+            $sql1="UPDATE studstory SET story='$story',reason='$reason' where S_id='$S_id'";
+            if(!$db->query($sql1)){
+                die('Error'.$db->error);
+            }
+           return true; 
+        }
+        else{
+            $sql1="INSERT INTO studstory (S_id,story,reason)
+            values('$S_id','$story','$reason')";
+            if(!$db->query($sql1)){
+                die('Error'.$db->error);
+            }
+            return true;
+        }
+
+    }
+
+    function getStory($S_id){
+
+        $db=dbopen();
+        $sql="SELECT * from studstory where S_id='$S_id'";
+        $result=$db->query($sql);
+        if(!$result){
+            die('Error'.$db->error);
+        }
+        $story=mysqli_fetch_array($result);
+        return $story;
+    }
         //$db=dbopen();
     	//$sql= "select sum(amount) from donations where S_id=$studentId";
     	//$result = $db->query($sql);

@@ -97,6 +97,8 @@ $Donors=getDonors($S_id);
 
 $total=count($Donors);
 
+$Story=getStory($S_id);
+
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //foreach($Donors as $totalDonors){ 
 //$totalDonors=count($listdonors);
@@ -149,21 +151,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         		</a>
 
-        			<h2>My Story</h2>
+        			<h2>You Story</h2>
 
         			<br>
 
-        			<p style="text-align:justify">Hey Guys! Please sponsor me for my new adventure with Jaaga. </b>Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.
- 					Through this program I am hoping to get a better understanding of programming languages and make great websites for a living!<br><br>
- 
-        			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-					Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					<br> <br>
-					Aenean lacinia bibendum nulla sed consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-					Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					Aenean lacinia bibendum nulla sed consectetur.
+        			<p style="text-align:justify"><?php echo $Story['story']; ?>
 					</p>
     			</div>
 			</div>
@@ -201,11 +193,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         		</a>
 
-					<h3>So here's why I need your help</h3><br><p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-						Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
+					<h3>So here's why I need your help</h3>
+					<p><?php echo $Story['reason']; ?></p>
 				</div>
 			</div>
 
