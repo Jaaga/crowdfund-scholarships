@@ -1,8 +1,8 @@
 <?php 
 session_start();
 include ('../model/student.php');
-$S_id=$_GET['id'];
-$U_id=$_GET['id2'];
+$S_id=$_GET['S_id'];
+$U_id=$_GET['U_id'];
  ?>
 <html>
 
@@ -55,8 +55,8 @@ font-size: 27px;
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php?id=<?php echo $U_id; ?>">Sponsor</a></li>
-            		<li><a href="userdashboard.php?id=<?php echo $U_id; ?>">MyProfile</a></li>
+            		<li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
+            		<li><a href="userdashboard.php?U_id=<?php echo $U_id; ?>">MyProfile</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
@@ -81,6 +81,7 @@ font-size: 27px;
 $row= getStudent($S_id);
 $Donors=getDonors($S_id);
 $total=count($Donors);
+$Story=getStory($S_id);
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //$totalDonors=0;
 //foreach($Donors as $totalDonors){ 
@@ -114,17 +115,8 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 
 				<img src=<?php echo $row['image_path']; ?> width="100%" height="400px">
 		 		<div class="well" width="100%">
-        			<h2>My Story</h2><br><p style="text-align:justify"><b>Hey Guys! Please sponsor me for my new adventure with Jaaga. </b>Currently, I have learnt HTML, CSS and Javascript on my own through Codecademy.
- 					Through this program I am hoping to get a better understanding of programming languages and make great websites for a living!<br><br>
- 
-        			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-					Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					<br> <br>
-					Aenean lacinia bibendum nulla sed consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-					Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					Aenean lacinia bibendum nulla sed consectetur.
+        			<h2>My Story</h2><br><p style="text-align:justify">
+        			<?php echo $Story['story']; ?>
 					</p>
     			</div>
 			</div>
@@ -160,12 +152,9 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 
 				<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">
 
-					<h3>So here's why I need your help</h3><br><p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
-						Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-					</p>
-					<p>Aenean lacinia bibendum nulla sed consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
-				</div>
+					<h3>So here's why I need your help</h3><br><p>
+					<?php echo $Story['reason']; ?>
+					<p>
 			</div>
 		</div>
 	</div>

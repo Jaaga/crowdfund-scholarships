@@ -25,7 +25,7 @@ $row= createStudent($U_id,$sname,$gender,$email,$Phone_Number,$address,$pincode,
 
 $S_id= $row['S_id'];
 
-header("location:../public/studentdashboard.php?id=$S_id");
+header("location:../public/studentdashboard.php?S_id=$S_id");
     
 }
 ?>

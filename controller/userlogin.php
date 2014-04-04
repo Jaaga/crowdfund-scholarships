@@ -5,6 +5,6 @@
  $password= $_POST['password'];
  $U_id=userLogin($email,$password);
 
- header("location:../public/userdashboard.php?id=$U_id");
+ header("location:../public/userdashboard.php?U_id=$U_id");
 
  ?> 

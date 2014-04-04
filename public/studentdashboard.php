@@ -1,6 +1,21 @@
 
 <?php 
 include ('../model/student.php');
+$S_id=$_GET['S_id'];
+    
+
+      $student= getStudent($S_id);
+      $U_id=$student['U_id'];
+
+      $Donors=getDonors($S_id);
+
+      $total=count($Donors);
+
+
+$Story=getStory($S_id);
+
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
+
 
 ?>
 <!DOCTYPE html>
@@ -57,19 +72,14 @@ include ('../model/student.php');
         <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
-
+<?php $link='listofstudents.php?U_id='.$U_id.''; ?>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-              <li><a href="listofstudents.php">Sponsor</a></li>
+              <li><a href="<?php echo $link; ?>">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
         </ul>
 
-        <div class="navbar-collapse collapse">
-          <div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#appEdit">Sign in</button> 
-          </div>              
-        </div>
+        
       </div>
     </div>
 </div>
@@ -86,24 +96,7 @@ include ('../model/student.php');
 					&nbsp
 			</div>
 
-			<?php
-
-			$S_id=$_GET['id'];
-
-			$student= getStudent($S_id);
-
-			$Donors=getDonors($S_id);
-
-			$total=count($Donors);
-
-
-$Story=getStory($S_id);
-
-$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
-//foreach($Donors as $totalDonors){ 
-//$totalDonors=count($listdonors);
-//$total = count($totalDonors);}
- ?>
+			
 
 			<div class="col-lg-6">
 
@@ -347,7 +340,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 		<br>
                 		<div class="modal-footer">
         					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        					<button class="btn btn-primary" type="submit">Save changes</button>
+        					<button class="btn btn-success" type="submit">Save changes</button>
       					</div>
               			</form>
         			</div>
@@ -367,7 +360,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			</div>
 
       			<div class="modal-body">  
-                
+                <form action="../controller/studentstory.php" method="post">
+                    <input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
       			      <div class="form-group">
                   			<label class="control-label" for="textarea">My story</label>  
                     		
@@ -385,8 +379,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
       			<div class="modal-footer">
         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        			<button type="button" class="btn btn-primary">Save changes</button>
+        			<button type="submit" class="btn btn-success">Save changes</button>
       			</div>
+            </form>
     		</div>
   		</div>
 	</div>

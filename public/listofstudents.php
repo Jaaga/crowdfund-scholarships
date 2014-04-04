@@ -58,7 +58,7 @@ padding-top: 60px;
     
       <div class="navbar-header" style="height: 50px;">
     
-        <?php $U_id=$_GET['id']; ?> 
+        <?php $U_id=$_GET['U_id']; ?> 
 
             <a class="navbar-brand" href="index.php">
 
@@ -66,7 +66,7 @@ padding-top: 60px;
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?id=<?php echo $U_id; ?>">Sponsor</a></li>
+                <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
                 
                 <li><a href="userdashboard.php?id=<?php echo $U_id;?>">MyProfile</a>
             </ul>
@@ -87,7 +87,7 @@ padding-top: 60px;
 
   <?php 
                
-            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
+            $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
 
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
