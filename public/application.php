@@ -55,28 +55,8 @@
               <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                  <li><a href="listofstudents.php">Sponsor</a></li>
-                  <li><a href="#">Sign Up</a></li>
-              </ul>
 
-          <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right" role="form">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-
-                  <button type="submit" class="btn btn-success" >Sign In</button> 
-                  &nbsp 
-
-                </form>
-                
-                </div><!--/.navbar-collapse -->
-          </div>
+           </div>
         </div>
         </div> 
   <!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
