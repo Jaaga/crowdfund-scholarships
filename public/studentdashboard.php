@@ -298,7 +298,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			</div>
       			<div class="modal-body">
       				<div class="navbar-collapse collapse">
-              		<form action="../controller/updatestudent.php" method="post">
+              			<form action="../controller/updatestudent.php" method="post">
               			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
                 		<!-- Text input-->
                 		<div class="form-group">
@@ -332,35 +332,15 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         					<button class="btn btn-primary" type="submit">Save changes</button>
       					</div>
-              		</form>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
-
-
-               			<div class="form-group">
-                  			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
-                    		<div class="col-md-4">
-                      			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
-                    		</div>
-                		</div>
-                		<br>
-                		<br>
-                		<br>
-                		<div class="modal-footer">
-        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        					<button class="btn btn-primary" type="submit">Save changes</button>
-      					</div>
-
               			</form>
-              		</div>
-        		</div>
-      		</div>
-    	</div>
-  	<!--</div>-->
-<!-- End of my story modal -->
+        			</div>
+      			</div>
+    		</div>
+  		</div>
+    </div>
 
+    <!-- Modal for Mystory -->
+  	
   	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-dialog">
     		<div class="modal-content">
@@ -394,7 +374,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   		</div>
 	</div>
 
-<!-- end of modals -->
+
 </div>
 
 	<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
