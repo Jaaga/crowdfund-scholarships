@@ -213,6 +213,9 @@
     </div>
   </div>
 
+
+
+
   <!-- for uploading anyfile-->
   
 <!--Upload image starts here-->
@@ -225,6 +228,7 @@
 
   </div>
   <div>
+
     <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
     
   </div>

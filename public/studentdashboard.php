@@ -113,16 +113,33 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 			</div>
     		
 
+                
+
+
 			<div class="col-lg-3" align="right" >
    					
-       			<form action="application.php">
+       			<!--<form action="application.php">-->
 
-       			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appEdit">
+       			<div class="btn-group">
+                    <button type="button" class="btn btn-info">Menu</button>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                     <ul class="dropdown-menu" role="menu">
+                       
+                        <li><a href="application.php">Edit Application</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Edit Profile</a></li>
+                    </ul>
+                </div>
+
+       			<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appEdit">
   			
-  				Edit Application
+  					Edit Application
 				</button><!-- button for pop up to edit the contents of the page -->
     				
-    			</form>
+    			<!--</form>-->
     		</div>	
     	</div>
 
