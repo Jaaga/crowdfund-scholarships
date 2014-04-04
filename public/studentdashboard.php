@@ -84,18 +84,18 @@ include ('../model/student.php');
 					<img src="./images/Twitter_logo.png" width="25px"/>
 					<img src="./images/linked-in.jpg" width="25px"/>
 					&nbsp
-
-	
 			</div>
-<?php
 
-$S_id=$_GET['id'];
+			<?php
 
-$student= getStudent($S_id);
+			$S_id=$_GET['id'];
 
-$Donors=getDonors($S_id);
+			$student= getStudent($S_id);
 
-$total=count($Donors);
+			$Donors=getDonors($S_id);
+
+			$total=count($Donors);
+
 
 $Story=getStory($S_id);
 
@@ -107,9 +107,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 			<div class="col-lg-6">
 
-			<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
-			<?php echo $student['sname']; ?>
-			</h1>
+				<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
+				<?php echo $student['sname']; ?>
+				</h1>
 			</div>
     		
 
@@ -118,8 +118,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
        			<form action="application.php">
 
        			<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appEdit">
-  Edit Application
-</button><!-- button for pop up to edit the contents of the page -->
+  			
+  				Edit Application
+				</button><!-- button for pop up to edit the contents of the page -->
     				
     			</form>
     		</div>	
@@ -144,10 +145,13 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         		</a>
 		 		<br>
 		 		
-		 		<div class="well" width="100%">
-        			<a class="edit"href="#">
 
-              	<span class="glyphicon glyphicon-edit" style="font-size:24px;"></span>
+				
+		 		<div class="well" width="100%">
+        		
+        		<a class="edit" href="#">
+
+              	<span class="glyphicon glyphicon-edit" data-toggle="modal" data-target="#myModal" style="font-size:24px;"></span>
         
         		</a>
 
@@ -176,8 +180,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                     	</div> -->
 						
 						<!--<button type="button" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;">Donate
-						</button>-->
-						
+						</button>-->						
 					</div>
 
 					<br><br><br>			
@@ -187,11 +190,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 				<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">
 
-				<a class="edit"href="#">
+				<!--<a class="edit"href="#">
 
-              	<span class="glyphicon glyphicon-edit" style="font-size:24px;"></span>
+              		<span class="glyphicon glyphicon-edit"  style="font-size:24px;"></span>
         
-        		</a>
+        		</a>-->
 
 					<h3>So here's why I need your help</h3>
 					<p><?php echo $Story['reason']; ?></p>
@@ -238,15 +241,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 				<br>
 				<br>
 				<br>
-
-				</div>
 			</div>
+		</div>
 	
 
 
     	<div class="row" style="padding: 100px 50px 0 50px" align="center">
     	
-    	<br><br>
+    		<br><br>
 
       		<div class="col-lg-4">
 
@@ -266,15 +268,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
       		<div class="col-lg-4">
           		<img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-          		<br><h3>STUDENT PAYS IT FORWARD</h3>
-          		<!--<p style="text-align: justify; padding:1em 1em;">The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>
-      		-->
+          		<br><h3>STUDENT PAYS IT FORWARD</h3>          		
       		</div>
     	</div>
 
 </div>
 
 	<hr>
+
 	<footer class="footer" style="text-align:center">
   		<nav>
     		<ul>
@@ -287,62 +288,149 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		</ul>
   		</nav> 
 	</footer>
+
 	<div class="modal fade" id="appEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Edit your Information</h4>
-      </div>
-      <div class="modal-body">
-      <div class="navbar-collapse collapse">
-              <form action="../controller/updatestudent.php" method="post">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        				<h4 class="modal-title" id="myModalLabel">Edit your Information</h4>
+      			</div>
+      			<div class="modal-body">
+      				<div class="navbar-collapse collapse">
+              		<form action="../controller/updatestudent.php" method="post">
+              			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
+                		<!-- Text input-->
+                		<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
+                    		<div class="col-md-4">
+                      			<input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
+                    		</div>
+                		</div>
+                		<br>
+                		<br>
+                 		<br>
+                		<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textinput">Address:</label>  
+                    		<div class="col-md-4">
+                      			<input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
+                    		</div>
+                		</div>
+                		<br>
+                		<br>
+                		<br>
+               			<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
+                    		<div class="col-md-4">
+                      			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
+                    		</div>
+                		</div>
+                		<br>
+                		<br>
+                		<br>
+                		<div class="modal-footer">
+        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        					<button class="btn btn-primary" type="submit">Save changes</button>
+      					</div>
+              		</form>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
 
-              <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
-                <!-- Text input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
-                    <div class="col-md-4">
-                      <input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
-                    </div>
-                </div>
-                <br>
-                <br>
-                 <br>
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Address:</label>  
-                    <div class="col-md-4">
-                      <input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
-                    </div>
-                </div>
-                <br>
-                 <br>
-                <br>
-               <div class="form-group">
-                  <label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
-                    <div class="col-md-4">
-                      <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
-                    </div>
-                </div>
-                 <br>
-               
-                <br>
-                <br>
+<!-- My Story Modal -->
+  	<!--<div class="modal fade" id="myStory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        				<h4 class="modal-title" id="myModalLabel">My Story</h4>
+      			</div>
+      			<div class="modal-body">
+      			
+      				<div class="navbar-collapse collapse">
+              			<form action="../controller/updatestudent.php" method="post">
+              			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>"> 
+                		<!-- Text input-->
+                		
+                		<!--<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
+                    		<div class="col-md-4">
+                      			<input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
+                    		</div>
+                		</div>-->
+                		<br>
+                		<br>
+                 		<br>
+                		<!--<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textinput">Address:</label>  
+                    		<div class="col-md-4">
+                      			<input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
+                    		</div>
+                		</div> -->
+                		<br>
+                		<br>
+                		<br>
+               			<div class="form-group">
+                  			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
+                    		<div class="col-md-4">
+                      			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
+                    		</div>
+                		</div>
+                		<br>
+                		<br>
+                		<br>
+                		<div class="modal-footer">
+        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        					<button class="btn btn-primary" type="submit">Save changes</button>
+      					</div>
 
-                 <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button class="btn btn-primary" type="submit">Save changes</button>
-      </div>
-              </form>
-        </div>
-       
-      </div>
-     
-    </div>
-  </div>
+              			</form>
+              		</div>
+        		</div>
+      		</div>
+    	</div>
+  	<!--</div>-->
+<!-- End of my story modal -->
+
+  	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      			</div>
+
+      			<div class="modal-body">  
+                
+      			      <div class="form-group">
+                  			<label class="control-label" for="textarea">My story</label>  
+                    		
+                      			<textarea rows="9" class="form-control" name="para" placeholder="Whats your Story"></textarea>
+                    		
+                	</div>
+
+                	<div class="form-group">
+                  			<label class="control-label" for="textarea">Here's why I need your money</label>  
+                    		
+                      			<textarea rows="9" class="form-control" name="para" placeholder="Explain how you'll be utilizing the fund "></textarea>
+                    		
+                	</div>
+      			</div>
+
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			<button type="button" class="btn btn-primary">Save changes</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+
+<!-- end of modals -->
 </div>
+
 	<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
-  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
