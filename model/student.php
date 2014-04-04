@@ -81,27 +81,32 @@
 
         
 
-    } 
-
-
-    function getDonors($studentId){
-
-        $db=dbopen();
-        $query="SELECT * from donation inner join user on donation.S_id='$studentId' && donation.U_id=user.U_id";
-        $sql=$db->prepare($query);
-        $sql->execute();
-        $sql->bind_result($U_id,$S_id,$date,$amount,$name,$email);
-         while($sql->fetch()){
-               
-        $Donors[]=array('U_id'=>$U_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'email'=>$email);
-
-        }
-        //$sql->store_result();
-        //$count= $sql->num_rows;
-        //$list = $db->query($sql);
-        $sql->close();
-        return ($Donors);
     }
+
+
+    function studentStory($S_id,$story,$reason){
+
+        $db= dbopen();
+        $sql= "SELECT S_id from studstory where S_id='$S_id'";
+        $result = $db->query($sql);
+        $count=mysqli_num_rows($result);
+        if($count==1){
+            $sql1="UPDATE studstory SET story='$story',reason='$reason' where S_id='$S_id'";
+            if(!$db->query($sql1)){
+                die('Error'.$db->error);
+            }
+           return true; 
+        }
+        else{
+            $sql1="INSERT INTO studstory (S_id,story,reason)
+            values('$S_id','$story','$reason')";
+            if(!$db->query($sql1)){
+                die('Error'.$db->error);
+            }
+            return true;
+        }
+
+    } 
 
     function getStudent($studentId){
 
@@ -151,29 +156,6 @@
 
     }
 
-    function studentStory($S_id,$story,$reason){
-
-        $db= dbopen();
-        $sql= "SELECT S_id from studstory where S_id='$S_id'";
-        $result = $db->query($sql);
-        $count=mysqli_num_rows($result);
-        if($count==1){
-            $sql1="UPDATE studstory SET story='$story',reason='$reason' where S_id='$S_id'";
-            if(!$db->query($sql1)){
-                die('Error'.$db->error);
-            }
-           return true; 
-        }
-        else{
-            $sql1="INSERT INTO studstory (S_id,story,reason)
-            values('$S_id','$story','$reason')";
-            if(!$db->query($sql1)){
-                die('Error'.$db->error);
-            }
-            return true;
-        }
-
-    }
 
     function getStory($S_id){
 
@@ -185,6 +167,25 @@
         }
         $story=mysqli_fetch_array($result);
         return $story;
+    }
+
+    function getDonors($studentId){
+
+        $db=dbopen();
+        $query="SELECT * from donation inner join user on donation.S_id='$studentId' && donation.U_id=user.U_id";
+        $sql=$db->prepare($query);
+        $sql->execute();
+        $sql->bind_result($U_id,$S_id,$date,$amount,$name,$email);
+         while($sql->fetch()){
+               
+        $Donors[]=array('U_id'=>$U_id,'S_id'=>$S_id,'date'=>$date,'amount'=>$amount,'name'=>$name,'email'=>$email);
+
+        }
+        //$sql->store_result();
+        //$count= $sql->num_rows;
+        //$list = $db->query($sql);
+        $sql->close();
+        return ($Donors);
     }
         //$db=dbopen();
     	//$sql= "select sum(amount) from donations where S_id=$studentId";
