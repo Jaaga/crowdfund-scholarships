@@ -111,6 +111,32 @@ INSERT INTO `student` VALUES (1,1,'Abhinay','F','abhinay@jaaga.in',2147483647,'B
 UNLOCK TABLES;
 
 --
+-- Table structure for table `studstory`
+--
+
+DROP TABLE IF EXISTS `studstory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `studstory` (
+  `S_id` int(11) NOT NULL,
+  `story` text NOT NULL,
+  `reason` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  KEY `S_id` (`S_id`),
+  CONSTRAINT `studstory_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `studstory`
+--
+
+LOCK TABLES `studstory` WRITE;
+/*!40000 ALTER TABLE `studstory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `studstory` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -147,4 +173,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-03 16:59:29
+-- Dump completed on 2014-04-04 11:46:52

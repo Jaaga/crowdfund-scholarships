@@ -2,7 +2,7 @@
 session_start();
 include ('../model/student.php');
 $S_id=$_GET['id'];
-$D_id=$_GET['id2'];
+$U_id=$_GET['id2'];
  ?>
 <html>
 
@@ -55,8 +55,8 @@ font-size: 27px;
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php?id=<?php echo $D_id; ?>">Sponsor</a></li>
-            		<li><a href="donordashboard.php?id=<?php echo $D_id; ?>">MyProfile</a></li>
+            		<li><a href="listofstudents.php?id=<?php echo $U_id; ?>">Sponsor</a></li>
+            		<li><a href="userdashboard.php?id=<?php echo $U_id; ?>">MyProfile</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
@@ -91,7 +91,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 	<div class="container" width="50px;" style="display: inline">
 <h1 align="center" style="font-family:'KGSecondChancesSketch'; 
-font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
+font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 	
 
 		
@@ -138,13 +138,13 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['fname']; ?></h1>
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b><? echo $totalAmount ?></b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data"> <b><?php echo $totalAmount ?></b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
 						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
 					
 						<br>
 
 					     <form action="donate.php" method="post">
-					     <input type="hidden" name="D_id" value="<?php echo $D_id ; ?>" >
+					     <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
 						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
 							<input name="amount" type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
