@@ -55,14 +55,15 @@ include ('dbcon.php');
 		function userInfo($userId)
 		{
 			$db =dbopen();
-			$sql = "select * from user where U_id = $userId";
+			$sql = "select * from user where U_id=$userId";
+			$result=$db->query($sql);
+			$row=mysqli_fetch_array($result);
 
-			$result = mysqli_fetch_array($db->query($sql));
-			if(!$result)
-			{
-				die('Error' .$db->error);
+			if (!$result){
+				die('Error'.$db->error);
 			}
-			return $result;
+			return $row;
+
 		} 
 	
 //"select * from donor  d, donation ds where  ds.D_id = d.D_id and "
@@ -137,7 +138,7 @@ include ('dbcon.php');
  function redirectToStudent($U_Id)
  	{
 		$U_id=$U_Id;
-  		header("Refresh: 3;url='userdashboard.php?id=$U_id");
+  		header("Refresh: 3;url='userdashboard.php?U_id=$U_id");
 	}
    
    function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {

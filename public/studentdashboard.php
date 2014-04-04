@@ -1,7 +1,21 @@
 
 <?php 
 include ('../model/student.php');
-$S_id=$_GET['id'];
+$S_id=$_GET['S_id'];
+    
+
+      $student= getStudent($S_id);
+      $U_id=$student['U_id'];
+
+      $Donors=getDonors($S_id);
+
+      $total=count($Donors);
+
+
+$Story=getStory($S_id);
+
+$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
+
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +72,7 @@ $S_id=$_GET['id'];
         <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
-<?php $link='listofstudents.php?id='.$S_id.''; ?>
+<?php $link='listofstudents.php?U_id='.$U_id.''; ?>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
               <li><a href="<?php echo $link; ?>">Sponsor</a></li>
@@ -82,24 +96,7 @@ $S_id=$_GET['id'];
 					&nbsp
 			</div>
 
-			<?php
-
 			
-
-			$student= getStudent($S_id);
-
-			$Donors=getDonors($S_id);
-
-			$total=count($Donors);
-
-
-$Story=getStory($S_id);
-
-$totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
-//foreach($Donors as $totalDonors){ 
-//$totalDonors=count($listdonors);
-//$total = count($totalDonors);}
- ?>
 
 			<div class="col-lg-6">
 

@@ -1,8 +1,8 @@
 <?php 
 session_start();
 include ('../model/student.php');
-$S_id=$_GET['id'];
-$U_id=$_GET['id2'];
+$S_id=$_GET['S_id'];
+$U_id=$_GET['U_id'];
  ?>
 <html>
 
@@ -55,8 +55,8 @@ font-size: 27px;
         	</div>
         	<div class="collapse navbar-collapse">
         		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php?id=<?php echo $U_id; ?>">Sponsor</a></li>
-            		<li><a href="userdashboard.php?id=<?php echo $U_id; ?>">MyProfile</a></li>
+            		<li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
+            		<li><a href="userdashboard.php?U_id=<?php echo $U_id; ?>">MyProfile</a></li>
         		</ul>
 
 				<div class="navbar-collapse collapse">
