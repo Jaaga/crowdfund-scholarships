@@ -111,7 +111,7 @@
     function getStudent($studentId){
 
         $db=dbopen();
-        $sql= "select * from student where S_id=$studentId";
+        $sql= "select * from student where U_id=$studentId";
         $result= $db->query($sql);
 
         if (!$result){
