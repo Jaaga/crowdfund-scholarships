@@ -338,39 +338,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     	</div>
   	</div>
 
-<!-- My Story Modal -->
-  	<!--<div class="modal fade" id="myStory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        				<h4 class="modal-title" id="myModalLabel">My Story</h4>
-      			</div>
-      			<div class="modal-body">
-      			
-      				<div class="navbar-collapse collapse">
-              			<form action="../controller/updatestudent.php" method="post">
-              			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>"> 
-                		<!-- Text input-->
-                		
-                		<!--<div class="form-group">
-                  			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
-                    		<div class="col-md-4">
-                      			<input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
-                    		</div>
-                		</div>-->
-                		<br>
-                		<br>
-                 		<br>
-                		<!--<div class="form-group">
-                  			<label class="col-md-4 control-label" for="textinput">Address:</label>  
-                    		<div class="col-md-4">
-                      			<input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
-                    		</div>
-                		</div> -->
-                		<br>
-                		<br>
-                		<br>
+
                			<div class="form-group">
                   			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
                     		<div class="col-md-4">
@@ -406,14 +374,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			      <div class="form-group">
                   			<label class="control-label" for="textarea">My story</label>  
                     		
-                      			<textarea rows="9" class="form-control" name="para" placeholder="Whats your Story"></textarea>
+                      			<textarea rows="9" class="form-control" name="story" placeholder="Whats your Story"></textarea>
                     		
                 	</div>
 
                 	<div class="form-group">
                   			<label class="control-label" for="textarea">Here's why I need your money</label>  
                     		
-                      			<textarea rows="9" class="form-control" name="para" placeholder="Explain how you'll be utilizing the fund "></textarea>
+                      			<textarea rows="9" class="form-control" name="reason" placeholder="Explain how you'll be utilizing the fund "></textarea>
                     		
                 	</div>
       			</div>
