@@ -142,7 +142,54 @@ font-size: 64px;}
       </ul>
     </nav> 
   </footer> 
+  <!-- Modal -->
+  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
+      </div>
 
+      <div class="modal-body">
+        <div class="navbar-collapse collapse">
+              <form action="../controller/userlogin.php" method="post">
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Username:</label>  
+                    <div class="col-md-4">
+                      <input id="email" name="email" type="text" placeholder="Username" class="form-control input-md"> 
+                    </div>
+                </div>
+
+                <br>
+                <br>
+  
+                <!--Text input-->
+                
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Password:</label>
+
+                    <div class="col-md-4">
+                      <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-default">Log In</button>
+                </div> 
+              </form>
+        </div>
+      </div>      
+    </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
