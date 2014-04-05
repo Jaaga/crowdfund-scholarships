@@ -191,7 +191,7 @@ if(isset($_POST['user']))
           <div class="well">
             <h3 class="feature">Featured</h3>
             <img src=<?php echo $students[0]['image_path']?> class="feature-image">
-            <h2><?php echo $students[0]['fname']; ?> </h2>
+            <h2><?php echo $students[0]['sname']; ?> </h2>
             <p style="text-align: justify; padding:1em 1em;" ><?php echo $students[0]['para'] ?></p>
           </div>
         </div>
@@ -200,7 +200,7 @@ if(isset($_POST['user']))
           <div class="well">
             <h3 class="feature">Featured</h3>
             <img src=<?php echo $students[1]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[1]['fname'] ?></h2>
+            <h2><?php echo $students[1]['sname'] ?></h2>
             <p style="text-align: justify; padding:1em 1em;"><?php echo $students[1]['para'] ?></p>
           </div>
         </div>
@@ -209,7 +209,7 @@ if(isset($_POST['user']))
           <div class="well">
             <h3 class="feature">Featured</h3>
             <img src=<?php echo $students[2]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[2]['fname'] ?></h2>
+            <h2><?php echo $students[2]['sname'] ?></h2>
             <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
           </div>
         </div>

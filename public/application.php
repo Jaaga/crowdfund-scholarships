@@ -1,4 +1,10 @@
-  
+   <?php 
+      if(isset($_POST['name'])){
+        $name=$_POST['name'];
+        
+        $email=$_POST['email'];
+        $U_id=$_POST['U_id'];
+      } ?>
   <!DOCTYPE html>
   <html>
   <head>
@@ -77,13 +83,7 @@
         </div>
       </div>
 
-  <?php 
-      if(isset($_POST['email'])){
-        $name=$_POST['name'];
-        
-        $email=$_POST['email'];
-        $U_id=$_POST['U_id'];
-      }
+ <?php
       if(isset($_POST['invalid'])){
         $Invalid=$_POST['invalid'];
         $U_id=$_POST['U_id'];
@@ -113,8 +113,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Your Name:</label> 
     <div class="col-md-4">
-    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name;
-    $sname; ?>">
+    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
     
     </div>
   </div>
@@ -166,7 +165,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea">Address:</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="address" value="<?php echo $address; ?>"></textarea>
+      <textarea class="form-control" name="address"></textarea>
     </div>
   </div>
 
@@ -218,7 +217,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea" >Introduce yourself!</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="para" value="<?php echo $para; ?>" placeholder="Introduce yourself in 120 characters"></textarea>
+      <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
     </div>
   </div>
   <!-- Text input-->

@@ -10,7 +10,8 @@ if(isset($_POST['type'])){
    $password = htmlspecialchars($password);
    $name=htmlspecialchars($name);
 
-   if($_POST['type']=='D'){
+   if($_POST['type']=='D')
+   {
 
       $User=createUser($name,$password,$email);
       if(is_numeric($User)){
@@ -20,12 +21,12 @@ if(isset($_POST['type'])){
 			  $_SESSION['password'] = $password;
 			  $_SESSION['time'] = time();
 
-			  header("location:../public/userdashboard.php?id=$U_id");
+			  header("location:../public/userdashboard.php?U_id=$U_id");
       }
       else{ 
            $User="Email already exists";
         ?>
-          <!doctype <!DOCTYPE html>
+          <!DOCTYPE html>
           <html>
           <body>
             <form name="studentForm" method="post" action="../public/usersignup.php">
@@ -47,12 +48,12 @@ if(isset($_POST['type'])){
     	$User=createUser($name,$password,$email);
 
       if(is_numeric($User)){
-
+        $U_id=$User;
         session_start();
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
         $_SESSION['time'] = time(); ?>
-      <!doctype <!DOCTYPE html>
+     <!DOCTYPE html>
       <html>
       <body>
         <form name="userForm" method="post" action="../public/application.php">
@@ -73,7 +74,7 @@ if(isset($_POST['type'])){
           else{ 
             $User="Email already exists";
         ?>
-        <!doctype <!DOCTYPE html>
+        <!DOCTYPE html>
           <html>
           <body>
            <form name="userForm" method="post" action="../public/usersignup.php">

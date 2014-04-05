@@ -67,9 +67,9 @@
         } 
 
         $sql1="SELECT * from student where U_id='$U_id'";
-        $result= $db->query($sql1);
+        $result1= $db->query($sql1);
         $row=mysqli_fetch_array($result1);       
-        if(!$result)
+        if(!$result1)
         {
             return ($db->error);
         } 
@@ -79,6 +79,15 @@
             return ($row);
         }
 
+    }
+
+    function removeStudent(){
+        $db=dbopen();
+        $sql="DELETE FROM user WHERE U_id='$U_id'";
+        if(!$db->query($sql)){
+            return false;
+        }
+        return true;
     }
 
 

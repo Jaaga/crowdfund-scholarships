@@ -44,7 +44,7 @@ if(is_array($row)){
       header("location:../public/studentdashboard.php?S_id=$S_id");  
 }
 else{
-      removeUser($U_id);
+      
  ?>
   <!doctype <!DOCTYPE html>
  <html>
