@@ -21,6 +21,7 @@ $Id= $Story['code_id'];
         $TotalScore=$json_output['user']['total_score'];
         $NumOfCourse=count($json_output['courses']['completed']);
 
+
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 
 
@@ -223,9 +224,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
     	<div class="row">
       
-        	<div class="col-md-7"  text-align="justify">
+        	<div class="col-md-6"  >
         <h3 align="center">PreWork Status</h3>
-				<div class="panel panel-primary">
+				<div class="panel panel-info">
 
 				<div class="panel-heading">Codeschool</div>
         <div class="panel-body">	 				
@@ -245,7 +246,20 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 					</div>	
 				</div>
         </div>
-			</div>
+       <br><br><br>
+        <div class="col-md-6"><div class="panel panel-info">
+
+        <div class="panel-heading">Codeschool Badges</div>
+        <div class="panel-body"><?php
+                     foreach($json_output['badges'] as $value){
+
+                      ?>
+ 
+                      <img src="<?php echo $value['badge']; ?>" width="10%" height="50px">
+                     <?php 
+                     }
+           ?></div>
+</div></div>			</div>
 
 
     	<div class="row" style="padding: 100px 50px 0 50px" align="center">
