@@ -1,4 +1,10 @@
-<?php include('../model/student.php'); ?>
+<?php include('../model/student.php');
+
+if(isset($_POST['user']))
+{
+   $Invalid=$_POST['user'];
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +137,7 @@
       </div>
     </div>
     </div> 
-    
+    <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
   
     
     <!--<div align="center">-->

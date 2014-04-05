@@ -61,25 +61,23 @@
         $sql ="INSERT INTO student(U_id,sname,gender,email,Phone_Number,address,
             pincode,country,course,scholar_AMT,para,image_path) VALUES ('$U_id','$sname','$gender',
             '$email','$Phone_Number','$address','$pincode','$country','$course','$scholar_AMT','$para','$image_path')";
-        $result= $db->query($sql); 
+        if(!$db->query($sql)){
+
+            return ($db->error);
+        } 
+
         $sql1="SELECT * from student where U_id='$U_id'";
-        $result1= $db->query($sql1);
+        $result= $db->query($sql1);
         $row=mysqli_fetch_array($result1);       
-        if(!$result1)
+        if(!$result)
         {
-            die('Error'.$db->error);
-        }
-
-        //$row=mysqli_fetch_array($result); 
-
-        //$S_id = $row['S_id'];  
+            return ($db->error);
+        } 
         else{
             
             $db->close();
             return ($row);
         }
-
-        
 
     }
 

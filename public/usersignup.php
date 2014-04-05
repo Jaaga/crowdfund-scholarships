@@ -1,3 +1,10 @@
+<?php
+if(isset($_POST['invalidemail'])){
+  $Invalidemail=$_POST['invalidemail'];
+  $name=$_POST['name'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,12 +43,10 @@ font-size: 64px;}
         	<div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-                <li><a href="#">Sign Up</a></li>
             </ul>
 
         	<div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-danger">Sign Up</button>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
               </div><!--/.navbar-collapse -->
             </div>
@@ -66,7 +71,7 @@ font-size: 64px;}
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
   		<div class="col-md-4">
-  			<input name="name" type="text" placeholder="First Name" class="form-control input-md">
+  			<input name="name" type="text" placeholder="First Name" value="<?php echo $name; ?>" class="form-control input-md">
   		</div>
 	</div>
 	<br>
@@ -74,7 +79,8 @@ font-size: 64px;}
 	<div class="form-group">
   			<label class="col-md-4 control-label" for="textinput" style="color:white;">Email:</label>  
   		<div class="col-md-4">
- 		 	<input  name="email" type="text" placeholder="Username" class="form-control input-md"> 
+ 		 	<input  name="email" type="text" placeholder="Username" class="form-control input-md">
+      <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
   		</div>
 	</div>
 	<br>

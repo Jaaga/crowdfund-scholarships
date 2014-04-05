@@ -7,26 +7,13 @@ include ('dbcon.php');
 	{
 		
 		$db=dbopen();
-        
-        //TO check uniqueness
-
-        //$sql="SELECT email from user where email='$email'";
-        //$result = $db->query($sql);
-        //$count = mysqli_num_rows($result);
-        //if($count==1){
-        //	$invalidUser="A User with this E-mail already exists";
-        //	return $invalidUser;
-
-        //}
-        //else{
-
 		$sql="INSERT INTO user (name, password,email)
 		VALUES('$name','$password','$email')";
 		//$result = $db->query($sql);
          
 		if(!$db->query($sql))
 		{
-			die('Error' .$db->error);
+			 return ($db->error);
 		}
 		else
 		{   $sql="SELECT * from user where email='$email' and password='$password'";
@@ -88,6 +75,17 @@ include ('dbcon.php');
 		//return ($value);
 
 	}
+    
+    function removeUser($U_id){
+        $db=dbopen();
+        $sql="DELETE FROM user WHERE U_id='$U_id'";
+        if(!$db->query($sql)){
+            return false;
+        }
+        return true;
+        
+    }
+
 
 	function userLogin($email,$password)
 	{
@@ -110,8 +108,8 @@ include ('dbcon.php');
 			}
 		else
 			{
-			echo "wrong username or password";
-			header("Refresh: 2;url='../public/index.php'");
+			$InvalidUser="wrong username or password";
+			return $InvalidUser;
 			}
 	}
  

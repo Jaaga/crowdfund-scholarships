@@ -78,11 +78,26 @@
       </div>
 
   <?php 
-      if(isset($_POST['name'])){
+      if(isset($_POST['email'])){
         $name=$_POST['name'];
         
         $email=$_POST['email'];
         $U_id=$_POST['U_id'];
+      }
+      if(isset($_POST['invalid'])){
+        $Invalid=$_POST['invalid'];
+        $U_id=$_POST['U_id'];
+        $sname=$_POST['sname'];
+        $gender=$_POST['gender'];
+        $email=$_POST['email'];
+        $Phone_Number=$_POST['Phone_Number'];
+        $address=$_POST['address'];
+        $pincode=$_POST['pincode'];
+        $country=$_POST['country'];
+        $course=$_POST['course'];
+        $scholar_AMT=$_POST['scholar_AMT'];
+        $para=$_POST['para'];
+
       }
   ?>
   <div class="container">
@@ -98,7 +113,8 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Your Name:</label> 
     <div class="col-md-4">
-    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
+    <input name="sname" type="text" class="form-control input-md" value="<?php echo $name;
+    $sname; ?>">
     
     </div>
   </div>
@@ -130,6 +146,7 @@
     <label class="col-md-4 control-label" for="textinput">E-mail:</label>  
     <div class="col-md-4">
     <input name="email" type="email" class="form-control input-md" value="<?php echo $email; ?>">
+    <span style="color:crimson;"><?php echo $Invalid; ?></span>
       
     </div>
   </div>
@@ -140,7 +157,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
     <div class="col-md-4">
-    <input name="Phone_Number" type="text" placeholder="Contact Number" class="form-control input-md">
+    <input name="Phone_Number" type="text" placeholder="Contact Number" value="<?php echo $Phone_Number; ?>" class="form-control input-md">
       
     </div>
   </div>
@@ -149,7 +166,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea">Address:</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="address" placeholder="Address"></textarea>
+      <textarea class="form-control" name="address" value="<?php echo $address; ?>"></textarea>
     </div>
   </div>
 
@@ -157,7 +174,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Pin Code:</label>  
     <div class="col-md-4">
-    <input name="pincode" type="text" placeholder="Pin Code" class="form-control input-md">
+    <input name="pincode" type="text" placeholder="Pin Code" value="<?php echo $pincode; ?>" class="form-control input-md">
     
     </div>
   </div>
@@ -201,14 +218,14 @@
   <div class="form-group">
     <label class="col-md-4 control-label" for="textarea" >Introduce yourself!</label>
     <div class="col-md-4">                     
-      <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
+      <textarea class="form-control" name="para" value="<?php echo $para; ?>" placeholder="Introduce yourself in 120 characters"></textarea>
     </div>
   </div>
   <!-- Text input-->
   <div class="form-group">
     <label class="col-md-4 control-label" for="textinput">Scholarship Amount:</label>  
     <div class="col-md-4">
-    <input name="scholar_AMT" type="text" placeholder="enter the amount required" class="form-control input-md">
+    <input name="scholar_AMT" type="text" value="<?php echo $scholar_AMT; ?>" placeholder="enter the amount required" class="form-control input-md">
 
     </div>
   </div>
