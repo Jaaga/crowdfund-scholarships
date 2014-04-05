@@ -84,22 +84,22 @@
     }
 
 
-    function studentStory($S_id,$story,$reason){
+    function studentStory($S_id,$story,$reason,$code_id){
 
         $db= dbopen();
         $sql= "SELECT S_id from studstory where S_id='$S_id'";
         $result = $db->query($sql);
         $count=mysqli_num_rows($result);
         if($count==1){
-            $sql1="UPDATE studstory SET story='$story',reason='$reason' where S_id='$S_id'";
+            $sql1="UPDATE studstory SET story='$story',reason='$reason',code_id='$code_id' where S_id='$S_id'";
             if(!$db->query($sql1)){
                 die('Error'.$db->error);
             }
            return true; 
         }
         else{
-            $sql1="INSERT INTO studstory (S_id,story,reason)
-            values('$S_id','$story','$reason')";
+            $sql1="INSERT INTO studstory (S_id,story,reason,code_id)
+            values('$S_id','$story','$reason','$code_id')";
             if(!$db->query($sql1)){
                 die('Error'.$db->error);
             }
@@ -127,18 +127,15 @@
 
     }
 
-    function getFundedAmount($S_id) 
-
-    	
-{
-    $db=dbopen();
-    //$Student_id=$_GET['id2'];
-    $sql = "select sum(amount) from donation where S_id=$S_id";
-    $result = $db->query($sql);
-    $sum = mysqli_fetch_array($result);
-    return $sum['sum(amount)'];
-
-}
+    function getFundedAmount($S_id) {
+        $db=dbopen();
+        //$Student_id=$_GET['id2'];
+        $sql = "select sum(amount) from donation where S_id=$S_id";
+        $result = $db->query($sql);
+        $sum = mysqli_fetch_array($result);
+        
+        return $sum['sum(amount)'];
+    }
 
 
     function updateStudent($S_id,$Phone_Number,$address,$para){
@@ -168,6 +165,7 @@
         $story=mysqli_fetch_array($result);
         return $story;
     }
+
 
     function getDonors($studentId){
 

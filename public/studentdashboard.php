@@ -13,6 +13,13 @@ $S_id=$_GET['S_id'];
 
 
 $Story=getStory($S_id);
+$Id= $Story['code_id'];
+        $jsonurl ='https://www.codeschool.com/users/'.$Id.'.json';
+        $json = file_get_contents($jsonurl,0,null,null);
+        $json_output = json_decode($json,true);
+        $Username= $json_output['user']['username'];
+        $TotalScore=$json_output['user']['total_score'];
+        $NumOfCourse=count($json_output['courses']['completed']);
 
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 
@@ -205,43 +212,28 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     	<div class="row">
       
         	<div class="col-md-7"  text-align="justify">
+        <h3 align="center">PreWork Status</h3>
+				<div class="panel panel-primary">
 
-				<div class="workstatus">
-					<h3>PreWork Status</h3>
-
-					<p>CodeAcademy</p>
-
-					<div class="progress">
-        				<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 		style="width: 40%">
-							<span class="sr-only">40% Complete (success)</span>
-						</div>
-    				</div>
-
-	 				<p>Codeschool</p>
-	 				<div class="progress">
-        					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
-							</div>
+				<div class="panel-heading">Codeschool</div>
+        <div class="panel-body">	 				
+          <ul>
+          <li>
+            <em>Username</em>
+            <strong><?php echo $Username; ?></strong>
+          </li>
+          <li>
+          <em>Course Completed</em>
+          <strong><?php echo $NumOfCourse; ?></strong>
+          </li><li>
+            <em>Total Points</em>
+            <strong><?php echo $TotalScore; ?></strong>
+          </li>
+          </ul>
 					</div>	
 				</div>
+        </div>
 			</div>
-
-
-			<div class="col-md-5">
-
-				<div class="well" width="100%">
-
-				This is where the badges will be placed
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-			</div>
-		</div>
-	
 
 
     	<div class="row" style="padding: 100px 50px 0 50px" align="center">
@@ -350,6 +342,12 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			<div class="modal-body">  
                 <form action="../controller/studentstory.php" method="post">
                     <input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
+                    <div class="form-group">
+                        <label class="control-label" for="textinput">Your CodeSchool ID:</label>
+                        
+                            <input name="code_id" type="text" placeholder="Codeschool Username" class="form-control"> 
+                        
+                    </div>
       			      <div class="form-group">
                   			<label class="control-label" for="textarea">My story</label>  
                     		

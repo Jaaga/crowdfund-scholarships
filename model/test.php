@@ -1,18 +1,12 @@
-<?php 
+<?php
+$Id="ansal";
+$jsonurl ='https://www.codeschool.com/users/'.$Id.'.json';
+        $json = file_get_contents($jsonurl,0,null,null);
+        $json_output = json_decode($json,true);
 
-$s = 80;
-$d = 'mm';
-$r = 'g';
-$img = false;
-$atts = array();
-    $email="abhinay302@gmail.com";
-    $url = 'http://www.gravatar.com/avatar/';
-    $url .= md5( strtolower( trim( $email ) ) );
-    $url .= "?s=$s&d=$d&r=$r";
-    if ( $img ) {
-        $url = '<img src="' . $url . '"';
-        foreach ( $atts as $key => $val )
-            $url .= ' ' . $key . '="' . $val . '"';
-        $url .= ' />';
-    echo  $url;
-} ?>
+     foreach($json_output as $val){
+
+        $user=$val;
+
+     }
+        ?>
