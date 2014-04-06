@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include ('../model/student.php');
+include ('../model/user.php');
 $S_id=$_GET['S_id'];
 $U_id=$_GET['U_id'];
  ?>
@@ -83,11 +84,23 @@ $Donors=getDonors($S_id);
 $total=count(array_unique($Donors));
 //$total=count($Donors);
 $Story=getStory($S_id);
-$Id=$Story['code_id'];
-$json_output=studentPrework($Id);
-$Username= $json_output['user']['username'];
-$TotalScore=$json_output['user']['total_score'];
-$NumOfCourse=count($json_output['courses']['completed']);
+$CS_id= $Story['CS_id'];
+$Git_id=$Story['Git_id'];
+               
+               // GET CODESCHOOL INFORMATION //  
+        list($CS_output,$Git_output)=studentPrework($CS_id,$Git_id);
+        $CS_Username= $CS_output['user']['username'];
+        $CS_TotalScore=$CS_output['user']['total_score'];
+        $CS_NumOfCourse=count($CS_output['courses']['completed']);
+
+        // GET GITHUB PROFILE //
+        $Git_Username= $Git_output['username'];
+        $Git_repo = $Git_output['repositories'];
+        $Git_languages= $Git_output['usage']['languages'];
+        $Git_totalpushes = $Git_output['usage']['total'];
+
+
+
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //$totalDonors=0;
 //foreach($Donors as $totalDonors){ 
@@ -167,45 +180,98 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 
 	
 	<div class="container">
-    	<div class="row">
+    	 <h3 align="center">PreWork Status</h3>
+      <div class="row">
       
-        	<div class="col-md-6"  >
-        <h3 align="center">PreWork Status</h3>
-				<div class="panel panel-info">
+          <div class="col-md-6"  >
+        
+        <div class="panel panel-info">
 
-				<div class="panel-heading">Codeschool</div>
-        <div class="panel-body">	 				
+        <div class="panel-heading">My Codeschool Profile</div>
+        <div class="panel-body">
+          <img src="./images/codeschool_logo.png" alt="CodeSchoolProfile" style="Height:100px" align="right">         
           <ul>
           <li>
-            <em>Username</em>
-            <strong><?php echo $Username; ?></strong>
+            <em>Username:</em>
+            <strong><?php echo $CS_Username; ?></strong>
           </li>
           <li>
-          <em>Course Completed</em>
-          <strong><?php echo $NumOfCourse; ?></strong>
+          <em>Course Completed:</em>
+          <strong><?php echo $CS_NumOfCourse; ?></strong>
           </li><li>
-            <em>Total Points</em>
-            <strong><?php echo $TotalScore; ?></strong>
+            <em>Total Points:</em>
+            <strong><?php echo $CS_TotalScore; ?></strong>
           </li>
           </ul>
-					</div>	
-				</div>
+          </div>  
         </div>
-       <br><br><br>
-        <div class="col-md-6"><div class="panel panel-info">
+        </div>
 
-                   <div class="panel-heading">Codeschool Badges</div>
-                       <div class="panel-body"><?php
-                           foreach($json_output['badges'] as $value){ ?>
-                           <img src="<?php echo $value['badge']; ?>" width="10%" height="50px">
+        <div class="col-md-6">
+        <div class="panel panel-info">
+
+        <div class="panel-heading">Codeschool Badges</div>
+        <div class="panel-body"><?php
+                     foreach($CS_output['badges'] as $value){
+
+                      ?>
+ 
+                      <img src="<?php echo $value['badge']; ?>" width="10%" height="50px">
                      <?php 
                      }
-           ?>
-           </div>
-        </div>
-     </div>			
+           ?></div>
 </div>
+</div>    
+  </div>
 
+    <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+         
+        <div class="panel-heading">My GITHUB Profile</div>
+        <div class="panel-body">
+        <img src="./images/github_logo.png" alt="GithubProfile" class="img-circle" align="right" style="Height:100px">
+        <ul>
+          <li>
+            <em>Username:</em>
+            <strong><?php echo $Git_Username; ?></strong>
+          </li>
+          <li>
+            <em>Total Pushes:</em>
+            <strong><?php echo $Git_totalpushes; ?></strong>
+          </li>
+          <li>
+            <em>Repositories Worked:</em><br>
+            <ol>
+            <?php
+                foreach($Git_repo as $repo){
+                  ?>
+                  <strong><li>
+                  <?php echo $repo['repo']; ?></li>
+            </strong><?php } ?>
+            </ol>
+          </li>
+        </ul>
+      </div></div>
+      </div>
+      <div class="col-md-6">
+          <div class="panel panel-info">
+
+        <div class="panel-heading">Languages and Total Pushes:</div>
+        <div class="panel-body">
+        <?php
+              
+              foreach ($Git_languages as $language ) { 
+         ?><em>Language:</em>
+         <strong><?php echo $language['language']; ?></strong>
+         <em>Total Pushes: </em>
+         <strong><?php echo $language['count']; ?></strong><br>
+<?php } ?>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
 	<div class="container1" align="center">
     <div class="row" style="padding: 80px 50px 0 50px">
       <div class="col-lg-4">
