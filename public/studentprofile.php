@@ -86,9 +86,10 @@ $total=count(array_unique($Donors));
 $Story=getStory($S_id);
 $CS_id= $Story['CS_id'];
 $Git_id=$Story['Git_id'];
+$CA_id=$Story['CA_id'];
                
                // GET CODESCHOOL INFORMATION //  
-        list($CS_output,$Git_output)=studentPrework($CS_id,$Git_id);
+        list($CS_output,$Git_output,$CA_output)=studentPrework($CS_id,$Git_id,$CA_id);
         $CS_Username= $CS_output['user']['username'];
         $CS_TotalScore=$CS_output['user']['total_score'];
         $CS_NumOfCourse=count($CS_output['courses']['completed']);
@@ -99,6 +100,12 @@ $Git_id=$Story['Git_id'];
         $Git_languages= $Git_output['usage']['languages'];
         $Git_totalpushes = $Git_output['usage']['total'];
 
+        // GET CADECADEMY PROFILE //
+        $CA_Username= $CA_id;
+        $CA_Totalpoints=$CA_output['points'];
+        $CA_Tracks = $CA_output['tracks'];
+
+
 
 
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
@@ -107,7 +114,6 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 //$totalDonors=count($listdonors);
 //	$total = count($totalDonors);}
  ?>
-
 
 	<div class="container" width="50px;" style="display: inline">
 <h1 align="center" style="font-family:'KGSecondChancesSketch'; 
@@ -271,6 +277,48 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
     </div>
     </div>
     </div>
+    <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+         
+        <div class="panel-heading">My Codecademy Profile</div>
+        <div class="panel-body">
+        <img src="./images/codecademy_logo.png" alt="CodecademyProfile" align="right" style="Height:70px">
+        <ul>
+          <li>
+            <em>Username:</em>
+            <strong><?php echo $CA_Username; ?></strong>
+            </li>
+            <li>
+              <em>TotalPoints:</em>
+              <strong><?php echo $CA_Totalpoints; ?></strong>
+            </li>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6">
+             <div class="panel panel-info">
+             <div class="panel-heading">Codecademy Tracks</div>
+             <div class="panel-body">
+                
+                
+                    <em>Tracks:</em>
+             <?php 
+              foreach ($CA_Tracks as $tracks){ ?>
+                <ul>
+                <li>
+                  <strong><?php echo $tracks['title']; ?></strong>
+                </li>
+                </ul>
+                <?php } ?>
+             </div>
+               
+             </div> 
+          
+        </div>
+
+        </div>
 </div>
 	<div class="container1" align="center">
     <div class="row" style="padding: 80px 50px 0 50px">

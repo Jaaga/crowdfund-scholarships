@@ -206,7 +206,7 @@
 
         
 
-        $CA_url = 'http://codeacademy-json.herokuapp.com/'.$CA_id.'';
+        $CA_url = 'https://codeacademy-json.herokuapp.com/'.$CA_id.'';
         $CA_content= file_get_contents($CA_url,0,null,null);
         $CA_output=json_decode($CA_content,true);
 
