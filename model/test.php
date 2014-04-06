@@ -1,12 +1,258 @@
-<?php
-$Id="abhinay302";
-$jsonurl ='https://www.codeschool.com/users/'.$Id.'.json';
-        $json = file_get_contents($jsonurl,0,null,null);
-        $json_output = json_decode($json,true);
-
-     foreach($json_output as $val){
-
-        $user=$val;
-
-     }
-        ?>
+"timezone": null,
+  "usage": {
+    "day": [
+      11,
+      14,
+      18,
+      31,
+      11,
+      10,
+      7,
+      8,
+      14,
+      18,
+      14,
+      14,
+      6,
+      5,
+      1,
+      0,
+      1,
+      0,
+      1,
+      3,
+      3,
+      11,
+      23,
+      21
+    ],
+    "events": [
+      {
+        "day": [
+          9,
+          12,
+          18,
+          25,
+          9,
+          10,
+          5,
+          6,
+          10,
+          14,
+          11,
+          12,
+          6,
+          5,
+          1,
+          0,
+          1,
+          0,
+          1,
+          3,
+          3,
+          7,
+          13,
+          11
+        ],
+        "total": 192,
+        "type": "PushEvent",
+        "week": [
+          8,
+          19,
+          31,
+          32,
+          68,
+          23,
+          11
+        ]
+      },
+      {
+        "day": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          3,
+          5
+        ],
+        "total": 22,
+        "type": "CreateEvent",
+        "week": [
+          2,
+          0,
+          2,
+          8,
+          4,
+          4,
+          2
+        ]
+      },
+      {
+        "day": [
+          2,
+          0,
+          0,
+          5,
+          1,
+          0,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          1
+        ],
+        "total": 20,
+        "type": "IssuesEvent",
+        "week": [
+          0,
+          0,
+          9,
+          2,
+          7,
+          2,
+          0
+        ]
+      },
+      {
+        "day": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "total": 5,
+        "type": "IssueCommentEvent",
+        "week": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "day": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "total": 3,
+        "type": "MemberEvent",
+        "week": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "count": 108,
+        "language": "PHP",
+        "quantile": 95
+      },
+      {
+        "count": 44,
+        "language": "Ruby",
+        "quantile": 100
+      },
+      {
+        "count": 23,
+        "language": "CSS",
+        "quantile": 100
+      },
+      {
+        "count": 22,
+        "language": "JavaScript",
+        "quantile": 100
+      }
+    ],
+    "total": 245,
+    "week": [
+      10,
+      21,
+      43,
+      44,
+      81,
+      33,
+      13
+    ]
+  },

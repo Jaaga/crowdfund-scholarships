@@ -80,7 +80,8 @@ font-size: 27px;
 
 $row= getStudent($S_id);
 $Donors=getDonors($S_id);
-$total=count($Donors);
+$total=count(array_unique($Donors));
+//$total=count($Donors);
 $Story=getStory($S_id);
 $Id=$Story['code_id'];
 $json_output=studentPrework($Id);
