@@ -82,6 +82,11 @@ $row= getStudent($S_id);
 $Donors=getDonors($S_id);
 $total=count($Donors);
 $Story=getStory($S_id);
+$Id=$Story['code_id'];
+$json_output=studentPrework($Id);
+$Username= $json_output['user']['username'];
+$TotalScore=$json_output['user']['total_score'];
+$NumOfCourse=count($json_output['courses']['completed']);
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
 //$totalDonors=0;
 //foreach($Donors as $totalDonors){ 
@@ -163,46 +168,42 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 	<div class="container">
     	<div class="row">
       
-        	<div class="col-sm-7"  text-align="justify">
+        	<div class="col-md-6"  >
+        <h3 align="center">PreWork Status</h3>
+				<div class="panel panel-info">
 
-				<div class="workstatus">
-					<h3>PreWork Status</h3>
-
-					<p>CodeAcademy</p>
-
-					<div class="progress">
-        				<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" 		style="width: 40%">
-							<span class="sr-only">40% Complete (success)</span>
-						</div>
-    				</div>
-
-	 				<p>Codeschool</p>
-	 				<div class="progress">
-        					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-							<span class="sr-only">20% Complete</span>
-							</div>
+				<div class="panel-heading">Codeschool</div>
+        <div class="panel-body">	 				
+          <ul>
+          <li>
+            <em>Username</em>
+            <strong><?php echo $Username; ?></strong>
+          </li>
+          <li>
+          <em>Course Completed</em>
+          <strong><?php echo $NumOfCourse; ?></strong>
+          </li><li>
+            <em>Total Points</em>
+            <strong><?php echo $TotalScore; ?></strong>
+          </li>
+          </ul>
 					</div>	
 				</div>
-			</div>
+        </div>
+       <br><br><br>
+        <div class="col-md-6"><div class="panel panel-info">
 
-
-			<div class="col-xs-5">
-
-				<div class="well" width="100%">
-
-				This is where the badges will be placed
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-				</div>
-
-		</div>
-	</div>
+                   <div class="panel-heading">Codeschool Badges</div>
+                       <div class="panel-body"><?php
+                           foreach($json_output['badges'] as $value){ ?>
+                           <img src="<?php echo $value['badge']; ?>" width="10%" height="50px">
+                     <?php 
+                     }
+           ?>
+           </div>
+        </div>
+     </div>			
+</div>
 
 	<div class="container1" align="center">
     <div class="row" style="padding: 80px 50px 0 50px">

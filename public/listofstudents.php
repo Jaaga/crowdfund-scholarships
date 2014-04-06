@@ -1,5 +1,18 @@
-<?php session_start();
-      include('../model/student.php');
+<?php 
+include('../model/student.php');
+
+session_start();
+//if(isset($_SESSION['email'] && $_SESSION['password'])){
+   
+  // return true;
+//} 
+//else{
+ // session_start();
+  //$_SESSION['email'] = '';
+  //$_SESSION['password']='';
+  //return false;
+//}
+      
  ?>
 
 <!DOCTYPE html>
@@ -68,7 +81,7 @@ padding-top: 60px;
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
                 
-                <li><a href="userdashboard.php?id=<?php echo $U_id;?>">MyProfile</a>
+                <li><a href="userdashboard.php?U_id=<?php echo $U_id;?>">MyProfile</a>
             </ul>
 
               

@@ -101,9 +101,7 @@ include ('dbcon.php');
 // If result matched $myusername and $mypassword, table row must be 1 row
 		if($count==1)
 			{
-				$_SESSION['email']= $email;
-				$_SESSION['password']= $password;
-// Register $myusername, $mypassword and redirect to file "Students_list.php"
+  				
 			return $U_id;
 			}
 		else
@@ -139,18 +137,31 @@ include ('dbcon.php');
   		header("Refresh: 3;url='userdashboard.php?U_id=$U_id");
 	}
    
-   function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() ) {
-    $url = 'http://www.gravatar.com/avatar/';
-    $url .= md5( strtolower( trim( $email ) ) );
-    $url .= "?s=$s&d=$d&r=$r";
-    if ( $img ) {
+   function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() )
+    {
+        $url = 'http://www.gravatar.com/avatar/';
+        $url .= md5( strtolower( trim( $email ) ) );
+        $url .= "?s=$s&d=$d&r=$r";
+    if ( $img ) 
+    {
         $url = '<img src="' . $url . '"';
         foreach ( $atts as $key => $val ){
             $url .= ' ' . $key . '="' . $val . '"';
-        }
+    }
         $url .= ' />';
     }
+
     return $url;
-}
+
+    }
+
+    function logout()
+    {
+    	session_start();
+        session_destroy();
+        $logout="You have been logged out";
+        return $logout;
+
+    }
 
 ?>

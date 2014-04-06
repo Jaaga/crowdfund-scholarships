@@ -1,6 +1,7 @@
 
 <?php 
 include ('../model/student.php');
+
 $S_id=$_GET['S_id'];
     
 
@@ -12,11 +13,11 @@ $S_id=$_GET['S_id'];
       $total=count($Donors);
 
 
-$Story=getStory($S_id);
-$Id= $Story['code_id'];
-        $jsonurl ='https://www.codeschool.com/users/'.$Id.'.json';
-        $json = file_get_contents($jsonurl,0,null,null);
-        $json_output = json_decode($json,true);
+      $Story=getStory($S_id);
+      $Id= $Story['code_id'];
+               
+               // GET CODESCHOOL INFORMATION //  
+        $json_output=studentPrework($Id);
         $Username= $json_output['user']['username'];
         $TotalScore=$json_output['user']['total_score'];
         $NumOfCourse=count($json_output['courses']['completed']);
@@ -119,7 +120,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 			<div class="col-lg-3" align="right" >
    					
-       			<form action="application.php">-->
+       			<form action="application.php">
 
        			
 

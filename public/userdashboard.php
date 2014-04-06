@@ -103,7 +103,7 @@ $noofStudents=count($students);
 
     foreach($students as $student):
                
-            $profilelink='studentprofile.php?id='.$student['S_id'].'&id2='.$U_id.'';
+            $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
 
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];

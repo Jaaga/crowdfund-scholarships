@@ -1,6 +1,9 @@
 <?php
  include ('../model/user.php');
  
+ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
  $email=$_POST['email'];
  $password= $_POST['password'];
  
@@ -10,9 +13,16 @@ $password = htmlspecialchars($password);
 $User=userLogin($email,$password);
  if(is_numeric($User)){
  	$U_id=$User;
+ 	session_start();
+ 	$_SESSION['email']= $email;
+ 	$_SESSION['password']=$password;
  	header("location:../public/userdashboard.php?U_id=$U_id");
  }
- else{ ?>
+  else{  
+         session_start();  
+         $_SESSION['email']='';
+         $_SESSION['password']='';
+ 	?>
 <!doctype <!DOCTYPE html>
 <html>
   <body>
@@ -28,4 +38,6 @@ $User=userLogin($email,$password);
 
  <?php         
  }
+
+}
  ?> 
