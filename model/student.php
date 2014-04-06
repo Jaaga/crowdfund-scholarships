@@ -91,23 +91,23 @@
     }
 
 
-    function studentStory($S_id,$story,$reason,$CS_id,$Git_id){
+    function studentStory($S_id,$story,$reason,$CS_id,$Git_id,$CA_id){
 
         $db= dbopen();
         $sql= "SELECT S_id from studstory where S_id='$S_id'";
         $result = $db->query($sql);
         $count=mysqli_num_rows($result);
         if($count==1){
-            $sql1="UPDATE studstory SET story='$story',reason='$reason',CS_id='$CS_id',Git_id='$Git_id'
-                   where S_id='$S_id'";
+            $sql1="UPDATE studstory SET story='$story',reason='$reason',CS_id='$CS_id',Git_id='$Git_id',
+                    CA_id='$CA_id' where S_id='$S_id'";
             if(!$db->query($sql1)){
                 die('Error'.$db->error);
             }
            return true; 
         }
         else{
-            $sql1="INSERT INTO studstory (S_id,story,reason,CS_id,Git_id)
-            values('$S_id','$story','$reason','$CS_id','$Git_id')";
+            $sql1="INSERT INTO studstory (S_id,story,reason,CS_id,Git_id,CA_id)
+            values('$S_id','$story','$reason','$CS_id','$Git_id','$CA_id')";
             if(!$db->query($sql1)){
                 die('Error'.$db->error);
             }
@@ -194,7 +194,7 @@
         return ($Donors);
     }
 
-    function studentPrework($CS_id,$Git_id){
+    function studentPrework($CS_id,$Git_id,$CA_id){
 
         $CS_url ='https://www.codeschool.com/users/'.$CS_id.'.json';
         $CS_content = file_get_contents($CS_url,0,null,null);
@@ -204,7 +204,13 @@
         $Git_content= file_get_contents($Git_url,0,null,null);
         $Git_output=json_decode($Git_content,true);
 
-        return [$CS_output,$Git_output];
+        
+
+        $CA_url = 'http://codeacademy-json.herokuapp.com/'.$CA_id.'';
+        $CA_content= file_get_contents($CA_url,0,null,null);
+        $CA_output=json_decode($CA_content,true);
+
+        return [$CS_output,$Git_output,$CA_output];
 
     }
         //$db=dbopen();

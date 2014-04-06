@@ -125,6 +125,7 @@ CREATE TABLE `studstory` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `CS_id` varchar(20) DEFAULT NULL,
   `Git_id` varchar(20) DEFAULT NULL,
+  `CA_id` varchar(20) DEFAULT NULL,
   KEY `S_id` (`S_id`),
   CONSTRAINT `studstory_ibfk_1` FOREIGN KEY (`S_id`) REFERENCES `student` (`S_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -136,7 +137,7 @@ CREATE TABLE `studstory` (
 
 LOCK TABLES `studstory` WRITE;
 /*!40000 ALTER TABLE `studstory` DISABLE KEYS */;
-INSERT INTO `studstory` VALUES (1,'','','2014-04-06 06:51:40','abhinay302','abhinay302');
+INSERT INTO `studstory` VALUES (1,'','','2014-04-06 06:51:40','','',NULL);
 /*!40000 ALTER TABLE `studstory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,4 +178,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-06 22:47:33
+-- Dump completed on 2014-04-07  0:26:06

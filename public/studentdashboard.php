@@ -19,18 +19,24 @@ $S_id=$_GET['S_id'];
       $Story=getStory($S_id);
       $CS_id= $Story['CS_id'];
       $Git_id=$Story['Git_id'];
+      $CA_id=$Story['CA_id'];
                
                // GET CODESCHOOL INFORMATION //  
-        list($CS_output,$Git_output)=studentPrework($CS_id,$Git_id);
+        list($CS_output,$Git_output,$CA_output)=studentPrework($CS_id,$Git_id,$CA_id);
         $CS_Username= $CS_output['user']['username'];
         $CS_TotalScore=$CS_output['user']['total_score'];
         $CS_NumOfCourse=count($CS_output['courses']['completed']);
 
         // GET GITHUB PROFILE //
         $Git_Username= $Git_output['username'];
-        $Git_repo = $Git_output['repositories'];
-        $Git_languages= $Git_output['usage']['languages'];
-        $Git_totalpushes = $Git_output['usage']['total'];
+        $Git_Repo = $Git_output['repositories'];
+        $Git_Languages= $Git_output['usage']['languages'];
+        $Git_Totalpushes = $Git_output['usage']['total'];
+         
+         // GET CADECADEMY PROFILE //
+        $CA_Username= $CA_id;
+        $CA_Totalpoints=$CA_output['points'];
+        $CA_Tracks = $CA_output['tracks'];
 
 
 $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets total funded amount
@@ -229,7 +235,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 				<div class="panel-heading">My Codeschool Profile</div>
         <div class="panel-body">
-        	<img src="./images/codeschool_logo.png" alt="CodeSchoolProfile" style="Height:100px" align="right"> 				
+        	<img src="./images/codeschool_logo.png" alt="CodeSchoolProfile" style="Height:80px" align="right"> 				
           <ul>
           <li>
             <em>Username:</em>
@@ -270,7 +276,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
          
         <div class="panel-heading">My GITHUB Profile</div>
         <div class="panel-body">
-        <img src="./images/github_logo.png" alt="GithubProfile" class="img-circle" align="right" style="Height:100px">
+        <img src="./images/github_logo.png" alt="GithubProfile" align="right" style="Height:70px">
         <ul>
           <li>
             <em>Username:</em>
@@ -278,13 +284,13 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
           </li>
           <li>
             <em>Total Pushes:</em>
-            <strong><?php echo $Git_totalpushes; ?></strong>
+            <strong><?php echo $Git_Totalpushes; ?></strong>
           </li>
           <li>
             <em>Repositories Worked:</em><br>
             <ol>
             <?php
-                foreach($Git_repo as $repo){
+                foreach($Git_Repo as $repo){
                   ?>
                   <strong><li>
                   <?php echo $repo['repo']; ?></li>
@@ -301,7 +307,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <div class="panel-body">
         <?php
               
-              foreach ($Git_languages as $language ) { 
+              foreach ($Git_Languages as $language ) { 
          ?><em>Language:</em>
          <strong><?php echo $language['language']; ?></strong>
          <em>Total Pushes: </em>
@@ -311,6 +317,49 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     </div>
     </div>
     </div>
+
+     <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+         
+        <div class="panel-heading">My Codecademy Profile</div>
+        <div class="panel-body">
+        <img src="./images/codecademy_logo.png" alt="CodecademyProfile" align="right" style="Height:70px">
+        <ul>
+          <li>
+            <em>Username:</em>
+            <strong><?php echo $CA_Username; ?></strong>
+            </li>
+            <li>
+              <em>TotalPoints:</em>
+              <strong><?php echo $CA_Totalpoints; ?></strong>
+            </li>
+        </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6">
+             <div class="panel panel-info">
+             <div class="panel-heading">Codecademy Tracks</div>
+             <div class="panel-body">
+                
+                
+                    <em>Tracks:</em>
+             <?php 
+              foreach ($CA_Tracks as $tracks){ ?>
+                <ul>
+                <li>
+                  <strong><?php echo $tracks['title']; ?></strong>
+                </li>
+                </ul>
+                <?php } ?>
+             </div>
+               
+             </div> 
+          
+        </div>
+
+        </div>
 
 
 
@@ -415,7 +464,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        			<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        			<h4 class="modal-title" id="myModalLabel">Your Information</h4>
       			</div>
 
       			<div class="modal-body">  
@@ -425,6 +474,12 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                         <label class="control-label" for="textinput">Your CodeSchool ID:</label>
                         
                             <input name="CS_id" type="text" placeholder="Codeschool Username" class="form-control"> 
+                        
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label" for="textinput">Your Codecademy ID:</label>
+                        
+                            <input name="CA_id" type="text" placeholder="Codeschool Username" class="form-control"> 
                         
                     </div>
                     <div class="form-group">
