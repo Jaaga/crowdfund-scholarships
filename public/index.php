@@ -367,17 +367,17 @@ if(empty($_POST['user']))
                     <div class="col-md-4">
                       <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
                     </div>
-                </div>
-
+                </div> <br>
                 <br>
-                <br>
+                <div class="modal-footer">
+                   <button type="submit" class="btn btn-default">Log In</button>
+              </div>
+               
               </form>
           </div>
         </div>
 
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-default">Log In</button>
-        </div>       
+               
       </div>
     </div>
   </div>
