@@ -114,45 +114,67 @@ if(isset($_POST['invalidemail'])){
 					<div class="form-group">
 						<label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
 		  				<input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
-							</div>
+					</div>
 
-		  					<div class="form-group">
-		  				<label class="control-label" for="textinput" style="color:black;">Email:</label>  
+		  		<div class="form-group">
+		  		  <label class="control-label" for="textinput" style="color:black;">Email:</label>  
 		  				
 		 		 		<input  name="email" type="text" placeholder="Username" class="form-control input-md">
-		      			<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
-		  					</div>
+		      	<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+		  		</div>
 
-		  					<div class="form-group">
-		  				<label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
+		  		<div class="form-group">
+		  			<label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
 		  				
 		 		 		<input  name="email" type="text" placeholder="Confirm Username" class="form-control input-md">
 		      			<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
-  					</div>
+  				</div>
 
   					
-  					<div class="form-group">
-						<label class="control-label" for="textinput" style="color:black;">Password:</label> 
-		  				<input name="password" type="password" placeholder="Password" class="form-control input-md">
-  					</div>
+  				<div class="form-group">
+					 <label class="control-label" for="textinput" style="color:black;">Password:</label> 
+		  		  <input name="password" type="password" placeholder="Password" class="form-control input-md">
+  				</div>
 
-  					<div class="form-group">
+  				<div class="form-group">
 						<label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
 		  				<input name="password" type="password" placeholder="Password" class="form-control input-md">
-  					</div>
+  				</div>
 
-  					<div class="form-group">
+         
+          
+            <div class="form-group">
+            <label class="control-label" for="radios" style="color:black;">Are You:</label>
+            
+            <div class="radio">
+              <label for="radios-0">
+                <input type="radio" name="type" id="radios-0" value="D" checked="checked" style="text-color:white;">
+                  Donor
+              </label>
+            </div>
+
+            <div class="radio">
+              <label for="radios-1">
+                <input type="radio" name="type" id="radios-1" value="S" style="color:white;">
+                Student
+              </label>
+            </div>
+            </div>
+
+  				  <div class="form-group">
 		       			<label class="control-label" for="singlebutton"></label>
 		        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Sign Up</button>	
-  					</div>
+  				  </div>
+
+
 				</div>
 			</div>
 
 			<div class="col-md-4">
-			<div class="well">
-			<h2>Social Media Login</h2>
+			 <div class="well">
+			 <h2>Social Media Login</h2>
 			
-			Alternatively use your social media account to Login
+			 Alternatively use your social media account to Login
   			<br>
   			<br>
   			<div class="form-group">

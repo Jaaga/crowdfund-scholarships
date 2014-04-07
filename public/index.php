@@ -77,8 +77,6 @@ if(isset($_POST['user']))
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);
   }
-
-
   .content-faq{
     /*This is the actual content for FAQ(in the white box)*/
   
@@ -112,7 +110,7 @@ if(isset($_POST['user']))
   <div class="container" >
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+      <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
@@ -138,7 +136,7 @@ if(isset($_POST['user']))
           </div>              
         </div>
       </div>
-    </div>
+      </div>
     </div> 
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
   
@@ -161,8 +159,7 @@ if(isset($_POST['user']))
         <h3>Apply for Scholarship</h3>
         </div>
 
-        <div class="submitprofile-button
-        ">
+        <div class="submitprofile-button">
   
         <a href="usersignup.php">
           <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
@@ -325,6 +322,7 @@ if(isset($_POST['user']))
   </div>
   
   <hr>
+
   <footer class="footer" style="text-align:center">
       <nav>
         <ul>
@@ -341,14 +339,14 @@ if(isset($_POST['user']))
   <!-- Modal -->
   <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
-      </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
+        </div>
 
-      <div class="modal-body">
-        <div class="navbar-collapse collapse">
+        <div class="modal-body">
+          <div class="navbar-collapse collapse">
               <form action="../controller/userlogin.php" method="post">
                 <!-- Text input-->
                 <div class="form-group">
@@ -373,14 +371,14 @@ if(isset($_POST['user']))
 
                 <br>
                 <br>
-
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-default">Log In</button>
-                </div> 
               </form>
+          </div>
         </div>
-      </div>      
-    </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default">Log In</button>
+        </div>       
+      </div>
     </div>
   </div>
 
