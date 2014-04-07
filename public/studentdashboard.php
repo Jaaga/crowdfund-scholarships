@@ -225,7 +225,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 			</div>
 
 		</div>
-	
+   
                 <h3 align="center">PreWork Status</h3>
     	<div class="row">
       
@@ -251,8 +251,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
           </ul>
 					</div>	
 				</div>
-        </div>
-
+        </div>  
+            
         <div class="col-md-6">
         <div class="panel panel-info">
 
