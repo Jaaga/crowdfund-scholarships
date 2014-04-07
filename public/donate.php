@@ -5,7 +5,15 @@ $U_id=$_POST['U_id'];
 $S_id=$_POST['S_id'];
 $amount=$_POST['amount']; 
 
+$U_id = htmlspecialchars($U_id);
+$S_id = htmlspecialchars($S_id);
+$amount = htmlspecialchars($amount);
+if(empty($amount)){
+  header("location:../public/listofstudents.php?U_id=$U_id");
+}
+else{
 giveDonation($U_id,$S_id,$amount);
+}
 ?>
 
 <html>

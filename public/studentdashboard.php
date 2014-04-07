@@ -324,7 +324,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
          
         <div class="panel-heading">My Codecademy Profile</div>
         <div class="panel-body">
-        <img src="./images/codecademy_logo.png" alt="CodecademyProfile" align="right" style="Height:70px">
+        <img src="./images/codecademy_logo.png" alt="CodecademyProfile" align="right" style="Height:80px">
         <ul>
           <li>
             <em>Username:</em>
@@ -476,18 +476,19 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                             <input name="CS_id" type="text" placeholder="Codeschool Username" class="form-control"> 
                         
                     </div>
-                     <div class="form-group">
-                        <label class="control-label" for="textinput">Your Codecademy ID:</label>
-                        
-                            <input name="CA_id" type="text" placeholder="Codeschool Username" class="form-control"> 
-                        
-                    </div>
                     <div class="form-group">
                         <label class="control-label" for="textinput">Your Github Username:</label>
                         
                             <input name="Git_id" type="text" placeholder="Github Username" class="form-control"> 
                         
                     </div>
+                     <div class="form-group">
+                        <label class="control-label" for="textinput">Your Codecademy ID:</label>
+                        
+                            <input name="CA_id" type="text" placeholder="Codeschool Username" class="form-control"> 
+                        
+                    </div>
+                    
       			      <div class="form-group">
                   			<label class="control-label" for="textarea">My story</label>  
                     		

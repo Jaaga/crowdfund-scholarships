@@ -92,14 +92,26 @@
 
 
     function studentStory($S_id,$story,$reason,$CS_id,$Git_id,$CA_id){
-
-        $db= dbopen();
+        
+         $db= dbopen();  
+         $updates = array();
+         if (!empty($story)){
+         $updates[] = 'story="'.$db->real_escape_string($story).'"';}
+         if (!empty($reason)){
+         $updates[] = 'reason="'.$db->real_escape_string($reason).'"';}
+         if (!empty($CS_id)){
+         $updates[] = 'CS_id="'.$db->real_escape_string($CS_id).'"';}
+         if (!empty($Git_id)){
+         $updates[] = 'Git_id="'.$db->real_escape_string($Git_id).'"';}
+         if (!empty($CA_id)){
+         $updates[] = 'CA_id="'.$db->real_escape_string($CA_id).'"';}
+         $updates = implode(', ', $updates);
+        
         $sql= "SELECT S_id from studstory where S_id='$S_id'";
         $result = $db->query($sql);
         $count=mysqli_num_rows($result);
         if($count==1){
-            $sql1="UPDATE studstory SET story='$story',reason='$reason',CS_id='$CS_id',Git_id='$Git_id',
-                    CA_id='$CA_id' where S_id='$S_id'";
+            $sql1="UPDATE studstory SET $updates where S_id='$S_id'";
             if(!$db->query($sql1)){
                 die('Error'.$db->error);
             }
@@ -149,8 +161,17 @@
     function updateStudent($S_id,$Phone_Number,$address,$para){
       
         $db=dbopen();
-        
-        $sql="UPDATE student SET Phone_Number='$Phone_Number',address='$address',para='$para' where S_id='$S_id'";
+
+        $updates = array();
+         if (!empty($Phone_Number)){
+         $updates[] = 'Phone_Number="'.$db->real_escape_string($Phone_Number).'"';}
+         if (!empty($address)){
+         $updates[] = 'address="'.$db->real_escape_string($address).'"';}
+         if (!empty($para)){
+         $updates[] = 'para="'.$db->real_escape_string($para).'"';}
+         
+         $updates = implode(', ', $updates);
+        $sql="UPDATE student SET $updates where S_id='$S_id'";
 
         if(!$db->query($sql))
             {

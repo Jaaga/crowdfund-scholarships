@@ -1,6 +1,6 @@
 <?php include('../model/student.php');
 
-if(isset($_POST['user']))
+if(empty($_POST['user']))
 {
    $Invalid=$_POST['user'];
 }
