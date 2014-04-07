@@ -101,6 +101,9 @@ if(isset($_POST['user']))
     height: auto;
     max-width: 100%;
   }
+  h2{
+  text-align:center;
+  }
   </style>
 </head>
 

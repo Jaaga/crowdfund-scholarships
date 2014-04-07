@@ -7,11 +7,14 @@ if(isset($_POST['invalidemail'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+	
 <head>
-  <title>Students</title>
+  <title>Signup / Login</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="./dist/css/custom.css" rel="stylesheet">
+</head>
   
- <style>
+<style>
 
    @font-face{
       font-family:'KGSecondChancesSketch'; 
@@ -19,18 +22,28 @@ if(isset($_POST['invalidemail'])){
 
      /* font-family: 'CabinSketch';
       src: url('fonts/CabinSketch-Regular.otf');*/
-         }
+    }
+
  	body{
-background: url("./images/wood1.png");
-background-repeat:repeat;
-}
+		background: url("./images/wood1.png");
+		background-repeat:repeat;
+		padding-top: 60px; }
+
+	}
 
 
-  h2{font-family:'Cabin Sketch' cursive;
-font-size: 64px;}
- </style>
+  h2{
+  		font-family:'Cabin Sketch' cursive;
+		font-size: 40px;
+		text-align:left;
+	}
+
+	
+</style>
 
 <body>
+
+
   	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     	<div class="container">
     
@@ -57,87 +70,116 @@ font-size: 64px;}
     	</div>
     </div>
 
- <!-- <br>
-  <br>
-  <br>-->
+
+
+	
 
   <!--Form starts here-->
-  <div class="container" style="padding:80px 170px 0 170px;">
-  	
-		<div class="well" style="background-color: rgba(144,144,144,1);">
-			<form class="form-horizontal" action="../controller/createuser.php" method="post">
-						<legend align="center" style="color: white;"><h2>Sign Up Now</h2><p>Create your account here</p></legend>
-						<!-- Text input-->
-	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Your Name:</label> 
-  		<div class="col-md-4">
-  			<input name="name" type="text" placeholder="First Name" value="<?php echo $name; ?>" class="form-control input-md">
-  		</div>
-	</div>
-	<br>
-<!-- Text input-->
-	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Email:</label>  
-  		<div class="col-md-4">
- 		 	<input  name="email" type="text" placeholder="Username" class="form-control input-md">
-      <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
-  		</div>
-	</div>
-	<br>
-
-<!--Text input-->
-	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Password:</label> 
-  		<div class="col-md-4">
-  			<input name="password" type="password" placeholder="Password" class="form-control input-md">
-  		</div>
-	</div>
-	<br>
-
-<!--Text input-->
-	<div class="form-group">
-  			<label class="col-md-4 control-label" for="textinput" style="color:white;">Confirm Password:</label> 
-  		<div class="col-md-4">
-  			<input name="confpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
-  		 </div>
-	</div>
-	<br>
-<!-- Button -->
-
-  <div class="form-group">
-    <label class="col-md-4 control-label" for="radios" style="color:white;">Are You:</label>
-    <div class="col-md-4">
-    <div class="radio">
-      <label for="radios-0">
-        <input type="radio" name="type" id="radios-0" value="D" checked="checked" style="text-color:white;">
-        Donor
-      </label>
-    </div>
-    <div class="radio">
-      <label for="radios-1">
-        <input type="radio" name="type" id="radios-1" value="S" style="color:white;">
-        Student
-      </label>
-    </div>
-    </div>
-  </div>
-
-<br>
-  <div class="form-group">
-       <label class="col-md-4 control-label" for="singlebutton"></label>
-      <div class="col-md-4" align="center">
-        <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
-      </div>
-    </div>
-				</div>
-			</form>
-		</div>
+<div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
+	<div class="row" style="padding-top: 10px; padding-bottom:20px">
+		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
 		
-	</div>
+			<div class="col-md-4">
+				<div class="well">
+					<h2>Login</h2>
+					Please login to continue
+
+					<br>
+					<br>
+
+  					<div class="form-group">
+  						<label class="control-label" for="textinput" style="color:black;">Email:</label>  
+ 		 				<input  name="email" type="text" placeholder="Username" class="form-control input-md">
+      					<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+  					</div>
+  			
+  					<div class="form-group">
+						<label class="control-label" for="textinput" style="color:black;">Password:</label> 			
+  						<input name="password" type="password" placeholder="Password" class="form-control input-md">
+  					</div>
+
+  					<div class="form-group">
+       			<label class="control-label" for="singlebutton"></label>
+        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Log In</button>	
+  					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-4">
+				<div class="well">
+					<h2>New User ?</h2>
+					You need to have an account to continue
+					<br>
+					<br>
+					<div class="form-group">
+						<label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
+		  				<input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
+							</div>
+
+		  					<div class="form-group">
+		  				<label class="control-label" for="textinput" style="color:black;">Email:</label>  
+		  				
+		 		 		<input  name="email" type="text" placeholder="Username" class="form-control input-md">
+		      			<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+		  					</div>
+
+		  					<div class="form-group">
+		  				<label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
+		  				
+		 		 		<input  name="email" type="text" placeholder="Confirm Username" class="form-control input-md">
+		      			<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+  					</div>
+
+  					
+  					<div class="form-group">
+						<label class="control-label" for="textinput" style="color:black;">Password:</label> 
+		  				<input name="password" type="password" placeholder="Password" class="form-control input-md">
+  					</div>
+
+  					<div class="form-group">
+						<label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
+		  				<input name="password" type="password" placeholder="Password" class="form-control input-md">
+  					</div>
+
+  					<div class="form-group">
+		       			<label class="control-label" for="singlebutton"></label>
+		        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Sign Up</button>	
+  					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+			<div class="well">
+			<h2>Social Media Login</h2>
+			
+			Alternatively use your social media account to Login
+  			<br>
+  			<br>
+  			<div class="form-group">
+       			<label class="control-label" for="singlebutton"></label>
+        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Facebook</button>
+  			</div>
+  			<br>
+  			<div class="form-group">
+       			<label class="control-label" for="singlebutton"></label>
+        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Google+</button>
+  			</div>
+  			<br>
+  			<div class="form-group">
+       			<label class="control-label" for="singlebutton"></label>
+        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Twitter</button>
+  			</div>
+  			</div>
+			</div>		
+
+  	</div>
 
 
-<hr>
-  <footer class="footer" style="text-align:center">
+
+
+	
+
+	<footer class="footer" style="text-align:center">
     <nav>
       <ul>
         <a href="index.php">Home </a> |
@@ -147,9 +189,11 @@ font-size: 64px;}
         <a href="#contact">Contact</a>  
       </ul>
     </nav> 
-  </footer> 
-  <!-- Modal -->
-  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	</footer> 
+</div>
+
+	<!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -192,10 +236,11 @@ font-size: 64px;}
       </div>      
     </div>
     </div>
-  </div>
+</div>
 
-  <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
-  <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
