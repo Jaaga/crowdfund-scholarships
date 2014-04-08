@@ -62,3 +62,40 @@
 		}
 		$('form').submit();
 	});
+
+
+////////
+//When submit button clicks, error will be shown. 
+
+		$('#submitButton').on('click', function(e){
+			e.preventDefault();
+			var email = $('#email').val();
+			var password = $('#password').val();
+			var repeatpassword = $('#repeatpassword').val();
+
+			if(!email) {
+				alert('Please enter an email');
+				return;
+			}
+			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if(re.test(email)) {
+				alert('Please enter a valid email');
+				return;
+			}
+			if (!password) {
+				alert('Please enter password');
+				return;
+			}
+
+			if(password.length < 6) {
+				alert('Please enter a password with more than 6 characters');
+				return;
+			}
+
+			if(password !== repeatpassword) {
+				alert('Passwords do not match');
+				return;
+			}
+
+			$('form').submit();
+		});
