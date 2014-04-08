@@ -54,9 +54,8 @@ else{
        <input type="hidden" name="sname" value="<?php echo $sname; ?>">
        <input name="email" type="hidden" value="<?php echo $email; ?>">
        <input name="Phone_Number" type="hidden" value="<?php echo $Phone_Number; ?>">
-       <textarea type="hidden" name="address" value="<?php echo $address; ?>"></textarea>
+       
        <input name="pincode" type="hidden" value="<?php echo $pincode; ?>">
-       <textarea type="hidden" name="para" value="<?php echo $para; ?>" ></textarea>
        <input name="scholar_AMT" type="hidden" value="<?php echo $scholar_AMT; ?>" >
        <input name="invalid" type="hidden" value="<?php echo $row; ?>" > 
       
