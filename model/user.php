@@ -27,18 +27,30 @@ include ('dbcon.php');
 
 	    
 	}
+	    function updateUser($U_id,$name,$old_password,$new_password,$pic){
+      
+        $db=dbopen();
 
-	function updateUser($U_id,$image,$details){
-       
-       $db = dbopen();
-       $sql = "UPDATE user SET image='$image',details='$details' where U_id='$U_id'";
-       
-       if(!$db->query($sql))
-			{
-				die('Error' .$db->error);
-			}
+        $updates = array();
+         if (!empty($name)){
+         $updates[] = 'name="'.$db->real_escape_string($name).'"';}
+         if (!empty($new_password)){
+         $updates[] = 'password="'.$db->real_escape_string($new_password).'"';}
+         if (!empty($pic)){
+         $updates[] = 'image="'.$db->real_escape_string($pic).'"';}
+         
+         
+         $updates = implode(', ', $updates);
+        $sql="UPDATE user SET $updates where U_id='$U_id' and password='$old_password' ";
 
-	}
+        if(!$db->query($sql))
+            {
+                die('Error' .$db->error);
+            }
+
+        return $U_id;    
+
+    }
 		function userInfo($userId)
 		{
 			$db =dbopen();
