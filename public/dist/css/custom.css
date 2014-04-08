@@ -1,10 +1,10 @@
 /* Style for Home Page */
 
 body{
-	background-color: #E8EDE0;
+	background-image:url("./public/images/white_carbonfiber_@2X.png");
 	padding-left: 50px;
   	padding-right: 50px;
-	background: url("../../images/wood1.png");
+	background-color:#fefeef;
 background-repeat:repeat;
 
 	}
