@@ -490,13 +490,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 		<br>
                 		
                 		
-              			</form>
+              			
         			</div>
       			</div>
 
             <div class="modal-footer">
                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                      <button class="btn btn-success" type="submit">Save changes</button>
+                     </form>
             </div>
     		</div>
   		</div>
