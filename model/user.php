@@ -92,14 +92,27 @@ include ('dbcon.php');
 		$db=dbopen();
 		//$myEmail = $_POST['email']; 
 		//$mypassword = $_POST['pass']; 
-		$sql ="SELECT * from user where email='".$email."' && password='".$password."'";
-        
-        $result =$db->query($sql);
-		$row=mysqli_fetch_array($result); 
-		$U_id = $row['U_id'];
-			$count = mysqli_num_rows($result);
-// If result matched $myusername and $mypassword, table row must be 1 row
-		if($count==1)
+		$sql="SELECT * from user inner join student on user.email='$email' && student.U_id=user.U_id";
+		$result=$db->query($sql);
+		$count=mysqli_num_rows($result);
+		$row=mysqli_fetch_array($result);
+		$S_id=$row['S_id'];
+         
+         if(($count==1) && ($password==$row['password']))
+         {
+
+         	header("location:../public/studentdashboard.php?S_id=$S_id");
+         }
+            
+
+         else
+        {
+             $sql1="SELECT * from user where email='$email' and password='$password' ";	
+             $result1 =$db->query($sql1);
+		     $row1=mysqli_fetch_array($result1); 
+		     $U_id = $row1['U_id'];
+			 $count1 = mysqli_num_rows($result1);
+			if($count1==1)
 			{
   				
 			return $U_id;
@@ -109,6 +122,10 @@ include ('dbcon.php');
 			$InvalidUser="wrong username or password";
 			return $InvalidUser;
 			}
+
+
+        }
+		
 	}
  
  function giveDonation($U_id,$S_id,$amount)

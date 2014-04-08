@@ -1,6 +1,6 @@
 <?php include('../model/student.php');
 
-if(empty($_POST['user']))
+if(!empty($_POST['user']))
 {
    $Invalid=$_POST['user'];
 }
@@ -179,6 +179,7 @@ if(empty($_POST['user']))
       </div>
       </div>
     </div> 
+
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
   
     
