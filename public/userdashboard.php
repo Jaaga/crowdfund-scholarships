@@ -22,6 +22,22 @@
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
   <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
+   <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#showimage').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+  
   <style type="text/css">
     @font-face{
       font-family:'KGSecondChancesSketch'; 
@@ -91,7 +107,10 @@ $noofStudents=count($students);
     	<div class="col-md-12" >
      		<div class="well" >
       
-        		<img src="<?php echo $url; ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/>
+        		<img src="<?php 
+                    if(empty($row['image'])){ echo $url;}
+                    else{ echo $row['image'];}              
+             ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/>
         		<button class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;" data-toggle="modal" data-target="#myModal"><h4>Edit Profile</h4></button>
         		<h2><?php echo $row['name'];?> </h2>
         		<br>
@@ -191,7 +210,8 @@ $noofStudents=count($students);
         <h4 class="modal-title" id="myModalLabel">Edit Your Profile</h4>
       </div>
       <div class="modal-body">
-        
+         <form action="../controller/updateuser.php" method="post" autocomplete="on" enctype="multipart/form-data">
+         <input type="hidden" name="U_id" value="<?php echo $U_id; ?>">
         <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Your Name</label>  
                     <div class="col-md-4">
@@ -205,7 +225,7 @@ $noofStudents=count($students);
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Old Password</label>  
                     <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="Old Password" class="form-control input-md"> 
+                      <input id="old_password" name="old_password" type="password" placeholder="Old Password" class="form-control input-md"> 
                     </div>
                 </div>
 
@@ -214,7 +234,7 @@ $noofStudents=count($students);
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">New Password</label>  
                     <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="New Password" class="form-control input-md"> 
+                      <input id="new_password" name="new_password" type="password" placeholder="New Password" class="form-control input-md"> 
                     </div>
                 </div>
 
@@ -223,14 +243,32 @@ $noofStudents=count($students);
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Confirm Password</label>  
                     <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="Confirm Password" class="form-control input-md"> 
+                      <input id="conf_password" name="conf_password" type="password" placeholder="Confirm Password" class="form-control input-md"> 
                     </div>
                 </div>
+
+                <div class="form-group">
+                      <label class="col-md-4 control-label">Change-Image:</label> 
+                    <div class="col-md-6" >
+                       <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+                        <img id="showimage" src="#" alt="your image" />
+
+                       </div>
+                      <div>
+
+                        <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
+    
+                      </div>
+                   </div>
+                </div>
+               </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
