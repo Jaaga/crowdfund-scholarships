@@ -50,7 +50,7 @@ if(empty($_POST['user']))
     }
     .feature-image{
       height:200px;
-       width:295px;
+       width:280px;
           
     margin-left:20px;
     margin-right: 20px;
@@ -102,6 +102,47 @@ if(empty($_POST['user']))
   h2{
   text-align:center;
   }
+
+
+
+    .image{
+    background-image:url("../public/images/footsteps-sand.jpg");
+    background-size: cover;
+    height: 650px;
+  background-attachment: fixed;
+   margin: -70px;
+
+  }
+  .color{
+    background-color: rgba(111, 101, 101, 0.5);
+    height: 650px;
+    font-family: arial;
+    color: white;
+    margin: 0px;
+  }
+  .leftButton{
+  position:absolute;
+  left: 200px;
+  bottom: 70px;
+  text-align: center;
+
+  }
+   
+  .rightButton{
+  position:absolute;
+  right: 200px;
+  bottom: 70px;
+  text-align: center;
+  }
+  .thought-bubble-background{
+    background-color: rgba(111, 101, 101, 1);
+    background-size: cover;
+    height: 1400px;
+    margin-left: -70px;
+    margin-right: -70px;
+
+  }
+ 
   </style>
 </head>
 
@@ -141,8 +182,8 @@ if(empty($_POST['user']))
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
   
     
-    <!--<div align="center">-->
-    <div class="row">
+   
+  <!--  <div class="row">
 
       <div class="col-md-12">
 
@@ -152,40 +193,65 @@ if(empty($_POST['user']))
           <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
         </div>
 
-        <!--</div>-->
+       
         <!-- Standard button -->
 
-        <div class="buttontext">
-        <h3>Apply for Scholarship</h3>
+  <!--       <div class="buttontext">
+         <h3>Apply for Scholarship</h3>
         </div>
 
         <div class="submitprofile-button">
   
-        <a href="usersignup.php">
+          <a href="usersignup.php">
           <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
-        </a> 
+          </a> 
         </div>
         <!-- Standard button -->
 
-        <div class="buttontext2">
-        <h3>View Scholarship Applications</h3>
+<!--        <div class="buttontext2">
+          <h3>View Scholarship Applications</h3>
         </div>
 
         <div class="viewprofile-button">
-        <a href="listofstudents.php">
+          <a href="listofstudents.php">
           <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
-        </a> 
+          </a> 
         </div>
       </div>
-    </div>
+    </div>-->
     <!--</div>-->
+    <div class="image">
+    <div class = "color">
+             <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:22px; padding-top: 0px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+              to fund the next candidate.</p>
+    
+    
+       
+            <div class="leftButton"><h3>Apply for Scholarship</h3>
+                  <a href="usersignup.php">
+              <button type="button" class="btn btn-danger btn-lg" align="center" button class = "btn-primary pull-left">Submit Profile</button>
+               </a> 
+            </div>
+           
+        
+            <div class="rightButton"><h3>View Scholarship Applications</h3>
+                <a href="listofstudents.php"> 
+              <button type="button" class="btn btn-success btn-lg" align="center" button class = "btn-danger pull-right">View Profiles</button>
+              </a>
+            </div> 
+          
+        
+     </div>
+  </div>
+
         
     <br>
 
     
     <?php $students= getStudentList(); ?>
 
-    <div class="row">
+    <div class="row" style="padding-top: 70px;">
 
         <div class="col-md-4" >
           <div class="well">
@@ -244,16 +310,16 @@ if(empty($_POST['user']))
       </div>  
     </div>
  
-   
-     <div class="row">
-    <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px;">
-          There's More!</h1>
-    </div>
+   <div class="thought-bubble-background">
+       <div class="row">
+           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px;">
+           There's More!</h1>
+       </div>
  
 
     <!--<div class="container">-->
 
-    <div class="row">
+    
       
        
 
@@ -278,17 +344,17 @@ if(empty($_POST['user']))
       <h2>How much should I donate?</h2>
       <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
       </div>
-
+    </div>
 
           <br>
-    <article style="text-align:justified; max-width:1000px; margin: 0 auto">
+    <article style="text-align:justified; max-width:1000px; margin: 0 auto; padding-top: 90px;">
 
           <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
           </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
       </article>
-    </div>
+    
     
       
     <!--    </div>
