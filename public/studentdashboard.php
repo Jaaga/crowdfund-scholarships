@@ -444,56 +444,66 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 		<div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
                     		<div class="col-md-4">
-                      			<input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
+                      			<input name="Phone_Number" type="text" class="form-control input-md"> 
                     		</div>
                 		</div>
-                		<br>
-                		<br>
-                 		<br>
+	
+                    <br><br>
                 		<div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Address:</label>  
                     		<div class="col-md-4">
-                      			<input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
+                      			<input name="address" type="text" class="form-control input-md"> 
                     		</div>
                 		</div>
                 		<br>
                 		<br>
-                		<br>
+                		<!-- Introduce Yourself -->
                			<div class="form-group">
                   			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
                     		<div class="col-md-4">
                       			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
                     		</div>
                 		</div>
-                    <div class="form-group">
-                      <label class="col-md-4 control-label">Upload-Image:</label> 
-                    <div class="col-md-6" >
-                       <div class="fileupload fileupload-new" data-provides="fileupload">
-                        <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
-                        <img id="showimage" src="#" alt="your image" />
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <div class="form-group" >
+                        <label class="col-md-4 control-label">Upload-Image:</label> 
+                        <div class="col-md-8" >
+                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+                              <img id="showimage" src="#" alt="your image" />
 
-                       </div>
-                      <div>
+                            </div>
+                          <div>
 
-                        <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
-    
-                      </div>
-                   </div>
-                </div>
-               </div>
+                              <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);" style="margin-top: -17px;"></span>
+                        
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+
                 		<br>
                 		<br>
-                		<br>
-                		<div class="modal-footer">
-        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        					<button class="btn btn-success" type="submit">Save changes</button>
-      					</div>
+                		
+                		
               			</form>
         			</div>
       			</div>
+
+            <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button class="btn btn-success" type="submit">Save changes</button>
+            </div>
     		</div>
   		</div>
-    </div>
+  </div>
+
+  
+       
 
     <!-- Modal for Mystory -->
   	

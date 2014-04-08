@@ -197,7 +197,7 @@ $noofStudents=count($students);
                     <div class="col-md-4">
                       <input id="name" name="name" type="text" placeholder="Full Name" class="form-control input-md"> 
                     </div>
-                </div>
+        </div>
 
                 <br>
                 <br>
