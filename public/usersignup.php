@@ -86,11 +86,11 @@ if(isset($_POST['invalidemail'])){
 
 					<br>
 					<br>
-
+           <form action="../controller/userlogin.php" method="post">
   					<div class="form-group">
   						<label class="control-label" for="textinput" style="color:black;">Email:</label>  
  		 				<input  name="email" type="text" placeholder="Username" class="form-control input-md">
-      					<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+      				
   					</div>
   			
   					<div class="form-group">
@@ -102,8 +102,33 @@ if(isset($_POST['invalidemail'])){
        			<label class="control-label" for="singlebutton"></label>
         		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Log In</button>	
   					</div>
+            </form>
 				</div>
 			</div>
+
+        <div class="col-md-4">
+       <div class="well">
+       <h2>Social Media Login</h2>
+      
+       Alternatively use your social media account to Login
+        <br>
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="singlebutton"></label>
+            <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Facebook</button>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="singlebutton"></label>
+            <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Google+</button>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="singlebutton"></label>
+            <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Twitter</button>
+        </div>
+        </div>
+      </div>  
 		
 			<div class="col-md-4">
 				<div class="well">
@@ -111,6 +136,7 @@ if(isset($_POST['invalidemail'])){
 					You need to have an account to continue
 					<br>
 					<br>
+          <form action="../controller/createuser.php" method="post">
 					<div class="form-group">
 						<label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
 		  				<input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
@@ -127,7 +153,7 @@ if(isset($_POST['invalidemail'])){
 		  			<label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
 		  				
 		 		 		<input  name="email" type="text" placeholder="Confirm Username" class="form-control input-md">
-		      			<span style="color:crimson;"><?php echo $Invalidemail; ?></span>
+		      			
   				</div>
 
   					
@@ -163,36 +189,15 @@ if(isset($_POST['invalidemail'])){
 
   				  <div class="form-group">
 		       			<label class="control-label" for="singlebutton"></label>
-		        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Sign Up</button>	
+		        		<button type="submit" name="singlebutton" class="btn btn-success btn-lg">Sign Up</button>	
   				  </div>
+            </form>
 
 
 				</div>
 			</div>
 
-			<div class="col-md-4">
-			 <div class="well">
-			 <h2>Social Media Login</h2>
 			
-			 Alternatively use your social media account to Login
-  			<br>
-  			<br>
-  			<div class="form-group">
-       			<label class="control-label" for="singlebutton"></label>
-        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Facebook</button>
-  			</div>
-  			<br>
-  			<div class="form-group">
-       			<label class="control-label" for="singlebutton"></label>
-        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Google+</button>
-  			</div>
-  			<br>
-  			<div class="form-group">
-       			<label class="control-label" for="singlebutton"></label>
-        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Twitter</button>
-  			</div>
-  			</div>
-			</div>		
 
   	</div>
 

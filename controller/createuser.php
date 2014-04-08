@@ -1,11 +1,19 @@
 <?php
    include ('../model/user.php');
    include ('../model/student.php');
-
-if(isset($_POST['type'])){
    $name=$_POST['name'];
    $password= $_POST['password'];
    $email=$_POST['email'];
+
+   if(empty($name) && empty($password) && empty($email)){
+
+    header("location:../public/usersignup.php");
+   }
+
+
+else{
+  if(isset($_POST['type'])){
+   
    $email = htmlspecialchars($email);
    $password = htmlspecialchars($password);
    $name=htmlspecialchars($name);
@@ -16,10 +24,10 @@ if(isset($_POST['type'])){
       $User=createUser($name,$password,$email);
       if(is_numeric($User)){
         $U_id=$User;
-        session_start();
-			  $_SESSION['email'] = $email;
-			  $_SESSION['password'] = $password;
-			  $_SESSION['time'] = time();
+        //session_start();
+			  //$_SESSION['email'] = $email;
+			  //$_SESSION['password'] = $password;
+			  //$_SESSION['time'] = time();
 
 			  header("location:../public/userdashboard.php?U_id=$U_id");
       }
@@ -92,6 +100,7 @@ if(isset($_POST['type'])){
 
 }
 
+}
 }
 ?>
 
