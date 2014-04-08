@@ -158,7 +158,7 @@
     }
 
 
-    function updateStudent($S_id,$Phone_Number,$address,$para){
+    function updateStudent($S_id,$Phone_Number,$address,$para,$pic){
       
         $db=dbopen();
 
@@ -169,6 +169,9 @@
          $updates[] = 'address="'.$db->real_escape_string($address).'"';}
          if (!empty($para)){
          $updates[] = 'para="'.$db->real_escape_string($para).'"';}
+         if(!empty($pic)){
+            $updates[] = 'image_path="'.$db->real_escape_string($pic).'"';
+         }
          
          $updates = implode(', ', $updates);
         $sql="UPDATE student SET $updates where S_id='$S_id'";

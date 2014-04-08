@@ -58,11 +58,7 @@ if(isset($_POST['invalidemail'])){
                 <li><a href="listofstudents.php">Sponsor</a></li>
             </ul>
 
-        	<div class="navbar-collapse collapse">
-              <div class="navbar-form navbar-right">
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
-              </div><!--/.navbar-collapse -->
-            </div>
+        	
         </div>
     
             </div><!--/.navbar-collapse -->
