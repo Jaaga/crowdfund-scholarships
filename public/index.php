@@ -482,6 +482,7 @@ if(!empty($_POST['user']))
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
+  <script type="text/javascript" src="./dist/js/form-validation.js"></script>
 </body>
 
 </html> 
