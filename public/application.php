@@ -239,7 +239,7 @@
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
 <div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+  <div class="fileupload-preview thumbnail" style="height: auto; width: auto; max-width: 40%; max-height: 600px;">
     <img id="showimage" src="#" alt="your image" />
 
   </div>
