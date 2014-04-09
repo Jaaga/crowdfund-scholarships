@@ -438,67 +438,64 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			</div>
       			<div class="modal-body">
       				<div class="navbar-collapse collapse">
-              			<form action="../controller/updatestudent.php" method="post" autocomplete="on" enctype="multipart/form-data">
-              			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
-                		<!-- Text input-->
-                		<div class="form-group">
+              		<form class="form-horizontal" role="form" action="../controller/updatestudent.php" method="post" autocomplete="on" enctype="multipart/form-data">
+              		<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
+                		
+
+                      
+                  <!-- Text input-->
+                		
+                
+                  <div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
                     		<div class="col-md-4">
                       			<input name="Phone_Number" type="text" class="form-control input-md"> 
                     		</div>
-                		</div>
+                	</div>
 	
-                    <br><br>
-                		<div class="form-group">
+                    
+                	<div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Address:</label>  
                     		<div class="col-md-4">
                       			<input name="address" type="text" class="form-control input-md"> 
                     		</div>
-                		</div>
-                		<br>
-                		<br>
+                	</div>
+                		
                 		<!-- Introduce Yourself -->
-               			<div class="form-group">
+               			
+                  <div class="form-group">
                   			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
                     		<div class="col-md-4">
                       			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
                     		</div>
-                		</div>
-                    <br>
-                    <br>
-                    <br>
+                	</div>
                     
-                    <div class="form-group" >
+                    
+                  <div class="form-group" >
                         <label class="col-md-4 control-label">Upload-Image:</label> 
-                        <div class="col-md-8" >
+                        <div class="col-md-6" >
                           <div class="fileupload fileupload-new" data-provides="fileupload">
                             <div class="fileupload-preview thumbnail" style= "height: auto; width: auto; max-width: 40%; max-height: 600px;">
                               <img id="showimage" src="#" alt="your image" />
 
                             </div>
-                          <div>
+                            <div>
+                              
+                              <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);" ></span>
+                            </div>
 
-                              <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);" style="margin-top: -17px;"></span>
-                        
                           </div>
                         </div>
-                        </div>
-                    </div>
-                    
-
-                		<br>
-                		<br>
-                		
-                		
-              			
+                  </div>
+                  </form>		
         			</div>
       			</div>
 
             <div class="modal-footer">
                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                     <button class="btn btn-success" type="submit">Save changes</button>
-                     </form>
+                     <button class="btn btn-success" type="submit">Save changes</button>          
             </div>
+
     		</div>
   		</div>
   </div>
