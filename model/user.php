@@ -27,18 +27,33 @@ include ('dbcon.php');
 
 	    
 	}
+	    function updateUser($U_id,$name,$old_password,$new_password,$pic)
+	    {
+      
+        $db=dbopen();
 
-	function updateUser($U_id,$image,$details){
-       
-       $db = dbopen();
-       $sql = "UPDATE user SET image='$image',details='$details' where U_id='$U_id'";
-       
-       if(!$db->query($sql))
-			{
-				die('Error' .$db->error);
-			}
+        $updates = array();
+         if (!empty($name)){
+         $updates[] = 'name="'.$db->real_escape_string($name).'"';}
+         if (!empty($new_password)){
+         $updates[] = 'password="'.$db->real_escape_string($new_password).'"';}
+         if (!empty($pic)){
+         $updates[] = 'image="'.$db->real_escape_string($pic).'"';
+          }
+         
+         
+         $updates = implode(', ', $updates);
+        $sql="UPDATE user SET $updates where U_id='$U_id' and password='$old_password' ";
 
-	}
+        if(!$db->query($sql))
+            {
+                die('Error' .$db->error);
+            }
+
+        return $U_id;    
+
+        }
+
 		function userInfo($userId)
 		{
 			$db =dbopen();
@@ -92,14 +107,27 @@ include ('dbcon.php');
 		$db=dbopen();
 		//$myEmail = $_POST['email']; 
 		//$mypassword = $_POST['pass']; 
-		$sql ="SELECT * from user where email='".$email."' && password='".$password."'";
-        
-        $result =$db->query($sql);
-		$row=mysqli_fetch_array($result); 
-		$U_id = $row['U_id'];
-			$count = mysqli_num_rows($result);
-// If result matched $myusername and $mypassword, table row must be 1 row
-		if($count==1)
+		$sql="SELECT * from user inner join student on user.email='$email' && student.U_id=user.U_id";
+		$result=$db->query($sql);
+		$count=mysqli_num_rows($result);
+		$row=mysqli_fetch_array($result);
+		$S_id=$row['S_id'];
+         
+         if(($count==1) && ($password==$row['password']))
+         {
+
+         	header("location:../public/studentdashboard.php?S_id=$S_id");
+         }
+            
+
+         else
+        {
+             $sql1="SELECT * from user where email='$email' and password='$password' ";	
+             $result1 =$db->query($sql1);
+		     $row1=mysqli_fetch_array($result1); 
+		     $U_id = $row1['U_id'];
+			 $count1 = mysqli_num_rows($result1);
+			if($count1==1)
 			{
   				
 			return $U_id;
@@ -109,6 +137,10 @@ include ('dbcon.php');
 			$InvalidUser="wrong username or password";
 			return $InvalidUser;
 			}
+
+
+        }
+		
 	}
  
  function giveDonation($U_id,$S_id,$amount)

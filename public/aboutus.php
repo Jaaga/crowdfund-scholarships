@@ -19,7 +19,7 @@
     
      }
 	body{
-background: url("./images/wood1.png");
+background: url("./images/backb.jpg");
 background-repeat:repeat;
 }
 h4 { position:relative;

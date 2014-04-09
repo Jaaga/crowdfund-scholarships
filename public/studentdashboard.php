@@ -58,6 +58,22 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
 	<link href="./dist/css/slider.css" rel="stylesheet">
 	<link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+
+    <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  </script>
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#showimage').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 	
 
 	<style>
@@ -422,46 +438,73 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       			</div>
       			<div class="modal-body">
       				<div class="navbar-collapse collapse">
-              			<form action="../controller/updatestudent.php" method="post">
+              			<form action="../controller/updatestudent.php" method="post" autocomplete="on" enctype="multipart/form-data">
               			<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
                 		<!-- Text input-->
                 		<div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
                     		<div class="col-md-4">
-                      			<input name="Phone_Number" type="text" placeholder="Update Your Number" class="form-control input-md"> 
+                      			<input name="Phone_Number" type="text" class="form-control input-md"> 
                     		</div>
                 		</div>
-                		<br>
-                		<br>
-                 		<br>
+	
+                    <br><br>
                 		<div class="form-group">
                   			<label class="col-md-4 control-label" for="textinput">Address:</label>  
                     		<div class="col-md-4">
-                      			<input name="address" type="text" placeholder="Update Your Address" class="form-control input-md"> 
+                      			<input name="address" type="text" class="form-control input-md"> 
                     		</div>
                 		</div>
                 		<br>
                 		<br>
-                		<br>
+                		<!-- Introduce Yourself -->
                			<div class="form-group">
                   			<label class="col-md-4 control-label" for="textarea">Inroduce Yourself:</label>  
                     		<div class="col-md-4">
                       			<textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
                     		</div>
                 		</div>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <div class="form-group" >
+                        <label class="col-md-4 control-label">Upload-Image:</label> 
+                        <div class="col-md-8" >
+                          <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+                              <img id="showimage" src="#" alt="your image" />
+
+                            </div>
+                          <div>
+
+                              <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);" style="margin-top: -17px;"></span>
+                        
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+
                 		<br>
                 		<br>
-                		<br>
-                		<div class="modal-footer">
-        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        					<button class="btn btn-success" type="submit">Save changes</button>
-      					</div>
-              			</form>
+                		
+                		
+              			
         			</div>
       			</div>
+
+            <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button class="btn btn-success" type="submit">Save changes</button>
+                     </form>
+            </div>
     		</div>
   		</div>
-    </div>
+  </div>
+
+  
+       
 
     <!-- Modal for Mystory -->
   	

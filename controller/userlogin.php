@@ -6,12 +6,14 @@
 
  $email=$_POST['email'];
  $password= $_POST['password'];
+// $from=$_SERVER['HTTP_REFERER'];
  
 $email = htmlspecialchars($email);
 $password = htmlspecialchars($password);
 
 $User=userLogin($email,$password);
- if(is_numeric($User)){
+ if(is_numeric($User))
+ {
  	$U_id=$User;
  	session_start();
  	$_SESSION['email']= $email;
