@@ -15,9 +15,9 @@ $User=userLogin($email,$password);
  if(is_numeric($User))
  {
  	$U_id=$User;
- 	session_start();
- 	$_SESSION['email']= $email;
- 	$_SESSION['password']=$password;
+ 	//session_start();
+ 	//$_SESSION['email']= $email;
+ 	//$_SESSION['password']=$password;
  	header("location:../public/userdashboard.php?U_id=$U_id");
  }
   else{  
