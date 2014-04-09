@@ -33,7 +33,7 @@
          }
    body 
     {
-  background: url("./images/backb.jpg");
+  background: url("./images/wood1.png");
   background-repeat:repeat;
   }
     .well{
@@ -238,19 +238,19 @@
   <div class="form-group">
     <label class="col-md-4 control-label">Upload-Image:</label> 
     <div class="col-md-6" >
-<div class="fileupload fileupload-new" data-provides="fileupload">
-  <div class="fileupload-preview thumbnail" style="height: auto; width: auto; max-width: 40%; max-height: 600px;">
-    <img id="showimage" src="#" alt="your image" />
+    <div class="fileupload fileupload-new" data-provides="fileupload">
+      <div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+        <img id="showimage" src="#" alt="your image" />
 
-  </div>
-  <div>
+        </div>
+        <div>
 
-    <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
+          <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
     
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-</div>
 <!--upload image ends here-->
 
 
