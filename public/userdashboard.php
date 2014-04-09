@@ -27,7 +27,7 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
    <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -71,8 +71,7 @@
     max-height: 600px;
     margin:10px; 
     margin-right:30px;
-  }
-
+    }
   </style>
 </head>
 
