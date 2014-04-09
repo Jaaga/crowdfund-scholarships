@@ -222,7 +222,7 @@
 
         $CS_url ='https://www.codeschool.com/users/'.$CS_id.'.json';
         $CS_content = file_get_contents($CS_url,0,null,null);
-        $CS_output = json_decode($CS_content,true);
+        $CS_output =json_decode($CS_content,true);
 
         $Git_url = 'http://osrc.dfm.io/'.$Git_id.'.json';
         $Git_content= file_get_contents($Git_url,0,null,null);

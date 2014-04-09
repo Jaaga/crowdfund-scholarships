@@ -33,7 +33,7 @@ $U_id=$_GET['U_id'];
 	text-align: center;
 	}
 		body{
-	background: url("./images/wood1.png");
+	background: url("./images/backb.jpg");
 	background-repeat:repeat;
 	}
 .sponsor_data{
