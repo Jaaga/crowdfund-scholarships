@@ -19,7 +19,7 @@
     
      }
 	body{
-background: url("./images/back2.jpg");
+background: url("./images/back.jpg");
 background-repeat:repeat;
 }
 h4 { position:relative;
