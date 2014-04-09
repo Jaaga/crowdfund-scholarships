@@ -33,7 +33,7 @@ session_start();
          }
   
   body{	
-background: url("./images/wood1.png");
+background: url("./images/backb.jpg");
 background-repeat:repeat;
 padding-top: 60px;
 }
