@@ -6,6 +6,7 @@
 
  $email=$_POST['email'];
  $password= $_POST['password'];
+// $from=$_SERVER['HTTP_REFERER'];
  
 $email = htmlspecialchars($email);
 $password = htmlspecialchars($password);

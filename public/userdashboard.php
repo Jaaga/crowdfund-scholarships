@@ -4,6 +4,9 @@
      
    //  header("location:../public/usersignup.php");
   //} 
+ if(isset($_POST['wrong'])){
+  $wrong="Wrong Password";
+ }
 ?>
 
 <?php
@@ -110,8 +113,10 @@ $noofStudents=count($students);
         		<img src="<?php 
                     if(empty($row['image'])){ echo $url;}
                     else{ echo $row['image'];}              
-             ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/>
-        		<button class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;" data-toggle="modal" data-target="#myModal"><h4>Edit Profile</h4></button>
+             ?>" alt="Please Update Your Picture" width="100px" height="100px" style="margin:10px;margin-right:30px;"/>
+        		<button class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;" data-toggle="modal" data-target="#myModal">
+            <h4>Edit Profile</h4></button>
+            
         		<h2><?php echo $row['name'];?> </h2>
         		<br>
         		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
@@ -119,7 +124,7 @@ $noofStudents=count($students);
     	</div>
     </div>
 
-  
+ <h1> <?php echo $wrong; ?></h1>
 
   	<!-- Heading for Donated list row-->
   	<div class="row">
@@ -210,7 +215,7 @@ $noofStudents=count($students);
         <h4 class="modal-title" id="myModalLabel">Edit Your Profile</h4>
       </div>
       <div class="modal-body">
-         <form action="../controller/updateuser.php" method="post" autocomplete="on" enctype="multipart/form-data">
+         <form action="../controller/updateuser.php" method="post" enctype="multipart/form-data">
          <input type="hidden" name="U_id" value="<?php echo $U_id; ?>">
         <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Your Name</label>  
@@ -223,7 +228,7 @@ $noofStudents=count($students);
                 <br>
 
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Old Password</label>  
+                  <label class="col-md-4 control-label" for="textinput">Current Password *</label>  
                     <div class="col-md-4">
                       <input id="old_password" name="old_password" type="password" placeholder="Old Password" class="form-control input-md"> 
                     </div>
@@ -257,7 +262,7 @@ $noofStudents=count($students);
                        </div>
                       <div>
 
-                        <span class="btn btn-file"><input type="file" name="image_path" onchange="readURL(this);"></span>
+                        <span class="btn btn-file"><input type="file" name="image" onchange="readURL(this);"></span>
     
                       </div>
                    </div>

@@ -27,7 +27,8 @@ include ('dbcon.php');
 
 	    
 	}
-	    function updateUser($U_id,$name,$old_password,$new_password,$pic){
+	    function updateUser($U_id,$name,$old_password,$new_password,$pic)
+	    {
       
         $db=dbopen();
 
@@ -37,7 +38,8 @@ include ('dbcon.php');
          if (!empty($new_password)){
          $updates[] = 'password="'.$db->real_escape_string($new_password).'"';}
          if (!empty($pic)){
-         $updates[] = 'image="'.$db->real_escape_string($pic).'"';}
+         $updates[] = 'image="'.$db->real_escape_string($pic).'"';
+          }
          
          
          $updates = implode(', ', $updates);
@@ -50,7 +52,8 @@ include ('dbcon.php');
 
         return $U_id;    
 
-    }
+        }
+
 		function userInfo($userId)
 		{
 			$db =dbopen();
