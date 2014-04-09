@@ -487,7 +487,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                           </div>
                         </div>
                   </div>
-                  </form>		
+                  	
         			</div>
       			</div>
 
@@ -495,6 +495,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                      <button class="btn btn-success" type="submit">Save changes</button>          
             </div>
+            </form> 
 
     		</div>
   		</div>
