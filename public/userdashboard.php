@@ -46,10 +46,12 @@
 
     img {
     float:left;
-    position: relative;
-    display: block;
     height: auto;
-    max-width: 100%;
+    width: auto;
+    max-width: 20%;
+    max-height: 600px;
+    margin:10px; 
+    margin-right:30px;
   }
   </style>
 </head>
@@ -88,9 +90,9 @@ $noofStudents=count($students);
 	  <!-- Donor Detail Row-->
  	  <div class="row">
     	<div class="col-md-12" >
-     		<div class="well" >
+     		<div class="well" style= "height: 265px;">
       
-        		<img src="<?php echo $url; ?>" alt="Please Update Your Picture" width="200px" height="200px" style="margin:10px;    margin-right:30px;"/>
+        		<img src="<?php echo $url; ?>" alt="Please Update Your Picture">
         		<button type="submit" class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;"><h4>Edit Profile</h4></button>
         		<h2><?php echo $row['name'];?> </h2>
         		<br>
