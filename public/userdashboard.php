@@ -27,7 +27,7 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>-->
    <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -39,7 +39,7 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    </script>
+</script>
   
   <style type="text/css">
     @font-face{
@@ -71,8 +71,7 @@
     max-height: 600px;
     margin:10px; 
     margin-right:30px;
-  }
-
+    }
   </style>
 </head>
 
@@ -219,7 +218,7 @@ $noofStudents=count($students);
         <h4 class="modal-title" id="myModalLabel">Edit Your Profile</h4>
       </div>
       <div class="modal-body">
-         <form action="../controller/updateuser.php" method="post" enctype="multipart/form-data">
+         <form class="form-horizontal" role="form" action="../controller/updateuser.php" method="post" enctype="multipart/form-data">
          <input type="hidden" name="U_id" value="<?php echo $U_id; ?>">
         <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Your Name</label>  
@@ -228,26 +227,25 @@ $noofStudents=count($students);
                     </div>
         </div>
 
-                <br>
-                <br>
+                
 
-                <div class="form-group">
+        <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Current Password *</label>  
                     <div class="col-md-4">
                       <input id="old_password" name="old_password" type="password" placeholder="Old Password" class="form-control input-md"> 
                     </div>
-                </div>
+        </div>
 
-                <br><br>
+                
 
-                <div class="form-group">
+        <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">New Password</label>  
                     <div class="col-md-4">
                       <input id="new_password" name="new_password" type="password" placeholder="New Password" class="form-control input-md"> 
                     </div>
-                </div>
+        </div>
 
-                <br><br>
+               
 
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Confirm Password</label>  
