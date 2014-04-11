@@ -195,7 +195,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 
         <div class="panel-heading">My Codeschool Profile</div>
         <div class="panel-body">
-          <img src="./images/codeschool_logo.png" alt="CodeSchoolProfile" style="Height:100px" align="right">         
+          <img src="./images/codeschool_logo.png" alt="CodeSchoolProfile" style="Height:80px" align="right">         
           <ul>
           <li>
             <em>Username:</em>
@@ -236,7 +236,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
          
         <div class="panel-heading">My GITHUB Profile</div>
         <div class="panel-body">
-        <img src="./images/github_logo.png" alt="GithubProfile" align="right" style="Height:100px">
+        <img src="./images/github_logo.png" alt="GithubProfile" align="right" style="Height:70px">
         <ul>
           <li>
             <em>Username:</em>
@@ -297,7 +297,7 @@ font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
         </div>
         </div>
         
-        <div class="col-md-6">
+          <div class="col-md-6">
              <div class="panel panel-info">
              <div class="panel-heading">Codecademy Tracks</div>
              <div class="panel-body">

@@ -251,37 +251,25 @@ if(!empty($_POST['user']))
     <br>
 
     
-    <?php $students= getStudentList(); ?>
+    <?php $students= featuredStudents();
+          shuffle($students);
+          ?>
 
     <div class="row" style="padding-top: 70px;">
-
+<?php foreach ($students as $student) {
+     ?>
         <div class="col-md-4" >
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[0]['image_path']?> class="feature-image">
-            <h2><?php echo $students[0]['sname']; ?> </h2>
-            <p style="text-align: justify; padding:1em 1em;" ><?php echo $students[0]['para'] ?></p>
+            <img src=<?php echo $student['image_path']?> class="feature-image">
+            <h2><?php echo $student['sname']; ?> </h2>
+            <p style="text-align: justify; padding:1em 1em;" ><?php echo $student['para'] ?></p>
           </div>
+          
         </div>
-
-        <div class="col-md-4">
-          <div class="well">
-            <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[1]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[1]['sname'] ?></h2>
-            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[1]['para'] ?></p>
-          </div>
-        </div>
-
-        <div class="col-md-4" >
-          <div class="well">
-            <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[2]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[2]['sname'] ?></h2>
-            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
-          </div>
-        </div>
+<?php } ?>
     </div>
+
 
     <h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
 
