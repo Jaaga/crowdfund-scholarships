@@ -1,10 +1,4 @@
-<?php 
- // if(!(isset($_SESSION['email'])) && !(isset($_SESSION['password'])))
-  //{
-     
-   //  header("location:../public/usersignup.php");
-  //} 
-  ?>
+
 <?php 
 include ('../model/student.php');
 include ('../model/user.php');
