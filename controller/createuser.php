@@ -1,4 +1,6 @@
+
 <?php
+
    include ('../model/user.php');
    include ('../model/student.php');
    $name=$_POST['name'];

@@ -12,6 +12,7 @@ if(!empty($_POST['user']))
 <head>
   <title>Home</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" rel="stylesheet" href="./dist/css/bootstrapValidator.min.css"/>
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
     
@@ -172,7 +173,7 @@ if(!empty($_POST['user']))
 
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+              <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 
           </div>              
         </div>
@@ -250,37 +251,25 @@ if(!empty($_POST['user']))
     <br>
 
     
-    <?php $students= getStudentList(); ?>
+    <?php $students= featuredStudents();
+          shuffle($students);
+          ?>
 
     <div class="row" style="padding-top: 70px;">
-
+<?php foreach ($students as $student) {
+     ?>
         <div class="col-md-4" >
           <div class="well">
             <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[0]['image_path']?> class="feature-image">
-            <h2><?php echo $students[0]['sname']; ?> </h2>
-            <p style="text-align: justify; padding:1em 1em;" ><?php echo $students[0]['para'] ?></p>
+            <img src=<?php echo $student['image_path']?> class="feature-image">
+            <h2><?php echo $student['sname']; ?> </h2>
+            <p style="text-align: justify; padding:1em 1em;" ><?php echo $student['para'] ?></p>
           </div>
+          
         </div>
-
-        <div class="col-md-4">
-          <div class="well">
-            <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[1]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[1]['sname'] ?></h2>
-            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[1]['para'] ?></p>
-          </div>
-        </div>
-
-        <div class="col-md-4" >
-          <div class="well">
-            <h3 class="feature">Featured</h3>
-            <img src=<?php echo $students[2]['image_path'] ?> class="feature-image"> 
-            <h2><?php echo $students[2]['sname'] ?></h2>
-            <p style="text-align: justify; padding:1em 1em;"><?php echo $students[2]['para'] ?></p>
-          </div>
-        </div>
+<?php } ?>
     </div>
+
 
     <h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
 
@@ -404,8 +393,38 @@ if(!empty($_POST['user']))
   </footer>
 
   <!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+         <div class="col-md-6" style="margin-left:130px;">
+          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input id="email" name="email" type="email" class="form-control" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input id="password" name="password"type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+             <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Log In</button>
+             </div>
+          </form>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
   <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -414,30 +433,28 @@ if(!empty($_POST['user']))
 
         <div class="modal-body">
           <div class="navbar-collapse collapse">
-              <form action="../controller/userlogin.php" method="post">
-                <!-- Text input-->
+              <form action="../controller/userlogin.php" method="post" class="form-horizontal>
+              
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Username:</label>  
+                  <label class="col-md-4 control-label" for="textinput">Email:</label>  
                     <div class="col-md-4">
-                      <input id="email" name="email" type="text" placeholder="Username" class="form-control input-md"> 
+                      <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md"> 
                     </div>
                 </div>
-
-                <br>
-                <br>
   
-                <!--Text input-->
+                
                 
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Password:</label>
+                     
+                     <label class="col-md-4 control-label" for="textinput">Password:</label>
 
                     <div class="col-md-4">
                       <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
                     </div>
-                </div> <br>
-                <br>
+                </div> 
+
                 <div class="modal-footer">
-                   <button type="submit" class="btn btn-default">Log In</button>
+                   <button type="submit" class="btn btn-success">Log In</button>
               </div>
                
               </form>
@@ -448,9 +465,12 @@ if(!empty($_POST['user']))
       </div>
     </div>
   </div>
+-->
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
+  <script type="text/javascript" src="./dist/js/form-validation.js"></script>
 </body>
 
 </html> 

@@ -89,7 +89,22 @@
         }
         return true;
     }
+    
+    function featuredStudents(){
 
+        $db=dbopen();
+          $sql=$db->prepare('SELECT S_id,sname,para,image_path FROM student');
+        $sql->execute();
+        $sql->bind_result($S_id,$sname,$para,$image_path);
+        while($sql->fetch()){
+               
+        $students[]=array('S_id'=>$S_id,'sname'=>$sname,'para'=>$para,'image_path'=>$image_path);
+        }
+        
+        $sql->close();
+        return ($students);  
+
+    }
 
     function studentStory($S_id,$story,$reason,$CS_id,$Git_id,$CA_id){
         
