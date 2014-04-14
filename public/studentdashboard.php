@@ -84,17 +84,16 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
      /* font-family: 'CabinSketch';
       src: url('fonts/CabinSketch-Regular.otf');*/
          }
+         body{
+    background: url("./images/backb.jpg");
+    background-repeat: no-repeat; 
+    padding-top: 80px;
+    }
 		#bg{
     	background:url('./images/chalkboard2.jpg');
     	border: 3 solid /*#33cc33*/#6E8B3D;
 		color: #FFFFe0;
 		text-align: center;
-		}
-		body{
-		
-	
-		padding-top: 80px;
-
 		}
 		.sponsor_data{
 		font-family:'Cabin Sketch' cursive;
@@ -147,7 +146,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 			<div class="col-lg-6">
 
-				<h1 align="center" style="font-family:'Cabin Sketch' cursive; font-size: 60px; margin-top: -30px " >
+				<h1 align="center" style="font-family:'KGSecondChancesSketch' cursive; font-size: 60px; margin-top: -30px " >
 				<?php echo $student['sname']; ?>
 				</h1>
 			</div>
@@ -200,7 +199,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 
                 </a>
 
-        			<h2>You Story</h2>
+        			<h3 style="font-family:'KGSecondChancesSketch' cursive;">Your Story</h2>
 
         			<br>
 
@@ -214,9 +213,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
-						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
-						<h2 class="sponsor_data"> <b><?php echo $student['date']; ?></b> days to go!</h2>
+						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $total; ?></b> donors backed </h2><br>
+						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $student['date']; ?></b> days to go!</h2>
 					
 						<br>
 					
@@ -241,14 +240,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         		</a>-->
 
-					<h3>So here's why I need your help</h3>
+					<h3 style="font-family:'KGSecondChancesSketch' cursive;">So here's why I need your help</h3>
 					<p><?php echo $Story['reason']; ?></p>
 				</div>
 			</div>
-
+</div>
 		</div>
    
-                <h3 align="center">PreWork Status</h3>
+                <h3 align="center" style="font-family:'KGSecondChancesSketch' cursive;">PreWork Status</h3>
     	<div class="row">
       
         	<div class="col-md-6"  >
@@ -393,7 +392,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       		<div class="col-lg-4">
 
           		<img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:100px"></img> 
-          		<br><h3>MAKE A DONATION</h3>
+          		<br><h3 style="font-family:'KGSecondChancesSketch' cursive;">MAKE A DONATION</h3>
          		<!-- <p style="text-align: justify; padding:1em 1em;">Our system is simple. We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>
 
           		<br>-->
@@ -401,14 +400,14 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
       		<div class="col-lg-4">
         		<img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-        		<br><h3>STUDENT BENEFITS FROM LOAN</h3>
+        		<br><h3 style="font-family:'KGSecondChancesSketch' cursive;">STUDENT BENEFITS FROM LOAN</h3>
         		<!--<p style="text-align: justify; padding:1em 1em;">You as a donor choose the candidate you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           		<br><br>-->
       		</div>
 
       		<div class="col-lg-4">
           		<img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:100px"></img> 
-          		<br><h3>STUDENT PAYS IT FORWARD</h3>          		
+          		<br><h3 style="font-family:'KGSecondChancesSketch' cursive;">STUDENT PAYS IT FORWARD</h3>          		
       		</div>
     	</div>
 

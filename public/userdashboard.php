@@ -51,9 +51,8 @@
     }
   
     body{
-     
+      background: url("./images/backb.jpg");
       background-repeat:repeat;
-
       padding-top: 80px;
 
     }
