@@ -1,12 +1,12 @@
 <?php 
- // if(!(isset($_SESSION['email'])) && !(isset($_SESSION['password'])))
-  //{
-     
-   //  header("location:../public/usersignup.php");
-  //} 
- if(isset($_POST['wrong'])){
-  $wrong="Wrong Password";
- }
+session_start();
+ if(!isset($_SESSION['email']))
+   {  
+    header("location:../public/usersignup.php");
+  } 
+ //if(isset($_POST['wrong'])){
+  //$wrong="Wrong Password";
+ //}
 ?>
 
 <?php
@@ -90,7 +90,17 @@
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
                 <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">AllStudents</a></li>
+                
            		</ul>
+              <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+
+              <a href="../controller/logout.php" class="btn btn-danger">LOGOUT</a>
+
+              <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
+
+          </div>   
+          </div>           
 
         		<div class="navbar-collapse collapse">
              		<div class="navbar-form navbar-right"> 

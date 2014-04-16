@@ -26,10 +26,11 @@ $User=userLogin($email,$password);
  if(is_numeric($User))
  {
  	$U_id=$User;
- 	//session_start();
- 	//$_SESSION['email']= $email;
+ 	session_start();
+  $_SESSION['email']=$email;
  	//$_SESSION['password']=$password;
- 	header("location:../public/userdashboard.php?U_id=$U_id");
+ //	var_dump($_SESSION);
+  header("location:../public/userdashboard.php?U_id=$U_id");
  }
   else{  
          session_start();  

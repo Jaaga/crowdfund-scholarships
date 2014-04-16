@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['email']))
+{
+  header("location:../public/usersignup.php");
+}
+?>
 <?php 
 include ('../model/student.php');
 include ('../model/user.php');
@@ -118,7 +124,15 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
               <li><a href="<?php echo $link; ?>">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
         </ul>
+<div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
 
+              <a href="../controller/logout.php" class="btn btn-danger">LOGOUT</a>
+
+              <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
+
+          </div>             
+        </div>
         
       </div>
     </div>
