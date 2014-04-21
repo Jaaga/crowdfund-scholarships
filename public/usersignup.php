@@ -82,16 +82,24 @@ if(isset($_POST['invalidemail'])){
 
 					<br>
 					<br>
-           <form action="../controller/userlogin.php" method="post">
+           <form action="../controller/userlogin.php" method="post" id="loginForm">
   					<div class="form-group">
   						<label class="control-label" for="textinput" style="color:black;">Email:</label>  
- 		 				<input  name="email" type="text" placeholder="Username" class="form-control input-md">
+ 		 				<input  name="email" type="text" placeholder="Username" class="form-control input-md"
+                data-bv-notempty="true"
+                data-bv-notempty-message="The last name is required and cannot be empty"
+                ata-bv-regexp="true"
+                data-bv-regexp-regexp="[a-zA-Z0-9_\.]+"
+                data-bv-regexp-message="The username can only consist of alphabetical, number, dot and underscore"
+            >
       				
   					</div>
   			
   					<div class="form-group">
 						<label class="control-label" for="textinput" style="color:black;">Password:</label> 			
-  						<input name="password" type="password" placeholder="Password" class="form-control input-md">
+  						<input name="password" type="password" placeholder="Password" class="form-control input-md"
+              data-bv-notempty="true"
+              data-bv-notempty-message="The password is required and cannot be empty">
   					</div>
 
   					<div class="form-group">
@@ -108,35 +116,53 @@ if(isset($_POST['invalidemail'])){
           You need to have an account to continue
           <br>
           <br>
-          <form action="../controller/createuser.php" method="post">
+          <form action="../controller/createuser.php" method="post" id="signupForm">
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
-              <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
+              <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" 
+              class="form-control input-md"
+              data-bv-notempty="true"
+              data-bv-notempty-message="The first name is required and cannot be empty" >
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Email:</label>  
               
-            <input  name="email" type="text" placeholder="Username" class="form-control input-md">
+            <input  name="email" type="text" placeholder="Username" class="form-control input-md"
+              data-bv-notempty="true"
+              data-bv-notempty-message="The last name is required and cannot be empty"
+              >
             <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
           </div>
 
           <div class="form-group">
-            <label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
-              
-            <input  name="email" type="text" placeholder="Confirm Username" class="form-control input-md">
-                
-          </div>
-
-            
-          <div class="form-group">
            <label class="control-label" for="textinput" style="color:black;">Password:</label> 
-            <input name="password" type="password" placeholder="Password" class="form-control input-md">
+            <input name="password" type="password" placeholder="Password" class="form-control input-md"
+             data-bv-notempty="true"
+             data-bv-notempty-message="The password is required and cannot be empty"
+
+             data-bv-identical="true"
+             data-bv-identical-field="confirmPassword"
+             data-bv-identical-message="The password and its confirm are not the same"
+
+             data-bv-different="true"
+             data-bv-different-field="username"
+             data-bv-different-message="The password cannot be the same as username">
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
-              <input name="password" type="password" placeholder="Password" class="form-control input-md">
+              <input name="confirmpassword" type="password" placeholder="Password" class="form-control input-md"
+             data-bv-notempty="true"
+             data-bv-notempty-message="The password is required and cannot be empty"
+
+             data-bv-identical="true"
+             data-bv-identical-field="confirmPassword"
+             data-bv-identical-message="The password and its confirm are not the same"
+
+             data-bv-different="true"
+             data-bv-different-field="username"
+             data-bv-different-message="The password cannot be the same as username">
           </div>
 
          
@@ -265,6 +291,13 @@ if(isset($_POST['invalidemail'])){
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="./dist/js/form-validation.js"></script>
+<script>
+$(document).ready(function() {
+    $('#signupForm').bootstrapValidator();
+});
+</script>
 
 </body>
 
