@@ -1,21 +1,13 @@
 /* Style for Home Page */
 
 body{
-	background-image:url("./public/images/white_carbonfiber_@2X.png");
+	background-image:url("./public/images/backb.jpg");
 	padding-left: 50px;
   	padding-right: 50px;
 	background-color:#fefeef;
 background-repeat:repeat;
 
 	}
-	
-	/*img {
-  	
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }*/
-    
 	/*--------------------------------------------
   This is the elevator-pitch on the home page/homepage
   ----------------------------------------------*/
@@ -65,96 +57,55 @@ This is the text above the apply and submit button/homepage
   	left: 650px;
   	color:white;
 	}
-  /*---------------------------------------------------*/
-
-
-	/*.student-pic {
-      height:550px;
-      }*/
-    /*.donation-amount {
-      width:100px;
-      display:inline;
-      }*/
-    /*.donation {
-      font-size:15pt;
-      display:inline;
-      }*/
-    /*.student-pic {
-      border:2px solid black;
-      
-      }*/
-
-    /*===============================================================
-    left work here, this is on the index page and the about us page
-    =================================================================*/
-      
-    .faq-content {
-      max-width:1000px;
-      text-align:justify;
-      margin:0 auto;
-      
-      }
-
-/* Style for StudentDashboard */
-
-    #viewprofile{
-    
-    /*margin-top:20px; */
-    float:right;
-    
-    
-    }
-
-    
+    /*----------------------
+      On student dashboard
+    -----------------------*/
     .sponsor_data{
       color:white;
       text-shadow: black 0.2em 0.2em 0.2em;
     }
 
-    .edit{
+  /*  .edit{
       float:right;
-    }
+    }*/
 
     
     
 
     
 
-    
+    /*===================================
+    I don't know where these classes are!
+    =====================================*/
 
-    #prework{
+   /* #prework{
       margin-top:50px;
-    }
+  
 
     .dashboard{
 
       float:right;
-    }
+    }*/
 
    /*orm{
      display:inline;
     } */
 
-    #student_dash{
-     background:url('./images/crowd_n.jpg');
-      height: 500px;
-      margin-top: 90px;
-      
-    }
+   
 
   /* Style for StudentProfile */
 
-  .col-md-3{
+  /*.col-md-3{
   padding-left: 60px;
-  }
+  }*/
 
   /*.icons{
   position: absolute;
   top: 130px;
   right: 100px;
   }*/
-.workstatus{
-  text-align: center;}
+/*.workstatus{
+  text-align: center;}*/
 
 /*
   ==========================================================

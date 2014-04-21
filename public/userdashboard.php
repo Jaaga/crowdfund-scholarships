@@ -13,7 +13,7 @@ session_start();
         include('../model/user.php');
         include ('../model/student.php');
 
-        $U_id=$_GET['U_id'];
+        $U_id=$_SESSION['U_id'];
         $row= userInfo($U_id);
         $email=$row['email'];
         $url=get_gravatar($email); 
@@ -89,7 +89,7 @@ session_start();
 
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">AllStudents</a></li>
+                <li><a href="listofstudents.php">AllStudents</a></li>
                 
            		</ul>
               <div class="navbar-collapse collapse">

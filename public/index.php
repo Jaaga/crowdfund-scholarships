@@ -182,46 +182,6 @@ if(!empty($_POST['user']))
     </div> 
 
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
-  
-    
-   
-  <!--  <div class="row">
-
-      <div class="col-md-12">
-
-        <img src="./images/jaaga-study1.png">
-
-        <div class="tagline">
-          <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
-        </div>
-
-       
-        <!-- Standard button -->
-
-  <!--       <div class="buttontext">
-         <h3>Apply for Scholarship</h3>
-        </div>
-
-        <div class="submitprofile-button">
-  
-          <a href="usersignup.php">
-          <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
-          </a> 
-        </div>
-        <!-- Standard button -->
-
-<!--        <div class="buttontext2">
-          <h3>View Scholarship Applications</h3>
-        </div>
-
-        <div class="viewprofile-button">
-          <a href="listofstudents.php">
-          <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
-          </a> 
-        </div>
-      </div>
-    </div>-->
-    <!--</div>-->
     <div class="image">
     <div class = "color">
              <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
@@ -410,7 +370,9 @@ if(!empty($_POST['user']))
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input id="password" name="password"type="password" class="form-control" id="password" placeholder="Password">
+              <input id="password" name="password" type="password" class="form-control" id="password" placeholder="Password" 
+                data-bv-notempty="true"
+                data-bv-notempty-message="The confirm password is required and cannot be empty"
             </div>
              <div class="modal-footer">
               <button type="submit" class="btn btn-success">Log In</button>
@@ -422,50 +384,6 @@ if(!empty($_POST['user']))
     </div>
   </div>
 </div>
-<!--
-  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
-        </div>
-
-        <div class="modal-body">
-          <div class="navbar-collapse collapse">
-              <form action="../controller/userlogin.php" method="post" class="form-horizontal>
-              
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Email:</label>  
-                    <div class="col-md-4">
-                      <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md"> 
-                    </div>
-                </div>
-  
-                
-                
-                <div class="form-group">
-                     
-                     <label class="col-md-4 control-label" for="textinput">Password:</label>
-
-                    <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
-                    </div>
-                </div> 
-
-                <div class="modal-footer">
-                   <button type="submit" class="btn btn-success">Log In</button>
-              </div>
-               
-              </form>
-          </div>
-        </div>
-
-               
-      </div>
-    </div>
-  </div>
--->
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
