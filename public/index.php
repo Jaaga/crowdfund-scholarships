@@ -182,46 +182,6 @@ if(!empty($_POST['user']))
     </div> 
 
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
-  
-    
-   
-  <!--  <div class="row">
-
-      <div class="col-md-12">
-
-        <img src="./images/jaaga-study1.png">
-
-        <div class="tagline">
-          <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
-        </div>
-
-       
-        <!-- Standard button -->
-
-  <!--       <div class="buttontext">
-         <h3>Apply for Scholarship</h3>
-        </div>
-
-        <div class="submitprofile-button">
-  
-          <a href="usersignup.php">
-          <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
-          </a> 
-        </div>
-        <!-- Standard button -->
-
-<!--        <div class="buttontext2">
-          <h3>View Scholarship Applications</h3>
-        </div>
-
-        <div class="viewprofile-button">
-          <a href="listofstudents.php">
-          <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
-          </a> 
-        </div>
-      </div>
-    </div>-->
-    <!--</div>-->
     <div class="image">
     <div class = "color">
              <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
