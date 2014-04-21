@@ -74,41 +74,38 @@ This is the text above the apply and submit button/homepage
 
     
 
-    
+    /*===================================
+    I don't know where these classes are!
+    =====================================*/
 
    /* #prework{
       margin-top:50px;
-    }*/
+  
 
     .dashboard{
 
       float:right;
-    }
+    }*/
 
    /*orm{
      display:inline;
     } */
 
-    #student_dash{
-     background:url('./images/crowd_n.jpg');
-      height: 500px;
-      margin-top: 90px;
-      
-    }
+   
 
   /* Style for StudentProfile */
 
-  .col-md-3{
+  /*.col-md-3{
   padding-left: 60px;
-  }
+  }*/
 
   /*.icons{
   position: absolute;
   top: 130px;
   right: 100px;
   }*/
-.workstatus{
-  text-align: center;}
+/*.workstatus{
+  text-align: center;}*/
 
 /*
   ==========================================================
