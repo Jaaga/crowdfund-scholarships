@@ -2,16 +2,7 @@
 include('../model/student.php');
 
 session_start();
-//if(isset($_SESSION['email'] && $_SESSION['password'])){
-   
-  // return true;
-//} 
-//else{
- // session_start();
-  //$_SESSION['email'] = '';
-  //$_SESSION['password']='';
-  //return false;
-//}
+$U_id=$_SESSION['U_id'];
       
  ?>
 
@@ -71,17 +62,15 @@ padding-top: 60px;
     
       <div class="navbar-header" style="height: 50px;">
     
-        <?php $U_id=$_GET['U_id']; ?> 
-
             <a class="navbar-brand" href="index.php">
 
             <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
+                <li><a href="listofstudents.php">Sponsor</a></li>
                 
-                <li><a href="userdashboard.php?U_id=<?php echo $U_id;?>">MyProfile</a>
+                <li><a href="userdashboard.php">MyProfile</a>
             </ul>
 
               
