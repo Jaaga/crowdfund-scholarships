@@ -28,9 +28,10 @@ $User=userLogin($email,$password);
  	$U_id=$User;
  	session_start();
   $_SESSION['email']=$email;
+  $_SESSION['U_id']=$U_id;
  	//$_SESSION['password']=$password;
- //	var_dump($_SESSION);
-  header("location:../public/userdashboard.php?U_id=$U_id");
+ //var_dump($_SESSION);
+  header("location:../public/userdashboard.php?");
  }
   else{  
          session_start();  
