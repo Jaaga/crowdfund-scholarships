@@ -110,8 +110,9 @@ if(!empty($_POST['user']))
 
     <div class="row" style="padding-top: 70px;">
 <?php foreach ($students as $student) {
+  $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
      ?>
-        <div class="col-md-4" >
+        <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">
             <h3 class="feature">Featured</h3>
             <img src=<?php echo $student['image_path']?> class="feature-image">
@@ -120,6 +121,7 @@ if(!empty($_POST['user']))
           </div>
           
         </div>
+        </a>
 <?php } ?>
     </div>
 

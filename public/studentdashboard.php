@@ -59,9 +59,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 	<link href="./dist/css/slider.css" rel="stylesheet">
 	<link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
 
-    <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -73,11 +73,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    </script>
+  </script>
 	
 
 	<style>
-	@font-face{
+	 @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
 
@@ -87,9 +87,10 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
          
 
     body{
-  background: url("./images/backb.jpg");
-  background-repeat:repeat;
-  }
+    background: url("./images/backb.jpg");
+    background-repeat:repeat;
+    padding-top: 80px;
+    }
 		#bg{
     	background:url('./images/chalkboard2.jpg');
     	border: 3 solid /*#33cc33*/#6E8B3D;
@@ -100,7 +101,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		font-family:'Cabin Sketch' cursive;
 		font-size: 27px;
 		}
-	</style>
+	</style>  
 </head>
 
 <body>

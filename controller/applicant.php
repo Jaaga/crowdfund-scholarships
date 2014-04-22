@@ -40,6 +40,8 @@ $row= createStudent($U_id,$sname,$gender,$email,$Phone_Number,$address,$pincode,
 
 if(is_array($row)){
       $S_id= $row['S_id'];
+      session_start();
+      $_SESSION['email']=$email;
 
       header("location:../public/studentdashboard.php?S_id=$S_id");  
 }
