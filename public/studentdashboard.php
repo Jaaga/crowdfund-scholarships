@@ -626,6 +626,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   	
       </div>
 
+      <!-- End -->
+
       <!-- Share my Profile -->
 
 
@@ -647,7 +649,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   </div>
       </div>
 
-      <!-->
+      <!-- End -->
 
 
   </div>

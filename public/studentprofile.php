@@ -128,12 +128,17 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 	<div class="container">
     	<div class="row">
-    		<div class="col-md-6" align="left" style="margin-top: -70px;">
-					<img src="./images/facebook-icon.png" width="25px"/>
-					<img src="./images/Twitter_logo.png" width="25px"/>
-					<img src="./images/linked-in.jpg" width="25px"/>
-
+    		
+      <!--
+        <div class="col-md-6" align="left" style="margin-top: -70px;">
+					
+         
+            <img src="./images/facebook-icon.png" width="25px"/>
+  					<img src="./images/Twitter_logo.png" width="25px"/>
+  				
 				</div>
+
+        -->
 
         	<div class="col-xs-7"  text-align="justify">
         		
@@ -360,6 +365,27 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		</ul>
   		</nav> 
 	</footer>
+
+  <!-- Share my profile Modal -->
+  <div class="modal fade" id="publicProfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Public Profile Link</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Share</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <!-- End -- >
 </body>
 
 </html>
