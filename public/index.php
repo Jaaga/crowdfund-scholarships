@@ -16,49 +16,27 @@ if(!empty($_POST['user']))
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
     
-  <style type="text/css">
+<style type="text/css">
 
    @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
-
-     /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');*/
          }
   body{
-   
-    padding-top: 80px;
+   padding-top: 80px;
   }
-  
-  
-    /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
 
-  
- 
-
-
-
-  img {
-    
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-  h2{
+ h2{
   text-align:center;
   }
 
-    .image{
+ .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
     height: 650px;
-  background-attachment: fixed;
+    background-attachment: fixed;
    margin: -70px;
-
-  }
-
-
- 
+    }
   </style>
 </head>
 

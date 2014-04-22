@@ -8,6 +8,7 @@ body{
 background-repeat:repeat;
 
 	}
+
 	/*--------------------------------------------
   This is the elevator-pitch on the home page/homepage
   ----------------------------------------------*/
@@ -58,9 +59,9 @@ This is the text above the apply and submit button/homepage
   	color:white;
 	}
 
-  /*-----------------
-  Featured student 
-  -------------------*/
+  /*-----------------------
+  Featured student content
+  --------------------*----*/
   .feature { 
     position:relative;
     color:#fff;
@@ -77,16 +78,15 @@ This is the text above the apply and submit button/homepage
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
-       .feature-image{
+  .feature-image{
       height:200px;
-       width:280px;
-          
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
+      width:280px;
+      margin-left:20px;
+      margin-right: 20px;
+      margin-bottom:20px;
     }
 
-      .header-faq {
+  .header-faq {
     /*This is the  header for FAQ(in the blue box)*/
   
     position:relative;
