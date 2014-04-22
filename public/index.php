@@ -30,69 +30,13 @@ if(!empty($_POST['user']))
     padding-top: 80px;
   }
   
-  .feature { 
-    position:relative;
-    color:#fff;
-    background:#3ea99f;
-    font-size:1.5em;
-    clear:both;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    text-align: center;
+  
     /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
 
   
-    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    }
-    .feature-image{
-      height:200px;
-       width:280px;
-          
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    }
+ 
 
-  .header-faq {
-    /*This is the  header for FAQ(in the blue box)*/
-  
-    position:relative;
-    color:#fff;
-    background:#3ea99f;
-    font-size:1.5em;
-    clear:both;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:0px;
-    font-size: 28px;
-    /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
-  
-    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-  }
-  .content-faq{
-    /*This is the actual content for FAQ(in the white box)*/
-  
-  
-    background:white;
-    color: black;
-    width: -100px;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    border-radius: 5px;
-    font-size: 18px;
-    line-height: 30px;
-  } 
+
 
   img {
     
@@ -104,8 +48,6 @@ if(!empty($_POST['user']))
   text-align:center;
   }
 
-
-
     .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
@@ -114,35 +56,8 @@ if(!empty($_POST['user']))
    margin: -70px;
 
   }
-  .color{
-    background-color: rgba(111, 101, 101, 0.5);
-    height: 650px;
-    font-family: arial;
-    color: white;
-    margin: 0px;
-  }
-  .leftButton{
-  position:absolute;
-  left: 200px;
-  bottom: 70px;
-  text-align: center;
 
-  }
-   
-  .rightButton{
-  position:absolute;
-  right: 200px;
-  bottom: 70px;
-  text-align: center;
-  }
-  .thought-bubble-background{
-    background-color: rgba(111, 101, 101, 1);
-    background-size: cover;
-    height: 1400px;
-    margin-left: -70px;
-    margin-right: -70px;
 
-  }
  
   </style>
 </head>
