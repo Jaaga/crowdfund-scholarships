@@ -30,69 +30,13 @@ if(!empty($_POST['user']))
     padding-top: 80px;
   }
   
-  .feature { 
-    position:relative;
-    color:#fff;
-    background:#3ea99f;
-    font-size:1.5em;
-    clear:both;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    text-align: center;
+  
     /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
 
   
-    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    }
-    .feature-image{
-      height:200px;
-       width:280px;
-          
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    }
+ 
 
-  .header-faq {
-    /*This is the  header for FAQ(in the blue box)*/
-  
-    position:relative;
-    color:#fff;
-    background:#3ea99f;
-    font-size:1.5em;
-    clear:both;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:0px;
-    font-size: 28px;
-    /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
-  
-    -moz-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -webkit-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-    box-shadow:2px 2px 0 rgba(0,0,0,0.1);
-  }
-  .content-faq{
-    /*This is the actual content for FAQ(in the white box)*/
-  
-  
-    background:white;
-    color: black;
-    width: -100px;
-    padding:10px 10px 10px 20px;
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
-    border-radius: 5px;
-    font-size: 18px;
-    line-height: 30px;
-  } 
+
 
   img {
     
@@ -104,8 +48,6 @@ if(!empty($_POST['user']))
   text-align:center;
   }
 
-
-
     .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
@@ -114,35 +56,8 @@ if(!empty($_POST['user']))
    margin: -70px;
 
   }
-  .color{
-    background-color: rgba(111, 101, 101, 0.5);
-    height: 650px;
-    font-family: arial;
-    color: white;
-    margin: 0px;
-  }
-  .leftButton{
-  position:absolute;
-  left: 200px;
-  bottom: 70px;
-  text-align: center;
 
-  }
-   
-  .rightButton{
-  position:absolute;
-  right: 200px;
-  bottom: 70px;
-  text-align: center;
-  }
-  .thought-bubble-background{
-    background-color: rgba(111, 101, 101, 1);
-    background-size: cover;
-    height: 1400px;
-    margin-left: -70px;
-    margin-right: -70px;
 
-  }
  
   </style>
 </head>
@@ -182,46 +97,6 @@ if(!empty($_POST['user']))
     </div> 
 
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
-  
-    
-   
-  <!--  <div class="row">
-
-      <div class="col-md-12">
-
-        <img src="./images/jaaga-study1.png">
-
-        <div class="tagline">
-          <h2>Philanthropists leverage our trusted crowdfunding platform to provide financial aid to aspiring students empowering them to pay it forward</h2>
-        </div>
-
-       
-        <!-- Standard button -->
-
-  <!--       <div class="buttontext">
-         <h3>Apply for Scholarship</h3>
-        </div>
-
-        <div class="submitprofile-button">
-  
-          <a href="usersignup.php">
-          <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
-          </a> 
-        </div>
-        <!-- Standard button -->
-
-<!--        <div class="buttontext2">
-          <h3>View Scholarship Applications</h3>
-        </div>
-
-        <div class="viewprofile-button">
-          <a href="listofstudents.php">
-          <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
-          </a> 
-        </div>
-      </div>
-    </div>-->
-    <!--</div>-->
     <div class="image">
     <div class = "color">
              <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
@@ -412,7 +287,9 @@ if(!empty($_POST['user']))
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input id="password" name="password"type="password" class="form-control" id="password" placeholder="Password">
+              <input id="password" name="password" type="password" class="form-control" id="password" placeholder="Password" 
+                data-bv-notempty="true"
+                data-bv-notempty-message="The confirm password is required and cannot be empty"
             </div>
              <div class="modal-footer">
               <button type="submit" class="btn btn-success">Log In</button>
@@ -424,50 +301,6 @@ if(!empty($_POST['user']))
     </div>
   </div>
 </div>
-<!--
-  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel">Login into Crowdfund</h4>
-        </div>
-
-        <div class="modal-body">
-          <div class="navbar-collapse collapse">
-              <form action="../controller/userlogin.php" method="post" class="form-horizontal>
-              
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Email:</label>  
-                    <div class="col-md-4">
-                      <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md"> 
-                    </div>
-                </div>
-  
-                
-                
-                <div class="form-group">
-                     
-                     <label class="col-md-4 control-label" for="textinput">Password:</label>
-
-                    <div class="col-md-4">
-                      <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
-                    </div>
-                </div> 
-
-                <div class="modal-footer">
-                   <button type="submit" class="btn btn-success">Log In</button>
-              </div>
-               
-              </form>
-          </div>
-        </div>
-
-               
-      </div>
-    </div>
-  </div>
--->
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>

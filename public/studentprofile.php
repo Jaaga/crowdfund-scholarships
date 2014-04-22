@@ -36,11 +36,11 @@ $U_id=$_GET['U_id'];
 	background: url("./images/backb.jpg");
 	background-repeat:repeat;
 	}
-.sponsor_data{
-/*font-family:'KG Second Chances Sketch- Regular';*/
-font-family: 'KGSecondChancesSketch', Arial, sans-serif;
-font-size: 27px;
-}
+  .sponsor_data{
+  /*font-family:'KG Second Chances Sketch- Regular';*/
+  font-family: 'KGSecondChancesSketch', Arial, sans-serif;
+  font-size: 27px;
+  }
 
 	</style>
 </head>
@@ -116,8 +116,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
  ?>
 
 	<div class="container" width="50px;" style="display: inline">
-<h1 align="center" style="font-family:'KGSecondChancesSketch'; 
-font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
+    <h1 align="center" style="font-family:'KGSecondChancesSketch'; 
+    font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 	
 
 		

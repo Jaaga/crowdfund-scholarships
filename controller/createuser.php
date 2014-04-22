@@ -26,12 +26,12 @@ else{
       $User=createUser($name,$password,$email);
       if(is_numeric($User)){
         $U_id=$User;
-        //session_start();
-			  //$_SESSION['email'] = $email;
-			  //$_SESSION['password'] = $password;
+        session_start();
+			  $_SESSION['email'] = $email;
+			  $_SESSION['U_id'] = $U_id;
 			  //$_SESSION['time'] = time();
 
-			  header("location:../public/userdashboard.php?U_id=$U_id");
+			  header("location:../public/userdashboard.php");
       }
       else{ 
            $User="Email already exists";

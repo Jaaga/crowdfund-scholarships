@@ -13,7 +13,7 @@ session_start();
         include('../model/user.php');
         include ('../model/student.php');
 
-        $U_id=$_GET['U_id'];
+        $U_id=$_SESSION['U_id'];
         $row= userInfo($U_id);
         $email=$row['email'];
         $url=get_gravatar($email); 
@@ -89,7 +89,7 @@ session_start();
 
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                <li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">AllStudents</a></li>
+                <li><a href="listofstudents.php">AllStudents</a></li>
                 
            		</ul>
               <div class="navbar-collapse collapse">
@@ -166,7 +166,7 @@ $noofStudents=count($students);
 
           	 <h3><?php echo $student['sname'];?></h3>
           	 <p ><?php echo $student['para'];?> </p></a>
-
++++
           	 <div class="progress progress-striped">
                 
           		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
