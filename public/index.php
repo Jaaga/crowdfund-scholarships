@@ -77,8 +77,8 @@ if(!empty($_POST['user']))
     <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
     <div class="image">
     <div class = "color">
-             <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:22px; padding-top: 0px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+             <h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:22px; padding: 0 0 0 20px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
     
     
