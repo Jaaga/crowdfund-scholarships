@@ -120,6 +120,7 @@ include ('../model/student.php');
 <?php 
 $students=getStudents($row['U_id']); 
 $U_id=$row['U_id'];
+
 $noofStudents=count($students);
 ?>
 		
@@ -129,9 +130,10 @@ $noofStudents=count($students);
     	<div class="col-md-12" >
      		<div class="well" style= "height: 265px;">
 
-        		<img src="<?php 
-                    if(empty($row['image'])){ echo $url;}
-                    else{ echo $row['image'];}              
+        		<img src="<?php
+            if(file_exists($row['image'])){
+                             echo $row['image']; }
+                    else{ echo $url;}              
              ?>" alt="Please Update Your Picture" width="100px" height="100px" style="margin:10px;margin-right:30px;"/>
         		<button class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;" data-toggle="modal" data-target="#myModal">
             <h4>Edit Profile</h4></button>
