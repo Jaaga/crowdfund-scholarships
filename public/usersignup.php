@@ -74,7 +74,11 @@ if(isset($_POST['invalidemail'])){
 <div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
 	<div class="row" style="padding-top: 10px; padding-bottom:20px">
 		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
-		
+ <?php   if(isset($_GET['id'])){
+  $wrong="Your are not Loggedin";
+?>
+    <div class="alert alert-danger"><?php echo $wrong; ?></div>
+	<?php } ?>	
 			<div class="col-md-4">
 				<div class="well">
 					<h2>Login</h2>

@@ -1,26 +1,19 @@
-
-<html>
-<head><title>Preferences Set</title></head>
-<body>
 <?php
-session_start();
-$colors = array(
-  'black'=> "#000000",
-   'white'=> "#ffffff",
-    'red'=> "#ff0000",
-     'blue'=> "#0000ff"
-);
-
-
-$backgroundName = $_POST['background'];
-$foregroundName = $_POST['foreground'];
-$_SESSION['backgroundName'] = $backgroundName;
-$_SESSION['foregroundName'] = $foregroundName;
-?>
-<p>Thank you. Your preferences have been changed to:<br />
-Background: <?php echo $backgroundName; ?><br />
-Foreground: <?php echo $foregroundName; ?></p>
-<p>Click <a href="test.php">here</a> to see the preferences
-in action.</p>
-</body>
-</html>
+include('dbcon.php'); 
+$db=dbopen();
+ 		$row=$db->query("SELECT * from user where email='abhinay302@gmail.com'");
+ 		$result=mysqli_fetch_array($row);
+ 		$U_id=$result['U_id'];
+ 		
+  		$sql = "INSERT INTO donation (U_id,S_id,amount)
+ 		VALUES ('$U_id',2,600)";
+ 		$result1 = $db->query($sql);
+		if(!$result1)
+		{
+			echo "sorry your donations were not accepted";
+		}
+		else
+		{
+			echo "Thank You for Donating";
+			//redirectToStudent($D_id);
+		}

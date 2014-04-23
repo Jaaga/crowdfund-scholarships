@@ -81,6 +81,16 @@ if(!empty($_POST['user']))
         <ul class="nav navbar-nav">
               <li><a href="listofstudents.php">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
+              <?php if(isset($_COOKIE['email']))
+              { ?>
+                 <li><a href= "userdashboard.php">MyProfile</a></li></ul>
+                  <div class="navbar-form navbar-right">
+
+              <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+
+          </div>
+              <?php
+              }              else{ ?>
         </ul>
 
         <div class="navbar-collapse collapse">
@@ -91,7 +101,7 @@ if(!empty($_POST['user']))
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 
           </div>              
-        </div>
+        </div><?php } ?>
       </div>
       </div>
     </div> 
@@ -132,7 +142,7 @@ if(!empty($_POST['user']))
 
     <div class="row" style="padding-top: 70px;">
 <?php foreach ($students as $student) {
-  $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
+  $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">

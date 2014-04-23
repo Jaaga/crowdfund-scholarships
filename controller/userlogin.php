@@ -29,9 +29,11 @@ $User=userLogin($email,$password);
  	session_start();
   $_SESSION['email']=$email;
   $_SESSION['U_id']=$U_id;
+  setcookie("email", "$email", time()+3600, "/","", 0);
+  // setcookie("U_id", "$U_id", time()+3600, "/", "",  0);
  	//$_SESSION['password']=$password;
  //var_dump($_SESSION);
-  header("location:../public/userdashboard.php?");
+  header("location:../public/userdashboard.php");
  }
   else{  
          session_start();  

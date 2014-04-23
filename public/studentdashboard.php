@@ -9,9 +9,9 @@ if(!isset($_SESSION['email']))
 include ('../model/student.php');
 include ('../model/user.php');
 
-$S_id=$_GET['S_id'];
+$S_id=$_SESSION['S_id'];
     
-
+$_SESSION['email']=$_SESSION['email'];
       $student= getStudent($S_id);
       $U_id=$student['U_id'];
 
@@ -119,11 +119,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
           <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
         </div>
 
-        <?php $link='listofstudents.php?U_id='.$U_id.''; ?>
+        
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-                <li><a href="<?php echo $link; ?>">Sponsor</a></li>
-                <li><a href= "#hiw">How it Works</a></li>
+                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href= "userdashboard.php">MyProfile</a></li>
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">

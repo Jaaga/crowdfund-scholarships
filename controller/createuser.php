@@ -59,8 +59,9 @@ else{
 
       if(is_numeric($User)){
         $U_id=$User;
-        //session_start();
-        //$_SESSION['email'] = $email;
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['U_id'] = $U_id;
         //$_SESSION['password'] = $password;
         //$_SESSION['time'] = time(); ?>
      <!DOCTYPE html>
