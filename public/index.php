@@ -1,9 +1,7 @@
 <?php include('../model/student.php');
+include('../model/user.php');
 
-if(!empty($_POST['user']))
-{
-   $Invalid=$_POST['user'];
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +57,22 @@ if(!empty($_POST['user']))
         <ul class="nav navbar-nav">
               <li><a href="listofstudents.php">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
+         <?php if(isset($_COOKIE["email"])){ 
+                  $email=$_COOKIE['email'];
+                 $whois=whois($email);
+                ?> 
+                <li><a href="userdashboard.php">UserDashboard</a>
+
+                <?php if(is_numeric($whois)){ ?>
+                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+               <?php } ?>
+                </ul> 
+                 <div class="navbar-form navbar-right">
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+
+          </div>           
+          <?php }
+                 else{ ?>
         </ul>
 
         <div class="navbar-collapse collapse">
@@ -69,13 +83,13 @@ if(!empty($_POST['user']))
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 
           </div>              
-        </div>
+        </div><?php } ?>
       </div>
       </div>
     </div> 
 
-    <div class="container">
 
+    <div class="container">
       <div class="row">
         <div class="col-lg-12"> 
           <div class="image">
@@ -114,7 +128,7 @@ if(!empty($_POST['user']))
 
     <div class="row" style="padding-top: 70px;">
 <?php foreach ($students as $student) {
-  $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
+  $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">
@@ -262,17 +276,26 @@ if(!empty($_POST['user']))
       <div class="modal-body">
         <div class="row">
          <div class="col-md-6" style="margin-left:130px;">
-          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm">
+          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm" 
+          data-toggle="validator">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input id="email" name="email" type="email" class="form-control" name="email" placeholder="Enter email">
+              <label >Email address</label>
+              <input id="email" name="email" type="email" class="form-control" name="email" 
+              placeholder="Enter email" data-error="Invalid Email Address" required>
+              <div class="help-block with-errors"></div>
             </div>
+
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input id="password" name="password" type="password" class="form-control" id="password" placeholder="Password" 
-                data-bv-notempty="true"
-                data-bv-notempty-message="The confirm password is required and cannot be empty"
+            <label class="control-label" for="textinput" style="color:black;">Password:</label>       
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
             </div>
+            <!--<div class="form-group">
+              <label class="control-label" for="textinput" style="color:black;">Password</label>
+              <input name="password" type="password" id="password" placeholder="Password">
+              <span class="help-block with-errors"></span>
+            </div>-->
              <div class="modal-footer">
               <button type="submit" class="btn btn-success">Log In</button>
              </div>
@@ -286,8 +309,7 @@ if(!empty($_POST['user']))
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
-  <script type="text/javascript" src="./dist/js/form-validation.js"></script>
+  <script type="text/javascript" src="./dist/js/validator.js"></script>
 </body>
 
 </html> 

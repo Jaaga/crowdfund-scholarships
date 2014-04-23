@@ -22,12 +22,12 @@ if(isset($_POST['S_id']))
   }
 
 if(empty($Phone_Number) && empty($address) && empty($para) && empty($pic)){
-	header("location:../public/studentdashboard.php?S_id=$S_id");
+	header("location:../public/studentdashboard.php");
 }
 else{
 $Id=updateStudent($S_id,$Phone_Number,$address,$para,$pic);
 
-header("location:../public/studentdashboard.php?S_id=$Id");
+header("location:../public/studentdashboard.php");
 }
 
 }

@@ -28,7 +28,8 @@ else{
         $U_id=$User;
         session_start();
 			  $_SESSION['email'] = $email;
-			  $_SESSION['U_id'] = $U_id;
+			 // $_SESSION['U_id'] = $U_id;
+        setcookie("email", "$email", time()+3600, "/","", 0);
 			  //$_SESSION['time'] = time();
 
 			  header("location:../public/userdashboard.php");
@@ -59,8 +60,7 @@ else{
 
       if(is_numeric($User)){
         $U_id=$User;
-        //session_start();
-        //$_SESSION['email'] = $email;
+        
         //$_SESSION['password'] = $password;
         //$_SESSION['time'] = time(); ?>
      <!DOCTYPE html>

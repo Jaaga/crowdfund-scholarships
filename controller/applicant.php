@@ -41,9 +41,11 @@ $row= createStudent($U_id,$sname,$gender,$email,$Phone_Number,$address,$pincode,
 if(is_array($row)){
       $S_id= $row['S_id'];
       session_start();
-      $_SESSION['email']=$email;
+      $_SESSION['S_id']=$S_id;
+      setcookie("email", "$email", time()+3600, "/","", 0);
 
-      header("location:../public/studentdashboard.php?S_id=$S_id");  
+      //$email=$_SESSION['email'];
+      header("location:../public/studentdashboard.php");  
 }
 else{
       
