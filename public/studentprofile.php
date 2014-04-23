@@ -174,11 +174,15 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 					
 						<br>
 
-					     <form action="donate.php" method="post">
+					     <form action="donate.php" method="post" data-toggle="validator">
 					     <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
-						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
-							<input name="amount" type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
+						
+            <div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
+              style="height: 50px; " pattern="([0-9]){1,10}" >
+              <div class="help-block with-errors"></div>
+
                     	</div>
 						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
 						</form>
@@ -395,6 +399,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   </div>
 
     <!-- End -- >
+
+    <script type="text/javascript" src="./dist/js/validator.js"></script>
 </body>
 
 </html>
