@@ -152,9 +152,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		
 	</div>
 
-	<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
-    <img src="./images/facebook-icon.png" width="25px"/>
-</a>
+	
 
 	<div class="container">
     	<div class="row">
@@ -163,7 +161,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <div class="col-md-6" align="left" style="margin-top: -70px;">
 					
          
-            <img src="./images/facebook-icon.png" width="25px"/>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
+    <img src="./images/facebook-icon.png" width="25px"/>
+</a>
   					<img src="./images/Twitter_logo.png" width="25px"/>
             <img src="./images/linked-in.jpg" width="25px"/>
   				
