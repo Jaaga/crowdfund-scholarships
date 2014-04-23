@@ -1,6 +1,87 @@
 crowdfund-scholarships
 ======================
 
-This is for people in the Jaaga Study program - http://jaaga.in/study - to create a platform for crowdfunding student scholarships 
+This is for people in the Jaaga Study program - http://jaaga.in/study - to create a platform for crowdfunding student scholarships .
+A. SETUP GIT AND PULL REPO. FROM GITHUB(Pull,Push).
+
+     1. Setup your Git:
+
+          $ git config --global user.name "XXXXX"
+          $ git config --global user.email XXXX@example.com 
+          
+     -> Simple follow this link before cloning: https://help.github.com/articles/generating-ssh-keys     
+
+     2. How to Pull Repo. from GITHUB.(Remember, You should pull this Repo. insde the /var/www/ Directory)
+          
+          $ cd /var/www
+          $ git clone git@github.com:Jaaga/crowdfund-scholarships.git
+
+     3.You have to add Remote, where you can push your changes:
+   
+          $ git remote add origin https://github.com/Jaaga/crowdfund-scholarships.git
+
+          Note: you can change "origin" to any other name you like.
+
+     4. Git init,add,commit,pull and push commands:
+
+          $ git init
+          $ git add .
+          $ git commit -m "some msg"
+          $ git pull origin master
+          $ git push origin master
+          $ git remote rm origin  // only if remote is already exists.
+
+          Note: origin master is optional is some cases.
+
+B. InstallING LAMP:
+     
+     1. You can install LAMP with command:
+         $ sudo apt-get install lamp-server^
+
+              or
+      You can follow instruction provided here:
+      https://www.digitalocean.com/community/articles/how-to-install-linux-apache-mysql-php-lamp-stack-on ubuntu
+
+     2. One important thing to take care of, by defautl mysqli() is not configured for PHP, so we have to add some changes to php.ini file and  with the command below:
+        
+         $ sudo subl /etc/php5/apache2/php.ini
+
+             add line "extension=mysqli.so" somewhere in line 859 just below "extension=mysql.so"
+             this will enable user to use mysqli syntax inside PHP.
+
+     3. Run Your project inside browser by going to the link: 
+
+                  localhost/crowdfund-scholarships/index.php
+
+C. Import DB inside Mysql:
+
+     1. move inside the dir. /var/www/crowdfund-scholarships/     // If LearnEmp.sql is present here, which is obvious
+     2. then run :
+        $ mysql -u root -p 
+      
+        mysql > source LearnEmp.sql    // This will create a DB with all tables inside it.
+   
+   Export DB from Mysql:
+
+     1. If you have made some changes to DB,you can import this DB into a .sql file with command from terminal:
+
+     Move into the Dir. "/var/www/crowdfund-scholarships" if you want to export .sql file inside your project.  
+
+     /var/www/crowd..$ mysqldump -u root -p DB_name > LearnEmp.sql   // You can change name but DB_name should point the 
+
+D. command for streaming the apache error log 
+tail -f /var/log/apache2/error.log
+
+
+E. DB you wanted to export 
+
+F. IF NOT ABLE TO REMOVE DATA FROM MYSQL,(TRUNCATE) FOLLOW THESE STEPS:
+    Inside MySql terminal:
+
+    mysql>  SET FOREIGN_KEY_CHECKS = 0; -- Disable foreign key checking.
+    mysql>  TRUNCATE TABLE table_name;
+    mysql>  TRUNCATE TABLE table_name;
+    mysql>  SET FOREIGN_KEY_CHECKS = 1; -- Enable foreign key checking.
+
 
 
