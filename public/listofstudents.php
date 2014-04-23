@@ -1,5 +1,6 @@
 <?php 
 include('../model/student.php');
+include('../model/user.php');
 session_start();
 
 if(isset($_COOKIE['email'])){
@@ -74,8 +75,15 @@ padding-top: 60px;
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-               <?php if(isset($_COOKIE["email"])){ ?> 
-                <li><a href="userdashboard.php">MyProfile</a></ul>
+               <?php if(isset($_COOKIE["email"])){ 
+                 $whois=whois($email);
+                ?> 
+                <li><a href="userdashboard.php">UserDashboard</a>
+                <?php if(is_numeric($whois)){ ?>
+                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+               <?php } ?>
+                </ul>
+
                   <div class="navbar-form navbar-right">
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
 

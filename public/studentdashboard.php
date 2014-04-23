@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['email']))
+if(!isset($_COOKIE['email']))
 {
   header("location:../public/usersignup.php");
 }
@@ -10,8 +10,6 @@ include ('../model/student.php');
 include ('../model/user.php');
 
 $S_id=$_SESSION['S_id'];
-    
-$_SESSION['email']=$_SESSION['email'];
       $student= getStudent($S_id);
       $U_id=$student['U_id'];
 
@@ -124,7 +122,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-                <li><a href= "userdashboard.php">MyProfile</a></li>
+
+                <li><a href= "userdashboard.php">UserDashboard</a></li>
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">

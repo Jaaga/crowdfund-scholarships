@@ -3,6 +3,9 @@ if(isset($_POST['invalidemail'])){
   $Invalidemail=$_POST['invalidemail'];
   $name=$_POST['name'];
 }
+if(isset($_COOKIE['email'])){
+  header("location:../public/index.php?id=x");
+}
 
 ?>
 <!DOCTYPE html>
@@ -75,7 +78,7 @@ if(isset($_POST['invalidemail'])){
 
 	<div class="row" style="padding-top: 10px; padding-bottom:20px">
 		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
- <?php   if(isset($_GET['id'])){
+ <?php   if($_GET['id']=='x'){
   $wrong="Your are not Loggedin";
 ?>
     <div class="alert alert-danger"><?php echo $wrong; ?></div>
@@ -150,7 +153,7 @@ if(isset($_POST['invalidemail'])){
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
-              <input name="password" type="password" placeholder="Password" class="form-control input-md">
+              <input name="conf-password" type="password" placeholder="Password" class="form-control input-md">
           </div>
 
          
