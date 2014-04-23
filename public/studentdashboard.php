@@ -638,7 +638,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <h4 class="modal-title" id="myModalLabel">Public Profile Link</h4>
       </div>
       <div class="modal-body">
-        <a href="studentprofile.php?S_id= <?php echo $S_id; ?>"> http://localhost/public/studentprofile.php?S_id=<?php echo $S_id; ?> </a>
+        <a href="http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"> MY PROFILE LINK </a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -61,8 +61,21 @@ if(isset($_COOKIE['email']))
         	<div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-               <?php if(isset($_COOKIE["email"])){ ?> 
-                <li><a href="userdashboard.php">MyProfile</a><?php }
+               <?php if(isset($_COOKIE["email"])){
+                  $email=$_COOKIE['email'];
+                 $whois=whois($email);  
+                ?> 
+                <li><a href="userdashboard.php">UserDashboard</a>
+                <?php if(is_numeric($whois)){ ?>
+                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+               <?php } ?>
+                </ul> 
+                 <div class="navbar-form navbar-right">
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+
+          </div>   
+
+                <?php }
                 else{ ?>
             </ul>
             <div class="navbar-collapse collapse">
