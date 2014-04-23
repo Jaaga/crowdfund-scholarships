@@ -144,29 +144,37 @@ padding-top: 60px;
                 </p>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php //echo $profilelink; ?>">Donate</a></div>-->
-        <form method="POST" action="donate.php">
+      <form method="POST" action="donate.php" data-toggle="validator">
           <input type="hidden" name="email" value="<?php echo $email ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
           
-          <!--<div class="col-lg-6">-->
+          
 
-         <div class="col-md-8">
+          <div class="col-md-8" >
 
-            <input type="text" name="amount" placeholder="$ " class="form-control input-md" > 
-
+            <input name="amount" type="text" placeholder="$ "
+             class="form-control input-md" pattern="([0-9]){1,10}"
+            data-match-error="Please enter numerical value" > 
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="col-md-4">
+
+          <div class="col-md-4" >
+          
             
               <!--<div class="col-lg-6">-->
-                <input type="submit" value="Donate" class="btn btn-primary">
-
-                             
+                <input type="submit" value="Donate" class="btn btn-primary">                
+         
           </div>
 
       </form>
+    </div>
+
+
+
       </div>
-      </div></div>
+
+      </div>
   <?php 
        }
 
@@ -191,7 +199,11 @@ padding-top: 60px;
         <a href="#contact">Contact</a>  
       </ul>
     </nav> 
-  </footer> 
+  </footer>
+
+
+
+    <script type="text/javascript" src="./dist/js/validator.js"></script> 
 </body>
 
 </html> 

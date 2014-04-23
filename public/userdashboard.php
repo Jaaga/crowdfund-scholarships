@@ -148,7 +148,7 @@ $noofStudents=count($students);
 
   	<!-- Heading for Donated list row-->
   	<div class="row">
-    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row['name'];?> Donated Student List</h1>
+    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row['name'];?>'s Donated Student List</h1>
 
     	<br>  
     </div>
@@ -186,18 +186,22 @@ $noofStudents=count($students);
               </p>
       
               <div class="row">
-              <form method="POST" action="donate.php">
+              <form method="POST" action="donate.php" data-toggle="validator">
                 <input type="hidden" name="email" value="<?php echo $email ; ?>" >
                 <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
+                
                 <div class="col-md-8">
 
-                <input type="text" name="amount" placeholder="$ " class="form-control input-md" > 
+                <input type="text" name="amount" placeholder="$ " class="form-control input-md"
+                pattern="([0-9]){1,10}" data-match-error="Please enter numerical value" > 
+                <div class="help-block with-errors"></div> 
                 </div>
 
                 <div class="col-md-4">
             
                 <!--<div class="col-lg-6">-->
-                <input type="submit" value="Donate" class="btn btn-primary">                 
+                <input type="submit" value="Donate" class="btn btn-primary"> 
+                               
                 </div>
               </form>
               </div>
@@ -301,6 +305,8 @@ $noofStudents=count($students);
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./dist/js/validator.js"></script>
+
 
 </body>
 
