@@ -5,8 +5,7 @@
   <title>About Us</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
   <link href="jumbotron.css" rel="stylesheet">
-    
-    <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+  <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
     
 <style type="text/css">
 @font-face{
@@ -103,25 +102,37 @@ h4:before{
 
             <br>
           <br>
-          <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-circle">
-            
+          
+      <a href="#" id="stephanie" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+      <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-circle">
+      </a>
+      
+      <a href="#" id="manoj" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">     
               <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="Manoj" class="img-circle">
-            
+      </a>
+      <a href="#" id="abhinay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">     
               <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-circle">
+              </a>
+              <a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
 
               <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-circle">
+              </a>
 
               <br>
               <br>
+              <a href="#" id="vaibhav" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
 
               <img src="./images/vaibhav.jpg" style="height:100px"  alt="Vaibhav" class="img-circle" >
-
+              </a>
+              <a href="#" id="sai" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
               <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="Sai" class="img-circle">
-
+              </a>
+              <a href="#" id="rajeef" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
               <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="Rajeef" class="img-circle" >
-
+              </a>
+              <a href="#" id="sujay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
               <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="Sujay" class="img-circle">
-
+              </a>
               <br>
             </div>
         </article>
@@ -129,10 +140,8 @@ h4:before{
     </div>
     <br>
 
-
+  <footer style="text-align:center">
   <hr>
-
-  <footer class="footer" style="text-align:center">
       <nav>
         <ul>
           <a href="index.php">Home </a> |
@@ -144,6 +153,35 @@ h4:before{
         </ul>
       </nav> 
   </footer>
+<script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="./dist/js/bootstrap.js"></script>
+<script type="text/javascript">
+   $(function ()  
+{ $("#stephanie").popover({title: 'Stephanie Brownee', content: "It's so simple to create a tooltop for my website!"});  
+});
+   $(function ()  
+{ $("#manoj").popover({title: 'Manoj Kumar', content: "It's so simple to create a tooltop for my website!"});  
+});
+ $(function ()  
+{ $("#abhinay").popover({title: 'Abhinay ', content: "It's so simple to create a tooltop for my website!"});  
+});
+  $(function ()  
+{ $("#sushil").popover({title: 'Sushil', content: "It's so simple to create a tooltop for my website!"});  
+});
+ $(function ()  
+{ $("#vaibhav").popover({title: 'Vaibhav Mule', content: "It's so simple to create a tooltop for my website!"});  
+});
+  $(function ()  
+{ $("#sai").popover({title: 'Sai Prashanth', content: "It's so simple to create a tooltop for my website!"});  
+});
+   $(function ()  
+{ $("#rajeef").popover({title: 'Rajeef MK', content: "It's so simple to create a tooltop for my website!"});  
+});
+    $(function ()  
+{ $("#sujay").popover({title: 'Sujay Datta', content: "It's so simple to create a tooltop for my website!"});  
+});
+</script> 
 </body>
+
 
 </html> 

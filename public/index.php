@@ -1,10 +1,7 @@
 <?php include('../model/student.php');
 include('../model/user.php');
 
-if(!empty($_POST['user']))
-{
-   $Invalid=$_POST['user'];
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -92,8 +89,8 @@ if(!empty($_POST['user']))
     </div> 
   </div>
 
-    <div class="container">
 
+    <div class="container">
       <div class="row">
         <div class="x">
         <div class="col-lg-12"> 
