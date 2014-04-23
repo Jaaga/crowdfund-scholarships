@@ -133,7 +133,7 @@ $noofStudents=count($students);
             if(file_exists($row['image'])){
                              echo $row['image']; }
                     else{ echo $url;}              
-             ?>" alt="Please Update Your Picture" width="100px" height="100px" style="margin:10px;margin-right:30px;"/>
+             ?>" alt="Please Update Your Picture" style="height: auto; width: auto; max-width: 40%; max-height: 200px;"/>
         		<button class="btn btn-success" style="font-family: verdana; float:right; margin-right:50px; width:150px; margin-top:20px;" data-toggle="modal" data-target="#myModal">
             <h4>Edit Profile</h4></button>
             
