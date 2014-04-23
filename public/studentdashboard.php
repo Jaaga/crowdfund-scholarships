@@ -59,9 +59,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 	<link href="./dist/css/slider.css" rel="stylesheet">
 	<link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
 
-    <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
+  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
   </script>
-<script type="text/javascript">
+  <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -73,11 +73,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    </script>
+  </script>
 	
 
 	<style>
-	@font-face{
+	 @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
 
@@ -87,9 +87,10 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
          
 
     body{
-  background: url("./images/backb.jpg");
-  background-repeat:repeat;
-  }
+    background: url("./images/backb.jpg");
+    background-repeat:repeat;
+    padding-top: 80px;
+    }
 		#bg{
     	background:url('./images/chalkboard2.jpg');
     	border: 3 solid /*#33cc33*/#6E8B3D;
@@ -100,7 +101,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		font-family:'Cabin Sketch' cursive;
 		font-size: 27px;
 		}
-	</style>
+	</style>  
 </head>
 
 <body>
@@ -149,9 +150,12 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     			<div class="col-lg-3" align="left"  >
     			
 
+              <a data-toggle="modal" data-target="#shareProfile">
     					<img src="./images/facebook-icon.png" width="25px"/>
+
     					<img src="./images/Twitter_logo.png" width="25px"/>
     					<img src="./images/linked-in.jpg" width="25px"/>
+              </a>
     					&nbsp
     			</div>
 
@@ -565,9 +569,6 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       </div>
       <!-- End -->
 
-    
-         
-
       <!-- Modal for Mystory -->
     	
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -624,6 +625,31 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		</div>
   	
       </div>
+
+      <!-- End -->
+
+      <!-- Share my Profile -->
+
+
+      <div class="modal fade" id="shareProfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Public Profile Link</h4>
+      </div>
+      <div class="modal-body">
+        <a href="studentprofile.php?S_id= <?php echo $S_id; ?>"> http://localhost/public/studentprofile.php?S_id=<?php echo $S_id; ?> </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Share</button>
+      </div>
+    </div>
+  </div>
+      </div>
+
+      <!-- End -->
 
 
   </div>

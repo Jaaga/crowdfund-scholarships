@@ -7,7 +7,7 @@ if(isset($_POST['invalidemail'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	
+  
 <head>
   <title>Signup / Login</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
@@ -24,54 +24,55 @@ if(isset($_POST['invalidemail'])){
       src: url('fonts/CabinSketch-Regular.otf');*/
     }
 
- 	body{
-		background: url("./images/backb.jpg");
-		background-repeat:repeat;
-		padding-top: 60px; }
+  body{
+    background: url("./images/backb.jpg");
+    background-repeat:repeat;
+    padding-top: 60px; }
 
-	}
+  }
 
 
   h2{
-  		font-family:'Cabin Sketch' cursive;
-		font-size: 40px;
-		text-align:left;
-	}
+      font-family:'Cabin Sketch' cursive;
+    font-size: 40px;
+    text-align:left;
+  }
 
-	
+  
 </style>
 
 <body>
 
 
-  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    	<div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
     
-    		<div class="navbar-header" style="height: 50px;">
+        <div class="navbar-header" style="height: 50px;">
     
           
-            	<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
-        	</div>
+              <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+          </div>
          
-        	<div class="collapse navbar-collapse">
+          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
             </ul>
 
-        	
+          
         </div>
     
             </div><!--/.navbar-collapse -->
-        	</div>
-    	</div>
+          </div>
+      </div>
     </div>
 
 
 
-	
+  
 
   <!--Form starts here-->
 <div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
+
 	<div class="row" style="padding-top: 10px; padding-bottom:20px">
 		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
  <?php   if(isset($_GET['id'])){
@@ -110,9 +111,10 @@ if(isset($_POST['invalidemail'])){
        			<label class="control-label" for="singlebutton"></label>
         		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Log In</button>	
   					</div>
+
             </form>
-				</div>
-			</div>
+        </div>
+      </div>
 
       <div class="col-md-4">
           <div class="well">
@@ -120,53 +122,35 @@ if(isset($_POST['invalidemail'])){
           You need to have an account to continue
           <br>
           <br>
-          <form action="../controller/createuser.php" method="post" id="signupForm">
+          <form action="../controller/createuser.php" method="post">
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
-              <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" 
-              class="form-control input-md"
-              data-bv-notempty="true"
-              data-bv-notempty-message="The first name is required and cannot be empty" >
+              <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Email:</label>  
               
-            <input  name="email" type="text" placeholder="Username" class="form-control input-md"
-              data-bv-notempty="true"
-              data-bv-notempty-message="The last name is required and cannot be empty"
-              >
+            <input  name="email" type="text" placeholder="Username" class="form-control input-md">
             <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
           </div>
 
+          <!--<div class="form-group">
+            <label class="control-label" for="textinput" style="color:black;">Confirm Email</label>  
+              
+            <input  name="email" type="text" placeholder="Confirm Username" class="form-control input-md">
+                
+          </div>-->
+
+            
           <div class="form-group">
            <label class="control-label" for="textinput" style="color:black;">Password:</label> 
-            <input name="password" type="password" placeholder="Password" class="form-control input-md"
-             data-bv-notempty="true"
-             data-bv-notempty-message="The password is required and cannot be empty"
-
-             data-bv-identical="true"
-             data-bv-identical-field="confirmPassword"
-             data-bv-identical-message="The password and its confirm are not the same"
-
-             data-bv-different="true"
-             data-bv-different-field="username"
-             data-bv-different-message="The password cannot be the same as username">
+            <input name="password" type="password" placeholder="Password" class="form-control input-md">
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
-              <input name="confirmpassword" type="password" placeholder="Password" class="form-control input-md"
-             data-bv-notempty="true"
-             data-bv-notempty-message="The password is required and cannot be empty"
-
-             data-bv-identical="true"
-             data-bv-identical-field="confirmPassword"
-             data-bv-identical-message="The password and its confirm are not the same"
-
-             data-bv-different="true"
-             data-bv-different-field="username"
-             data-bv-different-message="The password cannot be the same as username">
+              <input name="password" type="password" placeholder="Password" class="form-control input-md">
           </div>
 
          
@@ -222,19 +206,19 @@ if(isset($_POST['invalidemail'])){
         </div>
         </div>
       </div>  
-		
-		
+    
+    
 
-			
+      
 
-  	</div>
-
-
+    </div>
 
 
-	
 
-	<footer class="footer" style="text-align:center">
+
+  
+
+  <footer class="footer" style="text-align:center">
     <nav>
       <ul>
         <a href="index.php">Home </a> |
@@ -244,10 +228,10 @@ if(isset($_POST['invalidemail'])){
         <a href="#contact">Contact</a>  
       </ul>
     </nav> 
-	</footer> 
+  </footer> 
 </div>
 
-	<!-- Modal -->
+  <!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -295,13 +279,6 @@ if(isset($_POST['invalidemail'])){
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
-<script type="text/javascript" src="./dist/js/form-validation.js"></script>
-<script>
-$(document).ready(function() {
-    $('#signupForm').bootstrapValidator();
-});
-</script>
 
 </body>
 

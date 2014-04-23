@@ -16,49 +16,27 @@ if(!empty($_POST['user']))
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
     
-  <style type="text/css">
+<style type="text/css">
 
    @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
-
-     /* font-family: 'CabinSketch';
-      src: url('fonts/CabinSketch-Regular.otf');*/
          }
-  body{
-   
-    padding-top: 80px;
-  }
-  
-  
-    /*text-shadow:0 -1px #d0284b, 0 1px #f96080;*/
+  <!--body{
+   padding-top: 100px;
+  }-->
 
-  
- 
-
-
-
-  img {
-    
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-  h2{
+ h2{
   text-align:center;
   }
 
-    .image{
+ .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
     height: 650px;
-  background-attachment: fixed;
+    background-attachment: fixed;
    margin: -70px;
-
-  }
-
-
- 
+    }
   </style>
 </head>
 
@@ -106,32 +84,36 @@ if(!empty($_POST['user']))
       </div>
     </div> 
 
-    <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
-    <div class="image">
-    <div class = "color">
-             <h1 style="font-size:70px; padding-top: 60px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:22px; padding-top: 0px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12"> 
+          <div class="image">
+            <div class="color">
+             <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
+             <h1 style="font-size:5em; padding-top: 50px;">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
-    
-    
-       
-            <div class="leftButton"><h3>Apply for Scholarship</h3>
+            </div>
+          </div>
+          <div class="row" style="margin:-250px 0 100px 0;">
+            <div class="col-lg-6" align="center">
+              <h3>Apply for Scholarship</h3>
                   <a href="usersignup.php">
-              <button type="button" class="btn btn-danger btn-lg" align="center" button class = "btn-primary pull-left">Submit Profile</button>
+              <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
                </a> 
             </div>
-           
-        
-            <div class="rightButton"><h3>View Scholarship Applications</h3>
+            <div class="col-lg-6" align="center">
+              <h3>View Scholarship Applications</h3>
                 <a href="listofstudents.php"> 
-              <button type="button" class="btn btn-success btn-lg" align="center" button class = "btn-danger pull-right">View Profiles</button>
+              <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
               </a>
-            </div> 
-          
-        
-     </div>
-  </div>
-
+            </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    
         
     <br>
 

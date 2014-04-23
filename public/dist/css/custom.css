@@ -8,6 +8,7 @@ body{
 background-repeat:repeat;
 
 	}
+
 	/*--------------------------------------------
   This is the elevator-pitch on the home page/homepage
   ----------------------------------------------*/
@@ -26,41 +27,21 @@ background-repeat:repeat;
 	/*--------------------------------------------------
   this is the button to view scholarship applications/homepage
   ----------------------------------------------------*/
-	.viewprofile-button {
-  	position: absolute;
-  	top: 350px;
-  	left: 750px;
-	}
+	
  /*--------------------------------------------
   This is the button to apply for scholarships/homepage
   ---------------------------------------------*/
-	.submitprofile-button {
-  	position: absolute;
-  	top: 350px;
-  	left: 350px;
-	}
+	
 
 /*-----------------------------------------------
 This is the text above the apply and submit button/homepage
 ----------------------------------------------------*/  
 
-	.buttontext {
-  	position: absolute;
-  	top:300px;
-  	left: 300px;
-  	color:white;
-	}
+	
 
-	.buttontext2 {
-  	position: absolute;
-  	top:300px;
-  	left: 650px;
-  	color:white;
-	}
-
-  /*-----------------
-  Featured student 
-  -------------------*/
+  /*-----------------------
+  Featured student content
+  --------------------*----*/
   .feature { 
     position:relative;
     color:#fff;
@@ -77,16 +58,15 @@ This is the text above the apply and submit button/homepage
     -o-box-shadow:2px 2px 0 rgba(0,0,0,0.1);
     box-shadow:2px 2px 0 rgba(0,0,0,0.1);}
 
-       .feature-image{
+  .feature-image{
       height:200px;
-       width:280px;
-          
-    margin-left:20px;
-    margin-right: 20px;
-    margin-bottom:20px;
+      width:280px;
+      margin-left:20px;
+      margin-right: 20px;
+      margin-bottom:20px;
     }
 
-      .header-faq {
+  .header-faq {
     /*This is the  header for FAQ(in the blue box)*/
   
     position:relative;
@@ -136,20 +116,7 @@ This is the text above the apply and submit button/homepage
     color: white;
     margin: 0px;
   }
-  .leftButton{
-  position:absolute;
-  left: 200px;
-  bottom: 70px;
-  text-align: center;
-
-  }
-   
-  .rightButton{
-  position:absolute;
-  right: 200px;
-  bottom: 70px;
-  text-align: center;
-  }
+  
     /*----------------------
       On student dashboard
     -----------------------*/
