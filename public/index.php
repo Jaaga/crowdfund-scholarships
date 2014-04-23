@@ -35,6 +35,34 @@ include('../model/user.php');
     background-attachment: fixed;
    margin: -70px;
     }
+  .hiw-image{
+     background-image:url("../public/images/book.jpg");
+    background-size: cover;
+    height: 650px;
+    background-attachment: fixed;
+   margin: -70px;
+
+  }
+  .faq-image{
+      background-image:url("../public/images/classroom.jpg");
+    background-size: cover;
+    height: 650px;
+    background-attachment: fixed;
+   margin: -70px;
+   
+  }
+
+  .faq
+{
+  padding-top: 100px;
+}
+/*.faq-background{
+    background-color: rgba(111, 101, 101, 1);
+    background-size: cover;
+    height: 1400px;
+    width: 100%;*/
+
+  }
   </style>
 </head>
 
@@ -130,7 +158,7 @@ include('../model/user.php');
           shuffle($students);
           ?>
 
-    <div class="row" style="padding-top: 70px;">
+    <div class="row" style="padding-top: 70px; padding-bottom: 40px;">
 <?php foreach ($students as $student) {
   $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
@@ -148,12 +176,18 @@ include('../model/user.php');
     </div>
 
 
-    <h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive; font-size:48px;" id="hiw">How it Works</h1>
 
+
+
+
+
+<div class="hiw-image">
+    <h1 style="text-align: center; font-family:'KGSecondChancesSketch' cursive; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
+</div>
     <br>
 
   
-    <div class="row" align ="center">
+    <div class="row" align ="center" style="padding-bottom: 50px;">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
           <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">MAKE A DONATION</h3>
@@ -176,12 +210,21 @@ include('../model/user.php');
           A student who has been succesfully sponsored gets inducted into a pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>  
     </div>
- 
-   <div class="thought-bubble-background">
+
+
+
+
+
+
+
+    <div class="faq-image">
        <div class="row">
-           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px;">
-           There's More!</h1>
+           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px; padding-top: 300px; color: white; font-size: 7em;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+          Know More!</h1>
        </div>
+    </div>
+
+      
  
 
     <!--<div class="container">-->
@@ -190,29 +233,36 @@ include('../model/user.php');
       
        
 
-      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
-      <h2>How does LearnEm work?</h2>
-        <p>
-          <small>LearnEm is a social crowdfunding platform for
-           students who cannot afford higher education at their 
-          desired university or course. LearnEm enables the donor 
-          to identify a student's potential and accomplishments and 
-          make a contribution in order to help and empower the student.
-          </small>
-        </p>        
-      </div>
-        <br>
-      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
-          <h2>Will the donor be paid back?</h2>
-          <p><small>The donor is not paid back. LearnEm works on the principle of 'Pay it Forward Loans'. When a donor makes a contribution towards a student in need, he/she will automatically oblige the student in question to make a contribution in the future to fund and help another student in need. It's all about ensuring a better future delivered by the promising students on roll.</small></p>
-      </div>
-      <br>
-      <div class="oval-thought-border" style="text-align: justify; margin: 0 auto">
-      <h2>How much should I donate?</h2>
-      <p><small>When you have browsed through our list of students in need of funding, you can pick any one and donate any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding required and how much the student has already been funded. You will receive a letter of gratitude from the student and LearnEmp for your contribution.</small></p>
-      </div>
+ <div class="faq" style="text-align: justify; margin: 0 auto; width: 50%;">
+     <div class="faq-background">
+        <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+              <h2>What is LearnEm?</h2>
+                <p>
+                  LearnEm is a social crowdfunding platform for
+                   students who cannot afford higher education at their 
+                  desired university or course. LearnEm enables the donor 
+                  to identify a student's potential and accomplishments and 
+                  make a contribution in order to help and empower the student.
+                   </p>        
+              </div>
+                <br>
+              <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+                  <h2>Will the donor be paid back?</h2>
+                  <p>The donor is not paid back. LearnEm works on the principle of 'Pay it Forward Loans'. 
+                  When a donor makes a contribution towards a student in need, he/she will automatically oblige 
+                  the student in question to make a contribution in the future to fund and help another student in need.
+                   It's all about ensuring a better future delivered by the promising students on roll.</p>
+              </div>
+              <br>
+              <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+              <h2>How much should I donate?</h2>
+              <p>When you have browsed through our list of students in need of funding, you can pick any one and donate
+               any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding
+                required and how much the student has already been funded. You will receive a letter of gratitude from the student 
+                and LearnEmp for your contribution.</p>
+              </div>
     </div>
-
+</div>
           <br>
     <article style="text-align:justified; max-width:1000px; margin: 0 auto; padding-top: 90px;">
 

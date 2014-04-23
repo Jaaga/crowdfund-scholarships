@@ -60,7 +60,7 @@ This is the text above the apply and submit button/homepage
 
   .feature-image{
       height:200px;
-      width:280px;
+      width:300px;
       margin-left:20px;
       margin-right: 20px;
       margin-bottom:20px;
@@ -172,7 +172,7 @@ This is the text above the apply and submit button/homepage
   This is the thought bubble on the home page
   ==========================================================*/
 
-  .oval-thought-border {
+  /*.oval-thought-border {
   position:relative;
   padding:70px 70px;
   margin: 30px;
@@ -202,7 +202,7 @@ This is the text above the apply and submit button/homepage
 }
 
 /* creates the larger circle */
-.oval-thought-border:before {
+/*.oval-thought-border:before {
   content:"";
   position:absolute;
   z-index:10;
@@ -221,7 +221,7 @@ This is the text above the apply and submit button/homepage
 }
 
 /* creates the smaller circle */
-.oval-thought-border:after {
+/*.oval-thought-border:after {
   content:"";
   position:absolute;
   z-index:10;
@@ -240,7 +240,7 @@ This is the text above the apply and submit button/homepage
 
 }
 
-  .thought-bubble-background{
+ .faq-background{
     background-color: rgba(111, 101, 101, 1);
     background-size: cover;
     height: 1400px;
