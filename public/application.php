@@ -1,4 +1,7 @@
    <?php 
+   if(!isset($_COOKIE['email'])){
+      header("location:../public/usersignup.php");
+   }
       if(isset($_POST['name'])){
         $name=$_POST['name'];
         

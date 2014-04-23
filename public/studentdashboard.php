@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['email']))
+if(!isset($_COOKIE['email']))
 {
   header("location:../public/usersignup.php");
 }
@@ -9,9 +9,7 @@ if(!isset($_SESSION['email']))
 include ('../model/student.php');
 include ('../model/user.php');
 
-$S_id=$_GET['S_id'];
-    
-
+$S_id=$_SESSION['S_id'];
       $student= getStudent($S_id);
       $U_id=$student['U_id'];
 
@@ -120,11 +118,12 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
           <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
         </div>
 
-        <?php $link='listofstudents.php?U_id='.$U_id.''; ?>
+        
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-                <li><a href="<?php echo $link; ?>">Sponsor</a></li>
-                <li><a href= "#hiw">How it Works</a></li>
+                <li><a href="listofstudents.php">Sponsor</a></li>
+
+                <li><a href= "userdashboard.php">UserDashboard</a></li>
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
@@ -639,7 +638,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <h4 class="modal-title" id="myModalLabel">Public Profile Link</h4>
       </div>
       <div class="modal-body">
-        <a href="studentprofile.php?S_id= <?php echo $S_id; ?>"> http://localhost/public/studentprofile.php?S_id=<?php echo $S_id; ?> </a>
+        <a href="http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"> MY PROFILE LINK </a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

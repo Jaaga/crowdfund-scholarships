@@ -3,6 +3,9 @@ if(isset($_POST['invalidemail'])){
   $Invalidemail=$_POST['invalidemail'];
   $name=$_POST['name'];
 }
+if(isset($_COOKIE['email'])){
+  header("location:../public/index.php?id=x");
+}
 
 ?>
 <!DOCTYPE html>
@@ -16,13 +19,13 @@ if(isset($_POST['invalidemail'])){
   
 <style>
 
-   @font-face{
+  @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
       src: url('fonts/CabinSketch-Regular.otf');*/
-    }
+  }
 
   body{
     background: url("./images/backb.jpg");
@@ -36,9 +39,7 @@ if(isset($_POST['invalidemail'])){
       font-family:'Cabin Sketch' cursive;
     font-size: 40px;
     text-align:left;
-  }
-
-  
+  }  
 </style>
 
 <body>
@@ -72,32 +73,40 @@ if(isset($_POST['invalidemail'])){
 
   <!--Form starts here-->
 <div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
-  <div class="row" style="padding-top: 10px; padding-bottom:20px">
-    <!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
-    
-      <div class="col-md-4">
-        <div class="well">
-          <h2>Login</h2>
-          Please login to continue
+	<div class="row" style="padding-top: 10px; padding-bottom:20px">
+		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
+ <?php   if($_GET['id']=='x'){
+  $wrong="Your are not Loggedin";
+?>
+    <div class="alert alert-danger"><?php echo $wrong; ?></div>
+	<?php } ?>	
+			<div class="col-md-4">
+				<div class="well">
+					<h2>Login</h2>
+					Please login to continue
 
+					<br>
           <br>
-          <br>
-           <form action="../controller/userlogin.php" method="post">
+          <form action="../controller/userlogin.php" method="post" data-toggle="validator" role="form">
             <div class="form-group">
               <label class="control-label" for="textinput" style="color:black;">Email:</label>  
-            <input  name="email" type="text" placeholder="Username" class="form-control input-md">
-              
+            <input  name="email" type="email" placeholder="Username" class="form-control input-md" 
+            data-error="Invalid Email Address" required>
+            <div class="help-block with-errors"></div>
             </div>
         
             <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Password:</label>       
-              <input name="password" type="password" placeholder="Password" class="form-control input-md">
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
             </div>
 
-            <div class="form-group">
-            <label class="control-label" for="singlebutton"></label>
-            <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Log In</button>  
-            </div>
+  					<div class="form-group">
+       			<label class="control-label" for="singlebutton"></label>
+        		<button id="singlebutton" type="submit" name="singlebutton" class="btn btn-success btn-md">Log In</button>	
+  					</div>
+
             </form>
         </div>
       </div>
@@ -108,7 +117,7 @@ if(isset($_POST['invalidemail'])){
           You need to have an account to continue
           <br>
           <br>
-          <form action="../controller/createuser.php" method="post">
+          <form action="../controller/createuser.php" method="post" data-toggle="validator" role="form">
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
               <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
@@ -117,7 +126,9 @@ if(isset($_POST['invalidemail'])){
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Email:</label>  
               
-            <input  name="email" type="text" placeholder="Username" class="form-control input-md">
+            <input  name="email" type="email" placeholder="Username" class="form-control input-md" 
+            data-error="Invalid Email Address" required>
+            <div class="help-block with-errors"></div>
             <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
           </div>
 
@@ -131,12 +142,18 @@ if(isset($_POST['invalidemail'])){
             
           <div class="form-group">
            <label class="control-label" for="textinput" style="color:black;">Password:</label> 
-            <input name="password" type="password" placeholder="Password" class="form-control input-md">
+            <input name="password" type="password" placeholder="Password" class="form-control input-md"
+            data-toggle="validator" data-minlength="6" id="inputToMatch" required>
+              <span class="help-block with-errors">Minimum of 6 characters</span>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
-              <input name="password" type="password" placeholder="Password" class="form-control input-md">
+
+              <input name="password" type="password" placeholder="Password" class="form-control input-md" 
+              data-toggle="validator" data-minlength="6" data-match="#inputToMatch" data-error="Password Mismatch">
+              <span class="help-block with-errors"></span>
+
           </div>
 
          
@@ -217,7 +234,7 @@ if(isset($_POST['invalidemail'])){
   </footer> 
 </div>
 
-  <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -265,6 +282,7 @@ if(isset($_POST['invalidemail'])){
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./dist/js/validator.js"></script>
 
 </body>
 
