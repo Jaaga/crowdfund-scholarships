@@ -20,7 +20,7 @@ if(!empty($U_id)){
   $pic="../public/images/".$_FILES['image']['name'];
   move_uploaded_file($temp,$pic);
   }
-  if(empty($name) && empty($old_password) && empty($new_password) && empty($pic))
+  if(empty($name) && empty($new_password) && empty($pic))
   {
 	header("location:../public/userdashboard.php");
   }
@@ -32,21 +32,8 @@ $Id=updateUser($U_id,$name,$old_password,$new_password,$pic);
 if(is_numeric($Id)){
   header("location:../public/userdashboard.php");
 }
- else{ ?>
-      <!DOCTYPE html>
-          <html>
-          <body>
-            <form name="studentForm" method="post" action="$_SERVER['HTTP_REFERER']">
-              <input type="hidden" name="wrong" value="<?php echo $Id; ?>">
-              <input type="hidden" name="name" value="<?php echo $name; ?>">
-
-            <script language="JavaScript">document.studentForm.submit();
-            </script>
-      
-            </form>
-          </body>
-          </html>
-<?php
+ else{ 
+  header("location:../public/userdashboard.php");
  }
 
   }
