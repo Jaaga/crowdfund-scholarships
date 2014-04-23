@@ -43,7 +43,7 @@ $User=userLogin($email,$password);
 <!doctype <!DOCTYPE html>
 <html>
   <body>
-    <form name="studentForm" method="post" action="../public/index.php">
+    <form name="studentForm" method="post" action="../public/usersignup.php">
       <input type="hidden" name="user" value="<?php echo $User; ?>">
         
     <script language="JavaScript">document.studentForm.submit();

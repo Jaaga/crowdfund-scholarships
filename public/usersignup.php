@@ -6,6 +6,10 @@ if(isset($_POST['invalidemail'])){
 if(isset($_COOKIE['email'])){
   header("location:../public/index.php?id=x");
 }
+if(isset($_POST['user']))
+{
+   $Invalid=$_POST['user'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -93,6 +97,7 @@ if(isset($_COOKIE['email'])){
             <input  name="email" type="email" placeholder="Username" class="form-control input-md" 
             data-error="Invalid Email Address" required>
             <div class="help-block with-errors"></div>
+            <span style="color:crimson;"><?php echo $Invalid; ?></span>
             </div>
         
             <div class="form-group">
