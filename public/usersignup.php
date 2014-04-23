@@ -125,8 +125,16 @@ if(isset($_POST['user']))
           <form action="../controller/createuser.php" method="post" data-toggle="validator" role="form">
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
-              <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
+              <input name="name" type="text" placeholder="Full Name" 
+              value="<?php echo $name; ?>" class="form-control input-md"
+               pattern="([A-z ]){1,}"
+            data-error="Please enter numerical value">
+            <div class="help-block with-errors"></div>
+
           </div>
+
+          <!-- ^([_A-z0-9]){3,}$ -->
+
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Email:</label>  
