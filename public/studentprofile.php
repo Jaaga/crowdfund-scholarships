@@ -138,16 +138,17 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 	<div class="container">
     	<div class="row">
     		
-      <!--
+      
         <div class="col-md-6" align="left" style="margin-top: -70px;">
 					
          
             <img src="./images/facebook-icon.png" width="25px"/>
   					<img src="./images/Twitter_logo.png" width="25px"/>
+            <img src="./images/linked-in.jpg" width="25px"/>
   				
 				</div>
 
-        -->
+        
 
         	<div class="col-xs-7"  text-align="justify">
         		
