@@ -89,7 +89,7 @@ h4:before{
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="width: 1180px; margin-right: 0px; margin-left: 0px;">
   
         <article>
      <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2> </div>
@@ -139,20 +139,23 @@ h4:before{
     
     </div>
     <br>
-
+<div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
   <footer style="text-align:center">
   <hr>
       <nav>
-        <ul>
+        <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
             <a href= "#hiw">How It Works</a> |
             <a href="#faq">FAQ</a> |
             <a href="#contact">Contact</a>  
-
         </ul>
       </nav> 
   </footer>
+</div>
+</div>
+
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.js"></script>
 <script type="text/javascript">
