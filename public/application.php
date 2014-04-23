@@ -242,7 +242,7 @@
           <!-- Button -->
           <div class="form-group">
               <label class="col-md-4 control-label-sm" for="singlebutton"></label>
-              <div class="col-md-4" >
+              <div class="col-md-4" align="center">
                 <button type="submit" name="singlebutton" class="btn btn-success btn-lg">Submit!</button>
               </div>
           </div>
@@ -263,9 +263,11 @@
 
       <hr>
 
+<div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
     <footer class="footer" style="text-align:center">
       <nav>
-        <ul>
+        <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
             <a href= "#hiw">How It Works</a> |
@@ -275,6 +277,8 @@
         </ul>
       </nav> 
   </footer> 
+</div>
+</div>
 
 
   </body>
