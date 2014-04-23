@@ -109,7 +109,7 @@ padding-top: 60px;
     
   
   <div class="container" align="center">
-      <div class="row">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
     <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
@@ -125,7 +125,7 @@ padding-top: 60px;
                 $percentage = (($sum_amount/$requiredamount)*100);
                 
   ?>
-  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify;">
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;">
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
@@ -189,9 +189,11 @@ padding-top: 60px;
         
 
 <hr>
+<div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
   <footer class="footer" style="text-align:center">
     <nav>
-      <ul>
+      <ul style="padding-left: 0px;">
         <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
@@ -200,7 +202,8 @@ padding-top: 60px;
       </ul>
     </nav> 
   </footer>
-
+</div>
+</div>
 
 
     <script type="text/javascript" src="./dist/js/validator.js"></script> 

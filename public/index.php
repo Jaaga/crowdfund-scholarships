@@ -20,9 +20,9 @@ include('../model/user.php');
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
          }
-  <!--body{
+  body{
    padding-top: 100px;
-  }-->
+  }
 
  h2{
   text-align:center;
@@ -87,33 +87,37 @@ include('../model/user.php');
       </div>
       </div>
     </div> 
+  </div>
 
 
     <div class="container">
       <div class="row">
+        <div class="x">
         <div class="col-lg-12"> 
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 50px;">Scholarships<br> that are Paid Forward</h1>
+             <h1 style="font-size:5em; padding-top: 40px;">Scholarships<br> that are Paid Forward</h1>
               <p style="font-size:1.5em; padding-top: 50.5px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
             </div>
           </div>
+
           <div class="row" style="margin:-250px 0 100px 0;">
             <div class="col-lg-6" align="center">
-              <h3>Apply for Scholarship</h3>
+              <h3 style="color:white;">Apply for Scholarship</h3>
                   <a href="usersignup.php">
               <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
                </a> 
             </div>
             <div class="col-lg-6" align="center">
-              <h3>View Scholarship Applications</h3>
+              <h3 style="color:white;">View Scholarship Applications</h3>
                 <a href="listofstudents.php"> 
               <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
               </a>
             </div>
             </div>
+          </div>
           </div>      
         </div>
       </div>

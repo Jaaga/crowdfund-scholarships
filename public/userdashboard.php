@@ -129,7 +129,6 @@ $noofStudents=count($students);
  	  <div class="row">
     	<div class="col-md-12" >
      		<div class="well" style= "height: 265px;">
-
         		<img src="<?php
             if(file_exists($row['image'])){
                              echo $row['image']; }
