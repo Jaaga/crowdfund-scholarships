@@ -47,6 +47,12 @@ if(isset($_COOKIE['email']))
   }
 
 	</style>
+  <script>
+function fbs_click(){
+u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+return false;
+}
+</script>
 </head>
 
 <body>
@@ -146,7 +152,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		
 	</div>
 
-	
+	<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
+    <img src="./images/facebook-icon.png" width="25px"/>
+</a>
 
 	<div class="container">
     	<div class="row">

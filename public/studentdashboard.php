@@ -148,10 +148,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
     			<div class="col-lg-3" align="left"  >
     			
-
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
+             target="_blank">
+    <img src="./images/facebook-icon.png" width="25px"/>
+</a>
               <a data-toggle="modal" data-target="#shareProfile">
-    					<img src="./images/facebook-icon.png" width="25px"/>
-
     					<img src="./images/Twitter_logo.png" width="25px"/>
     					<img src="./images/linked-in.jpg" width="25px"/>
               </a>
