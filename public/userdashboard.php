@@ -14,6 +14,7 @@ include ('../model/student.php');
 
         $row= userInfo($email);
         $U_id=$row['U_id'];
+        $whois=whois($email);
         //$email=$row['email'];
         $url=get_gravatar($email); 
 ?>
@@ -89,6 +90,13 @@ include ('../model/student.php');
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">AllStudents</a></li>
+                <?php if(is_numeric($whois)){ ?>
+                <li><a href="studentdashboard.php">StudentDashboard</a></li>
+               <?php
+                }
+                 ?>
+
+
                 
            		</ul>
               <div class="navbar-collapse collapse">

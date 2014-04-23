@@ -100,6 +100,17 @@ include ('dbcon.php');
         return true;
         
     }
+    function whois($email){
+    	$db=dbopen();
+    	$sql="SELECT * from student where email='$email'";
+    	$result=$db->query($sql);
+    	$row=mysqli_fetch_array($result);
+    	$Id=$row['U_id'];
+    	if(!$result){
+    		return ($db->error);
+    	}
+    	return $Id;
+    }
 
 
 	function userLogin($email,$password)
