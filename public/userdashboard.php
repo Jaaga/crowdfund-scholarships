@@ -1,21 +1,20 @@
 <?php 
 session_start();
- if(!isset($_SESSION['email']))
+ if(!isset($_COOKIE['email']))
    {  
     header("location:../public/usersignup.php");
   } 
  //if(isset($_POST['wrong'])){
   //$wrong="Wrong Password";
  //}
-?>
+include('../model/user.php');
+include ('../model/student.php');
 
-<?php
-        include('../model/user.php');
-        include ('../model/student.php');
+        $email=$_COOKIE["email"];
 
-        $U_id=$_SESSION['U_id'];
-        $row= userInfo($U_id);
-        $email=$row['email'];
+        $row= userInfo($email);
+        $U_id=$row['U_id'];
+        //$email=$row['email'];
         $url=get_gravatar($email); 
 ?>
 <!DOCTYPE html>
@@ -111,7 +110,8 @@ session_start();
   </div> 
 
 <?php 
-$students=getStudents($U_id); 
+$students=getStudents($row['U_id']); 
+$U_id=$row['U_id'];
 $noofStudents=count($students);
 ?>
 		
@@ -166,10 +166,9 @@ $noofStudents=count($students);
 
           	 <h3><?php echo $student['sname'];?></h3>
           	 <p ><?php echo $student['para'];?> </p></a>
-+++
           	 <div class="progress progress-striped">
                 
-          		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-    valuemax="100" style="width: <?php echo $percentage; ?>%">
+          		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
               	 <b style="color:#111111;"><?php echo $percentage; ?> Complete</b>
            			</div>
           	 </div>
@@ -180,7 +179,7 @@ $noofStudents=count($students);
       
               <div class="row">
               <form method="POST" action="donate.php">
-                <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+                <input type="hidden" name="email" value="<?php echo $email ; ?>" >
                 <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
                 <div class="col-md-8">
 

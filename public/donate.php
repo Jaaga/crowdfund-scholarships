@@ -1,18 +1,20 @@
 <?php
 include ('../model/user.php');
-
-$U_id=$_POST['U_id'];
+if(!isset($_COOKIE['email'])){
+  header("location:../public/usersignup.php?id=x");
+}
+$email=$_POST['email'];
 $S_id=$_POST['S_id'];
 $amount=$_POST['amount']; 
 
-$U_id = htmlspecialchars($U_id);
+$email = htmlspecialchars($email);
 $S_id = htmlspecialchars($S_id);
 $amount = htmlspecialchars($amount);
 if(empty($amount)){
-  header("location:../public/listofstudents.php?U_id=$U_id");
+  header("location:../public/listofstudents.php");
 }
 else{
-giveDonation($U_id,$S_id,$amount);
+giveDonation($email,$S_id,$amount);
 }
 ?>
 
@@ -44,5 +46,5 @@ giveDonation($U_id,$S_id,$amount);
 </body>
 </html>
 <?php
-redirectToStudent($U_id);
+header("Refresh: 3;url='userdashboard.php");
 ?>

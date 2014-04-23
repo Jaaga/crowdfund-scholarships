@@ -54,10 +54,10 @@ include ('dbcon.php');
 
         }
 
-		function userInfo($userId)
+		function userInfo($email)
 		{
 			$db =dbopen();
-			$sql = "select * from user where U_id=$userId";
+			$sql = "select * from user where email='$email'";
 			$result=$db->query($sql);
 			$row=mysqli_fetch_array($result);
 
@@ -115,8 +115,12 @@ include ('dbcon.php');
          
          if(($count==1) && ($password==$row['password']))
          {
+         	session_start();
+         	$_SESSION['email']=$row['email'];
+         	$_SESSION['S_id']=$row['S_id'];
+         	setcookie("email", "$email", time()+3600, "/","", 0);
 
-         	header("location:../public/studentdashboard.php?S_id=$S_id");
+         	header("location:../public/studentdashboard.php");
          }
             
 
@@ -143,14 +147,17 @@ include ('dbcon.php');
 		
 	}
  
- function giveDonation($U_id,$S_id,$amount)
+ function giveDonation($email,$S_id,$amount)
  {
  		$db=dbopen();
+ 		$row=$db->query("SELECT * from user where email='$email'");
+ 		$result=mysqli_fetch_array($row);
+ 		$U_id=$result['U_id'];
  		
   		$sql = "INSERT INTO donation (U_id,S_id,amount)
- 		VALUES ('$U_id','$S_id','$amount' )";
- 		$result = $db->query($sql);
-		if(!$result)
+ 		VALUES ('$U_id','$S_id','$amount')";
+ 		$result1 = $db->query($sql);
+		if(!$result1)
 		{
 			echo "sorry your donations were not accepted";
 		}
@@ -163,10 +170,10 @@ include ('dbcon.php');
 
  }
 
- function redirectToStudent($U_Id)
+ function redirectToStudent()
  	{
-		$U_id=$U_Id;
-  		header("Refresh: 3;url='userdashboard.php?U_id=$U_id");
+		//$U_id=$U_Id;
+  		
 	}
    
    function get_gravatar( $email, $s = 200, $d = 'monsterid', $r = 'g', $img = false, $atts = array() )
@@ -191,6 +198,7 @@ include ('dbcon.php');
     {
     	session_start();
         session_destroy();
+        setcookie( "email", "", time()- 60, "/","", 0);
         $logout="You have been logged out";
         return $logout;
 

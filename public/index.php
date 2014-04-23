@@ -22,9 +22,9 @@ if(!empty($_POST['user']))
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
          }
-  body{
-   padding-top: 80px;
-  }
+  <!--body{
+   padding-top: 100px;
+  }-->
 
  h2{
   text-align:center;
@@ -59,6 +59,16 @@ if(!empty($_POST['user']))
         <ul class="nav navbar-nav">
               <li><a href="listofstudents.php">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
+              <?php if(isset($_COOKIE['email']))
+              { ?>
+                 <li><a href= "userdashboard.php">MyProfile</a></li></ul>
+                  <div class="navbar-form navbar-right">
+
+              <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+
+          </div>
+              <?php
+              }              else{ ?>
         </ul>
 
         <div class="navbar-collapse collapse">
@@ -69,37 +79,41 @@ if(!empty($_POST['user']))
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
 
           </div>              
-        </div>
+        </div><?php } ?>
       </div>
       </div>
     </div> 
 
-    <div class="danger" align="right"><h4 style="color:crimson;"><?php echo $Invalid; ?></h4></div>
-    <div class="image">
-    <div class = "color">
-             <h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:22px; padding: 0 0 0 20px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12"> 
+          <div class="image">
+            <div class="color">
+             <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
+             <h1 style="font-size:5em; padding-top: 50px;">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
-    
-    
-       
-            <div class="leftButton"><h3>Apply for Scholarship</h3>
+            </div>
+          </div>
+          <div class="row" style="margin:-250px 0 100px 0;">
+            <div class="col-lg-6" align="center">
+              <h3>Apply for Scholarship</h3>
                   <a href="usersignup.php">
-              <button type="button" class="btn btn-danger btn-lg" align="center" button class = "btn-primary pull-left">Submit Profile</button>
+              <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
                </a> 
             </div>
-           
-        
-            <div class="rightButton"><h3>View Scholarship Applications</h3>
+            <div class="col-lg-6" align="center">
+              <h3>View Scholarship Applications</h3>
                 <a href="listofstudents.php"> 
-              <button type="button" class="btn btn-success btn-lg" align="center" button class = "btn-danger pull-right">View Profiles</button>
+              <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
               </a>
-            </div> 
-          
-        
-     </div>
-  </div>
-
+            </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+    
         
     <br>
 
@@ -110,7 +124,7 @@ if(!empty($_POST['user']))
 
     <div class="row" style="padding-top: 70px;">
 <?php foreach ($students as $student) {
-  $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
+  $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">
