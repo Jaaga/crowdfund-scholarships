@@ -19,13 +19,13 @@ if(isset($_COOKIE['email'])){
   
 <style>
 
-   @font-face{
+  @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
 
      /* font-family: 'CabinSketch';
       src: url('fonts/CabinSketch-Regular.otf');*/
-    }
+  }
 
   body{
     background: url("./images/backb.jpg");
@@ -39,9 +39,7 @@ if(isset($_COOKIE['email'])){
       font-family:'Cabin Sketch' cursive;
     font-size: 40px;
     text-align:left;
-  }
-
-  
+  }  
 </style>
 
 <body>
@@ -75,7 +73,6 @@ if(isset($_COOKIE['email'])){
 
   <!--Form starts here-->
 <div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
-
 	<div class="row" style="padding-top: 10px; padding-bottom:20px">
 		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
  <?php   if($_GET['id']=='x'){
@@ -89,26 +86,21 @@ if(isset($_COOKIE['email'])){
 					Please login to continue
 
 					<br>
-					<br>
-           <form action="../controller/userlogin.php" method="post" id="loginForm">
-  					<div class="form-group">
-  						<label class="control-label" for="textinput" style="color:black;">Email:</label>  
- 		 				<input  name="email" type="text" placeholder="Username" class="form-control input-md"
-                data-bv-notempty="true"
-                data-bv-notempty-message="The last name is required and cannot be empty"
-                ata-bv-regexp="true"
-                data-bv-regexp-regexp="[a-zA-Z0-9_\.]+"
-                data-bv-regexp-message="The username can only consist of alphabetical, number, dot and underscore"
-            >
-      				
-  					</div>
-  			
-  					<div class="form-group">
-						<label class="control-label" for="textinput" style="color:black;">Password:</label> 			
-  						<input name="password" type="password" placeholder="Password" class="form-control input-md"
-              data-bv-notempty="true"
-              data-bv-notempty-message="The password is required and cannot be empty">
-  					</div>
+          <br>
+          <form action="../controller/userlogin.php" method="post" data-toggle="validator" role="form">
+            <div class="form-group">
+              <label class="control-label" for="textinput" style="color:black;">Email:</label>  
+            <input  name="email" type="email" placeholder="Username" class="form-control input-md" 
+            data-error="Invalid Email Address" required>
+            <div class="help-block with-errors"></div>
+            </div>
+        
+            <div class="form-group">
+            <label class="control-label" for="textinput" style="color:black;">Password:</label>       
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
+            </div>
 
   					<div class="form-group">
        			<label class="control-label" for="singlebutton"></label>
@@ -125,7 +117,7 @@ if(isset($_COOKIE['email'])){
           You need to have an account to continue
           <br>
           <br>
-          <form action="../controller/createuser.php" method="post">
+          <form action="../controller/createuser.php" method="post" data-toggle="validator" role="form">
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Your Name:</label> 
               <input name="name" type="text" placeholder="Full Name" value="<?php echo $name; ?>" class="form-control input-md">
@@ -134,7 +126,9 @@ if(isset($_COOKIE['email'])){
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Email:</label>  
               
-            <input  name="email" type="text" placeholder="Username" class="form-control input-md">
+            <input  name="email" type="email" placeholder="Username" class="form-control input-md" 
+            data-error="Invalid Email Address" required>
+            <div class="help-block with-errors"></div>
             <span style="color:crimson;"><?php echo $Invalidemail; ?></span>
           </div>
 
@@ -148,12 +142,18 @@ if(isset($_COOKIE['email'])){
             
           <div class="form-group">
            <label class="control-label" for="textinput" style="color:black;">Password:</label> 
-            <input name="password" type="password" placeholder="Password" class="form-control input-md">
+            <input name="password" type="password" placeholder="Password" class="form-control input-md"
+            data-toggle="validator" data-minlength="6" id="inputToMatch" required>
+              <span class="help-block with-errors">Minimum of 6 characters</span>
           </div>
 
           <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Confirm Password:</label> 
-              <input name="conf-password" type="password" placeholder="Password" class="form-control input-md">
+
+              <input name="password" type="password" placeholder="Password" class="form-control input-md" 
+              data-toggle="validator" data-minlength="6" data-match="#inputToMatch" data-error="Password Mismatch">
+              <span class="help-block with-errors"></span>
+
           </div>
 
          
@@ -234,7 +234,7 @@ if(isset($_COOKIE['email'])){
   </footer> 
 </div>
 
-  <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -282,6 +282,7 @@ if(isset($_COOKIE['email'])){
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./dist/js/validator.js"></script>
 
 </body>
 
