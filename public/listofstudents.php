@@ -144,23 +144,22 @@ padding-top: 60px;
                 </p>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php //echo $profilelink; ?>">Donate</a></div>-->
-        <form method="POST" action="donate.php" data-toggle="validator" role="form">
+      <form method="POST" action="donate.php" data-toggle="validator">
           <input type="hidden" name="email" value="<?php echo $email ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
           
-          <!--<div class="col-lg-6">-->
+          
 
-         
+          <div class="col-md-8" >
 
-         <div class="form-group col-md-8" >
-
-            <input name="amount" type="number"  pattern="([0-9]){1,10}" placeholder="$ " class="form-control input-md" 
+            <input name="amount" type="text" placeholder="$ "
+             class="form-control input-md" pattern="([0-9]){1,10}"
             data-match-error="Please enter numerical value" > 
             <div class="help-block with-errors"></div>
           </div>
 
 
-          <div class="form-group col-md-4" >
+          <div class="col-md-4" >
           
             
               <!--<div class="col-lg-6">-->
@@ -169,8 +168,13 @@ padding-top: 60px;
           </div>
 
       </form>
+    </div>
+
+
+
       </div>
-      </div></div>
+
+      </div>
   <?php 
        }
 
