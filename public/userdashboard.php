@@ -66,7 +66,7 @@ include ('../model/student.php');
     float:left;
     height: auto;
     width: auto;
-    max-width: 20%;
+    max-width: 94%;
     max-height: 600px;
     margin:10px; 
     margin-right:30px;
