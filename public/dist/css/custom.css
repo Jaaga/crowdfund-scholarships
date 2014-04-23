@@ -27,37 +27,17 @@ background-repeat:repeat;
 	/*--------------------------------------------------
   this is the button to view scholarship applications/homepage
   ----------------------------------------------------*/
-	.viewprofile-button {
-  	position: absolute;
-  	top: 350px;
-  	left: 750px;
-	}
+	
  /*--------------------------------------------
   This is the button to apply for scholarships/homepage
   ---------------------------------------------*/
-	.submitprofile-button {
-  	position: absolute;
-  	top: 350px;
-  	left: 350px;
-	}
+	
 
 /*-----------------------------------------------
 This is the text above the apply and submit button/homepage
 ----------------------------------------------------*/  
 
-	.buttontext {
-  	position: absolute;
-  	top:300px;
-  	left: 300px;
-  	color:white;
-	}
-
-	.buttontext2 {
-  	position: absolute;
-  	top:300px;
-  	left: 650px;
-  	color:white;
-	}
+	
 
   /*-----------------------
   Featured student content
@@ -136,20 +116,7 @@ This is the text above the apply and submit button/homepage
     color: white;
     margin: 0px;
   }
-  .leftButton{
-  position:absolute;
-  left: 200px;
-  bottom: 70px;
-  text-align: center;
-
-  }
-   
-  .rightButton{
-  position:absolute;
-  right: 200px;
-  bottom: 70px;
-  text-align: center;
-  }
+  
     /*----------------------
       On student dashboard
     -----------------------*/
