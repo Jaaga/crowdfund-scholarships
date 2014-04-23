@@ -85,6 +85,22 @@ include('../model/user.php');
         <ul class="nav navbar-nav">
               <li><a href="listofstudents.php">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
+              <li><script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script></li>
+
          <?php if(isset($_COOKIE["email"])){ 
                   $email=$_COOKIE['email'];
                  $whois=whois($email);

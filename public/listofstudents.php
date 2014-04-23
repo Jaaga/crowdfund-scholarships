@@ -110,8 +110,25 @@ padding-top: 60px;
   
   <div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
-    <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1>
-  
+      <div class="col-lg-2">
+  <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script></div>
+<div class="col-lg-8">
+    <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1></div>
+
   <?php $students= getStudentList();
         foreach($students as $student){ 
   ?>

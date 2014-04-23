@@ -154,11 +154,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 </a>
 <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flearnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>%2F&text=please take a look at my profile&tw_p=tweetbutton&url=http%3A%2F%2Flearnem.jaaga.us%2F&via=jaagarnaut" target="_blank">
 <img src="./images/Twitter_logo.png" width="25px"/></a>
-              <a data-toggle="modal" data-target="#shareProfile">
-    					
-    					<img src="./images/linked-in.jpg" width="25px"/>
-              </a>
-    					&nbsp
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+  lang: en_US
+</script>
+<script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>
+              
     			</div>
 
     		<!-- End -->
@@ -631,26 +631,6 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       <!-- End -->
 
       <!-- Share my Profile -->
-
-
-      <div class="modal fade" id="shareProfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Public Profile Link</h4>
-      </div>
-      <div class="modal-body">
-        <a href="http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"> MY PROFILE LINK </a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Share</button>
-      </div>
-    </div>
-  </div>
-      </div>
-
       <!-- End -->
 
 

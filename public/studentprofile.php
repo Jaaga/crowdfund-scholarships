@@ -169,7 +169,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
 if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
 fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            <img src="./images/linked-in.jpg" width="25px"/>
+            
+  <script src="//platform.linkedin.com/in.js" type="text/javascript">
+  lang: en_US
+</script>
+<script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>          
   				
 				</div>
 
