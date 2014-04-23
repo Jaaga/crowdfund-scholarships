@@ -95,8 +95,8 @@ if(isset($_POST['invalidemail'])){
             <div class="form-group">
             <label class="control-label" for="textinput" style="color:black;">Password:</label>       
               <input name="password" type="password" placeholder="Password" 
-              class="form-control input-md" data-toggle="validator" data-minlength="6" required>
-              <span class="help-block with-errors">Minimum of 6 characters</span>
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
             </div>
 
   					<div class="form-group">

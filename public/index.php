@@ -272,17 +272,26 @@ if(!empty($_POST['user']))
       <div class="modal-body">
         <div class="row">
          <div class="col-md-6" style="margin-left:130px;">
-          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm">
+          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm" 
+          data-toggle="validator">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input id="email" name="email" type="email" class="form-control" name="email" placeholder="Enter email">
+              <label >Email address</label>
+              <input id="email" name="email" type="email" class="form-control" name="email" 
+              placeholder="Enter email" data-error="Invalid Email Address" required>
+              <div class="help-block with-errors"></div>
             </div>
+
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input id="password" name="password" type="password" class="form-control" id="password" placeholder="Password" 
-                data-bv-notempty="true"
-                data-bv-notempty-message="The confirm password is required and cannot be empty"
+            <label class="control-label" for="textinput" style="color:black;">Password:</label>       
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
             </div>
+            <!--<div class="form-group">
+              <label class="control-label" for="textinput" style="color:black;">Password</label>
+              <input name="password" type="password" id="password" placeholder="Password">
+              <span class="help-block with-errors"></span>
+            </div>-->
              <div class="modal-footer">
               <button type="submit" class="btn btn-success">Log In</button>
              </div>
@@ -296,8 +305,7 @@ if(!empty($_POST['user']))
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./dist/js/bootstrapValidator.js"></script>
-  <script type="text/javascript" src="./dist/js/form-validation.js"></script>
+  <script type="text/javascript" src="./dist/js/validator.js"></script>
 </body>
 
 </html> 
