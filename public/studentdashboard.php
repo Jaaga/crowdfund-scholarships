@@ -148,10 +148,13 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
     			<div class="col-lg-3" align="left"  >
     			
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
+          <!--  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
              target="_blank">
     <img src="./images/facebook-icon.png" width="25px"/>
-</a>
+</a> -->
+<a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
+    <img src="./images/facebook-share.png" width="60px"/>
+    </a>
 <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flearnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>%2F&text=please take a look at my profile&tw_p=tweetbutton&url=http%3A%2F%2Flearnem.jaaga.us%2F&via=jaagarnaut" target="_blank">
 <img src="./images/Twitter_logo.png" width="25px"/></a>
 <script src="//platform.linkedin.com/in.js" type="text/javascript">

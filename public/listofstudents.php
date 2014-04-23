@@ -85,6 +85,21 @@ padding-top: 60px;
                 </ul>
 
                   <div class="navbar-form navbar-right">
+                  <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
 
           </div>
@@ -94,7 +109,21 @@ padding-top: 60px;
             </ul>
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-
+         <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -110,23 +139,6 @@ padding-top: 60px;
   
   <div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
-      <div class="col-lg-2">
-  <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate"
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script></div>
-<div class="col-lg-8">
     <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1></div>
 
   <?php $students= getStudentList();

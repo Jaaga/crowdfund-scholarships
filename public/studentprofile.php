@@ -77,6 +77,21 @@ return false;
                <?php } ?>
                 </ul> 
                  <div class="navbar-form navbar-right">
+                 <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
 
           </div>   
@@ -86,7 +101,21 @@ return false;
             </ul>
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-
+          <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -161,9 +190,12 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <div class="col-md-6" align="left" style="margin-top: -70px;">
 					
          
-            <a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
-    <img src="./images/facebook-icon.png" width="25px"/>
-</a>
+            <!--<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
+    <img src="./images/facebook-share.png" width="60px"/></a> -->
+    <a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
+    <img src="./images/facebook-share.png" width="60px"/>
+    </a>
+
   					<a href="https://twitter.com/share" class="twitter-share-button" data-via="jaagarnaut">Tweet</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
