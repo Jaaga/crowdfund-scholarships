@@ -3,7 +3,11 @@ session_start();
 include ('../model/student.php');
 include ('../model/user.php');
 $S_id=$_GET['S_id'];
-$U_id=$_GET['U_id'];
+if(isset($_COOKIE['email']))
+{
+  $email=$_COOKIE['email'];
+}
+
  ?>
 <html>
 
@@ -43,6 +47,12 @@ $U_id=$_GET['U_id'];
   }
 
 	</style>
+  <script>
+function fbs_click(){
+u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+return false;
+}
+</script>
 </head>
 
 <body>
@@ -55,19 +65,37 @@ $U_id=$_GET['U_id'];
         		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
-        		<ul class="nav navbar-nav">
-            		<li><a href="listofstudents.php?U_id=<?php echo $U_id; ?>">Sponsor</a></li>
-            		<li><a href="userdashboard.php?U_id=<?php echo $U_id; ?>">MyProfile</a></li>
-        		</ul>
+            <ul class="nav navbar-nav">
+                <li><a href="listofstudents.php">Sponsor</a></li>
+               <?php if(isset($_COOKIE["email"])){
+                  $email=$_COOKIE['email'];
+                 $whois=whois($email);  
+                ?> 
+                <li><a href="userdashboard.php">UserDashboard</a>
+                <?php if(is_numeric($whois)){ ?>
+                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+               <?php } ?>
+                </ul> 
+                 <div class="navbar-form navbar-right">
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
 
-				<div class="navbar-collapse collapse">
-        			<div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-danger">Sign Up</button>
-                <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
-              </div>
-           		
-           		</div><!--/.navbar-collapse -->
-    		</div>
+          </div>   
+
+                <?php }
+                else{ ?>
+            </ul>
+            <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+
+              <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
+
+              <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+
+          </div>              
+        </div><?php } ?>
+
+              
+      </div>
     	</div>
     </div><!--/.navbar-collapse -->
 
@@ -124,21 +152,24 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		
 	</div>
 
-	
+	<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
+    <img src="./images/facebook-icon.png" width="25px"/>
+</a>
 
 	<div class="container">
     	<div class="row">
     		
-      <!--
+      
         <div class="col-md-6" align="left" style="margin-top: -70px;">
 					
          
             <img src="./images/facebook-icon.png" width="25px"/>
   					<img src="./images/Twitter_logo.png" width="25px"/>
+            <img src="./images/linked-in.jpg" width="25px"/>
   				
 				</div>
 
-        -->
+        
 
         	<div class="col-xs-7"  text-align="justify">
         		
@@ -165,11 +196,15 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 					
 						<br>
 
-					     <form action="donate.php" method="post">
-					     <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+					     <form action="donate.php" method="post" data-toggle="validator">
+					     <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
-						<div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
-							<input name="amount" type="text" class="form-control" placeholder="enter amount" style="height: 50px; ">
+						
+            <div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
+              style="height: 50px; " pattern="([0-9]){1,10}" >
+              <div class="help-block with-errors"></div>
+
                     	</div>
 						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
 						</form>
@@ -386,6 +421,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   </div>
 
     <!-- End -- >
+
+    <script type="text/javascript" src="./dist/js/validator.js"></script>
 </body>
 
 </html>

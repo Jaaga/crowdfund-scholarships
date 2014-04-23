@@ -1,8 +1,14 @@
 <?php 
 include('../model/student.php');
-
+include('../model/user.php');
 session_start();
-$U_id=$_SESSION['U_id'];
+
+if(isset($_COOKIE['email'])){
+
+$email=$_COOKIE['email'];
+}
+
+
       
  ?>
 
@@ -69,9 +75,32 @@ padding-top: 60px;
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-                
-                <li><a href="userdashboard.php">MyProfile</a>
+               <?php if(isset($_COOKIE["email"])){ 
+                 $whois=whois($email);
+                ?> 
+                <li><a href="userdashboard.php">UserDashboard</a>
+                <?php if(is_numeric($whois)){ ?>
+                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+               <?php } ?>
+                </ul>
+
+                  <div class="navbar-form navbar-right">
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+
+          </div>
+
+                  <?php }
+                else{ ?>
             </ul>
+            <div class="navbar-collapse collapse">
+          <div class="navbar-form navbar-right">
+
+              <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
+
+              <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
+
+          </div>              
+        </div><?php } ?>
 
               
       </div><!--/.navbar-collapse -->
@@ -80,7 +109,7 @@ padding-top: 60px;
     
   
   <div class="container" align="center">
-      <div class="row">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
     <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1>
   
   <?php $students= getStudentList();
@@ -89,14 +118,14 @@ padding-top: 60px;
 
   <?php 
                
-            $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
+            $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
 
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage = (($sum_amount/$requiredamount)*100);
                 
   ?>
-  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify;">
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;">
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
@@ -114,30 +143,38 @@ padding-top: 60px;
               pledged out of <?php echo $requiredamount; ?>
                 </p>
     <div class="row">
-      <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php echo $profilelink; ?>">Donate</a></div>-->
-        <form method="POST" action="donate.php">
-          <input type="hidden" name="U_id" value="<?php echo $U_id ; ?>" >
+      <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php //echo $profilelink; ?>">Donate</a></div>-->
+      <form method="POST" action="donate.php" data-toggle="validator">
+          <input type="hidden" name="email" value="<?php echo $email ; ?>" >
           <input type="hidden" name="S_id" value="<?php echo $student['S_id']; ?>" >
           
-          <!--<div class="col-lg-6">-->
+          
 
-         <div class="col-md-8">
+          <div class="col-md-8" >
 
-            <input type="text" name="amount" placeholder="$ " class="form-control input-md" > 
-
+            <input name="amount" type="text" placeholder="$ "
+             class="form-control input-md" pattern="([0-9]){1,10}"
+            data-match-error="Please enter numerical value" > 
+            <div class="help-block with-errors"></div>
           </div>
 
-          <div class="col-md-4">
+
+          <div class="col-md-4" >
+          
             
               <!--<div class="col-lg-6">-->
-                <input type="submit" value="Donate" class="btn btn-primary">
-
-                             
+                <input type="submit" value="Donate" class="btn btn-primary">                
+         
           </div>
 
       </form>
+    </div>
+
+
+
       </div>
-      </div></div>
+
+      </div>
   <?php 
        }
 
@@ -152,9 +189,11 @@ padding-top: 60px;
         
 
 <hr>
+<div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
   <footer class="footer" style="text-align:center">
     <nav>
-      <ul>
+      <ul style="padding-left: 0px;">
         <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
@@ -162,7 +201,12 @@ padding-top: 60px;
         <a href="#contact">Contact</a>  
       </ul>
     </nav> 
-  </footer> 
+  </footer>
+</div>
+</div>
+
+
+    <script type="text/javascript" src="./dist/js/validator.js"></script> 
 </body>
 
 </html> 

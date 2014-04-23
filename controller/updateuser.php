@@ -7,7 +7,7 @@ $old_password=$_POST['old_password'];
 $new_password=$_POST['new_password'];
   
   
-if(isset($U_id)){
+if(!empty($U_id)){
 	
 
   $U_id = htmlspecialchars($U_id);
@@ -22,7 +22,7 @@ if(isset($U_id)){
   }
   if(empty($name) && empty($old_password) && empty($new_password) && empty($pic))
   {
-	header("location:../public/userdashboard.php?U_id=$U_id");
+	header("location:../public/userdashboard.php");
   }
 
  else{
@@ -30,7 +30,7 @@ if(isset($U_id)){
 $Id=updateUser($U_id,$name,$old_password,$new_password,$pic);
 
 if(is_numeric($Id)){
-  header("location:../public/userdashboard.php?U_id=$Id");
+  header("location:../public/userdashboard.php");
 }
  else{ ?>
       <!DOCTYPE html>
