@@ -128,7 +128,7 @@ if(isset($_POST['user']))
               <input name="name" type="text" placeholder="Full Name" 
               value="<?php echo $name; ?>" class="form-control input-md"
                pattern="([A-z ]){1,}"
-            data-error="Please enter numerical value">
+            data-error="Please use only alphabets">
             <div class="help-block with-errors"></div>
 
           </div>
