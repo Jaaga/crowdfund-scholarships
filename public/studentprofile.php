@@ -82,23 +82,23 @@ return false;
                 </ul> 
                  <div class="navbar-form navbar-right">
                  <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate Us"
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+    <script>
+      CoinWidgetCom.go({
+      wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+      , currency: "bitcoin"
+      , counter: "count"
+      , alignment: "bl"
+      , qrcode: true
+      , auto_show: false
+      , lbl_button: "Donate Us"
+      , lbl_address: "My Bitcoin Address:"
+      , lbl_count: "donations"
+      , lbl_amount: "BTC"
+      });
+    </script>
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
                                
-          </div>   
+  </div>   
 
                 <?php }
                 else{ ?>
@@ -106,20 +106,20 @@ CoinWidgetCom.go({
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
                <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate Us"
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+    <script>
+      CoinWidgetCom.go({
+        wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+        , currency: "bitcoin"
+        , counter: "count"
+        , alignment: "bl"
+        , qrcode: true
+        , auto_show: false
+        , lbl_button: "Donate Us"
+        , lbl_address: "My Bitcoin Address:"
+        , lbl_count: "donations"
+        , lbl_amount: "BTC"
+      });
+    </script>
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -130,7 +130,7 @@ CoinWidgetCom.go({
               
       </div>
     	</div>
-    </div><!--/.navbar-collapse -->
+  </div><!--/.navbar-collapse -->
 
     <br>
     <br>
@@ -187,23 +187,24 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 //	$total = count($totalDonors);}
  ?>
 
-	<div class="container" width="50px;" style="display: inline">
-    <h1 align="center" style="font-family:'KGSecondChancesSketch'; 
-    font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
+  <div class="container" > <!-- width="50px;" style="display: inline" -->
+    
+      <h1 align="center" style="font-family:'KGSecondChancesSketch'; 
+      font-size: 72px; margin-top: -30px;"><?php echo $row['sname']; ?></h1>
 	
 
 		
 		
-	</div>
+              <!--</div>-->
 
-	<div class="container">
-    	<div class="row">
-    		
+	             <!--<div class="container">-->
+  
+    <div class="row">		
       
         <div class="col-md-6" align="left" style="margin-top: -70px;">
 					
          
-        <!--   <img src="./images/facebook-icon.png" width="25px"/>
+          <!--   <img src="./images/facebook-icon.png" width="25px"/>
   					<img src="./images/Twitter_logo.png" width="25px"/>
             <img src="./images/linked-in.jpg" width="25px"/> -->
             <span class='st_sharethis_large' displayText='ShareThis'></span>
@@ -211,25 +212,26 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
             <span class='st_twitter_large' displayText='Tweet'></span>
             <span class='st_linkedin_large' displayText='LinkedIn'></span>
             <span class='st_pinterest_large' displayText='Pinterest'></span>
-            <span class='st_email_large' displayText='Email'></span>
-  				
+            <span class='st_email_large' displayText='Email'></span>	
 				</div>
+    </div>
 
-        
+    
+    <div class="row">
 
-        	<div class="col-xs-7"  text-align="justify">
+        <div class="col-xs-7"  text-align="justify">
         		
 
-				<img src=<?php echo $row['image_path']; ?> width="100%" height="400px">
-		 		<div class="well" width="100%">
-        			<h2>My Story</h2><br><p style="text-align:justify">
-        			<?php echo $Story['story']; ?>
-					</p>
-    			</div>
-			</div>
+				    <img src=<?php echo $row['image_path']; ?> width="100%" height="400px">
+  		 		  <div class="well" width="100%">
+          			<h2>My Story</h2><br><p style="text-align:justify">
+          			<?php echo $Story['story']; ?>
+  					   </p>
+      			</div>
+			  </div>
 
 		
-			<div class="col-xs-5"> 
+			  <div class="col-xs-5"> 
 
 			
 				
@@ -245,22 +247,22 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
              }
              else{ ?>
               <b><?php echo 30-$days; ?></b> days to go!</h2>
-					<?php } ?>
+					  <?php } ?>
 						<br>
 
-					     <form action="donate.php" method="post" data-toggle="validator">
-					     <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
-                         <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+					      <form action="donate.php" method="post" data-toggle="validator">
+					        <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
+                  <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
 						
-            <div class="input-group" style="position:absolute;">
-							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
-              style="height: 50px; border: 3px solid #33cc66 ; border-radius: 7px; " pattern="([0-9]){1,10}" >
-              <div class="help-block with-errors"></div>
+                  <div class="input-group" style="position:absolute;">
+      							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
+                    style="height: 50px; border: 3px solid #33cc66 ; border-radius: 7px; " pattern="([0-9]){1,10}" >
+                    <div class="help-block with-errors"></div>
 
-                    	</div>
-						<input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
-						</form>
-						</div>
+                  </div>
+						      <input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
+						    </form>
+				 </div>
 
 					<br><br><br>			
 				</div>
@@ -277,7 +279,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 	</div>
 
 	
-	<div class="container">
+	<!--<div class="container">-->
     	 <h3 align="center">PreWork Status</h3>
       <div class="row">
       
@@ -411,9 +413,9 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         </div>
 
         </div>
-</div>
-	<div class="container1" align="center">
-    <div class="row" style="padding: 80px 50px 0 50px">
+<!--</div>-->
+	<!--<div class="container" align="center">-->
+    <div class="row" style="padding: 80px 50px 0 50px" align="center">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:100px"></img> 
           <br><h4>MAKE A DONATION</h4>
