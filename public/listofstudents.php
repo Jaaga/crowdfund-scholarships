@@ -262,7 +262,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
+        <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
