@@ -13,14 +13,12 @@ setlocale(LC_MONETARY, 'en_IN');
   <link rel="stylesheet" type="text/css" rel="stylesheet" href="./dist/css/bootstrapValidator.min.css"/>
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
+ 
 
     
 <style type="text/css">
 
    @font-face{
-      font-family:'KGSecondChancesSketch'; 
-      src:url('fonts/KGSecondChancesSketch.ttf');
       font-family:'Josefin Sans'; 
       src:url('fonts/JosefinSans-Regular.ttf');
          }
@@ -30,6 +28,7 @@ setlocale(LC_MONETARY, 'en_IN');
       src:url('fonts/KGSecondChancesSketch.ttf');
     
          }
+    
   body{
    padding-top: 100px;
   }
@@ -44,14 +43,15 @@ setlocale(LC_MONETARY, 'en_IN');
     background-size: cover;
     height: 650px;
     background-attachment: fixed;
-   margin: -70px;
+    margin: -70px;
+
     }
   .faq-image{
-      background-image:url("../public/images/classroom.jpg");
+    background-image:url("../public/images/classroom.jpg");
     background-size: cover;
     height: 650px;
     background-attachment: fixed;
-   margin: -70px;
+    margin: -70px;
    
   }
    .hiw-image{
@@ -88,7 +88,7 @@ setlocale(LC_MONETARY, 'en_IN');
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch';  cursive; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
 
@@ -169,7 +169,7 @@ CoinWidgetCom.go({
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
              <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px;font-family: 'Coustard', 'serif'; font-size: 22px; ">Help students seeking education by providing financial aid, enabling him or her 
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
             </div>
           </div>
@@ -225,7 +225,7 @@ CoinWidgetCom.go({
 
 
 <div class="hiw-image">
-    <h1 style="text-align: center; font-family:'KGSecondChancesSketch' cursive; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
+    <h1 style="text-align: center; font-family:'KGSecondChancesSketch'; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
 </div>
     <br>
 
@@ -233,7 +233,7 @@ CoinWidgetCom.go({
     <div class="row" align ="center" style="padding-bottom: 50px;">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
-          <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">MAKE A DONATION</h3>
+          <br><h3 style="font-family:'KGSecondChancesSketch';">MAKE A DONATION</h3>
           <p style="text-align: justify; padding:1em 1em;"><!--We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>-->
           View our student list and donate an amount. You can share the candidates profile to give them a further boost in achieving their goal. A little donation from your end could go a long way in helping someone for life.</p>
           <br>
@@ -241,14 +241,14 @@ CoinWidgetCom.go({
 
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
-        <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">AID THE STUDENT</h3>
+        <br><h3 style="font-family:'KGSecondChancesSketch';">AID THE STUDENT</h3>
         <p style="text-align: justify; padding:1em 1em;">You as a donor choose the applicant you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>
       </div>
 
       <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
-          <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">STUDENT PAYS IT FORWARD</h3>
+          <br><h3 style="font-family:'KGSecondChancesSketch';">STUDENT PAYS IT FORWARD</h3>
           <p style="text-align: justify; padding:1em 1em;"><!--The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>-->
           A student who has been succesfully sponsored gets inducted into a pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>  
@@ -262,7 +262,7 @@ CoinWidgetCom.go({
 
     <div class="faq-image">
        <div class="row">
-           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px; padding-top: 300px; color: white; font-size: 7em;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch'; font-size:45px; padding-top: 300px; color: white; font-size: 7em;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
           Know More!</h1>
        </div>
     </div>
@@ -312,7 +312,7 @@ CoinWidgetCom.go({
 
          <article style="text-align:justified; max-width:1000px; margin: 0 auto;">
 
-          <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get Involved</h2>
+          <h2 style="font-family:'KGSecondChancesSketch';">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
           </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
@@ -323,7 +323,7 @@ CoinWidgetCom.go({
 
       <div class="col-lg-4">
 
-      <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get in Touch</h2>
+      <h2 style="font-family:'KGSecondChancesSketch';">Get in Touch</h2>
       <p align="center"> 
       1, Penthouse 01<br>
       Rich Homes<br>
@@ -343,7 +343,7 @@ CoinWidgetCom.go({
     </div>      
     <!--</div>-->
     <div class="col-lg-4">
-        <h2 style="font-family:'KGSecondChancesSketch' cursive;">Explore</h2>
+        <h2 style="font-family:'KGSecondChancesSketch';">Explore</h2>
           <ul>
           <li><a href="index.php">Home </a> </li>
           <li><a href="#about">About Us</a> </li>

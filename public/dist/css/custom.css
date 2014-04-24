@@ -28,14 +28,7 @@ background-repeat:repeat;
 	/*-----------------------------------------------------------
   this is the image with the How it works text on the homepage
   -------------------------------------------------------------*/
-	 .hiw-image{
-     background-image:url("./public/images/book.jpg");
-    background-size: cover;
-    height: 650px;
-    background-attachment: fixed;
-   margin: -70px;
-
-  }
+	
  /*--------------------------------------------
   This is the button to apply for scholarships/homepage
   ---------------------------------------------*/
@@ -45,13 +38,7 @@ background-repeat:repeat;
 This is the banner image on the homepage
 -----------------------------------------*/  
 
-	 .image{
-    background-image:url("./public/images/footsteps-sand.jpg");
-    background-size: cover;
-    height: 650px;
-    background-attachment: fixed;
-   margin: -70px;
-    }
+	 
 
   /*-----------------------
   Featured student content
