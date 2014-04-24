@@ -220,7 +220,9 @@ foreach ($students as $student) {
           
         </div>
         </a>
-<?php } ?>
+<?php 
+$i++;
+} ?>
     </div>
 
 
