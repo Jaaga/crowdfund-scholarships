@@ -18,6 +18,8 @@ setlocale(LC_MONETARY, 'en_IN');
 <head>
   <title>Students</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+
   
   <style type="text/css">
   
@@ -63,18 +65,18 @@ padding-top: 60px;
 
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #25383c; border-color: #25383c;">
     <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
             <a class="navbar-brand" href="index.php">
 
-            <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+            <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px; color: white;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
                <?php if(isset($_COOKIE["email"])){ 
                  $whois=whois($email);
                 ?> 
@@ -118,7 +120,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
@@ -190,7 +192,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Me"
+  , lbl_button: "Sponsor Me"
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"

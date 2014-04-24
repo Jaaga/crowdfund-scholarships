@@ -66,7 +66,7 @@ return false;
 			<div class="navbar-header" style="height: 50px;">
 		
           
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;">LearnEm<h1></a>
         	</div>
         	<div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -90,7 +90,7 @@ return false;
       , alignment: "bl"
       , qrcode: true
       , auto_show: false
-      , lbl_button: "Donate Us"
+      , lbl_button: "Donate Us "
       , lbl_address: "My Bitcoin Address:"
       , lbl_count: "donations"
       , lbl_amount: "BTC"
@@ -114,7 +114,7 @@ return false;
         , alignment: "bl"
         , qrcode: true
         , auto_show: false
-        , lbl_button: "Donate Us"
+        , lbl_button: "Donate "
         , lbl_address: "My Bitcoin Address:"
         , lbl_count: "donations"
         , lbl_amount: "BTC"
