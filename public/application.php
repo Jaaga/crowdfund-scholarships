@@ -5,7 +5,10 @@
         
         $email=$_POST['email'];
         $U_id=$_POST['U_id'];
-      } ?>
+      }
+      else{
+        header("location:../public/usersignup.php");
+        } ?>
   <!DOCTYPE html>
 <html>
   <head>
