@@ -70,7 +70,7 @@ padding-top: 60px;
     
             <a class="navbar-brand" href="index.php">
 
-            <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+            <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">

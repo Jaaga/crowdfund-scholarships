@@ -77,7 +77,7 @@ setlocale(LC_MONETARY, 'en_IN');
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;">LearnEm<h1></a>
       </div>
 
 
@@ -214,7 +214,7 @@ CoinWidgetCom.go({
 
 
 <div class="hiw-image">
-    <h1 style="text-align: center; font-family:'KGSecondChancesSketch' cursive; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
+    <h1 style="text-align: center; font-family:'KGSecondChancesSketch'; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
 </div>
     <br>
 
@@ -222,7 +222,7 @@ CoinWidgetCom.go({
     <div class="row" align ="center" style="padding-bottom: 50px;">
       <div class="col-lg-4">
           <img src="./images/Donation.jpg" alt="donate" class="img-circle" align="center" style="Height:200px"></img> 
-          <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">MAKE A DONATION</h3>
+          <br><h3 style="font-family:'KGSecondChancesSketch';">MAKE A DONATION</h3>
           <p style="text-align: justify; padding:1em 1em;"><!--We select candidates for a scholarship based on certain criteria preset by our team.We consider economic background, academic performance and extra curricular skills while making our selections, but also look for that x-factor while making our choices.</p>-->
           View our student list and donate an amount. You can share the candidates profile to give them a further boost in achieving their goal. A little donation from your end could go a long way in helping someone for life.</p>
           <br>
@@ -230,7 +230,7 @@ CoinWidgetCom.go({
 
       <div class="col-lg-4">
         <img src="./images/Student_benefit.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
-        <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">AID THE STUDENT</h3>
+        <br><h3 style="font-family:'KGSecondChancesSketch';">AID THE STUDENT</h3>
         <p style="text-align: justify; padding:1em 1em;">You as a donor choose the applicant you would like to sponsor. The student utilizes the loan for paying his/her academic fee and to cover basic necessities during the course.</p>
           <br><br>
       </div>
@@ -251,7 +251,7 @@ CoinWidgetCom.go({
 
     <div class="faq-image">
        <div class="row">
-           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch' cursive; font-size:45px; padding-top: 300px; color: white; font-size: 7em;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+           <h1  align="center" id="faq" style="font-family:'KGSecondChancesSketch'; font-size:45px; padding-top: 300px; color: white; font-size: 7em;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
           Know More!</h1>
        </div>
     </div>
@@ -307,8 +307,8 @@ CoinWidgetCom.go({
           <br>
    <div class="row well" style="margin:0px -50px -50px -50px;">
     <div class="col-lg-4">
-      <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Get in Touch</h3>
-      `<iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+     <h3 style="font-family:'KGSecondChancesSketch'; text-align:left">Reach Us</h3>
+      <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
       marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
 
       </iframe> 
@@ -316,7 +316,7 @@ CoinWidgetCom.go({
     
     <div class="col-lg-4">
 
-      <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Get in Touch</h3>
+      <h3 style="font-family:'KGSecondChancesSketch'; text-align:left">Get in Touch</h3>
       <p> <strong>Contact Address</strong></br>
       1, Penthouse 01<br>
       Rich Homes<br>
@@ -336,7 +336,7 @@ CoinWidgetCom.go({
     </div>      
     <!--</div>-->
     <div class="col-lg-4">
-          <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Explore</h3>
+          <h3 style="font-family:'KGSecondChancesSketch' cursive; -moz-font-family:'KGSecondChancesSketch' cursive; text-align:center">Explore</h3>
           <nav>
           <p><a href="index.php">Home </a></p>
           <p><a href="#about">About Us</a></p>
