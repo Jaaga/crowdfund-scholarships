@@ -192,7 +192,7 @@ CoinWidgetCom.go({
         </a>
         <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
-               <b style="color:#111111;"><?php echo $percentage; ?> Complete</b> 
+               <b style="color:#111111;"><?php echo $percentage."%"; ?> Complete</b> 
                 </div>
                </div>
            
