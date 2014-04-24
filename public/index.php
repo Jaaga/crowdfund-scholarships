@@ -85,6 +85,7 @@ include('../model/user.php');
         <ul class="nav navbar-nav">
               <li><a href="listofstudents.php">Sponsor</a></li>
               <li><a href= "#hiw">How it Works</a></li>
+              <li><a href= "#faq">Know More</a></li>
           
 
          <?php if(isset($_COOKIE["email"])){ 
@@ -295,24 +296,23 @@ CoinWidgetCom.go({
     </div>
 </div>
           <br>
-    <article style="text-align:justified; max-width:1000px; margin: 0 auto; padding-top: 90px;">
+   <div class="row">
+      <div class="col-lg-4">
 
-          <h2 class="header-faq" style="background-color: black;">Get Involved</h2>
+         <article style="text-align:justified; max-width:1000px; margin: 0 auto;">
+
+          <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get Involved</h2>
            <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
           </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
-      </article>
-    
-    
-      
-    <!--    </div>
-    </div>-->
+         </article>
 
-    <br>
+        
+      </div>
 
-    <!--<div class="container1" align="center">-->
-    <div class="row" align="center">
-      <h1 style="font-family:'KGSecondChancesSketch' cursive;">Get in Touch</h1>
+      <div class="col-lg-4">
+
+      <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get in Touch</h2>
       <p align="center"> 
       1, Penthouse 01<br>
       Rich Homes<br>
@@ -321,7 +321,7 @@ CoinWidgetCom.go({
       INDIA<br>
       </p>
 
-      <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
+      <iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
 
       </iframe>
 
@@ -331,24 +331,41 @@ CoinWidgetCom.go({
       </small>  
     </div>      
     <!--</div>-->
-
-    <br>  
+    <div class="col-lg-4">
+        <h2 style="font-family:'KGSecondChancesSketch' cursive;">Explore</h2>
+          <ul>
+          <li><a href="index.php">Home </a> </li>
+          <li><a href="#about">About Us</a> </li>
+          <li><a href= "#hiw">How It Works</a> </li>
+           <li> <a href="#faq">FAQ</a> </li>
+           <li> <a href="#contact">Contact</a></li>  
+      </ul>
+    </div>
   </div>
   
-  <hr>
 
-  <footer class="footer" style="text-align:center">
-      <nav>
-        <ul>
-          <a href="index.php">Home </a> |
-          <a href= "#about">About Us</a> |
-            <a href= "#hiw">How It Works</a> |
-            <a href="#faq">FAQ</a> |
-            <a href="#contact">Contact</a>  
+        
+      </div>
+     
 
-        </ul>
-      </nav> 
-  </footer>
+   </div>
+
+
+
+
+
+
+
+   
+    
+    
+      
+    <!--    </div>
+    </div>-->
+
+    <br>
+
+    <!--<div class="container1" align="center">-->
 
   <!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
