@@ -164,10 +164,9 @@ $noofStudents=count($students);
  <h1> <?php echo $wrong; ?></h1>
 
   	<!-- Heading for Donated list row-->
-  	<div class="row">
-    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row['name'];?>'s Donated Student List</h1>
-
-    	<br>  
+     <div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+     	<h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive;"><?php echo $row['name'];?>'s Donated Student List</h1>
     </div>
     <?php 
 
@@ -182,8 +181,7 @@ $noofStudents=count($students);
             
     ?>
   
-  	<div class="row">
-          <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"/>
+  	      <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"/>
     	    <div class="col-md-4" >
         	<div class="well" >
         	   <!-- style="width: 340px;"-->
@@ -195,7 +193,7 @@ $noofStudents=count($students);
           	 <div class="progress progress-striped">
                 
           		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
-              	 <b style="color:#111111;"><?php echo $percentage; ?> Complete</b>
+              	 <b style="color:#111111;"><?php echo $percentage."%"; ?> Complete</b>
            			</div>
           	 </div>
 
@@ -231,7 +229,7 @@ $noofStudents=count($students);
               </div>
           </div>
      	    </div>
-    </div>
+
 
 
 
@@ -240,10 +238,12 @@ $noofStudents=count($students);
   <hr>
 
   <!-- Footer -->
-  <div class="row">
-    <footer class="footer" style="text-align:center" class="row">
+  <div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+
+   <footer class="footer" style="text-align:center" class="row">
       <nav>
-        <ul>
+        <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
           <a href= "#hiw">How It Works</a> |
@@ -253,6 +253,7 @@ $noofStudents=count($students);
       </nav> 
     </footer>
   </div>
+</div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
