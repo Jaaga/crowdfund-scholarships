@@ -109,22 +109,22 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 	
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
       <div class="container">
       
         <div class="navbar-header" style="height: 50px;">
       
 
           <a class="navbar-brand" href="index.php">
-          <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
+          <h1 style="font-family:'KGSecondChancesSketch' ; margin-top: -9px;color: white;">LearnEm</h1></a>
         </div>
 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
 
-                <li><a href= "userdashboard.php">UserDashboard</a></li>
+                <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
@@ -137,7 +137,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
@@ -298,7 +298,7 @@ CoinWidgetCom.go({
       </div>
     <!-- Row End -->
 
-    <h3 align="center" style="font-family:'KGSecondChancesSketch' cursive;">PreWork Status</h3>
+    <h3 align="center" style="font-family:'KGSecondChancesSketch';">PreWork Status</h3>
       	
     <!-- Codeschool Row Begin -->
         <div class="row">

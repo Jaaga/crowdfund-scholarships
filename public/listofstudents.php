@@ -80,9 +80,9 @@ padding-top: 60px;
                <?php if(isset($_COOKIE["email"])){ 
                  $whois=whois($email);
                 ?> 
-                <li><a href="userdashboard.php">UserDashboard</a>
+                <li><a href="userdashboard.php" style="color: white;">UserDashboard</a>
                 <?php if(is_numeric($whois)){ ?>
-                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+                 <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></ul>
                <?php } ?>
                 </ul>
 
@@ -96,7 +96,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
