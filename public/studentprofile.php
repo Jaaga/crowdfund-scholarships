@@ -250,9 +250,11 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 					  <?php } ?>
 						<br>
 
-					      <form action="donate.php" method="post" data-toggle="validator">
-					        <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
-                  <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+
+					     <form action="donate.php" method="post" data-toggle="validator">
+					     <input type="hidden" name="email" value="<?php echo $email ; ?>" >
+                <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
+
 						
                   <div class="input-group" style="position:absolute;">
       							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
@@ -266,7 +268,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 					<br><br><br>			
 				</div>
-			</form>
+			
 
 
 				<div class="well" style="background-color:#; height:450px; margin-top: -20px; text-align: justify;">
