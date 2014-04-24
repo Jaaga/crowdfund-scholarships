@@ -109,28 +109,42 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 	
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
       <div class="container">
       
         <div class="navbar-header" style="height: 50px;">
       
 
           <a class="navbar-brand" href="index.php">
-          <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
+          <h1 style="font-family:'KGSecondChancesSketch' ; margin-top: -9px;color: white;">LearnEm</h1></a>
         </div>
 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
 
-                <li><a href= "userdashboard.php">UserDashboard</a></li>
+                <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
-
+<script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate "
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
                 <a href="../controller/logout.php" class="btn btn-danger">LOGOUT</a>
-
+                
                 <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
 
             </div>             
@@ -251,7 +265,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 $Expire="Campaign is Over";
                 echo $Expire;
               } else{ ?>
-              <b><?php echo $days; } ?></b> days to go!</h2>
+              <b><?php echo 30-$days; } ?></b> days to go!</h2>
   					
   						<br>
   					
@@ -284,7 +298,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
       </div>
     <!-- Row End -->
 
-    <h3 align="center" style="font-family:'KGSecondChancesSketch' cursive;">PreWork Status</h3>
+    <h3 align="center" style="font-family:'KGSecondChancesSketch';">PreWork Status</h3>
       	
     <!-- Codeschool Row Begin -->
         <div class="row">
@@ -522,7 +536,13 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                 		<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
                   		
 
-                        
+                  <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinput">Your BitCoin-address :</label>  
+                          <div class="col-md-4">
+                              <input name="bitdetail" type="text" class="form-control input-md"> 
+                          </div>
+                    </div>
+          
                     <!-- Text input-->
                   		
                   

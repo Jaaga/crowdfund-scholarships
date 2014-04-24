@@ -79,20 +79,20 @@ include ('../model/student.php');
 
 	
 	<!-- Navbar section -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
     	<div class="container">
     
     		<div class="navbar-header" style="height: 50px;">
     
           
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
         </div>
 
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">AllStudents</a></li>
+                <li><a href="listofstudents.php" style="color: white;">AllStudents</a></li>
                 <?php if(is_numeric($whois)){ ?>
-                <li><a href="studentdashboard.php">StudentDashboard</a></li>
+                <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></li>
                <?php
                 }
                  ?>
@@ -102,9 +102,23 @@ include ('../model/student.php');
            		</ul>
               <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-
+<script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate "
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
               <a href="../controller/logout.php" class="btn btn-danger">LOGOUT</a>
-
+               
               <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
 
           </div>   
@@ -150,10 +164,9 @@ $noofStudents=count($students);
  <h1> <?php echo $wrong; ?></h1>
 
   	<!-- Heading for Donated list row-->
-  	<div class="row">
-    	<h1 style="text-align:center; font-family:Cabin Sketch"><?php echo $row['name'];?>'s Donated Student List</h1>
-
-    	<br>  
+     <div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+     	<h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive;"><?php echo $row['name'];?>'s Donated Student List</h1>
     </div>
     <?php 
 
@@ -164,12 +177,11 @@ $noofStudents=count($students);
                 $sum_amount=getFundedAmount($student['S_id']);
                 $days=remainingDays($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
+                $percentage = floor(($sum_amount/$requiredamount)*100);
             
     ?>
   
-  	<div class="row">
-          <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"/>
+  	      <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"/>
     	    <div class="col-md-4" >
         	<div class="well" >
         	   <!-- style="width: 340px;"-->
@@ -181,7 +193,7 @@ $noofStudents=count($students);
           	 <div class="progress progress-striped">
                 
           		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
-              	 <b style="color:#111111;"><?php echo $percentage; ?> Complete</b>
+              	 <b style="color:#111111;"><?php echo $percentage."%"; ?> Complete</b>
            			</div>
           	 </div>
 
@@ -189,7 +201,7 @@ $noofStudents=count($students);
               $Expire="Campaign is Over";
               echo $Expire;
              } else{ ?>
-             <b><?php echo $days; }
+             <b><?php echo 30-$days; }
              ?></b> days to go <b><br>
              <?php echo money_format('%i',$sum_amount);?></b> 
                 pledged out of <br><?php echo money_format('%i',$requiredamount); ?>
@@ -217,7 +229,7 @@ $noofStudents=count($students);
               </div>
           </div>
      	    </div>
-    </div>
+
 
 
 
@@ -226,10 +238,12 @@ $noofStudents=count($students);
   <hr>
 
   <!-- Footer -->
-  <div class="row">
-    <footer class="footer" style="text-align:center" class="row">
+  <div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+
+   <footer class="footer" style="text-align:center" class="row">
       <nav>
-        <ul>
+        <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
           <a href= "#about">About Us</a> |
           <a href= "#hiw">How It Works</a> |
@@ -239,6 +253,7 @@ $noofStudents=count($students);
       </nav> 
     </footer>
   </div>
+</div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

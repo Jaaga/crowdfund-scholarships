@@ -13,13 +13,22 @@ setlocale(LC_MONETARY, 'en_IN');
   <link rel="stylesheet" type="text/css" rel="stylesheet" href="./dist/css/bootstrapValidator.min.css"/>
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+ 
+
     
 <style type="text/css">
 
    @font-face{
+      font-family:'Josefin Sans'; 
+      src:url('fonts/JosefinSans-Regular.ttf');
+         }
+
+     @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
+    
          }
+    
   body{
    padding-top: 100px;
   }
@@ -28,28 +37,30 @@ setlocale(LC_MONETARY, 'en_IN');
   text-align:center;
   }
 
+
  .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
     height: 650px;
     background-attachment: fixed;
-   margin: -70px;
+    margin: -70px;
+
     }
-  .hiw-image{
+  .faq-image{
+    background-image:url("../public/images/classroom.jpg");
+    background-size: cover;
+    height: 650px;
+    background-attachment: fixed;
+    margin: -70px;
+   
+  }
+   .hiw-image{
      background-image:url("../public/images/book.jpg");
     background-size: cover;
     height: 650px;
     background-attachment: fixed;
    margin: -70px;
 
-  }
-  .faq-image{
-      background-image:url("../public/images/classroom.jpg");
-    background-size: cover;
-    height: 650px;
-    background-attachment: fixed;
-   margin: -70px;
-   
   }
 
   .faq
@@ -70,36 +81,38 @@ setlocale(LC_MONETARY, 'en_IN');
 
   <div class="container" >
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
       <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;">LearnEm<h1></a>
+
+        <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white; ">LearnEm<h1></a>
+
       </div>
 
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-              <li><a href="listofstudents.php">Sponsor</a></li>
-              <li><a href= "#hiw">How it Works</a></li>
-              <li><a href= "#faq">Know More</a></li>
+              <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
+              <li><a href= "#hiw" style="color: white;">How it Works</a></li>
+              <li><a href= "#faq" style="color: white;">Know More</a></li>
           
 
          <?php if(isset($_COOKIE["email"])){ 
                   $email=$_COOKIE['email'];
                  $whois=whois($email);
                 ?> 
-                <li><a href="userdashboard.php">UserDashboard</a>
+                <li><a href="userdashboard.php"style="color: white;">UserDashboard</a>
 
                 <?php if(is_numeric($whois)){ ?>
-                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+                 <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></ul>
                <?php } ?>
                 </ul> 
                  <div class="navbar-form navbar-right">
-                         <script src="http://coinwidget.com/widget/coin.js"></script>
+                      <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
   wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
@@ -108,14 +121,14 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
 });
-</script>
+</script>   
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
-
+               
           </div>           
           <?php }
                  else{ ?>
@@ -132,7 +145,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
@@ -157,21 +170,21 @@ CoinWidgetCom.go({
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
             </div>
           </div>
 
           <div class="row" style="margin:-250px 0 100px 0;">
             <div class="col-lg-6" align="center">
-              <h3 style="color:white;">Apply for Scholarship</h3>
+              <h3 style="color:white;font-family: 'Josefin Sans', 'sans-serif';">Apply for Scholarship</h3>
                   <a href="usersignup.php">
               <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
                </a> 
             </div>
             <div class="col-lg-6" align="center">
-              <h3 style="color:white;">View Scholarship Applications</h3>
+              <h3 style="color:white;font-family: 'Josefin Sans', 'sans-serif';">View Scholarship Applications</h3>
                 <a href="listofstudents.php"> 
               <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
               </a>
@@ -191,12 +204,15 @@ CoinWidgetCom.go({
           ?>
 
     <div class="row" style="padding-top: 70px; padding-bottom: 40px;">
-<?php foreach ($students as $student) {
+<?php 
+$i=0;
+foreach ($students as $student) {
+  if($i==3) break;
   $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">
-            <h3 class="feature">Featured</h3>
+            <h3 class="feature" style="font-family: 'Josefin Sans', 'sans-serif'; font-size: 28px;">Featured</h3>
             <img src=<?php echo $student['image_path']?> class="feature-image">
             <h2><?php echo $student['sname']; ?> </h2>
             <p style="text-align: justify; padding:1em 1em;" ><?php echo $student['para'] ?></p>
@@ -237,7 +253,7 @@ CoinWidgetCom.go({
 
       <div class="col-lg-4">
           <img src="./images/Pay_it.jpg" alt="donate" class="img-circle" style="height:200px"></img> 
-          <br><h3 style="font-family:'KGSecondChancesSketch' cursive;">STUDENT PAYS IT FORWARD</h3>
+          <br><h3 style="font-family:'KGSecondChancesSketch';">STUDENT PAYS IT FORWARD</h3>
           <p style="text-align: justify; padding:1em 1em;"><!--The student who has been sponsored through our system gets inducted into an honour-based pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.</p>-->
           A student who has been succesfully sponsored gets inducted into a pay-it-forward process wherein once the student graduates and begins to earn, he/she is encouraged to sponsor another student.
       </div>  
@@ -291,21 +307,21 @@ CoinWidgetCom.go({
               <p>When you have browsed through our list of students in need of funding, you can pick any one and donate
                any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding
                 required and how much the student has already been funded. You will receive a letter of gratitude from the student 
-                and LearnEmp for your contribution.</p>
+                and LearnEm for your contribution.</p>
               </div>
-              <br>
               <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
-              <h2>How can I get involved?</h2>
-              <p>After you've sponsored your first student, we would like you to stay in touch with us via 
+              <h2>How can I get Involved?</h2>
+              <p>After you've sponsored your first student or even otherwise, 
+              we would like you to stay involved with us by keeping in touch via 
           <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
-          </a>
-          If you would like to put in some time volunteering with our organization, feel free to drop us an email 
-          at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
+          </a>If you would like to put in some time volunteering with our organization, 
+          feel free to drop us an email at
+           <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
               </div>
     </div>
 </div>
           <br>
-   <div class="row well" style="margin:0px -50px -50px -50px;">
+<div class="row well" style="margin:0px -50px -50px -50px;">
     <div class="col-lg-4">
 
       <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
@@ -369,7 +385,7 @@ CoinWidgetCom.go({
 
     <!--<div class="container1" align="center">-->
 
-  <!-- Modal -->
+  <!-- Modal Sign In-->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">

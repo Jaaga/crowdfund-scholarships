@@ -18,6 +18,8 @@ setlocale(LC_MONETARY, 'en_IN');
 <head>
   <title>Students</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
+  <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+
   
   <style type="text/css">
   
@@ -63,29 +65,33 @@ padding-top: 60px;
 
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #25383c; border-color: #25383c;">
     <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
             <a class="navbar-brand" href="index.php">
 
+<<<<<<< HEAD
             <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;">LearnEm<h1></a>
+=======
+            <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px; color: white;">LearnEm<h1></a>
+>>>>>>> 4ddbda5bba431682338b493bd4f341f77d45c8ba
       </div>
       <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
                <?php if(isset($_COOKIE["email"])){ 
                  $whois=whois($email);
                 ?> 
-                <li><a href="userdashboard.php">UserDashboard</a>
+                <li><a href="userdashboard.php" style="color: white;">UserDashboard</a>
                 <?php if(is_numeric($whois)){ ?>
-                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+                 <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></ul>
                <?php } ?>
                 </ul>
 
                   <div class="navbar-form navbar-right">
-                  <script src="http://coinwidget.com/widget/coin.js"></script>
+   <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
   wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
@@ -94,14 +100,14 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
 });
 </script>
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
-
+               
           </div>
 
                   <?php }
@@ -118,7 +124,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
@@ -138,9 +144,20 @@ CoinWidgetCom.go({
     
   
   <div class="container" align="center">
+<div class="row" align="right">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="N6AWJCSLS8Z3U">
+<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:60px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+</div>
+
       <div class="row" style="margin-left: auto; margin-right: auto;">
     <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1></div>
-
+    
   <?php $students= getStudentList();
         foreach($students as $student){ 
   ?>
@@ -148,10 +165,11 @@ CoinWidgetCom.go({
   <?php 
                
             $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
-
+                
+                $bitdetail=$student['bitdetail'];
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
+                $percentage =floor(($sum_amount/$requiredamount)*100);
                 //$DateApplied= $student['date'];
                 $DateApplied=$student['date'];
                 $CurrentDate= date("Y-m-d H:i:s");
@@ -171,12 +189,27 @@ CoinWidgetCom.go({
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
+        <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "<?php echo $bitdetail; ?>"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Sponsor Me"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
         <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
         <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
-               <b style="color:#111111;"><?php echo $percentage; ?> Complete</b> 
+               <b style="color:#111111;"><?php echo $percentage."%"; ?> Complete</b> 
                 </div>
                </div>
            
@@ -188,7 +221,7 @@ CoinWidgetCom.go({
               }
               else{
               ?>
-              <b><?php echo $days; 
+              <b><?php echo 30-$days; 
               }?></b> days left<b><br>
                 
                 <?php echo money_format('%i',$sum_amount);?></b> 
@@ -246,7 +279,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
+        <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
@@ -257,10 +290,53 @@ CoinWidgetCom.go({
 </div>
 </div>
 
+<!-- Sign in Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+         <div class="col-md-6" style="margin-left:130px;">
+          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm" 
+          data-toggle="validator">
+            <div class="form-group">
+              <label >Email address</label>
+              <input id="email" name="email" type="email" class="form-control" name="email" 
+              placeholder="Enter email" data-error="Invalid Email Address" required>
+              <div class="help-block with-errors"></div>
+            </div>
 
-    <script type="text/javascript" src="./dist/js/validator.js"></script>
+            <div class="form-group">
+            <label class="control-label" for="textinput" style="color:black;">Password:</label>       
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
+            </div>
+            <!--<div class="form-group">
+              <label class="control-label" for="textinput" style="color:black;">Password</label>
+              <input name="password" type="password" id="password" placeholder="Password">
+              <span class="help-block with-errors"></span>
+            </div>-->
+             <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Log In</button>
+             </div>
+          </form>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
     <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="./dist/js/validator.js"></script>
+
 </body>
 
 </html> 
