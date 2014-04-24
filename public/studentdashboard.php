@@ -536,7 +536,13 @@ CoinWidgetCom.go({
                 		<input type="hidden" name="S_id" value="<?php echo $S_id; ?>">
                   		
 
-                        
+                  <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinput">Bit-add</label>  
+                          <div class="col-md-4">
+                              <input name="bitdetail" type="text" class="form-control input-md"> 
+                          </div>
+                    </div>
+          
                     <!-- Text input-->
                   		
                   

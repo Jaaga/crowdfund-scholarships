@@ -148,7 +148,8 @@ CoinWidgetCom.go({
   <?php 
                
             $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
-
+                
+                $bitdetail=$student['bitdetail'];
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage =floor(($sum_amount/$requiredamount)*100);
@@ -171,6 +172,21 @@ CoinWidgetCom.go({
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
+        <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "<?php echo $bitdetail; ?>"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate Us"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
         <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>

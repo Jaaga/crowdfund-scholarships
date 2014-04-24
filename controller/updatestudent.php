@@ -5,6 +5,7 @@ $S_id= $_POST['S_id'];
 $Phone_Number=$_POST['Phone_Number'];
 $address= $_POST['address'];
 $para=$_POST['para'];
+$bitdetail=$_POST['bitdetail'];
 
 if(isset($_POST['S_id']))
 {
@@ -21,11 +22,11 @@ if(isset($_POST['S_id']))
   move_uploaded_file($temp,$pic);
   }
 
-if(empty($Phone_Number) && empty($address) && empty($para) && empty($pic)){
+if(empty($Phone_Number) && empty($address) && empty($para) && empty($pic) && empty($bitdetail)){
 	header("location:../public/studentdashboard.php");
 }
 else{
-$Id=updateStudent($S_id,$Phone_Number,$address,$para,$pic);
+$Id=updateStudent($S_id,$Phone_Number,$address,$para,$pic,$bitdetail);
 
 header("location:../public/studentdashboard.php");
 }
