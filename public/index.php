@@ -81,22 +81,22 @@ setlocale(LC_MONETARY, 'en_IN');
 
   <div class="container" >
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
       <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'KGSecondChancesSketch';  cursive; margin-top: -9px;">LearnEm<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch';  cursive; margin-top: -9px;color: white;">LearnEm<h1></a>
       </div>
 
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-              <li><a href="listofstudents.php">Sponsor</a></li>
-              <li><a href= "#hiw">How it Works</a></li>
-              <li><a href= "#faq">Know More</a></li>
+              <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
+              <li><a href= "#hiw" style="color: white;">How it Works</a></li>
+              <li><a href= "#faq" style="color: white;">Know More</a></li>
           
 
          <?php if(isset($_COOKIE["email"])){ 
@@ -302,7 +302,7 @@ CoinWidgetCom.go({
               <p>When you have browsed through our list of students in need of funding, you can pick any one and donate
                any amount you prefer. The minimum amount is $5 (Rs.300). On every student's page you can view the funding
                 required and how much the student has already been funded. You will receive a letter of gratitude from the student 
-                and LearnEmp for your contribution.</p>
+                and LearnEm for your contribution.</p>
               </div>
     </div>
 </div>
