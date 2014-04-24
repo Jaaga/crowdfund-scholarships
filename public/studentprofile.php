@@ -17,9 +17,7 @@ if(isset($_COOKIE['email']))
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
 	<link href="./dist/css/slider.css" rel="stylesheet">
 	<link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
-	<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "efbad282-59ff-4ef1-90cc-48691ddef625", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+	
 
 	<style>
 	
@@ -49,12 +47,12 @@ if(isset($_COOKIE['email']))
   }
 
 	</style>
-  <!-- <script>
+  <script>
 function fbs_click(){
 u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
 return false;
 }
-</script> -->
+</script>
 </head>
 
 <body>
@@ -79,21 +77,6 @@ return false;
                <?php } ?>
                 </ul> 
                  <div class="navbar-form navbar-right">
-                 <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate"
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
 
           </div>   
@@ -103,21 +86,7 @@ CoinWidgetCom.go({
             </ul>
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-          <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate"
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -192,37 +161,21 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 		
 	</div>
 
-	
+	<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
+    <img src="./images/facebook-icon.png" width="25px"/>
+</a>
 
 	<div class="container">
     	<div class="row">
     		
       
         <div class="col-md-6" align="left" style="margin-top: -70px;">
-					<span class='st_sharethis_large' displayText='ShareThis'></span>
-<span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
-<span class='st_linkedin_large' displayText='LinkedIn'></span>
-<span class='st_pinterest_large' displayText='Pinterest'></span>
-<span class='st_email_large' displayText='Email'></span>
+					
          
-            <!--<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
-    <img src="./images/facebook-share.png" width="60px"/></a> 
-    <a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
-    <img src="./images/facebook-share.png" width="60px"/>
-    </a>
-
-  					<a href="https://twitter.com/share" class="twitter-share-button" data-via="jaagarnaut">Tweet</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            
-  <script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>          
-  		-->		
+            <img src="./images/facebook-icon.png" width="25px"/>
+  					<img src="./images/Twitter_logo.png" width="25px"/>
+            <img src="./images/linked-in.jpg" width="25px"/>
+  				
 				</div>
 
         
@@ -261,9 +214,9 @@ fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</scri
 					     <input type="hidden" name="$email" value="<?php echo $email ; ?>" >
                          <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
 						
-            <div class="input-group" style="border: 3px solid #33cc66 ; border-radius: 7px;position:absolute;">
+            <div class="input-group" style="position:absolute;">
 							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
-              style="height: 50px; " pattern="([0-9]){1,10}" >
+              style="height: 50px; border: 3px solid #33cc66 ; border-radius: 7px; " pattern="([0-9]){1,10}" >
               <div class="help-block with-errors"></div>
 
                     	</div>

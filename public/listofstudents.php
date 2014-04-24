@@ -204,7 +204,7 @@ CoinWidgetCom.go({
 
           <div class="col-md-8" >
 
-            <input name="amount" type="text" placeholder="$ "
+            <input name="amount" type="text" placeholder="Rs. "
              class="form-control input-md" pattern="([0-9]){1,10}"
             data-match-error="Please enter numerical value" > 
             <div class="help-block with-errors"></div>
@@ -246,7 +246,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |
+        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
@@ -258,7 +258,9 @@ CoinWidgetCom.go({
 </div>
 
 
-    <script type="text/javascript" src="./dist/js/validator.js"></script> 
+    <script type="text/javascript" src="./dist/js/validator.js"></script>
+    <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script> 
 </body>
 
 </html> 
