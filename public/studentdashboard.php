@@ -537,7 +537,7 @@ CoinWidgetCom.go({
                   		
 
                   <div class="form-group">
-                          <label class="col-md-4 control-label" for="textinput">Bit-add</label>  
+                          <label class="col-md-4 control-label" for="textinput">Your BitCoin-address :</label>  
                           <div class="col-md-4">
                               <input name="bitdetail" type="text" class="form-control input-md"> 
                           </div>
