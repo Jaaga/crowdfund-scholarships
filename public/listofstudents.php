@@ -85,7 +85,9 @@ padding-top: 60px;
                 </ul>
 
                   <div class="navbar-form navbar-right">
-                  <script src="http://coinwidget.com/widget/coin.js"></script>
+   
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+               <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
   wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
@@ -100,8 +102,6 @@ CoinWidgetCom.go({
   , lbl_amount: "BTC"
 });
 </script>
-                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
-
           </div>
 
                   <?php }

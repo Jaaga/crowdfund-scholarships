@@ -104,7 +104,21 @@ include ('../model/student.php');
           <div class="navbar-form navbar-right">
 
               <a href="../controller/logout.php" class="btn btn-danger">LOGOUT</a>
-
+               <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
               <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
 
           </div>   

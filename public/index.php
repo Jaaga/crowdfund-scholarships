@@ -99,7 +99,9 @@ setlocale(LC_MONETARY, 'en_IN');
                <?php } ?>
                 </ul> 
                  <div class="navbar-form navbar-right">
-                         <script src="http://coinwidget.com/widget/coin.js"></script>
+                         
+                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
+               <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
   wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
@@ -114,8 +116,6 @@ CoinWidgetCom.go({
   , lbl_amount: "BTC"
 });
 </script>
-                <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
-
           </div>           
           <?php }
                  else{ ?>
@@ -293,57 +293,53 @@ CoinWidgetCom.go({
                 required and how much the student has already been funded. You will receive a letter of gratitude from the student 
                 and LearnEmp for your contribution.</p>
               </div>
-              <br>
-              <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
-              <h2>How can I get involved?</h2>
-              <p>After you've sponsored your first student, we would like you to stay in touch with us via 
-          <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
-          </a>
-          If you would like to put in some time volunteering with our organization, feel free to drop us an email 
-          at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
-              </div>
     </div>
 </div>
           <br>
-   <div class="row well" style="margin:0px -50px -50px -50px;">
-    <div class="col-lg-4">
-      <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Get in Touch</h3>
-      `<iframe width="300px" height="200px" frameborder="0" scrolling="no" 
-      marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
+   <div class="row">
+      <div class="col-lg-4">
 
-      </iframe> 
-    </div>
-    
-    <div class="col-lg-4">
+         <article style="text-align:justified; max-width:1000px; margin: 0 auto;">
 
-      <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Get in Touch</h3>
-      <p> <strong>Contact Address</strong></br>
+          <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get Involved</h2>
+           <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
+          <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
+          </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
+         </article>
+
+        
+      </div>
+
+      <div class="col-lg-4">
+
+      <h2 style="font-family:'KGSecondChancesSketch' cursive;">Get in Touch</h2>
+      <p align="center"> 
       1, Penthouse 01<br>
       Rich Homes<br>
       Richmond Road<br>
       Bangalore - 560025<br>
       INDIA<br>
-      <br>
-
-      <a href="mailto:contact@learnem.com">contact@learnem.com</a>
       </p>
 
-      
+      <iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
+
+      </iframe>
 
       <br>
 
-       
+      <small><a href="http://bit.ly/1otljDy" style="color:#0000FF;text-align:left" align="right">View Larger Map</a>
+      </small>  
     </div>      
     <!--</div>-->
     <div class="col-lg-4">
-          <h3 style="font-family:'KGSecondChancesSketch' cursive; text-align:center">Explore</h3>
-          <nav>
-          <p><a href="index.php">Home </a></p>
-          <p><a href="#about">About Us</a></p>
-          <p><a href= "#hiw">How It Works</a></p>
-          <p><a href="#faq">FAQ</a></p>
-          <p><a href="#contact">Contact</a></p>
-          </nav>
+        <h2 style="font-family:'KGSecondChancesSketch' cursive;">Explore</h2>
+          <ul>
+          <li><a href="index.php">Home </a> </li>
+          <li><a href="#about">About Us</a> </li>
+          <li><a href= "#hiw">How It Works</a> </li>
+           <li> <a href="#faq">FAQ</a> </li>
+           <li> <a href="#contact">Contact</a></li>  
+      </ul>
     </div>
   </div>
   
