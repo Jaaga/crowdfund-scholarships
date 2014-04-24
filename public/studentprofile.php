@@ -17,7 +17,9 @@ if(isset($_COOKIE['email']))
 	<link href="./dist/css/bootstrap.css" rel="stylesheet">
 	<link href="./dist/css/slider.css" rel="stylesheet">
 	<link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
-	
+	<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "efbad282-59ff-4ef1-90cc-48691ddef625", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
 
 	<style>
 	
@@ -47,12 +49,12 @@ if(isset($_COOKIE['email']))
   }
 
 	</style>
-  <script>
+  <!-- <script>
 function fbs_click(){
 u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
 return false;
 }
-</script>
+</script> -->
 </head>
 
 <body>
@@ -188,10 +190,15 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     		
       
         <div class="col-md-6" align="left" style="margin-top: -70px;">
-					
+					<span class='st_sharethis_large' displayText='ShareThis'></span>
+<span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span>
+<span class='st_email_large' displayText='Email'></span>
          
             <!--<a href="https://www.facebook.com/sharer/sharer.php?u=<url>" onclick="return fbs_click()" target="_blank">
-    <img src="./images/facebook-share.png" width="60px"/></a> -->
+    <img src="./images/facebook-share.png" width="60px"/></a> 
     <a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
     <img src="./images/facebook-share.png" width="60px"/>
     </a>
@@ -206,7 +213,7 @@ fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</scri
   lang: en_US
 </script>
 <script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>          
-  				
+  		-->		
 				</div>
 
         

@@ -156,7 +156,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
     <img src="./images/facebook-share.png" width="60px"/>
     </a>
 <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flearnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>%2F&text=please take a look at my profile&tw_p=tweetbutton&url=http%3A%2F%2Flearnem.jaaga.us%2F&via=jaagarnaut" target="_blank">
-<img src="./images/Twitter_logo.png" width="25px"/></a>
+<img src="./images/Twitter-share1.png" width="90px"/></a>
 <script src="//platform.linkedin.com/in.js" type="text/javascript">
   lang: en_US
 </script>
