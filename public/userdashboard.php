@@ -164,7 +164,7 @@ $noofStudents=count($students);
                 $sum_amount=getFundedAmount($student['S_id']);
                 $days=remainingDays($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
+                $percentage = floor(($sum_amount/$requiredamount)*100);
             
     ?>
   

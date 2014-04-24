@@ -151,7 +151,7 @@ CoinWidgetCom.go({
 
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
-                $percentage = (($sum_amount/$requiredamount)*100);
+                $percentage =floor(($sum_amount/$requiredamount)*100);
                 //$DateApplied= $student['date'];
                 $DateApplied=$student['date'];
                 $CurrentDate= date("Y-m-d H:i:s");
