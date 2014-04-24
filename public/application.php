@@ -9,21 +9,7 @@
   <!DOCTYPE html>
 <html>
   <head>
-  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js">
-  </script>
-  <script type="text/javascript">
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
 
-                reader.onload = function (e) {
-                    $('#showimage').attr('src', e.target.result);
-                }
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-  </script>
   <style>
     @font-face{
       font-family:'KGSecondChancesSketch'; 
@@ -92,7 +78,8 @@
     
     <div class="col-md-8">
       <div class="well" >
-        <form class="form-horizontal" action="../controller/applicant.php" method="post" autocomplete="on" enctype="multipart/form-data">
+        <form class="form-horizontal" action="../controller/applicant.php" 
+        method="post" autocomplete="on" enctype="multipart/form-data" data-toggle="validator" role="form">
         
         <fieldset>
 
@@ -104,8 +91,11 @@
           <div class="form-group">
           <label class="col-md-4 control-label" for="textinput">Your Name:</label> 
           <div class="col-md-4">
-            <input name="sname" type="text" class="form-control input-md" value="<?php echo $name; ?>">
-        
+            <input name="sname" type="text" class="form-control input-md" 
+            value="<?php echo $name; ?>"
+            pattern="([A-z ]){1,}" data-error="Please use only alphabets">
+            <div class="help-block with-errors"></div>
+
           </div>
           </div>
 
@@ -135,7 +125,9 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">E-mail:</label>  
             <div class="col-md-4">
-              <input name="email" type="email" class="form-control input-md" value="<?php echo $email; ?>">
+              <input name="email" type="email" class="form-control input-md" 
+              value="<?php echo $email; ?>" data-error="Invalid Email Address" required>
+              <div class="help-block with-errors"></div>
               <span style="color:crimson;"><?php echo $Invalid; ?></span>    
             </div>
           </div>
@@ -146,7 +138,10 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Contact Number:</label>  
             <div class="col-md-4">
-            <input name="Phone_Number" type="text" placeholder="Contact Number" value="<?php echo $Phone_Number; ?>" class="form-control input-md">
+            <input name="Phone_Number" type="text" placeholder="Contact Number" 
+            value="<?php echo $Phone_Number; ?>" class="form-control input-md" pattern="([0-9]){1,10}"
+            data-match-error="Please enter numerical value">
+            <div class="help-block with-errors"></div>
               
             </div>
           </div>
@@ -155,7 +150,9 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="textarea">Address:</label>
             <div class="col-md-4">                     
-              <textarea class="form-control" name="address"></textarea>
+              <textarea class="form-control" name="address" 
+              pattern="^([_A-z0-9]){3,}$" ></textarea>
+              <div class="help-block with-errors"></div>
             </div>
           </div>
 
@@ -163,7 +160,10 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Pin Code:</label>  
             <div class="col-md-4">
-            <input name="pincode" type="text" placeholder="Pin Code" value="<?php echo $pincode; ?>" class="form-control input-md">
+            <input name="pincode" type="text" placeholder="Pin Code" 
+            value="<?php echo $pincode; ?>" class="form-control input-md" pattern="([0-9]){1,10}"
+            data-match-error="Please enter numerical value">
+            <div class="help-block with-errors"></div>
             
             </div>
           </div>
@@ -174,7 +174,8 @@
             <div class="col-md-4">
               <select name="country" class="form-control">
                 <option value="#">Select Country</option>
-                <option value="Armenia">Armenia</option>
+                <option value="Armenia">India</option>
+                <option value="Armenia">Other</option>
               </select>
             </div>
           </div>
@@ -196,17 +197,22 @@
 
           <!-- Textarea -->
           <div class="form-group">
-            <label class="col-md-4 control-label" for="textarea" >Introduce yourself!</label>
+            <label class="col-md-4 control-label" for="textarea" >Introduce yourself</label>
             <div class="col-md-4">                     
-              <textarea class="form-control" name="para" placeholder="Introduce yourself in 120 characters"></textarea>
-            </div>
+              <textarea class="form-control" name="para"
+               placeholder="Introduce yourself in 120 characters" pattern="^([_A-z0-9]){3,}$" maxlength="120"></textarea>
+            </div><br>
+            <div class="help-block with-errors"></div>
           </div>
 
           <!-- Text input-->
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Scholarship Amount:</label>  
             <div class="col-md-4">
-            <input name="scholar_AMT" type="text" value="<?php echo $scholar_AMT; ?>" placeholder="enter the amount required" class="form-control input-md">
+            <input name="scholar_AMT" type="text" value="<?php echo $scholar_AMT; ?>" 
+            placeholder="enter the amount required" class="form-control input-md"
+            pattern="([0-9]){1,10}" data-match-error="Please enter numerical value">
+            <div class="help-block with-errors"></div>
 
             </div>
           </div>
@@ -280,7 +286,20 @@
 </div>
 </div>
 
+  <script language="javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
+                reader.onload = function (e) {
+                    $('#showimage').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }</script>
+  <script type="text/javascript" src="./dist/js/validator.js"></script>
   </body>
 
 </html>

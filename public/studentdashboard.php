@@ -4,6 +4,7 @@ if(!isset($_COOKIE['email']))
 {
   header("location:../public/usersignup.php");
 }
+setlocale(LC_MONETARY, 'en_IN');
 ?>
 <?php 
 include ('../model/student.php');
@@ -18,8 +19,8 @@ $S_id=$_SESSION['S_id'];
       $total=count(array_unique($Donors));
 
       //$total=count($Donors);
-
-
+      $days=remainingDays($S_id);  
+      
       $Story=getStory($S_id);
       $CS_id= $Story['CS_id'];
       $Git_id=$Story['Git_id'];
@@ -241,9 +242,16 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
   				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
   					<div class="sponsor_data">
-  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $total; ?></b> donors backed </h2><br>
-  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
-  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> <b><?php echo $student['date']; ?></b> days to go!</h2>
+  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> 
+              <b><?php echo $total; ?></b> donors backed </h2><br>
+  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;">
+              <b><?php echo money_format('%i',$totalAmount); ?></b> pledged<br> out of<b>
+              <?php echo money_format('%i',$student['scholar_AMT']); ?></b></h2>
+  						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"><?php if(!($days<30)){
+                $Expire="Campaign is Over";
+                echo $Expire;
+              } else{ ?>
+              <b><?php echo $days; } ?></b> days to go!</h2>
   					
   						<br>
   					

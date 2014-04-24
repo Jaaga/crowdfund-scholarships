@@ -1,6 +1,6 @@
 <?php include('../model/student.php');
 include('../model/user.php');
-
+setlocale(LC_MONETARY, 'en_IN');
 
 ?>
 
@@ -157,8 +157,8 @@ CoinWidgetCom.go({
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 40px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
             </div>
           </div>

@@ -4,6 +4,7 @@ session_start();
    {  
     header("location:../public/usersignup.php");
   } 
+  setlocale(LC_MONETARY, 'en_IN');
  //if(isset($_POST['wrong'])){
   //$wrong="Wrong Password";
  //}
@@ -128,6 +129,7 @@ $noofStudents=count($students);
 	  <!-- Donor Detail Row-->
  	  <div class="row">
     	<div class="col-md-12" >
+      
      		<div class="well" style= "height: 265px;">
         		<img src="<?php
             if(file_exists($row['image'])){
@@ -160,6 +162,7 @@ $noofStudents=count($students);
             $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
 
                 $sum_amount=getFundedAmount($student['S_id']);
+                $days=remainingDays($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage = (($sum_amount/$requiredamount)*100);
             
@@ -182,8 +185,14 @@ $noofStudents=count($students);
            			</div>
           	 </div>
 
-          	 <p style="text-align:left"><b>4</b> days to go <b><?php echo "Rs. ".$sum_amount;?></b> 
-                pledged out of <?php echo $requiredamount; ?>
+          	 <p style="text-align:left"><?php if(!($days<30)){
+              $Expire="Campaign is Over";
+              echo $Expire;
+             } else{ ?>
+             <b><?php echo $days; }
+             ?></b> days to go <b><br>
+             <?php echo money_format('%i',$sum_amount);?></b> 
+                pledged out of <br><?php echo money_format('%i',$requiredamount); ?>
               </p>
       
               <div class="row">

@@ -8,7 +8,7 @@ if(isset($_COOKIE['email'])){
 $email=$_COOKIE['email'];
 }
 
-
+setlocale(LC_MONETARY, 'en_IN');
       
  ?>
 
@@ -152,6 +152,18 @@ CoinWidgetCom.go({
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage = (($sum_amount/$requiredamount)*100);
+                //$DateApplied= $student['date'];
+                $DateApplied=$student['date'];
+                $CurrentDate= date("Y-m-d H:i:s");
+                $diff=abs(strtotime($CurrentDate) - strtotime($DateApplied));
+                //$remainingDay = date_diff($DateApplied,$CurrentDate);
+                $years = floor($diff / (365*60*60*24));
+                $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+                $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+
+                 //printf("%d years, %d months, %d days\n", $years, $months, $days);
+                //echo $remainingDay;
+                
                 
   ?>
   <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;">
@@ -168,8 +180,19 @@ CoinWidgetCom.go({
                 </div>
                </div>
            
-              <p style="text-align:left"><b>4</b> days left<b><br><?php echo "Rs. ".$sum_amount;?></b> 
-              pledged out of <?php echo $requiredamount; ?>
+              <p style="text-align:left">
+              <?php if(!($days<30)) 
+              { 
+               $Expire="campaign is over"; 
+                echo $Expire; 
+              }
+              else{
+              ?>
+              <b><?php echo $days; 
+              }?></b> days left<b><br>
+                
+                <?php echo money_format('%i',$sum_amount);?></b> 
+              pledged out of <?php echo money_format('%i',$requiredamount); ?>
                 </p>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php //echo $profilelink; ?>">Donate</a></div>-->
@@ -223,7 +246,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |
+        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
@@ -235,7 +258,9 @@ CoinWidgetCom.go({
 </div>
 
 
-    <script type="text/javascript" src="./dist/js/validator.js"></script> 
+    <script type="text/javascript" src="./dist/js/validator.js"></script>
+    <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script> 
 </body>
 
 </html> 
