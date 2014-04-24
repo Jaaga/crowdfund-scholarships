@@ -160,6 +160,7 @@ $noofStudents=count($students);
             $profilelink='studentprofile.php?S_id='.$student['S_id'].'&U_id='.$U_id.'';
 
                 $sum_amount=getFundedAmount($student['S_id']);
+                $days=remainingDays($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage = (($sum_amount/$requiredamount)*100);
             
@@ -182,7 +183,13 @@ $noofStudents=count($students);
            			</div>
           	 </div>
 
-          	 <p style="text-align:left"><b>4</b> days to go <b><?php echo "Rs. ".$sum_amount;?></b> 
+          	 <p style="text-align:left"><?php if(!($days<30)){
+              $Expire="Campaign is Over";
+              echo $Expire;
+             } else{ ?>
+             <b><?php echo $days; }
+             ?></b> days to go <b><br>
+             <?php echo "Rs. ".$sum_amount;?></b> 
                 pledged out of <?php echo $requiredamount; ?>
               </p>
       

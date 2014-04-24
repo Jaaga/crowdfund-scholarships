@@ -139,6 +139,15 @@ CoinWidgetCom.go({
 	<?php 
 
 $row= getStudent($S_id);
+//Count Remaining Days //
+//$DateApplied=$row['date'];
+//$CurrentDate= date("Y-m-d H:i:s");
+//$diff=abs(strtotime($CurrentDate) - strtotime($DateApplied));
+//$remainingDay = date_diff($DateApplied,$CurrentDate);
+//$years = floor($diff / (365*60*60*24));
+//$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+//$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+$days=remainingDays($S_id);
 $Donors=getDonors($S_id);
 $total=count(array_unique($Donors));
 //$total=count($Donors);
@@ -239,8 +248,13 @@ fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</scri
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
 						<h2 class="sponsor_data"> <b><?php echo $totalAmount ?></b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
-						<h2 class="sponsor_data"> <b>4</b> days to go!</h2>
-					
+						<h2 class="sponsor_data"><?php if(!($days<30)){
+               $Expire="Campaign is Over";
+               echo $Expire;
+             }
+             else{ ?>
+              <b><?php echo $days; ?></b> days to go!</h2>
+					<?php } ?>
 						<br>
 
 					     <form action="donate.php" method="post" data-toggle="validator">
