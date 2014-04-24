@@ -60,17 +60,17 @@ h4:before{
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;color: white;">LearnEm<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
-                <li><a href="#">Sign Up</a></li>
+                
             </ul>
 
         <div class="navbar-collapse collapse">
               <div class="navbar-form navbar-right">
-                <button type="button" class="btn btn-danger">Sign Up</button>
+                <button type="button" class="btn btn-danger" >Sign Up</button>
                 <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign In</button> 
               </div><!--/.navbar-collapse -->
             </div>
