@@ -54,9 +54,9 @@ padding-top: 60px;
   color: white;
   }
 
-  .col-lg-4{
+  /*.col-lg-4{
   margin:18px;
-  }
+  }*/
   #hiw{
   font-family:'Cabin Sketch' cursive;
   font-size: 72px;}
@@ -180,7 +180,9 @@ CoinWidgetCom.go({
                 
                 
   ?>
-  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;">
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"> 
+   <div class="col-lg-4" ><!-- style="width:350px; text-align: justify; padding-left: 0px; 
+   padding-right: 0px; margin-left: auto; margin-right: auto;"-->
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
