@@ -90,8 +90,6 @@ This is the text above the apply and submit button/homepage
     .content-faq{
     /*This is the actual content for FAQ(in the white box)*/
   
-  
-    background:white;
     color: black;
     width: -100px;
     padding:10px 10px 10px 20px;
@@ -99,7 +97,7 @@ This is the text above the apply and submit button/homepage
     margin-right: 20px;
     margin-bottom:20px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
   }
 
