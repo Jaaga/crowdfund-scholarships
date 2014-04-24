@@ -12,12 +12,12 @@
         $sql=$db->prepare('SELECT * FROM student');
         $sql->execute();
         $sql->bind_result($S_id,$U_id,$sname,$gender,$email,$Phone_Number,$address,
-            $pincode,$country,$course,$scholar_AMT,$para,$image_path,$date);
+            $pincode,$country,$course,$scholar_AMT,$para,$image_path,$date,$bitdetail);
         while($sql->fetch()){
                
         $students[]=array('S_id'=>$S_id,'U_id'=>$U_id,'sname'=>$sname,'gender'=>$gender,'email'=>$email,
             'Phone_Number'=>$Phone_Number,'address'=>$address,'pincode'=>$pincode,'country'=>$country,
-            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'image_path'=>$image_path,'date'=>$date);
+            'course'=>$course,'scholar_AMT'=>$scholar_AMT,'para'=>$para,'image_path'=>$image_path,'date'=>$date,'bitdetail'=>$bitdetail);
         }
 
         
@@ -173,7 +173,7 @@
     }
 
 
-    function updateStudent($S_id,$Phone_Number,$address,$para,$pic){
+    function updateStudent($S_id,$Phone_Number,$address,$para,$pic,$bitdetail){
       
         $db=dbopen();
 
@@ -187,7 +187,10 @@
          if(!empty($pic)){
             $updates[] = 'image_path="'.$db->real_escape_string($pic).'"';
          }
-         
+         if(!empty($bitdetail)){
+            $updates[] = 'bitdetail="'.$db->real_escape_string($bitdetail).'"';
+         }
+
          $updates = implode(', ', $updates);
         $sql="UPDATE student SET $updates where S_id='$S_id'";
 

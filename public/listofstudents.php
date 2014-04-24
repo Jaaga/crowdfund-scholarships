@@ -148,7 +148,8 @@ CoinWidgetCom.go({
   <?php 
                
             $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
-
+                
+                $bitdetail=$student['bitdetail'];
                 $sum_amount=getFundedAmount($student['S_id']);
                 $requiredamount = $student['scholar_AMT'];
                 $percentage =floor(($sum_amount/$requiredamount)*100);
@@ -171,12 +172,27 @@ CoinWidgetCom.go({
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
+        <script src="http://coinwidget.com/widget/coin.js"></script>
+<script>
+CoinWidgetCom.go({
+  wallet_address: "<?php echo $bitdetail; ?>"
+  , currency: "bitcoin"
+  , counter: "count"
+  , alignment: "bl"
+  , qrcode: true
+  , auto_show: false
+  , lbl_button: "Donate Me"
+  , lbl_address: "My Bitcoin Address:"
+  , lbl_count: "donations"
+  , lbl_amount: "BTC"
+});
+</script>
         <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
         <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $percentage; ?>%">
-               <b style="color:#111111;"><?php echo $percentage; ?> Complete</b> 
+               <b style="color:#111111;"><?php echo $percentage."%"; ?> Complete</b> 
                 </div>
                </div>
            
@@ -246,7 +262,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
+        <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
