@@ -77,7 +77,7 @@ if(isset($_POST['user']))
 
   <!--Form starts here-->
 <div class="container" > <!-- style="padding:80px 170px 0 170px;" -->
-	<div class="row" style="padding-top: 10px; padding-bottom:20px">
+	<div class="row" style="padding-top: 20px; padding-bottom:20px; margin-left: auto;margin-right: auto;">
 		<!--<div class="well" style="background-color: rgba(144,144,144,1);">-->
  <?php   if($_GET['id']=='x'){
   $wrong="Your are not Loggedin";
@@ -232,11 +232,11 @@ if(isset($_POST['user']))
 
 
 
-  
-
+<div class="container" align="center">
+      <div class="row" style="margin-left: auto; margin-right: auto;">  
   <footer class="footer" style="text-align:center">
     <nav>
-      <ul>
+      <ul style="padding-left: 0px;">
         <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
@@ -245,6 +245,7 @@ if(isset($_POST['user']))
       </ul>
     </nav> 
   </footer> 
+</div>
 </div>
 
 <!-- Modal -->
