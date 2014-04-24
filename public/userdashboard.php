@@ -193,7 +193,7 @@ $noofStudents=count($students);
                 
                 <div class="col-md-8">
 
-                <input type="text" name="amount" placeholder="$ " class="form-control input-md"
+                <input type="text" name="amount" placeholder="Rs. " class="form-control input-md"
                 pattern="([0-9]){1,10}" data-match-error="Please enter numerical value" > 
                 <div class="help-block with-errors"></div> 
                 </div>

@@ -181,7 +181,7 @@ CoinWidgetCom.go({
 
           <div class="col-md-8" >
 
-            <input name="amount" type="text" placeholder="$ "
+            <input name="amount" type="text" placeholder="Rs. "
              class="form-control input-md" pattern="([0-9]){1,10}"
             data-match-error="Please enter numerical value" > 
             <div class="help-block with-errors"></div>
