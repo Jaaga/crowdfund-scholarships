@@ -309,7 +309,7 @@ CoinWidgetCom.go({
     <div class="col-lg-4">
 
       <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
-      <p style="text-align:left; margin-left:35px;"> <strong>Contact Address</strong></br>
+      <p style="text-align:center"> <strong>Contact Address</strong></br>
       1, Penthouse 01<br>
       Rich Homes<br>
       Richmond Road<br>
@@ -335,7 +335,7 @@ CoinWidgetCom.go({
     
     <div class="col-lg-4">
           <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
-          <nav>
+          <nav style="text-align:center">
           <p><a href="index.php">Home </a></p>
           <p><a href="aboutus.php">About Us</a></p>
           <p><a href= "#hiw">How It Works</a></p>
