@@ -138,9 +138,17 @@ CoinWidgetCom.go({
     
   
   <div class="container" align="center">
+<div class="row" align="right">
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="N6AWJCSLS8Z3U">
+<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:80px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form></div>
+
       <div class="row" style="margin-left: auto; margin-right: auto;">
     <h1 style="font-family:'KGSecondChancesSketch'" id="hiw">Meet the Students</h1></div>
-
+    
   <?php $students= getStudentList();
         foreach($students as $student){ 
   ?>
@@ -262,7 +270,7 @@ CoinWidgetCom.go({
   <footer class="footer" style="text-align:center">
     <nav>
       <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |http://localhost/public/listofstudents.php
+        <a href="index.php">Home </a> |
         <a href= "aboutus.php">About Us</a> |
         <a href= "#hiw">How It Works</a> |
         <a href="#faq">FAQ</a> |
