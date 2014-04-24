@@ -7,6 +7,7 @@ if(isset($_COOKIE['email']))
 {
   $email=$_COOKIE['email'];
 }
+setlocale(LC_MONETARY, 'en_IN');
 
  ?>
 <html>
@@ -47,7 +48,7 @@ if(isset($_COOKIE['email']))
   }
 
 	</style>
-  <!--<script>
+  <!--!-<script>
 function fbs_click(){
 u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
 return false;
@@ -207,7 +208,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 				<div class="well" style="background-color:#33cc66; height:400px" id="bg" >
 					<div class="sponsor_data">
 						<h2 class="sponsor_data"> <b><?php echo $total; ?></b> donors backed </h2><br>
-						<h2 class="sponsor_data"> <b><?php echo $totalAmount ?></b> pledged<br>of<b> Rs.<?php echo $row['scholar_AMT']; ?></b></h2>
+						<h2 class="sponsor_data"> <b><?php echo money_format('%i', $totalAmount); ?>
+            </b> pledged<br>of<b> Rs.<?php echo money_format('%i',$row['scholar_AMT']); ?></b></h2>
 						<h2 class="sponsor_data"><?php if(!($days<30)){
                $Expire="Campaign is Over";
                echo $Expire;

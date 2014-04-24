@@ -1,6 +1,6 @@
 <?php include('../model/student.php');
 include('../model/user.php');
-
+setlocale(LC_MONETARY, 'en_IN');
 
 ?>
 

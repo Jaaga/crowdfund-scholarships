@@ -4,6 +4,7 @@ session_start();
    {  
     header("location:../public/usersignup.php");
   } 
+  setlocale(LC_MONETARY, 'en_IN');
  //if(isset($_POST['wrong'])){
   //$wrong="Wrong Password";
  //}
@@ -190,8 +191,8 @@ $noofStudents=count($students);
              } else{ ?>
              <b><?php echo $days; }
              ?></b> days to go <b><br>
-             <?php echo "Rs. ".$sum_amount;?></b> 
-                pledged out of <?php echo $requiredamount; ?>
+             <?php echo money_format('%i',$sum_amount);?></b> 
+                pledged out of <br><?php echo money_format('%i',$requiredamount); ?>
               </p>
       
               <div class="row">

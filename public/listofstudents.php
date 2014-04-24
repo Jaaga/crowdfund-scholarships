@@ -8,7 +8,7 @@ if(isset($_COOKIE['email'])){
 $email=$_COOKIE['email'];
 }
 
-
+setlocale(LC_MONETARY, 'en_IN');
       
  ?>
 
@@ -191,8 +191,8 @@ CoinWidgetCom.go({
               <b><?php echo $days; 
               }?></b> days left<b><br>
                 
-                <?php echo "Rs. ".$sum_amount;?></b> 
-              pledged out of <?php echo $requiredamount; ?>
+                <?php echo money_format('%i',$sum_amount);?></b> 
+              pledged out of <?php echo money_format('%i',$requiredamount); ?>
                 </p>
     <div class="row">
       <!--<div class="col-lg-6"><a class="btn btn-danger" href="<?php //echo $profilelink; ?>">Donate</a></div>-->
