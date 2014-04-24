@@ -40,7 +40,7 @@ CREATE TABLE `donation` (
 
 LOCK TABLES `donation` WRITE;
 /*!40000 ALTER TABLE `donation` DISABLE KEYS */;
-INSERT INTO `donation` VALUES (1,1,'2014-04-06 07:03:33',10000.00),(1,1,'2014-04-06 07:04:47',500.00),(2,1,'2014-04-08 17:14:32',500.00),(2,2,'2014-04-08 19:02:43',50000.00),(2,3,'2014-04-08 19:03:01',50000.00);
+INSERT INTO `donation` VALUES (1,1,'2014-04-06 07:03:33',10000.00),(1,1,'2014-04-06 07:04:47',500.00),(2,1,'2014-04-08 17:14:32',500.00),(2,2,'2014-04-08 19:02:43',50000.00),(2,3,'2014-04-08 19:03:01',50000.00),(1,1,'2014-04-24 10:07:55',5000.00),(1,1,'2014-04-24 10:43:50',123.00),(1,1,'2014-04-24 10:43:58',5000.00),(1,2,'2014-04-24 10:44:11',100000.00),(2,1,'2014-04-24 10:50:39',5000.00);
 /*!40000 ALTER TABLE `donation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,6 +94,7 @@ CREATE TABLE `student` (
   `para` varchar(500) DEFAULT NULL,
   `image_path` blob,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `bitdetail` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`S_id`),
   UNIQUE KEY `email` (`email`),
   KEY `U_id` (`U_id`),
@@ -107,7 +108,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'looking for a donor who can support me and fund me for my higher education.  ','../public/images/12student.jpg','2014-04-06 06:48:40'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'HI,I am JS guy..please fund me','../public/images/crowdfunding.jpg','2014-04-08 17:49:10'),(3,4,'Yatin Taluja','F','yatintaluja@gmail.com',953956792,'Bangalore',560062,'Armenia','Php',120000,'Hi, I am a backend programmer .looking for a donor who can fund me for my higher education at Jaaga','../public/images/yatin.png','2014-04-08 17:55:22');
+INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'looking for a donor who can support me and fund me for my higher education.  ','../public/images/12student.jpg','2014-04-06 06:48:40','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'HI,I am JS guy..please fund me','../public/images/crowdfunding.jpg','2014-04-08 17:49:10',NULL),(3,4,'Yatin Taluja','F','yatintaluja@gmail.com',953956792,'Bangalore',560062,'Armenia','Php',120000,'Hi, I am a backend programmer .looking for a donor who can fund me for my higher education at Jaaga','../public/images/yatin.png','2014-04-08 17:55:22',NULL);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-09  0:34:34
+-- Dump completed on 2014-04-24 16:49:39
