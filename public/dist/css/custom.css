@@ -1,5 +1,6 @@
 /* Style for Home Page */
 
+
 body{
 	background-image:url("./public/images/backb.jpg");
 	padding-left: 50px;
@@ -24,20 +25,20 @@ background-repeat:repeat;
 	color: white;
 	}
 
-	/*--------------------------------------------------
-  this is the button to view scholarship applications/homepage
-  ----------------------------------------------------*/
+	/*-----------------------------------------------------------
+  this is the image with the How it works text on the homepage
+  -------------------------------------------------------------*/
 	
  /*--------------------------------------------
   This is the button to apply for scholarships/homepage
   ---------------------------------------------*/
 	
 
-/*-----------------------------------------------
-This is the text above the apply and submit button/homepage
-----------------------------------------------------*/  
+/*---------------------------------------
+This is the banner image on the homepage
+-----------------------------------------*/  
 
-	
+	 
 
   /*-----------------------
   Featured student content
