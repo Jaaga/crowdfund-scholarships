@@ -203,7 +203,7 @@ $noofStudents=count($students);
               $Expire="Campaign is Over";
               echo $Expire;
              } else{ ?>
-             <b><?php echo $days; }
+             <b><?php echo 30-$days; }
              ?></b> days to go <b><br>
              <?php echo money_format('%i',$sum_amount);?></b> 
                 pledged out of <br><?php echo money_format('%i',$requiredamount); ?>

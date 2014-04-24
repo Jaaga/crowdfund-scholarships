@@ -244,7 +244,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
                echo $Expire;
              }
              else{ ?>
-              <b><?php echo $days; ?></b> days to go!</h2>
+              <b><?php echo 30-$days; ?></b> days to go!</h2>
 					<?php } ?>
 						<br>
 

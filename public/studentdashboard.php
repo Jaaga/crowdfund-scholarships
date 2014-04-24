@@ -265,7 +265,7 @@ CoinWidgetCom.go({
                 $Expire="Campaign is Over";
                 echo $Expire;
               } else{ ?>
-              <b><?php echo $days; } ?></b> days to go!</h2>
+              <b><?php echo 30-$days; } ?></b> days to go!</h2>
   					
   						<br>
   					

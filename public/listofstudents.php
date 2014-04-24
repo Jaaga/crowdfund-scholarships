@@ -188,7 +188,7 @@ CoinWidgetCom.go({
               }
               else{
               ?>
-              <b><?php echo $days; 
+              <b><?php echo 30-$days; 
               }?></b> days left<b><br>
                 
                 <?php echo money_format('%i',$sum_amount);?></b> 
