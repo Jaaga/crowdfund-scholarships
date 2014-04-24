@@ -88,7 +88,7 @@ setlocale(LC_MONETARY, 'en_IN');
     
 
         <a class="navbar-brand" href="index.php">
-        <h1 style="font-family:'KGSecondChancesSketch';  cursive; margin-top: -9px;color: white;">LearnEm<h1></a>
+        <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white; ">LearnEm<h1></a>
       </div>
 
 
@@ -103,10 +103,10 @@ setlocale(LC_MONETARY, 'en_IN');
                   $email=$_COOKIE['email'];
                  $whois=whois($email);
                 ?> 
-                <li><a href="userdashboard.php">UserDashboard</a>
+                <li><a href="userdashboard.php"style="color: white;">UserDashboard</a>
 
                 <?php if(is_numeric($whois)){ ?>
-                 <li><a href="studentdashboard.php">StudentDashboard</a></ul>
+                 <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></ul>
                <?php } ?>
                 </ul> 
                  <div class="navbar-form navbar-right">
@@ -119,7 +119,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"

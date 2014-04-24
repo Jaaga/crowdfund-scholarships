@@ -54,17 +54,17 @@ h4:before{
 
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
     <div class="container">
     
       <div class="navbar-header" style="height: 50px;">
     
           
-            <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm<h1></a>
+            <a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;color: white;">LearnEm<h1></a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">Sponsor</a></li>
+                <li><a href="listofstudents.php" style="color: white;">Sponsor</a></li>
                 <li><a href="#">Sign Up</a></li>
             </ul>
 
@@ -85,14 +85,14 @@ h4:before{
 
     <div class="row">
    
-      <h1 style="font-family:'KGSecondChancesSketch' cursive; text-align: center;font-size:45px;">About Us</h1>
+      <h1 style="font-family:'KGSecondChancesSketch'; text-align: center;font-size:45px;">About Us</h1>
       </div>
     </div>
 
     <div class="row" style="width: 1180px; margin-right: 0px; margin-left: 0px;">
   
         <article>
-     <h2 style="font-family:'KGSecondChancesSketch' cursive;">The Team</h2> </div>
+     <h2 style="font-family:'KGSecondChancesSketch';">The Team</h2> </div>
         
         <div align="center">
 
