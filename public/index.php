@@ -202,7 +202,10 @@ CoinWidgetCom.go({
           ?>
 
     <div class="row" style="padding-top: 70px; padding-bottom: 40px;">
-<?php foreach ($students as $student) {
+<?php 
+$i=0;
+foreach ($students as $student) {
+  if($i==3) break;
   $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
