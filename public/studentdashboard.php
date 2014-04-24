@@ -244,7 +244,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"> 
               <b><?php echo $total; ?></b> donors backed </h2><br>
   						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;">
-              <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo money_format('%i',$student['scholar_AMT']); ?></b></h2>
+              <b><?php echo $totalAmount; ?></b> pledged<br> out of<b> Rs.<?php echo $student['scholar_AMT']; ?></b></h2>
   						<h2 class="sponsor_data" style="font-family:'KGSecondChancesSketch' cursive;"><?php if(!($days<30)){
                 $Expire="Campaign is Over";
                 echo $Expire;
