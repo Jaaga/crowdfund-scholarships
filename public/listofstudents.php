@@ -72,6 +72,7 @@ padding-top: 60px;
     
             <a class="navbar-brand" href="index.php">
 
+
             <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px; color: white;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
@@ -147,8 +148,6 @@ CoinWidgetCom.go({
 <input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:60px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
-
-
 </div>
 
       <div class="row" style="margin-left: auto; margin-right: auto;">
