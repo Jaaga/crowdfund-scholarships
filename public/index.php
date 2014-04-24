@@ -13,12 +13,22 @@ setlocale(LC_MONETARY, 'en_IN');
   <link rel="stylesheet" type="text/css" rel="stylesheet" href="./dist/css/bootstrapValidator.min.css"/>
   <link href="jumbotron.css" rel="stylesheet"> 
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
+
     
 <style type="text/css">
 
    @font-face{
       font-family:'KGSecondChancesSketch'; 
       src:url('fonts/KGSecondChancesSketch.ttf');
+      font-family:'Josefin Sans'; 
+      src:url('fonts/JosefinSans-Regular.ttf');
+         }
+
+     @font-face{
+      font-family:'KGSecondChancesSketch'; 
+      src:url('fonts/KGSecondChancesSketch.ttf');
+    
          }
   body{
    padding-top: 100px;
@@ -28,6 +38,7 @@ setlocale(LC_MONETARY, 'en_IN');
   text-align:center;
   }
 
+
  .image{
     background-image:url("../public/images/footsteps-sand.jpg");
     background-size: cover;
@@ -35,14 +46,6 @@ setlocale(LC_MONETARY, 'en_IN');
     background-attachment: fixed;
    margin: -70px;
     }
-  .hiw-image{
-     background-image:url("../public/images/book.jpg");
-    background-size: cover;
-    height: 650px;
-    background-attachment: fixed;
-   margin: -70px;
-
-  }
   .faq-image{
       background-image:url("../public/images/classroom.jpg");
     background-size: cover;
@@ -50,6 +53,14 @@ setlocale(LC_MONETARY, 'en_IN');
     background-attachment: fixed;
    margin: -70px;
    
+  }
+   .hiw-image{
+     background-image:url("../public/images/book.jpg");
+    background-size: cover;
+    height: 650px;
+    background-attachment: fixed;
+   margin: -70px;
+
   }
 
   .faq
@@ -157,21 +168,21 @@ CoinWidgetCom.go({
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: Times New Roman;">Help students seeking education by providing financial aid, enabling him or her 
+             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px;font-family: 'Coustard', 'serif'; font-size: 22px; ">Help students seeking education by providing financial aid, enabling him or her 
               to fund the next candidate.</p>
             </div>
           </div>
 
           <div class="row" style="margin:-250px 0 100px 0;">
             <div class="col-lg-6" align="center">
-              <h3 style="color:white;">Apply for Scholarship</h3>
+              <h3 style="color:white;font-family: 'Josefin Sans', 'sans-serif';">Apply for Scholarship</h3>
                   <a href="usersignup.php">
               <button type="button" class="btn btn-danger btn-lg" align="center">Submit Profile</button>
                </a> 
             </div>
             <div class="col-lg-6" align="center">
-              <h3 style="color:white;">View Scholarship Applications</h3>
+              <h3 style="color:white;font-family: 'Josefin Sans', 'sans-serif';">View Scholarship Applications</h3>
                 <a href="listofstudents.php"> 
               <button type="button" class="btn btn-success btn-lg" align="center">View Profiles</button>
               </a>
@@ -196,7 +207,7 @@ CoinWidgetCom.go({
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
           <div class="well">
-            <h3 class="feature">Featured</h3>
+            <h3 class="feature" style="font-family: 'Josefin Sans', 'sans-serif'; font-size: 28px;">Featured</h3>
             <img src=<?php echo $student['image_path']?> class="feature-image">
             <h2><?php echo $student['sname']; ?> </h2>
             <p style="text-align: justify; padding:1em 1em;" ><?php echo $student['para'] ?></p>
