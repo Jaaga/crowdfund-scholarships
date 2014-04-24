@@ -100,7 +100,7 @@ CoinWidgetCom.go({
                                
           </div>   
 
-                <?php }
+                <?php <script}
                 else{ ?>
             </ul>
             <div class="navbar-collapse collapse">
@@ -453,6 +453,48 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   		</nav> 
 	</footer>
 
+  <!-- Sign in Modal -->
+  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+         <div class="col-md-6" style="margin-left:130px;">
+          <form role="form" action="../controller/userlogin.php" method="post" id="loginForm" 
+          data-toggle="validator">
+            <div class="form-group">
+              <label >Email address</label>
+              <input id="email" name="email" type="email" class="form-control" name="email" 
+              placeholder="Enter email" data-error="Invalid Email Address" required>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label" for="textinput" style="color:black;">Password:</label>       
+              <input name="password" type="password" placeholder="Password" 
+              class="form-control input-md" required>
+              <span class="help-block with-errors"></span>
+            </div>
+            <!--<div class="form-group">
+              <label class="control-label" for="textinput" style="color:black;">Password</label>
+              <input name="password" type="password" id="password" placeholder="Password">
+              <span class="help-block with-errors"></span>
+            </div>-->
+             <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Log In</button>
+             </div>
+          </form>
+         </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
   <!-- Share my profile Modal -->
   <div class="modal fade" id="publicProfile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -474,6 +516,8 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
     <!-- End -- >
 
+    <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./dist/js/validator.js"></script>
 </body>
 

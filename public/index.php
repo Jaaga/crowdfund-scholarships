@@ -367,7 +367,7 @@ CoinWidgetCom.go({
 
     <!--<div class="container1" align="center">-->
 
-  <!-- Modal -->
+  <!-- Modal Sign In-->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
