@@ -100,7 +100,7 @@ CoinWidgetCom.go({
                                
           </div>   
 
-                <?php <script}
+                <?php }
                 else{ ?>
             </ul>
             <div class="navbar-collapse collapse">
