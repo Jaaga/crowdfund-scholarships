@@ -88,7 +88,9 @@ setlocale(LC_MONETARY, 'en_IN');
     
 
         <a class="navbar-brand" href="index.php">
+
         <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white; ">LearnEm<h1></a>
+
       </div>
 
 
@@ -162,8 +164,7 @@ CoinWidgetCom.go({
 
 
     <div class="container">
-      <div class="row">
-        <div class="x">
+      <div class="row-fluid">
         <div class="col-lg-12"> 
           <div class="image">
             <div class="color">
@@ -192,8 +193,7 @@ CoinWidgetCom.go({
           </div>
           </div>      
         </div>
-      </div>
-    
+         
         
     <br>
 
@@ -203,7 +203,10 @@ CoinWidgetCom.go({
           ?>
 
     <div class="row" style="padding-top: 70px; padding-bottom: 40px;">
-<?php foreach ($students as $student) {
+<?php 
+$i=0;
+foreach ($students as $student) {
+  if($i==3) break;
   $profilelink='studentprofile.php?S_id='.$student['S_id'].'';
      ?>
         <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"><div class="col-md-4" >
@@ -216,7 +219,9 @@ CoinWidgetCom.go({
           
         </div>
         </a>
-<?php } ?>
+<?php 
+$i++;
+} ?>
     </div>
 
 
@@ -305,53 +310,57 @@ CoinWidgetCom.go({
                 required and how much the student has already been funded. You will receive a letter of gratitude from the student 
                 and LearnEm for your contribution.</p>
               </div>
+              <div class="oval-thought-border" style="text-align: justify; margin: 0 auto;">
+              <h2>How can I get Involved?</h2>
+              <p>After you've sponsored your first student or even otherwise, 
+              we would like you to stay involved with us by keeping in touch via 
+          <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
+          </a>If you would like to put in some time volunteering with our organization, 
+          feel free to drop us an email at
+           <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
+              </div>
     </div>
 </div>
           <br>
-   <div class="row">
-      <div class="col-lg-4">
+<div class="row well" style="margin:0px -50px -50px -50px;">
+    <div class="col-lg-4">
 
-         <article style="text-align:justified; max-width:1000px; margin: 0 auto;">
-
-          <h2 style="font-family:'KGSecondChancesSketch';">Get Involved</h2>
-           <p class="content-faq">After you've sponsored your first student or even otherwise, we would like you to stay involved with us by keeping in touch via 
-          <a href="www.facebook.com">Facebook </a> and <a href="www.twitter.com">Twitter.
-          </a>If you would like to put in some time volunteering with our organization, feel free to drop us an email at <a href="mailto:volunteer@learnem.com">volunteer@learnem.com</a>.</p>
-         </article>
-
-        
-      </div>
-
-      <div class="col-lg-4">
-
-      <h2 style="font-family:'KGSecondChancesSketch';">Get in Touch</h2>
-      <p align="center"> 
+      <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+      <p style="text-align:center"> <strong>Contact Address</strong></br>
       1, Penthouse 01<br>
       Rich Homes<br>
       Richmond Road<br>
       Bangalore - 560025<br>
       INDIA<br>
-      </p>
-
-      <iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://bit.ly/1fKde81">
-
-      </iframe>
-
       <br>
 
-      <small><a href="http://bit.ly/1otljDy" style="color:#0000FF;text-align:left" align="right">View Larger Map</a>
-      </small>  
+     <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+     <strong>Phone no.</strong>+91 986-654-6356
+      </p>
+
+      <br>
+       
     </div>      
     <!--</div>-->
     <div class="col-lg-4">
-        <h2 style="font-family:'KGSecondChancesSketch';">Explore</h2>
-          <ul>
-          <li><a href="index.php">Home </a> </li>
-          <li><a href="aboutus.php">About Us</a> </li>
-          <li><a href= "#hiw">How It Works</a> </li>
-           <li> <a href="#faq">FAQ</a> </li>
-           <li> <a href="#contact">Contact</a></li>  
-      </ul>
+
+     <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+      <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+      marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+      </iframe> 
+    </div>
+    
+    <div class="col-lg-4">
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+          <nav style="text-align:center">
+          <p><a href="index.php">Home </a></p>
+          <p><a href="aboutus.php">About Us</a></p>
+          <p><a href= "#hiw">How It Works</a></p>
+          <p><a href="#faq">FAQ</a></p>
+          <p><a href="#contact">Contact</a></p>
+          </nav>
+
     </div>
   </div>
   

@@ -72,6 +72,7 @@ padding-top: 60px;
     
             <a class="navbar-brand" href="index.php">
 
+
             <h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px; color: white;">LearnEm<h1></a>
       </div>
       <div class="collapse navbar-collapse">
@@ -87,21 +88,7 @@ padding-top: 60px;
                 </ul>
 
                   <div class="navbar-form navbar-right">
-   <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate "
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+   
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
                
           </div>
@@ -111,21 +98,7 @@ CoinWidgetCom.go({
             </ul>
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-         <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate "
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+         
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -141,14 +114,12 @@ CoinWidgetCom.go({
   
   <div class="container" align="center">
 <div class="row" align="right">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="N6AWJCSLS8Z3U">
-<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:60px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:70px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
-
-
 </div>
 
       <div class="row" style="margin-left: auto; margin-right: auto;">

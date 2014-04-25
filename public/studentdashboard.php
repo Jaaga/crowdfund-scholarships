@@ -122,6 +122,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+
                 <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
 
                 <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
@@ -167,16 +168,7 @@ CoinWidgetCom.go({
              target="_blank">
     <img src="./images/facebook-icon.png" width="25px"/>
 </a> -->
-<a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
-    <img src="./images/facebook-share.png" width="60px"/>
-    </a>
-<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flearnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>%2F&text=please take a look at my profile&tw_p=tweetbutton&url=http%3A%2F%2Flearnem.jaaga.us%2F&via=jaagarnaut" target="_blank">
-<img src="./images/Twitter-share1.png" width="90px"/></a>
-<script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>
-              
+<a href="studentprofile.php?S_id=<?php echo $S_id; ?>" class="btn btn-primary btn-lg">My Profile</a>
     			</div>
 
     		<!-- End -->
@@ -185,7 +177,7 @@ CoinWidgetCom.go({
 
     			<div class="col-lg-6">
 
-    				<h1 align="center" style="font-family:'KGSecondChancesSketch' cursive; font-size: 60px; margin-top: -30px " >
+    				<h1 align="center" style="font-family:'KGSecondChancesSketch' cursive; font-size: 60px; margin-top: 0px;" >
     				<?php echo $student['sname']; ?>
     				</h1>
     			</div>
@@ -197,7 +189,7 @@ CoinWidgetCom.go({
 
   			 <div class="col-lg-3" align="right" >
      					
-         		<form action="application.php">
+         		
 
          			
 
@@ -206,12 +198,12 @@ CoinWidgetCom.go({
     					Edit Application
   				    </button><!-- button for pop up to edit the contents of the page -->
       				
-      			</form>
+      			
       	 </div>	
         <!-- End -->
       </div>
     <!-- Row end -->
-
+</div>
     <br>
    
     <!-- Student Image & Sponsored Details -->
