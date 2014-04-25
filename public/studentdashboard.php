@@ -189,7 +189,7 @@ CoinWidgetCom.go({
 
   			 <div class="col-lg-3" align="right" >
      					
-         		<form action="application.php">
+         		
 
          			
 
@@ -198,7 +198,7 @@ CoinWidgetCom.go({
     					Edit Application
   				    </button><!-- button for pop up to edit the contents of the page -->
       				
-      			</form>
+      			
       	 </div>	
         <!-- End -->
       </div>

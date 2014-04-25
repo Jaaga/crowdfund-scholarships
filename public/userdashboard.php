@@ -85,12 +85,9 @@ include ('../model/student.php');
     		<div class="navbar-header" style="height: 50px;">
     
           
-<<<<<<< HEAD
-        		<a class="navbar-brand" href="index.php">
-              <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
-=======
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
->>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
+
+   		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
+
         </div>
 
         <div class="collapse navbar-collapse">
