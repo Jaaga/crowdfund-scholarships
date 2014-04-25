@@ -245,7 +245,7 @@ $noofStudents=count($students);
       <nav>
         <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
-          <a href= "#about">About Us</a> |
+          <a href= "aboutus.php">About Us</a> |
           <a href= "#hiw">How It Works</a> |
           <a href="#faq">FAQ</a> |
           <a href="#contact">Contact</a>  

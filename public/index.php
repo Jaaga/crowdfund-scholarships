@@ -168,9 +168,10 @@ CoinWidgetCom.go({
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking education by providing financial aid, enabling him or her 
-              to fund the next candidate.</p>
+             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> 
+             that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking 
+              education by providing financial aid, enabling them to fund the next candidates.</p>
             </div>
           </div>
 
@@ -346,7 +347,7 @@ CoinWidgetCom.go({
         <h2 style="font-family:'KGSecondChancesSketch';">Explore</h2>
           <ul>
           <li><a href="index.php">Home </a> </li>
-          <li><a href="#about">About Us</a> </li>
+          <li><a href="aboutus.php">About Us</a> </li>
           <li><a href= "#hiw">How It Works</a> </li>
            <li> <a href="#faq">FAQ</a> </li>
            <li> <a href="#contact">Contact</a></li>  
