@@ -693,11 +693,11 @@ CoinWidgetCom.go({
         <div class="col-lg-4">
               <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
               <nav style="text-align:center">
-              <p><a href="index.php">Home </a></p>
-              <p><a href="aboutus.php">About Us</a></p>
-              <p><a href= "#hiw">How It Works</a></p>
-              <p><a href="#faq">FAQ</a></p>
-              <p><a href="#contact">Contact</a></p>
+              <p><a href="index.php" style="text-decoration:none;color:#111111;">Home </a></p>
+              <p><a href="aboutus.php" style="text-decoration:none;color:#111111;">About Us</a></p>
+              <p><a href= "#hiw" style="text-decoration:none;color:#111111;">How It Works</a></p>
+              <p><a href="#faq" style="text-decoration:none;color:#111111;">FAQ</a></p>
+              <p><a href="#contact" style="text-decoration:none;color:#111111;">Contact</a></p>
               </nav>
         </div>
     </div>
