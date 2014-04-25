@@ -162,13 +162,14 @@ CoinWidgetCom.go({
 
         <!-- Social Media Icons -->
 
-    			<div class="col-lg-3" align="left"  >
+    			<div class="col-lg-3"   > <!-- align="left" -->
     			
-          <!--  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
-             target="_blank">
-    <img src="./images/facebook-icon.png" width="25px"/>
-</a> -->
-<a href="studentprofile.php?S_id=<?php echo $S_id; ?>" class="btn btn-primary btn-lg">My Profile</a>
+                        <!--  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
+                           target="_blank">
+                  <img src="./images/facebook-icon.png" width="25px"/>
+              </a> -->
+              <a href="studentprofile.php?S_id=<?php echo $S_id; ?>" 
+              class="btn btn-primary btn-lg">My Profile</a>
     			</div>
 
     		<!-- End -->
@@ -187,7 +188,7 @@ CoinWidgetCom.go({
                   
         <!-- Edit Application Button -->
 
-  			 <div class="col-lg-3" align="right" >
+  			 <div class="col-lg-3" align="right" > <!--  -->
      					
          		
 
