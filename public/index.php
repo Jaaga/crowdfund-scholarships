@@ -234,7 +234,7 @@ $i++;
 
 <div class="hiw-image">
   <div class="row">
-    <h1 align="center" id="faq" style="font-family:'KGSecondChancesSketch'; font-size:7em; padding-top: 300px;">How it Works</h1>
+    <h1 align="center" id="hiw" style="font-family:'KGSecondChancesSketch'; font-size:7em; padding-top: 300px;">How it Works</h1>
 </div>
 </div>
     <br>
