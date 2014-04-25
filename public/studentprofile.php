@@ -49,14 +49,14 @@ setlocale(LC_MONETARY, 'en_IN');
 
 	</style>
   <!--!-<script>
-function fbs_click(){
-u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
-return false;
-}
-</script> -->
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "efbad282-59ff-4ef1-90cc-48691ddef625", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+  function fbs_click(){
+  u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+  return false;
+  }
+  </script> -->
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "efbad282-59ff-4ef1-90cc-48691ddef625", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
 </head>
 
 <body>
@@ -255,15 +255,23 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 					     <input type="hidden" name="email" value="<?php echo $email ; ?>" >
                 <input type="hidden" name="S_id" value="<?php echo $S_id; ?>" >
 
-						
+						    <div class="row">
+                <div class="col-md-8">
                   <div class="input-group" style="position:absolute;">
       							<input name="amount" type="text" class="form-control" placeholder="enter amount" 
                     style="height: 50px; border: 3px solid #33cc66 ; border-radius: 7px; " pattern="([0-9]){1,10}" >
                     <div class="help-block with-errors"></div>
 
                   </div>
-						      <input type="submit" value="Donate" class="btn btn-lg btn-success" style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
+                </div>
+
+
+                <div class="col-md-4">
+						      <input type="submit" value="Donate" class="btn btn-lg btn-success" 
+                  style="width:150px; height: 50px; float: right;border: 3px solid #33cc66 ;" >
 						    </form>
+                </div>
+                </div>
 				 </div>
 
 					<br><br><br>			
