@@ -109,21 +109,27 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
 
 	
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
       <div class="container">
       
         <div class="navbar-header" style="height: 50px;">
       
 
           <a class="navbar-brand" href="index.php">
-          <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
+          <h1 style="font-family:'KGSecondChancesSketch' ; margin-top: -9px;color: white;">LearnEm</h1></a>
         </div>
 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+<<<<<<< HEAD
                 <li><a href="listofstudents.php">Sponsor</a></li>
                 <li><a href= "userdashboard.php">UserDashboard</a></li>
+=======
+                <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
+
+                <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
+>>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
@@ -136,7 +142,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
@@ -166,16 +172,7 @@ CoinWidgetCom.go({
              target="_blank">
     <img src="./images/facebook-icon.png" width="25px"/>
 </a> -->
-<a href="https://www.facebook.com/sharer.php?app_id=113869198637480&sdk=joey&u=http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>&display=popup" target="_blank">
-    <img src="./images/facebook-share.png" width="60px"/>
-    </a>
-<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flearnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>%2F&text=please take a look at my profile&tw_p=tweetbutton&url=http%3A%2F%2Flearnem.jaaga.us%2F&via=jaagarnaut" target="_blank">
-<img src="./images/Twitter-share1.png" width="90px"/></a>
-<script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<script type="IN/Share" data-url="http://learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>" data-counter="right"></script>
-              
+<a href="studentprofile.php?S_id=<?php echo $S_id; ?>" class="btn btn-primary btn-lg">My Profile</a>
     			</div>
 
     		<!-- End -->
@@ -297,7 +294,7 @@ CoinWidgetCom.go({
       </div>
     <!-- Row End -->
 
-    <h3 align="center" style="font-family:'KGSecondChancesSketch' cursive;">PreWork Status</h3>
+    <h3 align="center" style="font-family:'KGSecondChancesSketch';">PreWork Status</h3>
       	
     <!-- Codeschool Row Begin -->
         <div class="row">

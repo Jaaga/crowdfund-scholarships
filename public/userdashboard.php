@@ -79,21 +79,25 @@ include ('../model/student.php');
 
 	
 	<!-- Navbar section -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style=" background-color: #25383c; border-color: #25383c;">
     	<div class="container">
     
     		<div class="navbar-header" style="height: 50px;">
     
           
+<<<<<<< HEAD
         		<a class="navbar-brand" href="index.php">
               <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
+=======
+        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
+>>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
         </div>
 
         <div class="collapse navbar-collapse">
             	<ul class="nav navbar-nav">
-                <li><a href="listofstudents.php">AllStudents</a></li>
+                <li><a href="listofstudents.php" style="color: white;">AllStudents</a></li>
                 <?php if(is_numeric($whois)){ ?>
-                <li><a href="studentdashboard.php">StudentDashboard</a></li>
+                <li><a href="studentdashboard.php" style="color: white;">StudentDashboard</a></li>
                <?php
                 }
                  ?>
@@ -110,7 +114,7 @@ CoinWidgetCom.go({
   , alignment: "bl"
   , qrcode: true
   , auto_show: false
-  , lbl_button: "Donate Us"
+  , lbl_button: "Donate "
   , lbl_address: "My Bitcoin Address:"
   , lbl_count: "donations"
   , lbl_amount: "BTC"
