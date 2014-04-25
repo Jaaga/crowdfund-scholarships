@@ -113,12 +113,8 @@ h4:before{
       <a href="#" id="abhinay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Lead Functionality Specialist" data-original-title="" title="">     
               <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-circle">
               </a>
-<<<<<<< HEAD
-              <    </div>
-a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
-=======
               <a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Principal Communications Officer" data-original-title="" title="">
->>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
+
 
               <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-circle">
               </a>
