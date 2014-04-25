@@ -162,13 +162,14 @@ CoinWidgetCom.go({
 
         <!-- Social Media Icons -->
 
-    			<div class="col-lg-3" align="left"  >
+    			<div class="col-lg-3"   > <!-- align="left" -->
     			
-          <!--  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
-             target="_blank">
-    <img src="./images/facebook-icon.png" width="25px"/>
-</a> -->
-<a href="studentprofile.php?S_id=<?php echo $S_id; ?>" class="btn btn-primary btn-lg">My Profile</a>
+                        <!--  <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.learnem.jaaga.us/public/studentprofile.php?S_id=<?php echo $S_id; ?>"
+                           target="_blank">
+                  <img src="./images/facebook-icon.png" width="25px"/>
+              </a> -->
+              <a href="studentprofile.php?S_id=<?php echo $S_id; ?>" 
+              class="btn btn-primary btn-lg">My Profile</a>
     			</div>
 
     		<!-- End -->
@@ -187,7 +188,7 @@ CoinWidgetCom.go({
                   
         <!-- Edit Application Button -->
 
-  			 <div class="col-lg-3" align="right" >
+  			 <div class="col-lg-3" align="right" > <!--  -->
      					
          		
 
@@ -693,11 +694,11 @@ CoinWidgetCom.go({
         <div class="col-lg-4">
               <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
               <nav style="text-align:center">
-              <p><a href="index.php">Home </a></p>
-              <p><a href="aboutus.php">About Us</a></p>
-              <p><a href= "#hiw">How It Works</a></p>
-              <p><a href="#faq">FAQ</a></p>
-              <p><a href="#contact">Contact</a></p>
+              <p><a href="index.php" style="text-decoration:none;color:#111111;">Home </a></p>
+              <p><a href="aboutus.php" style="text-decoration:none;color:#111111;">About Us</a></p>
+              <p><a href= "#hiw" style="text-decoration:none;color:#111111;">How It Works</a></p>
+              <p><a href="#faq" style="text-decoration:none;color:#111111;">FAQ</a></p>
+              <p><a href="#contact" style="text-decoration:none;color:#111111;">Contact</a></p>
               </nav>
         </div>
     </div>

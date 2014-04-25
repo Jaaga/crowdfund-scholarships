@@ -162,7 +162,13 @@ $noofStudents=count($students);
   	<!-- Heading for Donated list row-->
      <div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto; padding-bottom: 20px;">
-     	<h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive;"><?php echo $row['name'];?>'s Donated Student List</h1>
+     	<h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive;">
+      <?php if($noofStudents==0){ ?>
+          You Haven't made any Donations !! </h1>
+        <?php  
+        } else{ ?>
+          <?php echo $row['name'];?>'s Donated Student List</h1>
+       <?php } ?>
     </div>
     <?php 
 
@@ -371,11 +377,11 @@ $noofStudents=count($students);
         <div class="col-lg-4">
               <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
               <nav style="text-align:center">
-              <p><a href="index.php">Home </a></p>
-              <p><a href="aboutus.php">About Us</a></p>
-              <p><a href= "#hiw">How It Works</a></p>
-              <p><a href="#faq">FAQ</a></p>
-              <p><a href="#contact">Contact</a></p>
+              <p><a href="index.php" style="text-decoration:none;color:#111111;">Home </a></p>
+              <p><a href="aboutus.php" style="text-decoration:none;color:#111111;">About Us</a></p>
+              <p><a href= "#hiw" style="text-decoration:none;color:#111111;">How It Works</a></p>
+              <p><a href="#faq" style="text-decoration:none;color:#111111;">FAQ</a></p>
+              <p><a href="#contact" style="text-decoration:none;color:#111111;">Contact</a></p>
               </nav>
         </div>
     </div>
