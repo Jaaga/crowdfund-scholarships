@@ -122,14 +122,10 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                <li><a href="listofstudents.php">Sponsor</a></li>
-                <li><a href= "userdashboard.php">UserDashboard</a></li>
-=======
+
                 <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
 
                 <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
->>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
@@ -193,7 +189,7 @@ CoinWidgetCom.go({
 
   			 <div class="col-lg-3" align="right" >
      					
-         		<form action="application.php">
+         		
 
          			
 
@@ -202,7 +198,7 @@ CoinWidgetCom.go({
     					Edit Application
   				    </button><!-- button for pop up to edit the contents of the page -->
       				
-      			</form>
+      			
       	 </div>	
         <!-- End -->
       </div>
@@ -502,20 +498,22 @@ CoinWidgetCom.go({
     <!-- End -->
       <!--</div>-->
 
-  	  <hr>
-
+  	
+      <!--
   	  <footer class="footer" style="text-align:center">
     		<nav>
       		<ul>
       			<a href="index.php">Home </a> |
-      			<a href= "#about">About Us</a> |
+      			<a href= "aboutus.php">About Us</a> |
         			<a href= "#hiw">How It Works</a> |
         			<a href="#faq">FAQ</a> |
         			<a href="#contact">Contact</a>  
 
       		</ul>
     		</nav> 
-  	  </footer>
+  	  </footer>-->
+
+
 
 
       <!-- Edit Information modal -->
@@ -662,6 +660,48 @@ CoinWidgetCom.go({
 
 
   </div>
+
+  <!-- Footer Begin -->
+    <div class="row well" style="margin:0px -50px -50px -50px;">
+        <div class="col-lg-4">
+
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+          <p style="text-align:center"> <strong>Contact Address</strong></br>
+          1, Penthouse 01<br>
+          Rich Homes<br>
+          Richmond Road<br>
+          Bangalore - 560025<br>
+          INDIA<br>
+          <br>
+
+         <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+         <strong>Phone no.</strong>+91 986-654-6356
+          </p>
+
+          <br>
+           
+        </div>      
+        <!--</div>-->
+        <div class="col-lg-4">
+         <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+          <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+          marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+          </iframe> 
+        </div>
+        
+        <div class="col-lg-4">
+              <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+              <nav style="text-align:center">
+              <p><a href="index.php">Home </a></p>
+              <p><a href="aboutus.php">About Us</a></p>
+              <p><a href= "#hiw">How It Works</a></p>
+              <p><a href="#faq">FAQ</a></p>
+              <p><a href="#contact">Contact</a></p>
+              </nav>
+        </div>
+    </div>
+  <!-- Footer End -->
 
   <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>

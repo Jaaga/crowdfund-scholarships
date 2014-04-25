@@ -85,12 +85,9 @@ include ('../model/student.php');
     		<div class="navbar-header" style="height: 50px;">
     
           
-<<<<<<< HEAD
-        		<a class="navbar-brand" href="index.php">
-              <h1 style="font-family:'KGSecondChancesSketch' cursive; margin-top: -9px;">LearnEm</h1></a>
-=======
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
->>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
+
+   		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
+
         </div>
 
         <div class="collapse navbar-collapse">
@@ -234,25 +231,40 @@ $noofStudents=count($students);
 
     <?php endforeach; ?>
   </div>
-  <hr>
+  
 
   <!-- Footer -->
-  <div class="container" align="center">
+  <!--<div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
 
+<<<<<<< HEAD
+         <footer class="footer" style="text-align:center" class="row">
+            <nav>
+              <ul style="padding-left: 0px;">
+                <a href="index.php">Home </a> |
+                <a href= "#about">About Us</a> |
+                <a href= "#hiw">How It Works</a> |
+                <a href="#faq">FAQ</a> |
+                <a href="#contact">Contact</a>  
+              </ul>
+            </nav> 
+          </footer>
+      </div>
+=======
    <footer class="footer" style="text-align:center" class="row">
       <nav>
         <ul style="padding-left: 0px;">
           <a href="index.php">Home </a> |
-          <a href= "#about">About Us</a> |
+          <a href= "aboutus.php">About Us</a> |
           <a href= "#hiw">How It Works</a> |
           <a href="#faq">FAQ</a> |
           <a href="#contact">Contact</a>  
         </ul>
       </nav> 
     </footer>
+>>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
   </div>
-</div>
+  <!-- End -->
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -324,6 +336,50 @@ $noofStudents=count($students);
   </div>
 </div>
 
+</div>
+</div>
+
+ <!-- Footer Begin -->
+    <div class="row well" style="margin:0px -50px -50px -50px;">
+        <div class="col-lg-4">
+
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+          <p style="text-align:center"> <strong>Contact Address</strong></br>
+          1, Penthouse 01<br>
+          Rich Homes<br>
+          Richmond Road<br>
+          Bangalore - 560025<br>
+          INDIA<br>
+          <br>
+
+         <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+         <strong>Phone no.</strong>+91 986-654-6356
+          </p>
+
+          <br>
+           
+        </div>      
+        <!--</div>-->
+        <div class="col-lg-4">
+         <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+          <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+          marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+          </iframe> 
+        </div>
+        
+        <div class="col-lg-4">
+              <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+              <nav style="text-align:center">
+              <p><a href="index.php">Home </a></p>
+              <p><a href="aboutus.php">About Us</a></p>
+              <p><a href= "#hiw">How It Works</a></p>
+              <p><a href="#faq">FAQ</a></p>
+              <p><a href="#contact">Contact</a></p>
+              </nav>
+        </div>
+    </div>
+  <!-- Footer End -->
 
 
 

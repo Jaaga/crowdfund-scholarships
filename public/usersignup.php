@@ -231,22 +231,26 @@ if(isset($_POST['user']))
 
 
 
-
+<!--
 <div class="container" align="center">
-      <div class="row" style="margin-left: auto; margin-right: auto;">  
-  <footer class="footer" style="text-align:center">
-    <nav>
-      <ul style="padding-left: 0px;">
-        <a href="index.php">Home </a> |
-        <a href= "aboutus.php">About Us</a> |
-        <a href= "#hiw">How It Works</a> |
-        <a href="#faq">FAQ</a> |
-        <a href="#contact">Contact</a>  
-      </ul>
-    </nav> 
-  </footer> 
-</div>
-</div>
+  <div class="row" style="margin-left: auto; margin-right: auto;">  
+    <footer class="footer" style="text-align:center">
+      <nav>
+        <ul style="padding-left: 0px;">
+          <a href="index.php">Home </a> |
+          <a href= "aboutus.php">About Us</a> |
+          <a href= "#hiw">How It Works</a> |
+          <a href="#faq">FAQ</a> |
+          <a href="#contact">Contact</a>  
+        </ul>
+      </nav> 
+    </footer> 
+  </div>
+</div> -->
+
+
+
+
 
 <!-- Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -298,6 +302,49 @@ if(isset($_POST['user']))
 <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./dist/js/validator.js"></script>
 
+</div>
+<!-- Footer Begin -->
+    <div class="row well" style="margin:0px -50px -50px -50px;">
+        <div class="col-lg-4">
+
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+          <p style="text-align:center"> <strong>Contact Address</strong></br>
+          1, Penthouse 01<br>
+          Rich Homes<br>
+          Richmond Road<br>
+          Bangalore - 560025<br>
+          INDIA<br>
+          <br>
+
+         <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+         <strong>Phone no.</strong>+91 986-654-6356
+          </p>
+
+          <br>
+           
+        </div>      
+        <!--</div>-->
+        <div class="col-lg-4">
+         <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+          <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+          marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+          </iframe> 
+        </div>
+        
+        <div class="col-lg-4">
+              <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+              <nav style="text-align:center">
+              <p><a href="index.php">Home </a></p>
+              <p><a href="aboutus.php">About Us</a></p>
+              <p><a href= "#hiw">How It Works</a></p>
+              <p><a href="#faq">FAQ</a></p>
+              <p><a href="#contact">Contact</a></p>
+              </nav>
+        </div>
+    </div>
+    
+<!-- Footer End -->
 </body>
 
 </html>

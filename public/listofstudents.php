@@ -19,6 +19,8 @@ setlocale(LC_MONETARY, 'en_IN');
   <title>Students</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
   <link href="./dist/css/custom.css" rel="stylesheet" type='text/css'>
+  <link href="jumbotron.css" rel="stylesheet"> 
+
 
   
   <style type="text/css">
@@ -54,9 +56,9 @@ padding-top: 60px;
   color: white;
   }
 
-  .col-lg-4{
+  /*.col-lg-4{
   margin:18px;
-  }
+  }*/
   #hiw{
   font-family:'Cabin Sketch' cursive;
   font-size: 72px;}
@@ -88,21 +90,7 @@ padding-top: 60px;
                 </ul>
 
                   <div class="navbar-form navbar-right">
-   <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate "
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+   
                 <a href="../controller/logout.php" class="btn btn-danger">Logout</a>
                
           </div>
@@ -112,21 +100,7 @@ CoinWidgetCom.go({
             </ul>
             <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
-         <script src="http://coinwidget.com/widget/coin.js"></script>
-<script>
-CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
-  , currency: "bitcoin"
-  , counter: "count"
-  , alignment: "bl"
-  , qrcode: true
-  , auto_show: false
-  , lbl_button: "Donate "
-  , lbl_address: "My Bitcoin Address:"
-  , lbl_count: "donations"
-  , lbl_amount: "BTC"
-});
-</script>
+         
               <a href="usersignup.php" class="btn btn-danger">Sign Up</a>
 
               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> 
@@ -142,10 +116,10 @@ CoinWidgetCom.go({
   
   <div class="container" align="center">
 <div class="row" align="right">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="N6AWJCSLS8Z3U">
-<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:60px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<input type="image" src="http://3.bp.blogspot.com/-mO2Xv0REVj4/Uw22ZbWX2EI/AAAAAAAAAFI/AnD3f7KmP1A/s1600/8446299_orig.png" style="height:70px; width:120px" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
@@ -179,7 +153,9 @@ CoinWidgetCom.go({
                 
                 
   ?>
-  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;">  <div class="col-lg-4" style="width:350px; text-align: justify; padding-left: 0px; padding-right: 0px; margin-left: auto; margin-right: auto;">
+  <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"> 
+   <div class="col-lg-4" ><!-- style="width:350px; text-align: justify; padding-left: 0px; 
+   padding-right: 0px; margin-left: auto; margin-right: auto;"-->
       <div class="well" style="width: 340px;">
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
@@ -268,7 +244,8 @@ CoinWidgetCom.go({
             </div></div> -->
         
 
-<hr>
+
+<!-- Old footer 
 <div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
   <footer class="footer" style="text-align:center">
@@ -284,6 +261,51 @@ CoinWidgetCom.go({
   </footer>
 </div>
 </div>
+-->
+
+    <!-- Footer Begin -->
+    
+    <div class="row well" style="margin:0px -50px -50px -50px;">
+        <div class="col-lg-4">
+
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+          <p style="text-align:center"> <strong>Contact Address</strong></br>
+          1, Penthouse 01<br>
+          Rich Homes<br>
+          Richmond Road<br>
+          Bangalore - 560025<br>
+          INDIA<br>
+          <br>
+
+         <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+         <strong>Phone no.</strong>+91 986-654-6356
+          </p>
+
+          <br>
+           
+        </div>      
+        <!--</div>-->
+        <div class="col-lg-4">
+         <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+          <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+          marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+          </iframe> 
+        </div>
+        
+        <div class="col-lg-4">
+              <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+              <nav style="text-align:center">
+              <p><a href="index.php">Home </a></p>
+              <p><a href="aboutus.php">About Us</a></p>
+              <p><a href= "#hiw">How It Works</a></p>
+              <p><a href="#faq">FAQ</a></p>
+              <p><a href="#contact">Contact</a></p>
+              </nav>
+        </div>
+    </div>
+   
+    <!-- Footer End -->
 
 <!-- Sign in Modal -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
