@@ -113,7 +113,8 @@ h4:before{
       <a href="#" id="abhinay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">     
               <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-circle">
               </a>
-              <a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+              <    </div>
+a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
 
               <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-circle">
               </a>
@@ -139,22 +140,68 @@ h4:before{
     
     </div>
     <br>
+
+   <!-- 
 <div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
-  <footer style="text-align:center">
-  <hr>
-      <nav>
-        <ul style="padding-left: 0px;">
-          <a href="index.php">Home </a> |
-          <a href= "#about">About Us</a> |
-            <a href= "#hiw">How It Works</a> |
-            <a href="#faq">FAQ</a> |
-            <a href="#contact">Contact</a>  
-        </ul>
-      </nav> 
-  </footer>
+        <footer style="text-align:center">
+        
+            <nav>
+              <ul style="padding-left: 0px;">
+                <a href="index.php">Home </a> |
+                <a href= "#about">About Us</a> |
+                  <a href= "#hiw">How It Works</a> |
+                  <a href="#faq">FAQ</a> |
+                  <a href="#contact">Contact</a>  
+              </ul>
+            </nav> 
+        </footer>
+      </div>
 </div>
-</div>
+-->
+
+<!-- Footer Begin -->
+    <div class="row well" style="margin:0px -50px -50px -50px;">
+        <div class="col-lg-4">
+
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+          <p style="text-align:center"> <strong>Contact Address</strong></br>
+          1, Penthouse 01<br>
+          Rich Homes<br>
+          Richmond Road<br>
+          Bangalore - 560025<br>
+          INDIA<br>
+          <br>
+
+         <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+         <strong>Phone no.</strong>+91 986-654-6356
+          </p>
+
+          <br>
+           
+        </div>      
+        <!--</div>-->
+        <div class="col-lg-4">
+         <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+          <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+          marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+          </iframe> 
+        </div>
+        
+        <div class="col-lg-4">
+              <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+              <nav style="text-align:center">
+              <p><a href="index.php">Home </a></p>
+              <p><a href="aboutus.php">About Us</a></p>
+              <p><a href= "#hiw">How It Works</a></p>
+              <p><a href="#faq">FAQ</a></p>
+              <p><a href="#contact">Contact</a></p>
+              </nav>
+        </div>
+    </div>
+    
+<!-- Footer End -->
 
 <script type="text/javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="./dist/js/bootstrap.js"></script>
