@@ -188,7 +188,7 @@ CoinWidgetCom.go({
                   
         <!-- Edit Application Button -->
 
-  			 <div class="col-lg-3"  > <!-- align="right" -->
+  			 <div class="col-lg-3" align="right" > <!--  -->
      					
          		
 
