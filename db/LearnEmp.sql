@@ -40,7 +40,7 @@ CREATE TABLE `donation` (
 
 LOCK TABLES `donation` WRITE;
 /*!40000 ALTER TABLE `donation` DISABLE KEYS */;
-INSERT INTO `donation` VALUES (1,1,'2014-04-06 07:03:33',10000.00),(1,1,'2014-04-06 07:04:47',500.00),(2,1,'2014-04-08 17:14:32',500.00),(2,2,'2014-04-08 19:02:43',50000.00),(2,3,'2014-04-08 19:03:01',50000.00),(1,1,'2014-04-24 10:07:55',5000.00),(1,1,'2014-04-24 10:43:50',123.00),(1,1,'2014-04-24 10:43:58',5000.00),(1,2,'2014-04-24 10:44:11',100000.00),(2,1,'2014-04-24 10:50:39',5000.00);
+INSERT INTO `donation` VALUES (1,1,'2014-04-06 07:03:33',10000.00),(1,1,'2014-04-06 07:04:47',500.00),(2,1,'2014-04-08 17:14:32',500.00),(2,2,'2014-04-08 19:02:43',50000.00),(2,3,'2014-04-08 19:03:01',50000.00),(1,1,'2014-04-24 10:07:55',5000.00),(1,1,'2014-04-24 10:43:50',123.00),(1,1,'2014-04-24 10:43:58',5000.00),(2,1,'2014-04-24 10:50:39',5000.00);
 /*!40000 ALTER TABLE `donation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,7 +108,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'looking for a donor who can support me and fund me for my higher education.  ','../public/images/12student.jpg','2014-04-06 06:48:40','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'HI,I am JS guy..please fund me','../public/images/crowdfunding.jpg','2014-04-08 17:49:10',NULL),(3,4,'Yatin Taluja','F','yatintaluja@gmail.com',953956792,'Bangalore',560062,'Armenia','Php',120000,'Hi, I am a backend programmer .looking for a donor who can fund me for my higher education at Jaaga','../public/images/yatin.png','2014-04-08 17:55:22',NULL);
+INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'I am a ruby on rails enthusiast and would like to be able to learn further to help make better web apps. Please fund me.\r\n','../public/images/12student.jpg','2014-04-06 06:48:40','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'The computer engineering course at Jaaga is one of the best in the country and encourages professional development.','../public/images/Login-Student.png','2014-04-08 17:49:10','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,7 @@ CREATE TABLE `studstory` (
 
 LOCK TABLES `studstory` WRITE;
 /*!40000 ALTER TABLE `studstory` DISABLE KEYS */;
-INSERT INTO `studstory` VALUES (1,'','','2014-04-06 06:51:40','abhinay302','abhinay302','abhinay_kumar21'),(2,'','','2014-04-08 17:50:47','ansal','ansal','ansal'),(3,'','','2014-04-08 17:56:04','yatintaluja','yatintaluja','yatintaluja');
+INSERT INTO `studstory` VALUES (1,'My childhood dream was that someday my actions would dramatically impact the world. After a great deal of self-evaluation and an exciting journey through my undergraduate education, I have come to realize that it is not as hard as I had imagined it to be. I find the success of the Google search engine that touches a million lives each day inspirational .It was after all a research project developed by its founders during their student days at a US university. I feel that such are probable prospects of a graduate education at a university as esteemed as yours where a single line of code that I might write could touch the lives of millions around the world.10 years down the line I see myself in an industry contributing to the field of computer science in the industry and hope that my dream will manifest into reality.','I understand that innovation and creativity are some of the core values on which this course has been built. Looking at the course work and the credentials of the faculty of Jaaga Study, that seems credible. The computer engineering course at Jaaga is one of the best in the country and encourages professional development in all aspects of the graduate program. I believe it can help me eliminate any technical misconceptions and mould me into an astute working professional besides helping realize my childhood dream .','2014-04-06 06:51:40','abhinay302','abhinay302','abhinay_kumar21'),(2,'My childhood dream was that someday my actions would dramatically impact the world. After a great deal of self-evaluation and an exciting journey through my undergraduate education, I have come to realize that it is not as hard as I had imagined it to be. I find the success of the Google search engine that touches a million lives each day inspirational .It was after all a research project developed by its founders during their student days at a US university. I feel that such are probable prospects of a graduate education at a university as esteemed as yours where a single line of code that I might write could touch the lives of millions around the world.10 years down the line I see myself in an industry contributing to the field of computer science in the industry and hope that my dream will manifest into reality.','I understand that innovation and creativity are some of the core values on which this course has been built. Looking at the course work and the credentials of the faculty of Jaaga Study, that seems credible. The computer engineering course at Jaaga is one of the best in the country and encourages professional development in all aspects of the graduate program. I believe it can help me eliminate any technical misconceptions and mould me into an astute working professional besides helping realize my childhood dream .','2014-04-08 17:50:47','ansal','ansal','ansal');
 /*!40000 ALTER TABLE `studstory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,7 +158,7 @@ CREATE TABLE `user` (
   `image` blob,
   PRIMARY KEY (`U_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Abhinay','123123','abhinay302@gmail.com','2014-04-06 06:43:24',NULL),(2,'Freeman Murray','freeman','freeman@jaaga.in','2014-04-08 17:14:20','../public/images/donor.jpg'),(3,'Ansal','ansal','ansal@bsstech.com','2014-04-08 17:25:37',NULL),(4,'Yatin Taluja','yatin','yatintaluja@gmail.com','2014-04-08 17:52:55',NULL),(5,'Akshay','akshay','akshay@jaaga.in','2014-04-08 18:22:18','../public/images/Abhinay.jpg');
+INSERT INTO `user` VALUES (1,'Abhinay','123123','abhinay302@gmail.com','2014-04-06 06:43:24',NULL),(2,'Freeman Murray','freeman','freeman@jaaga.in','2014-04-08 17:14:20','../public/images/donor.jpg'),(3,'Ansal','ansal','ansal@bsstech.com','2014-04-08 17:25:37',NULL),(5,'Akshay','akshay','akshay@jaaga.in','2014-04-08 18:22:18','../public/images/Abhinay.jpg'),(6,'abc','123123','abhi@jaaga.in','2014-04-25 06:51:15',NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -180,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-24 16:49:39
+-- Dump completed on 2014-04-25 15:17:05
