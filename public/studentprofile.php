@@ -448,7 +448,7 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
   		<nav>
     		<ul>
     			<a href="index.php">Home </a> |
-    			<a href= "#about">About Us</a> |
+    			<a href= "aboutus.php">About Us</a> |
       			<a href= "#hiw">How It Works</a> |
       			<a href="#faq">FAQ</a> |
       			<a href="#contact">Contact</a>  

@@ -103,35 +103,39 @@ h4:before{
             <br>
           <br>
           
-      <a href="#" id="stephanie" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+      <a href="#" id="stephanie" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Imagination Queen/ Slave Driver" data-original-title="" title="">
       <img src="./images/stephanie1.jpg" style="height:100px" alt="Stephanie" class="img-circle">
       </a>
       
-      <a href="#" id="manoj" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">     
+      <a href="#" id="manoj" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="International Double Agent" data-original-title="" title="">     
               <img src="./images/manoj.jpg" style="height:100px; margin-left:30px" alt="Manoj" class="img-circle">
       </a>
-      <a href="#" id="abhinay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">     
+      <a href="#" id="abhinay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Lead Functionality Specialist" data-original-title="" title="">     
               <img src="./images/abhinay.jpg" style="height:100px; margin-left:30px"  alt="Abhinay" class="img-circle">
               </a>
+<<<<<<< HEAD
               <    </div>
 a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+=======
+              <a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Principal Communications Officer" data-original-title="" title="">
+>>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
 
               <img src="./images/sushil.jpg" style="height:100px; margin-left:30px" alt="Sushil" class="img-circle">
               </a>
 
               <br>
               <br>
-              <a href="#" id="vaibhav" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+              <a href="#" id="vaibhav" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Random Design Master" data-original-title="" title="">
 
               <img src="./images/vaibhav.jpg" style="height:100px"  alt="Vaibhav" class="img-circle" >
               </a>
-              <a href="#" id="sai" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+              <a href="#" id="sai" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Chief Survey Technician" data-original-title="" title="">
               <img src="./images/Sai.jpg" style="height:100px; margin-left:30px" alt="Sai" class="img-circle">
               </a>
-              <a href="#" id="rajeef" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+              <a href="#" id="rajeef" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Internal Change Agent" data-original-title="" title="">
               <img src="./images/RJ.JPG" style="height:100px; margin-left:30px" alt="Rajeef" class="img-circle" >
               </a>
-              <a href="#" id="sujay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">
+              <a href="#" id="sujay" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Head Program Strategist" data-original-title="" title="">
               <img src="./images/sujay.jpg" style="height:100px; margin-left:30px" alt="Sujay" class="img-circle">
               </a>
               <br>
@@ -207,7 +211,7 @@ a href="#" id="sushil" data-toggle="popover" data-trigger="hover" data-placement
 <script type="text/javascript" src="./dist/js/bootstrap.js"></script>
 <script type="text/javascript">
    $(function ()  
-{ $("#stephanie").popover({title: 'Stephanie Brownee', content: "It's so simple to create a tooltop for my website!"});  
+{ $("#stephanie").popover({title: 'Stephanie ', content: "It's so simple to create a tooltop for my website!"});  
 });
    $(function ()  
 { $("#manoj").popover({title: 'Manoj Kumar', content: "It's so simple to create a tooltop for my website!"});  

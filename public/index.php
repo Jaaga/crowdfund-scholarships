@@ -164,15 +164,15 @@ CoinWidgetCom.go({
 
 
     <div class="container">
-      <div class="row">
-        <div class="x">
+      <div class="row-fluid">
         <div class="col-lg-12"> 
           <div class="image">
             <div class="color">
              <!--<h1 style="font-size:70px; padding: 60px 0 0 20px;">Scholarships<br> that are Paid Forward</h1>-->
-             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> that are Paid Forward</h1>
-              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking education by providing financial aid, enabling him or her 
-              to fund the next candidate.</p>
+             <h1 style="font-size:5em; padding-top: 40px; padding-left: 55px;font-family: 'Josefin Sans', 'sans-serif';">Scholarships<br> 
+             that are Paid Forward</h1>
+              <p style="font-size:1.5em; padding-top: 50.5px; padding-left: 55px; font-family: 'Georgia'; font-size: 23px; ">Help students seeking 
+              education by providing financial aid, enabling them to fund the next candidates.</p>
             </div>
           </div>
 
@@ -193,8 +193,7 @@ CoinWidgetCom.go({
           </div>
           </div>      
         </div>
-      </div>
-    
+         
         
     <br>
 
@@ -324,6 +323,7 @@ $i++;
     </div>
 </div>
           <br>
+<<<<<<< HEAD
 
     <!-- Footer Begin -->
     <div class="row well" style="margin:0px -50px -50px -50px;">
@@ -364,6 +364,47 @@ $i++;
               <p><a href="#contact">Contact</a></p>
               </nav>
         </div>
+=======
+<div class="row well" style="margin:0px -50px -50px -50px;">
+    <div class="col-lg-4">
+
+      <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Get in Touch</h3>
+      <p style="text-align:center"> <strong>Contact Address</strong></br>
+      1, Penthouse 01<br>
+      Rich Homes<br>
+      Richmond Road<br>
+      Bangalore - 560025<br>
+      INDIA<br>
+      <br>
+
+     <strong> Email: </strong><a href="mailto:contact@learnem.com">contact@learnem.com</a><br>
+     <strong>Phone no.</strong>+91 986-654-6356
+      </p>
+
+      <br>
+       
+    </div>      
+    <!--</div>-->
+    <div class="col-lg-4">
+
+     <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Reach Us</h3>
+      <iframe width="300px" height="200px" frameborder="0" scrolling="no" 
+      marginheight="0" marginwidth="0" style ="margin-left:30px" src="http://bit.ly/1fKde81">
+
+      </iframe> 
+    </div>
+    
+    <div class="col-lg-4">
+          <h3 style="font-family:'KGSecondChancesSketch'; text-align:center">Explore</h3>
+          <nav style="text-align:center">
+          <p><a href="index.php">Home </a></p>
+          <p><a href="aboutus.php">About Us</a></p>
+          <p><a href= "#hiw">How It Works</a></p>
+          <p><a href="#faq">FAQ</a></p>
+          <p><a href="#contact">Contact</a></p>
+          </nav>
+
+>>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
     </div>
     <!-- Footer End -->
   

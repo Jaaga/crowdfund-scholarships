@@ -33,7 +33,7 @@ $User=userLogin($email,$password);
   // setcookie("U_id", "$U_id", time()+3600, "/", "",  0);
  	//$_SESSION['password']=$password;
  //var_dump($_SESSION);
-  header("location:../public/userdashboard.php");
+  header("location:../public/listofstudents.php");
  }
   else{  
          session_start();  

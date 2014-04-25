@@ -273,6 +273,7 @@
      
 <!--
 <div class="container" align="center">
+<<<<<<< HEAD
   <div class="row" style="margin-left: auto; margin-right: auto;">
         <footer class="footer" style="text-align:center">
             <nav>
@@ -289,6 +290,23 @@
   </div>
 </div>-->
 
+=======
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+    <footer class="footer" style="text-align:center">
+      <nav>
+        <ul style="padding-left: 0px;">
+          <a href="index.php">Home </a> |
+          <a href= "aboutus.php">About Us</a> |
+            <a href= "#hiw">How It Works</a> |
+            <a href="#faq">FAQ</a> |
+            <a href="#contact">Contact</a>  
+
+        </ul>
+      </nav> 
+  </footer> 
+</div>
+</div>
+>>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
 
   <script language="javascript" src="./dist/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript">

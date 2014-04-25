@@ -85,7 +85,9 @@ include ('../model/student.php');
     		<div class="navbar-header" style="height: 50px;">
     
           
-        		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
+
+   		<a class="navbar-brand" href="index.php"><h1 style="font-family:'KGSecondChancesSketch'; margin-top: -9px;color: white;">LearnEm</h1></a>
+
         </div>
 
         <div class="collapse navbar-collapse">
@@ -97,8 +99,6 @@ include ('../model/student.php');
                 }
                  ?>
 
-
-                
            		</ul>
               <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right">
@@ -121,12 +121,7 @@ CoinWidgetCom.go({
                
               <!--<button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button> -->
 
-          </div>   
-          </div>           
-
-        		<div class="navbar-collapse collapse">
-             		<div class="navbar-form navbar-right"> 
-                </div><!--/.navbar-collapse -->
+              </div><!--/.navbar-collapse -->
             </div>
         </div><!--/.navbar-collapse -->
       </div>      	
@@ -160,12 +155,13 @@ $noofStudents=count($students);
       	</div>
     	</div>
     </div>
+  </div>
 
  <h1> <?php echo $wrong; ?></h1>
 
   	<!-- Heading for Donated list row-->
      <div class="container" align="center">
-      <div class="row" style="margin-left: auto; margin-right: auto;">
+      <div class="row" style="margin-left: auto; margin-right: auto; padding-bottom: 20px;">
      	<h1 style="text-align:center; font-family:'KGSecondChancesSketch' cursive;"><?php echo $row['name'];?>'s Donated Student List</h1>
     </div>
     <?php 
@@ -182,7 +178,7 @@ $noofStudents=count($students);
     ?>
   
   	      <a href="<?php echo $profilelink; ?>" style="text-decoration:none;color:#111111;"/>
-    	    <div class="col-md-4" >
+    	    <div class="col-md-4" style="padding-left: 0px;">
         	<div class="well" >
         	   <!-- style="width: 340px;"-->
           	 <img src=<?php echo $student['image_path']; ?> alt="donate"align="center" style="height:200px; width:320px" ></img> 
@@ -241,6 +237,7 @@ $noofStudents=count($students);
   <!--<div class="container" align="center">
       <div class="row" style="margin-left: auto; margin-right: auto;">
 
+<<<<<<< HEAD
          <footer class="footer" style="text-align:center" class="row">
             <nav>
               <ul style="padding-left: 0px;">
@@ -253,6 +250,19 @@ $noofStudents=count($students);
             </nav> 
           </footer>
       </div>
+=======
+   <footer class="footer" style="text-align:center" class="row">
+      <nav>
+        <ul style="padding-left: 0px;">
+          <a href="index.php">Home </a> |
+          <a href= "aboutus.php">About Us</a> |
+          <a href= "#hiw">How It Works</a> |
+          <a href="#faq">FAQ</a> |
+          <a href="#contact">Contact</a>  
+        </ul>
+      </nav> 
+    </footer>
+>>>>>>> 9d582de5efad2376611aa9cff0b6a321d60350e8
   </div>
   <!-- End -->
 
