@@ -173,7 +173,7 @@ CoinWidgetCom.go({
               <p style="padding-top:1.5em; padding-left: 2.7em; font-family: 'Georgia'; font-size: 1.5em; ">Help students seeking education by providing financial aid, enabling them 
               to fund the next candidate.</p>
             
-          <div class="row">
+          <div class="row" style="padding-top:4em;">
             <div class="col-lg-6" align="center">
               <h3 style="color:white;font-family: 'Josefin Sans', 'sans-serif';">Apply for Scholarship</h3>
                   <a href="usersignup.php">
@@ -192,16 +192,16 @@ CoinWidgetCom.go({
           </div>
           </div>      
         </div>
-        
+
         
     <br>
 
-    
+    <div class="container">
     <?php $students= featuredStudents();
           shuffle($students);
           ?>
 
-    <div class="row" style="padding-top: 70px; padding-bottom: 40px;">
+    <div class="row" style="padding-top: 7em; padding-bottom: 4em;">
 <?php 
 $i=0;
 foreach ($students as $student) {
@@ -223,6 +223,7 @@ foreach ($students as $student) {
 $i++;
 } ?>
     </div>
+  </div>
 
 
 
@@ -232,7 +233,9 @@ $i++;
 
 
 <div class="hiw-image">
-    <h1 style="text-align: center; font-family:'KGSecondChancesSketch'; font-size:7em; padding: 250px;" id="hiw">How it Works</h1>
+  <div class="row">
+    <h1 align="center" id="faq" style="font-family:'KGSecondChancesSketch'; font-size:7em; padding-top: 300px;">How it Works</h1>
+</div>
 </div>
     <br>
 
