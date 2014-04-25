@@ -32,7 +32,7 @@ else{
         setcookie("email", "$email", time()+3600, "/","", 0);
 			  //$_SESSION['time'] = time();
 
-			  header("location:../public/userdashboard.php");
+			  header("location:../public/lisofstuents.php");
       }
       else{ 
            $User="Email already exists";
