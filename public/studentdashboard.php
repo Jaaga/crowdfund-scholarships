@@ -123,7 +123,6 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
                 <li><a href="listofstudents.php">Sponsor</a></li>
-
                 <li><a href= "userdashboard.php">UserDashboard</a></li>
           </ul>
           <div class="navbar-collapse collapse">
@@ -185,7 +184,7 @@ CoinWidgetCom.go({
 
     			<div class="col-lg-6">
 
-    				<h1 align="center" style="font-family:'KGSecondChancesSketch' cursive; font-size: 60px; margin-top: -30px " >
+    				<h1 align="center" style="font-family:'KGSecondChancesSketch' cursive; font-size: 60px; margin-top: 0px;" >
     				<?php echo $student['sname']; ?>
     				</h1>
     			</div>
@@ -211,7 +210,7 @@ CoinWidgetCom.go({
         <!-- End -->
       </div>
     <!-- Row end -->
-
+</div>
     <br>
    
     <!-- Student Image & Sponsored Details -->

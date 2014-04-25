@@ -162,8 +162,7 @@ CoinWidgetCom.go({
 
 
     <div class="container">
-      <div class="row">
-        <div class="x">
+      <div class="row-fluid">
         <div class="col-lg-12"> 
           <div class="image">
             <div class="color">
@@ -191,8 +190,7 @@ CoinWidgetCom.go({
           </div>
           </div>      
         </div>
-      </div>
-    
+         
         
     <br>
 
