@@ -122,14 +122,10 @@ $totalAmount=getFundedAmount($S_id); //try to omit if page is not working. gets 
         
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-<<<<<<< HEAD
-                <li><a href="listofstudents.php">Sponsor</a></li>
-                <li><a href= "userdashboard.php">UserDashboard</a></li>
-=======
+
                 <li><a href="listofstudents.php"style="color: white;">Sponsor</a></li>
 
                 <li><a href= "userdashboard.php" style="color: white;">UserDashboard</a></li>
->>>>>>> 896b32c418b537e1e0afc9c79e1fd3e90a164cca
           </ul>
           <div class="navbar-collapse collapse">
             <div class="navbar-form navbar-right">
