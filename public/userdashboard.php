@@ -151,7 +151,7 @@ $noofStudents=count($students);
 
         		<h2><?php echo $row['name'];?> </h2>
         		<br>
-        		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students -- Donate to More</p>
+        		<p style="font-size:26px" "text-type:bold">Donated to <?php echo $noofStudents ; ?> Students </p>
       	</div>
     	</div>
     </div>
