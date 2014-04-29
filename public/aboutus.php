@@ -1,5 +1,6 @@
 <?php
 echo "Hello ";
+echo "Welcome";
  ?>
 <!DOCTYPE html>
 <html lang="en">
