@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
+
 <head>
   <title>About Us</title>
   <link href="./dist/css/bootstrap.css" rel="stylesheet">
