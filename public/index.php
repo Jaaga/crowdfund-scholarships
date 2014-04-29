@@ -115,7 +115,7 @@ setlocale(LC_MONETARY, 'en_IN');
                       <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  wallet_address: "1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP"
   , currency: "bitcoin"
   , counter: "count"
   , alignment: "bl"
@@ -139,7 +139,7 @@ CoinWidgetCom.go({
           <script src="http://coinwidget.com/widget/coin.js"></script>
 <script>
 CoinWidgetCom.go({
-  wallet_address: "15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4"
+  wallet_address: "1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP"
   , currency: "bitcoin"
   , counter: "count"
   , alignment: "bl"

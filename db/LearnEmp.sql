@@ -108,7 +108,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'I am a ruby on rails enthusiast and would like to be able to learn further to help make better web apps. Please fund me.\r\n','../public/images/12student.jpg','2014-04-06 06:48:40','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'The computer engineering course at Jaaga is one of the best in the country and encourages professional development.','../public/images/Login-Student.png','2014-04-08 17:49:10','15WTM5hsiK5oJZS4qTB9cZXhuHYRzfkrr4');
+INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'I am a ruby on rails enthusiast and would like to be able to learn further to help make better web apps. Please fund me.\r\n','../public/images/12student.jpg','2014-04-06 06:48:40','1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'The computer engineering course at Jaaga is one of the best in the country and encourages professional development.','../public/images/Login-Student.png','2014-04-08 17:49:10','1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
