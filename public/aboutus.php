@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<?php
-echo "Hello "; ?>
 <!DOCTYPE html>
 <html lang="en">
 <html>
