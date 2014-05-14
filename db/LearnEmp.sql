@@ -55,6 +55,7 @@ CREATE TABLE `invoice_payments` (
   `transaction_hash` char(64) NOT NULL DEFAULT '',
   `value` double DEFAULT NULL,
   `invoice_id` int(11) DEFAULT NULL,
+  `bit_address` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`transaction_hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -104,6 +105,7 @@ CREATE TABLE `pending_invoice_payments` (
   `transaction_hash` char(64) NOT NULL DEFAULT '',
   `value` double DEFAULT NULL,
   `invoice_id` int(11) DEFAULT NULL,
+  `bit_address` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`transaction_hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

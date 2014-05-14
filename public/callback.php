@@ -16,10 +16,10 @@ if ($_GET['test'] == true) {
   return;
 }
 
-if ($_GET['address'] != $my_bitcoin_address) {
-    echo 'Incorrect Receiving Address';
-  return;
-}
+//if ($_GET['address'] != $my_bitcoin_address) {
+  //  echo 'Incorrect Receiving Address';
+  //return;
+//}
 
 if ($_GET['secret'] != $secret) {
   echo 'Invalid Secret';

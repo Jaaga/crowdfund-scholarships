@@ -160,7 +160,10 @@ padding-top: 60px;
         <img src=<?php echo $student['image_path'];
          ?> alt="donate"align="center" style="height:200px; width:300px" ></img> 
         <br>
+
     <a href="create.php?invoice_id=123&bit=<?php echo $bitdetail; ?>" class="btn btn-success">Donate In BTC</a>
+
+    
         <h3><?php echo $student['sname']; ?></h3>
         <p><?php echo $student['para']; ?></p>
         </a>
