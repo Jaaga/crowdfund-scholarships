@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.35, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: LearnEmp
 -- ------------------------------------------------------
--- Server version	5.5.35-0ubuntu0.12.04.2
+-- Server version	5.5.37-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,6 +42,79 @@ LOCK TABLES `donation` WRITE;
 /*!40000 ALTER TABLE `donation` DISABLE KEYS */;
 INSERT INTO `donation` VALUES (1,1,'2014-04-06 07:03:33',10000.00),(1,1,'2014-04-06 07:04:47',500.00),(2,1,'2014-04-08 17:14:32',500.00),(2,2,'2014-04-08 19:02:43',50000.00),(2,3,'2014-04-08 19:03:01',50000.00),(1,1,'2014-04-24 10:07:55',5000.00),(1,1,'2014-04-24 10:43:50',123.00),(1,1,'2014-04-24 10:43:58',5000.00),(2,1,'2014-04-24 10:50:39',5000.00);
 /*!40000 ALTER TABLE `donation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `invoice_payments`
+--
+
+DROP TABLE IF EXISTS `invoice_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `invoice_payments` (
+  `transaction_hash` char(64) NOT NULL DEFAULT '',
+  `value` double DEFAULT NULL,
+  `invoice_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`transaction_hash`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `invoice_payments`
+--
+
+LOCK TABLES `invoice_payments` WRITE;
+/*!40000 ALTER TABLE `invoice_payments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `invoice_payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `invoices`
+--
+
+DROP TABLE IF EXISTS `invoices`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `invoices` (
+  `invoice_id` int(11) NOT NULL DEFAULT '0',
+  `price_in_usd` double DEFAULT NULL,
+  `price_in_btc` double DEFAULT NULL,
+  `product_url` text,
+  PRIMARY KEY (`invoice_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `invoices`
+--
+
+LOCK TABLES `invoices` WRITE;
+/*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
+/*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pending_invoice_payments`
+--
+
+DROP TABLE IF EXISTS `pending_invoice_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pending_invoice_payments` (
+  `transaction_hash` char(64) NOT NULL DEFAULT '',
+  `value` double DEFAULT NULL,
+  `invoice_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`transaction_hash`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pending_invoice_payments`
+--
+
+LOCK TABLES `pending_invoice_payments` WRITE;
+/*!40000 ALTER TABLE `pending_invoice_payments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pending_invoice_payments` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -99,7 +172,7 @@ CREATE TABLE `student` (
   UNIQUE KEY `email` (`email`),
   KEY `U_id` (`U_id`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`U_id`) REFERENCES `user` (`U_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,7 +181,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'I am a ruby on rails enthusiast and would like to be able to learn further to help make better web apps. Please fund me.\r\n','../public/images/12student.jpg','2014-04-06 06:48:40','1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'The computer engineering course at Jaaga is one of the best in the country and encourages professional development.','../public/images/Login-Student.png','2014-04-08 17:49:10','1MZgG3NtUGWLinBhBf9GM97jUhikjuWeiP');
+INSERT INTO `student` VALUES (1,1,'Abhinay','M','abhinay302@gmail.com',2147483647,'Bangalore',560062,'Armenia','Php',120000,'I am a ruby on rails enthusiast and would like to be able to learn further to help make better web apps. Please fund me.\r\n','../public/images/12student.jpg','2014-04-06 06:48:40','1CM6QQXzG7PunkdCcZzRSYiAsdNxFtxfut'),(2,3,'Ansal','M','ansal@bsstech.com',2147483647,'Banjarpalya',560062,'Armenia','html/css',120000,'The computer engineering course at Jaaga is one of the best in the country and encourages professional development.','../public/images/Login-Student.png','2014-04-08 17:49:10','1CM6QQXzG7PunkdCcZzRSYiAsdNxFtxfut');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +253,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-25 15:17:05
+-- Dump completed on 2014-05-14 17:31:22
