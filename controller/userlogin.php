@@ -14,7 +14,7 @@
 <?php
  include ('../model/user.php');
  
- if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+ if ($_POST['email']) {
  $email=$_POST['email'];
  $password= $_POST['password'];
 // $from=$_SERVER['HTTP_REFERER'];
@@ -40,7 +40,7 @@ $User=userLogin($email,$password);
          $_SESSION['email']='';
          $_SESSION['password']='';
  	?>
-<!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <body>
     <form name="studentForm" method="post" action="../public/usersignup.php">

@@ -2,7 +2,7 @@
 function dbopen(){
 	$host="localhost"; // Host name 
 	$username="root"; // Mysql username 
-	$password="123"; // Mysql password 
+	$password="123123"; // Mysql password 
 	$db_name="LearnEmp"; // Database name 
 
 	//$tbl_name="donor"; // Table name 
