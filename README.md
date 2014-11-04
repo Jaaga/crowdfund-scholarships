@@ -2,7 +2,7 @@ crowdfund-scholarships
 ======================
 
 This is for people in the Jaaga Study program - http://jaaga.in/study - to create a platform for crowdfunding student scholarships .
-A. SETUP GIT AND PULL REPO. FROM GITHUB(Pull,Push).
+A. SETUP GIT AND PULL REPO FROM GITHUB(Pull,Push).
 
      1. Setup your Git:
 
