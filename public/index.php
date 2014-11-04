@@ -71,9 +71,9 @@ setlocale(LC_MONETARY, 'en_IN');
     background-color: rgba(111, 101, 101, 1);
     background-size: cover;
     height: 1400px;
-    width: 100%;*/
+    width: 100%;
 
-  }
+  } */
   </style>
 </head>
 
